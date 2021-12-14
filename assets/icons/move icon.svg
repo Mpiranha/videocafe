@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <g id="move_icon" data-name="move icon" transform="translate(-1546 -202)">
+    <path id="ic_chevron_right_24px" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" transform="translate(1547.205 203.5)" fill="#e15fff"/>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1546 202)" fill="none" stroke="#e15fff" stroke-width="2">
+      <circle cx="13.5" cy="13.5" r="13.5" stroke="none"/>
+      <circle cx="13.5" cy="13.5" r="12.5" fill="none"/>
+    </g>
+  </g>
+</svg>

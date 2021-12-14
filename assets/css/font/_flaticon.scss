@@ -1,0 +1,116 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 04/03/2021 21:53
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-envelope:before { content: "\f100"; }
+.flaticon-padlock:before { content: "\f101"; }
+.flaticon-dashboard:before { content: "\f102"; }
+.flaticon-search:before { content: "\f103"; }
+.flaticon-stack-of-papers:before { content: "\f104"; }
+.flaticon-funnel:before { content: "\f105"; }
+.flaticon-stats:before { content: "\f106"; }
+.flaticon-information:before { content: "\f107"; }
+.flaticon-settings:before { content: "\f108"; }
+.flaticon-gift-card:before { content: "\f109"; }
+.flaticon-logout:before { content: "\f10a"; }
+.flaticon-notification:before { content: "\f10b"; }
+.flaticon-flags:before { content: "\f10c"; }
+.flaticon-email:before { content: "\f10d"; }
+.flaticon-open-mail:before { content: "\f10e"; }
+.flaticon-man-user:before { content: "\f10f"; }
+.flaticon-question:before { content: "\f110"; }
+.flaticon-right-down:before { content: "\f111"; }
+.flaticon-list:before { content: "\f112"; }
+.flaticon-facebook-message:before { content: "\f113"; }
+.flaticon-chat:before { content: "\f114"; }
+.flaticon-drop-down-arrow:before { content: "\f115"; }
+.flaticon-upload:before { content: "\f116"; }
+.flaticon-right-arrow-angle:before { content: "\f117"; }
+.flaticon-bar-chart:before { content: "\f118"; }
+.flaticon-usability:before { content: "\f119"; }
+.flaticon-smartphone-call:before { content: "\f11a"; }
+.flaticon-rocket:before { content: "\f11b"; }
+.flaticon-like:before { content: "\f11c"; }
+.flaticon-funnel-1:before { content: "\f11d"; }
+.flaticon-eye:before { content: "\f11e"; }
+.flaticon-pencil:before { content: "\f11f"; }
+.flaticon-trash-bin:before { content: "\f120"; }
+.flaticon-copy:before { content: "\f121"; }
+.flaticon-upload-1:before { content: "\f122"; }
+.flaticon-group-of-people:before { content: "\f123"; }
+.flaticon-right-arrow:before { content: "\f124"; }
+.flaticon-up-chevron:before { content: "\f125"; }
+    
+    $font-Flaticon-envelope: "\f100";
+    $font-Flaticon-padlock: "\f101";
+    $font-Flaticon-dashboard: "\f102";
+    $font-Flaticon-search: "\f103";
+    $font-Flaticon-stack-of-papers: "\f104";
+    $font-Flaticon-funnel: "\f105";
+    $font-Flaticon-stats: "\f106";
+    $font-Flaticon-information: "\f107";
+    $font-Flaticon-settings: "\f108";
+    $font-Flaticon-gift-card: "\f109";
+    $font-Flaticon-logout: "\f10a";
+    $font-Flaticon-notification: "\f10b";
+    $font-Flaticon-flags: "\f10c";
+    $font-Flaticon-email: "\f10d";
+    $font-Flaticon-open-mail: "\f10e";
+    $font-Flaticon-man-user: "\f10f";
+    $font-Flaticon-question: "\f110";
+    $font-Flaticon-right-down: "\f111";
+    $font-Flaticon-list: "\f112";
+    $font-Flaticon-facebook-message: "\f113";
+    $font-Flaticon-chat: "\f114";
+    $font-Flaticon-drop-down-arrow: "\f115";
+    $font-Flaticon-upload: "\f116";
+    $font-Flaticon-right-arrow-angle: "\f117";
+    $font-Flaticon-bar-chart: "\f118";
+    $font-Flaticon-usability: "\f119";
+    $font-Flaticon-smartphone-call: "\f11a";
+    $font-Flaticon-rocket: "\f11b";
+    $font-Flaticon-like: "\f11c";
+    $font-Flaticon-funnel-1: "\f11d";
+    $font-Flaticon-eye: "\f11e";
+    $font-Flaticon-pencil: "\f11f";
+    $font-Flaticon-trash-bin: "\f120";
+    $font-Flaticon-copy: "\f121";
+    $font-Flaticon-upload-1: "\f122";
+    $font-Flaticon-group-of-people: "\f123";
+    $font-Flaticon-right-arrow: "\f124";
+    $font-Flaticon-up-chevron: "\f125";

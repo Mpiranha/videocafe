@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.911" height="17.943" viewBox="0 0 27.911 17.943">
+  <g id="video-camera" transform="translate(0 -85.333)">
+    <g id="Group_104" data-name="Group 104" transform="translate(0 85.333)">
+      <g id="Group_103" data-name="Group 103" transform="translate(0 0)">
+        <path id="Path_67" data-name="Path 67" d="M27.439,87.475a1,1,0,0,0-.97-.044L19.936,90.7V88.323a2.99,2.99,0,0,0-2.99-2.99H2.99A2.99,2.99,0,0,0,0,88.323v11.962a2.99,2.99,0,0,0,2.99,2.99H16.946a2.99,2.99,0,0,0,2.99-2.99V97.911l6.532,3.272a1,1,0,0,0,1.442-.9V88.323A1,1,0,0,0,27.439,87.475Zm-9.5,12.81a1,1,0,0,1-1,1H2.99a1,1,0,0,1-1-1V88.323a1,1,0,0,1,1-1H16.946a1,1,0,0,1,1,1v11.962Zm7.975-1.613-5.981-2.99V92.927l5.981-2.99Z" transform="translate(0 -85.333)" fill="#e15fff"/>
+      </g>
+    </g>
+    <g id="Group_106" data-name="Group 106" transform="translate(5.981 90.317)">
+      <g id="Group_105" data-name="Group 105" transform="translate(0 0)">
+        <path id="Path_68" data-name="Path 68" d="M106.387,170.667a3.987,3.987,0,1,0,3.987,3.987A3.987,3.987,0,0,0,106.387,170.667Zm0,5.981a1.994,1.994,0,1,1,1.994-1.994A1.994,1.994,0,0,1,106.387,176.648Z" transform="translate(-102.4 -170.667)" fill="#e15fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

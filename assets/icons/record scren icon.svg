@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.736" height="25.277" viewBox="0 0 25.736 25.277">
+  <g id="record_scren_icon" data-name="record scren icon" transform="translate(0 -0.403)">
+    <g id="Group_107" data-name="Group 107" transform="translate(0 0.403)">
+      <path id="Path_69" data-name="Path 69" d="M0,10.973H2.758V3.621a.46.46,0,0,1,.46-.46H10.57V.4H3.217A3.222,3.222,0,0,0,0,3.621Z" transform="translate(0 -0.403)" fill="#e15fff"/>
+      <path id="Path_70" data-name="Path 70" d="M33.982.4H26.629V3.16h7.353a.46.46,0,0,1,.46.46v7.353H37.2V3.62A3.221,3.221,0,0,0,33.982.4Z" transform="translate(-11.463 -0.403)" fill="#e15fff"/>
+      <path id="Path_71" data-name="Path 71" d="M2.758,33.578V26.225H0v7.353a3.221,3.221,0,0,0,3.217,3.217H10.57V34.037H3.217A.46.46,0,0,1,2.758,33.578Z" transform="translate(0 -11.519)" fill="#e15fff"/>
+      <path id="Path_72" data-name="Path 72" d="M34.441,33.578a.46.46,0,0,1-.46.46H26.628V36.8h7.353A3.221,3.221,0,0,0,37.2,33.578V26.225H34.44v7.353Z" transform="translate(-11.463 -11.519)" fill="#e15fff"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="3.676" cy="3.676" r="3.676" transform="translate(9.192 8.962)" fill="#e15fff"/>
+    </g>
+  </g>
+</svg>

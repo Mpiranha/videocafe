@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="thick_box_icon" data-name="thick box icon" transform="translate(-405 -585)">
+    <g id="Rectangle_661" data-name="Rectangle 661" transform="translate(405 585)" fill="none" stroke="#d840e5" stroke-width="2">
+      <rect width="22" height="22" rx="4" stroke="none"/>
+      <rect x="1" y="1" width="20" height="20" rx="3" fill="none"/>
+    </g>
+    <path id="Path_207" data-name="Path 207" d="M4.772,7.928,0,3.157,1.542,1.615l3.23,3.157L9.543,0l1.542,1.542Z" transform="translate(410.457 592.035)" fill="#d840e5"/>
+  </g>
+</svg>

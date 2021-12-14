@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="12" viewBox="0 0 270 12">
+  <g id="Progress_Bar_3" data-name="Progress Bar 3" transform="translate(-320 -317.01)">
+    <rect id="Rectangle_634" data-name="Rectangle 634" width="270" height="8" rx="4" transform="translate(320 319.01)" fill="#f1f9ff"/>
+    <path id="Rectangle_635" data-name="Rectangle 635" d="M4,0H92a0,0,0,0,1,0,0V8a0,0,0,0,1,0,0H4A4,4,0,0,1,0,4V4A4,4,0,0,1,4,0Z" transform="translate(320 319.01)" fill="#d840e5"/>
+    <g id="Ellipse_263" data-name="Ellipse 263" transform="translate(406 317.01)" fill="#d840e5" stroke="#fff" stroke-width="2">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5" fill="none"/>
+    </g>
+    <circle id="Ellipse_264" data-name="Ellipse 264" cx="1.5" cy="1.5" r="1.5" transform="translate(497 321.01)" fill="#d840e5"/>
+    <circle id="Ellipse_262" data-name="Ellipse 262" cx="1.5" cy="1.5" r="1.5" transform="translate(584 321.01)" fill="#d840e5"/>
+  </g>
+</svg>

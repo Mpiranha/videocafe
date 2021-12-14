@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
+  <g id="audio_screen_on_screen_icon" data-name="audio/screen on screen icon" transform="translate(-1417 -400)">
+    <g id="sound" transform="translate(1446 416.959)">
+      <path id="Sound-2" data-name="Sound" d="M0,17.8V14.562A4.854,4.854,0,0,1,4.854,9.708h.421a13.309,13.309,0,0,0,4.5-.779L18.828,1.17A4.854,4.854,0,0,1,21.988,0h0a3.058,3.058,0,0,1,3.058,3.058V29.3a3.058,3.058,0,0,1-3.058,3.058h0a4.854,4.854,0,0,1-3.16-1.17L9.775,23.43a13.309,13.309,0,0,0-4.5-.779H4.854A4.854,4.854,0,0,1,0,17.8Z" transform="translate(0)" fill="#fff"/>
+    </g>
+    <path id="monitor" d="M557,128H491a11,11,0,0,0-11,11v44a11,11,0,0,0,11,11h16.5v11h-11a5.5,5.5,0,0,0,0,11h55a5.5,5.5,0,0,0,0-11h-11V194H557a11,11,0,0,0,11-11V139A11,11,0,0,0,557,128Zm-27.5,77h-11V194h11ZM557,183H491V139h66Z" transform="translate(937 272)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>
