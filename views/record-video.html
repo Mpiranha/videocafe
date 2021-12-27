@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Record Video</title>
+</head>
+
+<body>
+
+    <div class="flex-wrapper">
+        <div class="sidebar">
+            <nav class="nav flex-column nav-wrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                        <img class="sidebar-icon" src="../assets/icons/dash icon.svg" alt="">
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="views/record-video.html">
+                        <img class="sidebar-icon" src="../assets/icons/live icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Video
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="viewsrecord-screen.html">
+                        <img class="sidebar-icon" src="../assets/icons/record scren icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Screen
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-video">
+                        <img class="sidebar-icon" src="../assets/icons/video-camera.svg" alt="">
+                        <span class="nav-text">
+                            Videos
+                        </span>
+                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-video">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="upload-video.html">Upload Video</a>
+                        <a class="nav-link" href="all-video.html">All Videos</a>
+                        <a class="nav-link" href="import-video.html">Import Videos</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/projects.html">
+                        <img class="sidebar-icon" src="../assets/icons/project icon.svg" alt="">
+                        <span class="nav-text">
+                            Projects
+                        </span>
+                    </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-media">
+                        <img class="sidebar-icon" src="../assets/icons/media icon.svg" alt="">
+                        <span class="nav-text">
+                            Media
+                        </span>
+                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-media">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="free-music.html">Free Music</a>
+                        <a class="nav-link" href="stock-video.html">Stock Images</a>
+                        <a class="nav-link" href="text-speech.html">Text To Speech</a>
+                        <a class="nav-link" href="stock-video.html">Stock Video</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/email.html">
+                        <img class="sidebar-icon" src="../assets/icons/email icon.svg" alt="">
+                        <span class="nav-text">
+                            Emails
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/integrations.html">
+                        <img class="sidebar-icon" src="../assets/icons/integration icon.svg" alt="">
+                        <span class="nav-text">
+                            Integrations
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-settings">
+                        <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
+                        <span class="nav-text">
+                            Settings
+                        </span>
+                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-settings">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="player-settings.html">Player Settings</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
+                        <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
+                        <span class="nav-text">
+                            Agency
+                        </span>
+                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-agency">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="agency-reseller.html">Agency Reseller</a>
+                        <a class="nav-link" href="manage-client.html">Manage Client</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/help.html">
+                        <img class="sidebar-icon" src="../assets/icons/help icon.svg" alt="">
+                        <span class="nav-text">
+                            Help
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/bonuses.html">
+                        <img class="sidebar-icon" src="../assets/icons/bonus icon.svg" alt="">
+                        <span class="nav-text">
+                            Bonuses
+                        </span>
+                    </a>
+                </li>
+
+            </nav>
+            <div class="bottom-stat">
+                <canvas id="myChart" width="400" height="400"></canvas>
+                Usage 0.02GB/50GB <span>(0.04%)</span>
+            </div>
+
+        </div>
+        <section class="content">
+            <div class="content-head">
+                <nav class="nav nav-top">
+                    <a class="nav-link" href="video-git.html">
+                        <img class="icon-top" src="../assets/icons/video to gif.svg" alt="video to gif">
+                        Video to GIF
+                    </a>
+                    <a class="nav-link" href="analytics.html">
+                        <img class="icon-top" src="../assets/icons/analysis icon.svg" alt="analytics">
+                        Analytics</a>
+                    <a class="nav-link" href="teams.html">
+                        <img class="icon-top" src="../assets/icons/team icon.svg" alt="team">
+                        Teams
+                    </a>
+                    <a class="nav-link" href="record-screen.html">
+                        <img class="icon-top" src="../assets/icons/record scren icon.svg" alt="record screen">
+                        Record Screen
+                    </a>
+                    <a class="nav-link" href="go-live.html">
+                        <img class="icon-top" src="../assets/icons/live icon.svg" alt="go live">
+                        Go Live
+                    </a>
+                    <div class="nav-link dropdown">
+                        <button class="btn upload-dropdown dropdown-toggle" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Upload
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">Add Video</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown nav-link">
+                        <button class="btn notification-dropdown no-shadow" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="notification-icon" src="../assets/icons/notification bell.svg"
+                                alt="notification bell">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <div class="notification-inner">
+                                <div class="notification-head">
+                                    <img class="bell-icon" src="../assets/icons/notification bell.svg" alt="">
+                                    <h2 class="title">
+                                        Latest Changes
+                                    </h2>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-link" href="#">
+                        <div class="workspace-prev">
+                            <div class="dropdown">
+                                <div class="btn user-dropdown dropdown-toggle" type="button" id="triggerId"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="workspace-details">
+                                        Welcome <br>
+                                        @Dwaynejohnson
+                                    </div>
+                                    <img class="user-logo" src="../assets/icons/usage icon.svg" alt="Workspace Logo">
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="triggerId">
+                                    <div class="dropdown-top">
+                                        @Therockjohnson <br>
+                                        Dwaynejohnson@Gmail.Com
+                                    </div>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/my account icon.svg"
+                                            alt="">
+                                        My Account
+                                    </a>
+
+
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/billings icon.svg" alt="">
+                                        Billing
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/upgrade icon.svg" alt="">
+                                        Upgrade
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/log out icon.svg" alt="">
+                                        Logout
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!-- <nav class="nav nav-secondary">
+                    
+                  
+                </nav> -->
+
+
+            </div>
+            <div class="content-body">
+                <div class="container-fluid">
+                    <div class="page-heading">
+                        <img class="head-icon" src="../assets/icons/live icon.svg" alt="">
+                        Record Live
+                    </div>
+
+                    <div class="flex--content-wrapper mb-4">
+                        <div>
+                            <div class="navigation-box" data-state="wrapped">
+                                <button class="btn btn-fall-wrap">
+                                    <img src="../assets/icons/download thumbnail.svg" alt="">
+                                </button>
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-audio-video-tab" data-toggle="pill"
+                                            href="#pills-audio-video" role="tab" aria-controls="pills-audio-video"
+                                            aria-selected="true">
+                                            <img src="../assets/icons/audio-video icon.svg" alt="Audio/Video">
+                                            Audio/Video
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video"
+                                            role="tab" aria-controls="pills-video" aria-selected="false">
+                                            <img src="../assets/icons/video icon only.svg" alt="Video">
+                                            Video Only
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-audio-tab" data-toggle="pill" href="#pills-audio"
+                                            role="tab" aria-controls="pills-audio" aria-selected="false">
+                                            <img src="../assets/icons/audio only icon.svg" alt="Audio">
+                                            Audio Only
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-picture-tab" data-toggle="pill"
+                                            href="#pills-picture" role="tab" aria-controls="pills-audio"
+                                            aria-selected="false">
+                                            <img src="../assets/icons/picture in picture icon.svg"
+                                                alt="Picture in Picture">
+                                            Picture-In
+                                            -Picture
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="table-wrap" data-state="hidden">
+                                    <table class="table table-manual">
+                                        <thead>
+                                            <tr>
+                                                <th>Key</th>
+                                                <th>Actions</th>
+                                                <th>Descriptions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">X</td>
+                                                <td class="text-center">
+                                                    Toggle Record
+                                                </td>
+                                                <td>
+                                                    Start/Stop (Or Take Snapshot
+                                                    In Image-Only Mode)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">C</td>
+                                                <td class="text-center">
+                                                    Toggle
+                                                    Playback
+                                                </td>
+                                                <td>
+                                                    Start/Stop Playback
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">P</td>
+                                                <td class="text-center">
+                                                    Toggle
+                                                    Picture-
+                                                    In-
+                                                    Picture
+                                                </td>
+                                                <td>
+                                                    Enter/Exit Picture-In-Picture
+                                                    Mode (If Enabled)
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation-item-box">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-default" role="tabpanel"
+                                    aria-labelledby="pills-default-tab">
+                                    <div class="navigation-default">
+                                        <div class="bg-play-icon">
+                                            <h1 class="title">
+                                                How This Works?
+                                            </h1>
+
+                                            <div class="steps-list">
+                                                <div class="step-item">
+                                                    <div class="step-number">
+                                                        Step 1
+                                                    </div>
+                                                    <div class="step-item-main">
+                                                        <div class="step-title">
+                                                            Choose Options
+                                                        </div>
+                                                        <div class="step-content">
+                                                            Choose any one options from the left
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-item">
+                                                    <div class="step-number">
+                                                        Step 2
+                                                    </div>
+                                                    <div class="step-item-main">
+                                                        <div class="step-title">
+                                                            Click Record
+                                                        </div>
+                                                        <div class="step-content">
+                                                            Click on record button within the players to start the
+                                                            recording. if you
+                                                            are recoding it for the first time, you need to click in the
+                                                            center of the
+                                                            player. this will allow the brower to ask you permissions
+                                                            for allowing
+                                                            microphone and camera
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-item">
+                                                    <div class="step-number">
+                                                        Step 3
+                                                    </div>
+                                                    <div class="step-item-main">
+                                                        <div class="step-title">
+                                                            Stop Recording
+                                                        </div>
+                                                        <div class="step-content">
+                                                            Click on the stop button within the player to complete your
+                                                            recording
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-item">
+                                                    <div class="step-number">
+                                                        Step 4
+                                                    </div>
+                                                    <div class="step-item-main">
+                                                        <div class="step-title">
+                                                            Upload Video
+                                                        </div>
+                                                        <div class="step-content">
+                                                            Click on upload video to upload the recording to the
+                                                            videocafe server
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-audio-video" role="tabpanel"
+                                    aria-labelledby="pills-audio-video-tab">
+                                    <div class="navigation-audio-video">
+                                        <button class="btn btn-record no-shadow">
+                                            <img class="rec-icon" src="../assets/icons/audio-video icon.svg" alt="">
+                                        </button>
+                                        <div class="static-controls">
+                                            <button class="btn btn-vol">
+                                                <img src="../assets/icons/volume.svg" alt="">
+                                            </button>
+                                            <button class="btn btn-fs">
+                                                <img src="../assets/icons/full screen icon.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="custom-vid-player">
+                                        <div class="bottom-controls">
+                                            <div class="main-controls">
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/play on icon.svg" alt="">
+                                                </button>
+
+                                                <div class="vid-text-desc">
+                                                    00:00 / 02:00:00
+                                                </div>
+                                            </div>
+                                            <div class="fs-wrap">
+                                                <button class="btn no-shadow btn-fs-vid">
+                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-upload-vid">Upload</button>
+                                </div>
+                                <div class="tab-pane fade" id="pills-video" role="tabpanel"
+                                    aria-labelledby="pills-video-tab">
+
+                                    <div class="navigation-video">
+                                        <button class="btn btn-record no-shadow">
+                                            <img class="rec-icon" src="../assets/icons/video icon only.svg" alt="">
+                                        </button>
+                                        <div class="static-controls">
+
+                                            <button class="btn btn-fs ml-auto">
+                                                <img src="../assets/icons/full screen icon.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="custom-vid-player">
+                                        <div class="bottom-controls">
+                                            <div class="main-controls">
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/play on icon.svg" alt="">
+                                                </button>
+
+                                                <div class="vid-text-desc">
+                                                    00:00 / 02:00:00
+                                                </div>
+                                            </div>
+                                            <div class="fs-wrap">
+                                                <button class="btn no-shadow btn-fs-vid">
+                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-upload-vid">Upload</button>
+                                </div>
+                                <div class="tab-pane fade" id="pills-audio" role="tabpanel"
+                                    aria-labelledby="pills-audio-tab">
+                                    <div class="navigation-audio">
+                                        <button class="btn btn-record no-shadow">
+                                            <img class="rec-icon" src="../assets/icons/audio only icon.svg" alt="">
+                                        </button>
+                                        <div class="static-controls">
+                                            <button class="btn btn-vol">
+                                                <img src="../assets/icons/volume.svg" alt="">
+                                            </button>
+                                            <button class="btn btn-fs">
+                                                <img src="../assets/icons/full screen icon.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="custom-vid-player custom-aud-player">
+                                        <div class="bottom-controls">
+                                            <div class="main-controls">
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/play on icon.svg" alt="">
+                                                </button>
+
+                                                <div class="vid-text-desc">
+                                                    00:00 / 02:00:00
+                                                </div>
+                                            </div>
+                                            <div class="fs-wrap">
+                                                <button class="btn no-shadow btn-fs-vid">
+                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-upload-vid">Upload</button>
+                                </div>
+                                <div class="tab-pane fade" id="pills-picture" role="tabpanel"
+                                    aria-labelledby="pills-picture-tab">
+                                    <div class="navigation-pictures">
+                                        <button class="btn btn-record no-shadow">
+                                            <img class="rec-icon" src="../assets/icons/picture in picture icon.svg"
+                                                alt="">
+                                        </button>
+                                        <div class="static-controls">
+
+                                            <button class="btn btn-fs ml-auto">
+                                                <img src="../assets/icons/full screen icon.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="custom-vid-player">
+                                        <div class="bottom-controls">
+                                            <div class="main-controls">
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                </button>
+                                                <button class="btn no-shadow btn-stop">
+                                                    <img src="../assets/icons/play on icon.svg" alt="">
+                                                </button>
+
+                                                <div class="vid-text-desc">
+                                                    00:00 / 02:00:00
+                                                </div>
+                                            </div>
+                                            <div class="fs-wrap">
+                                                <button class="btn no-shadow btn-fs-vid">
+                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-upload-vid">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <div class="col-3">
+                            <div class="uploaded-box">
+                                <div class="media--box">
+                                    <video src="../assets/video/CB Start - ContentBurger.webm"></video>
+                                </div>
+                                <div class="media-desc">
+                                    <div class="title">
+                                        Screenrecording20210830at2am
+                                    </div>
+                                    <div class="desc">
+                                        Uploaded June 30, 2021 At 02:05 pm
+                                    </div>
+
+                                    <div class="box-actions">
+                                        <button class="btn btn-add-to no-shadow">
+                                            <img src="../assets/icons/add icon.svg" alt="">
+                                            Add to Category
+                                        </button>
+                                        <button class="btn btn-del no-shadow" data-toggle="modal"
+                                            data-target="#delete-modal">
+                                            <img src="../assets/icons/delete_4.svg" alt="">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="modal fade" id="delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
+                    <div class="title">Are You Sure?</div>
+                    <div class="desc">
+                        Are You Sure That You Want To Delete This Video
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button data-dismiss="modal" class="btn btn-cancel mr-5">
+                            Cancel
+                        </button>
+                        <button class="btn btn-submit">
+                            Yes, Delete
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/popper/popper.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+        integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
+        integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="../assets/js/custom/chart.js"></script>
+    <script src="../assets/js/custom/script.js"></script>
+
+</body>
+
+</html>

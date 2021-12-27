@@ -288,6 +288,19 @@ $(function () {
     });
 
 
+    $(".btn-fall-wrap").on('click', function () {
+
+        if ($(".navigation-box").attr("data-state") == "wrapped") {
+            $(".navigation-box").attr("data-state", "unwrapped");
+            $(".table-wrap").attr("data-state", "visible");
+            $(".btn-fall-wrap img").css("transform", "rotateZ(180deg)");
+        } else {
+            $(".navigation-box").attr("data-state", "wrapped");
+            $(".table-wrap").attr("data-state", "hidden");
+            $(".btn-fall-wrap img").css("transform", "rotateZ(0deg)");
+        }
+    });
+
 
 
 })

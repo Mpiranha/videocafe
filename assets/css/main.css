@@ -59,7 +59,7 @@
 
 .sign-up-inner .left-section {
     background-color: #2f0643;
-    width: 50%;
+    width: 45%;
     position: relative;
     background-image: url("../../assets/icons/login\ image.svg");
     background-repeat: no-repeat;
@@ -70,6 +70,18 @@
 
 }
 
+.left-section img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 91%;
+}
+
+.left-section svg path {
+    width: 100%;
+    height: 100%;
+}
+
 .left-section .title {
     color: #fff;
     font-size: 0.8rem;
@@ -78,13 +90,13 @@
 
 .sign-up-inner .right-section {
     background-color: #fff;
-    width: 50%;
+    width: 55%;
     border-radius: 0 1rem 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 3.1rem 3rem;
+    padding: 3.1rem 3rem 3rem 5rem;
 
 }
 
@@ -430,7 +442,7 @@
 }
 
 .welcome-wrap {
-    
+
     position: relative;
     height: 300px;
     margin-bottom: 2.5rem;
@@ -501,7 +513,7 @@
 
 .quick-nav .nav-item span {
     font-size: 0.7rem;
-} 
+}
 
 .dashboard-bottom {
     padding: 0 1.5rem;
@@ -668,4 +680,424 @@
     width: 1.2rem;
 }
 
+.page-heading {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 1.2rem 0;
+}
 
+.page-heading .head-icon {
+    width: 1.7rem;
+    margin-right: 0.2rem;
+}
+
+
+.flex--content-wrapper {
+    display: flex;
+}
+
+.navigation-box {
+    background-color: #570880;
+    margin-right: 2rem;
+    padding: 1.5rem 1.3rem;
+    border-radius: 0.4rem;
+    position: relative;
+    height: 136px;
+    width: 442px;
+}
+
+.navigation-box .btn-fall-wrap {
+    background-color: #9413e6;
+    position: absolute;
+    bottom: -15px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -15px;
+}
+
+.navigation-box .btn-fall-wrap img {
+    width: 0.9rem;
+    transition: all 1s;
+}
+
+.navigation-item-box {
+    flex-grow: 1;
+}
+
+.navigation-box .nav-pills .nav-link {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #9413e6;
+    color: #fff;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem 0.5rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+.navigation-box .nav-pills .nav-link.active {
+    background: linear-gradient(135deg, #8f3ae6, #d359fb);
+}
+
+.navigation-box .nav-pills .nav-link img {
+    width: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.navigation-box .nav-pills .nav-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.btn-upload-vid {
+    width: 250px;
+    font-size: 0.8rem;
+    color: #fff;
+    background: linear-gradient(to right, #7d32e1, #517be1);
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 1rem;
+    transition: background 5s;
+}
+
+.btn-upload-vid:hover {
+    background: linear-gradient(-90deg, #7d32e1, #517be1);
+}
+
+.navigation-default {
+    border-radius: 0.4rem;
+    background: linear-gradient(to right, #60098e, #8c11d9);
+}
+
+.bg-play-icon {
+    background-image: url(../icons/play\ one\ icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 7rem 0.5rem 1rem;
+    background-size: 4rem;
+}
+
+.navigation-default .title {
+    color: #fff;
+    font-size: 1rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.steps-list .step-item {
+    margin-bottom: 0.8rem;
+}
+
+.step-item .step-number {
+    color: #fff;
+    border-bottom: 2px solid #f33a40;
+    display: inline;
+    font-size: 0.8rem;
+}
+
+.step-item-main {
+    padding-left: 3rem;
+    color: #fff;
+}
+
+.step-item-main .step-title {
+    font-size: 0.9rem;
+}
+
+.step-item-main .step-content {
+    font-size: 0.7rem;
+}
+
+.navigation-box[data-state="wrapped"] {
+    animation: stretch-in 0.5s linear 1 forwards;
+}
+
+.navigation-box[data-state="unwrapped"] {
+    animation: stretch-out 0.5s linear 1 forwards;
+}
+
+.table-wrap {
+    padding: 0 2rem;
+}
+
+.table-wrap[data-state="hidden"] {
+    display: none;
+}
+
+.table-wrap[data-state="visible"] {
+    display: block;
+}
+
+
+
+
+.table-manual {
+    margin-top: 3.5rem;
+}
+
+.table-manual thead tr {
+    background-color: #9413e6;
+}
+
+.table-manual thead tr th,
+.table-manual tbody tr td {
+    border: none !important;
+    padding: 0.35rem 0.75rem;
+}
+
+.table-manual tbody td {
+    font-size: 0.8rem;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.table-manual thead tr th {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.navigation-audio-video,
+.navigation-video,
+.navigation-audio,
+.navigation-pictures {
+    height: 400px;
+    background-color: #6e5ef1;
+    border-radius: 0.4rem;
+}
+
+.navigation-audio-video,
+.navigation-video,
+.navigation-audio,
+.navigation-pictures {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.btn-record {
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-record .rec-icon {
+    width: 4.6rem;
+    opacity: 0.8;
+}
+
+.static-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem
+}
+
+.static-controls .btn {
+    background-color: transparent;
+    padding: 0;
+}
+
+.static-controls .btn img {
+    width: 1.3rem;
+}
+
+.custom-vid-player {
+    height: 400px;
+    position: relative;
+    background-color: #517be1;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.custom-vid-player .bottom-controls {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #2c0640;
+    border-radius: 0 0 0.3rem 0.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.bottom-controls .btn {
+    background-color: transparent;
+    padding: 0;
+}
+
+.bottom-controls .btn img {
+    width: 1.1rem;
+}
+
+.bottom-controls .main-controls {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-controls .main-controls .btn {
+    margin-right: 0.5rem;
+}
+
+.bottom-controls .vid-text-desc {
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.uploaded-box {
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploaded-box .media--box {
+    background-color: #9413e6;
+    height: 150px;
+    padding: 0.9rem;
+}
+
+.media--box video {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.uploaded-box .media-desc {
+    background-color: #570880;
+    flex-grow: 1;
+    color: #fff;
+    padding: 2rem 1rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-desc .title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.media-desc .desc {
+    font-size: 0.7rem;
+}
+
+.media-desc .box-actions {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.media-desc .box-actions .btn {
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.7rem;
+    flex-grow: 1;
+}
+
+.media-desc .box-actions .btn img {
+    width: 0.8rem;
+    margin-right: 0.3rem;
+}
+
+#delete-modal .modal-content {
+    background-color: #d840e5;
+    min-height: 300px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete-modal .modal-content .warning-icon {
+    width: 2.8rem;
+    margin-bottom: 0.7rem;
+}
+
+#delete-modal .modal-content .title {
+    font-weight: bolder;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+#delete-modal .modal-content .desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.3rem;
+}
+
+.modal-content .btn-cancel {
+    font-size: 0.7rem;
+    background-color: #c39ddb;
+    color: #fff;
+    padding: 0.5rem 2rem;
+}
+
+.modal-content .btn-submit {
+    background: linear-gradient(to right, #7d32e1, #517be1);
+    font-size: 0.7rem;
+    color: #fff;
+    padding: 0.5rem 2rem;
+}
+
+.navigation-audio .static-controls {
+    background: linear-gradient(to right, #a239bb, #ac19a6);
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.custom-aud-player {
+    background-color: #570880;
+}
+
+@keyframes stretch-out {
+    0% {
+        height: 136px;
+    }
+
+    25% {
+        height: 415px;
+    }
+
+    50% {
+        height: 400px;
+    }
+
+    75% {
+        height: 430px;
+    }
+
+    100% {
+        height: 390px;
+    }
+}
+
+@keyframes stretch-in {
+    0% {
+        height: 415px;
+    }
+
+    25% {
+        height: 390px;
+    }
+
+    100% {
+        height: 136px;
+    }
+}
