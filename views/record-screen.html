@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Record Video</title>
+    <title>Record Screen</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="record-video.html">
+                    <a class="nav-link" href="record-video.html">
                         <img class="sidebar-icon" src="../assets/icons/live icon.svg" alt="">
                         <span class="nav-text">
                             Record Video
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="record-screen.html">
+                    <a class="nav-link active" href="record-screen.html">
                         <img class="sidebar-icon" src="../assets/icons/record scren icon.svg" alt="">
                         <span class="nav-text">
                             Record Screen
@@ -309,37 +309,22 @@
                                 </button>
                                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-audio-video-tab" data-toggle="pill"
-                                            href="#pills-audio-video" role="tab" aria-controls="pills-audio-video"
+                                        <a class="nav-link" id="pills-screen-only-tab" data-toggle="pill"
+                                            href="#pills-screen-only" role="tab" aria-controls="pills-screen-only"
                                             aria-selected="true">
-                                            <img src="../assets/icons/audio-video icon.svg" alt="Audio/Video">
-                                            Audio/Video
+                                            <img src="../assets/icons/screen only icon.svg" alt="Audio/Video">
+                                            Screen Only
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video"
-                                            role="tab" aria-controls="pills-video" aria-selected="false">
-                                            <img src="../assets/icons/video icon only.svg" alt="Video">
-                                            Video Only
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="pills-audio-tab" data-toggle="pill" href="#pills-audio"
-                                            role="tab" aria-controls="pills-audio" aria-selected="false">
-                                            <img src="../assets/icons/audio only icon.svg" alt="Audio">
-                                            Audio Only
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="pills-picture-tab" data-toggle="pill"
-                                            href="#pills-picture" role="tab" aria-controls="pills-audio"
+                                        <a class="nav-link" id="pills-audio-screen-tab" data-toggle="pill"
+                                            href="#pills-audio-screen" role="tab" aria-controls="pills-audio-screen"
                                             aria-selected="false">
-                                            <img src="../assets/icons/picture in picture icon.svg"
-                                                alt="Picture in Picture">
-                                            Picture-In
-                                            -Picture
+                                            <img src="../assets/icons/audio-screen.svg" alt="Video">
+                                            Audio/Screen
                                         </a>
                                     </li>
+
 
                                 </ul>
                                 <div class="table-wrap" data-state="hidden">
@@ -359,7 +344,6 @@
                                                 </td>
                                                 <td>
                                                     Start/Stop (Or Take Snapshot
-                                                    In Image-Only Mode)
                                                 </td>
                                             </tr>
                                             <tr>
@@ -372,19 +356,7 @@
                                                     Start/Stop Playback
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td scope="row">P</td>
-                                                <td class="text-center">
-                                                    Toggle
-                                                    Picture-
-                                                    In-
-                                                    Picture
-                                                </td>
-                                                <td>
-                                                    Enter/Exit Picture-In-Picture
-                                                    Mode (If Enabled)
-                                                </td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -465,20 +437,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="pills-audio-video" role="tabpanel"
-                                    aria-labelledby="pills-audio-video-tab">
-                                    <div class="navigation-audio-video">
+                                <div class="tab-pane fade" id="pills-screen-only" role="tabpanel"
+                                    aria-labelledby="pills-screen-only-tab">
+                                    <div class="navigation-screen-only">
                                         <button class="btn btn-record no-shadow">
-                                            <img class="rec-icon" src="../assets/icons/audio-video icon.svg" alt="">
+                                            <img class="rec-icon" src="../assets/icons/screen only icon.svg" alt="">
                                         </button>
-                                        <div class="static-controls">
-                                            <button class="btn btn-vol">
-                                                <img src="../assets/icons/volume.svg" alt="">
-                                            </button>
-                                            <button class="btn btn-fs">
-                                                <img src="../assets/icons/full screen icon.svg" alt="">
-                                            </button>
-                                        </div>
+
                                     </div>
                                     <div class="custom-vid-player">
                                         <div class="bottom-controls">
@@ -507,102 +472,15 @@
 
                                     <button class="btn btn-upload-vid">Upload</button>
                                 </div>
-                                <div class="tab-pane fade" id="pills-video" role="tabpanel"
-                                    aria-labelledby="pills-video-tab">
+                                <div class="tab-pane fade" id="pills-audio-screen" role="tabpanel"
+                                    aria-labelledby="pills-audio-screen-tab">
 
-                                    <div class="navigation-video">
-                                        <button class="btn btn-record no-shadow">
-                                            <img class="rec-icon" src="../assets/icons/video icon only.svg" alt="">
-                                        </button>
-                                        <div class="static-controls">
-
-                                            <button class="btn btn-fs ml-auto">
-                                                <img src="../assets/icons/full screen icon.svg" alt="">
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="custom-vid-player">
-                                        <div class="bottom-controls">
-                                            <div class="main-controls">
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
-                                                </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
-                                                </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/play on icon.svg" alt="">
-                                                </button>
-
-                                                <div class="vid-text-desc">
-                                                    00:00 / 02:00:00
-                                                </div>
-                                            </div>
-                                            <div class="fs-wrap">
-                                                <button class="btn no-shadow btn-fs-vid">
-                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn-upload-vid">Upload</button>
-                                </div>
-                                <div class="tab-pane fade" id="pills-audio" role="tabpanel"
-                                    aria-labelledby="pills-audio-tab">
-                                    <div class="navigation-audio">
-                                        <button class="btn btn-record no-shadow">
-                                            <img class="rec-icon" src="../assets/icons/audio only icon.svg" alt="">
-                                        </button>
-                                        <div class="static-controls">
-                                            <button class="btn btn-vol">
-                                                <img src="../assets/icons/volume.svg" alt="">
-                                            </button>
-                                            <button class="btn btn-fs">
-                                                <img src="../assets/icons/full screen icon.svg" alt="">
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="custom-vid-player custom-aud-player">
-                                        <div class="bottom-controls">
-                                            <div class="main-controls">
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
-                                                </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
-                                                </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/play on icon.svg" alt="">
-                                                </button>
-
-                                                <div class="vid-text-desc">
-                                                    00:00 / 02:00:00
-                                                </div>
-                                            </div>
-                                            <div class="fs-wrap">
-                                                <button class="btn no-shadow btn-fs-vid">
-                                                    <img src="../assets/icons/full screen icon.svg" alt="fullscreen">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn-upload-vid">Upload</button>
-                                </div>
-                                <div class="tab-pane fade" id="pills-picture" role="tabpanel"
-                                    aria-labelledby="pills-picture-tab">
-                                    <div class="navigation-pictures">
-                                        <button class="btn btn-record no-shadow">
-                                            <img class="rec-icon" src="../assets/icons/picture in picture icon.svg"
+                                    <div class="navigation-audio-screen">
+                                        <button data-toggle="modal" data-target="#screen-select-modal" class="btn btn-record no-shadow">
+                                            <img class="rec-icon" src="../assets/icons/audio-screen on screen icon.svg"
                                                 alt="">
                                         </button>
-                                        <div class="static-controls">
 
-                                            <button class="btn btn-fs ml-auto">
-                                                <img src="../assets/icons/full screen icon.svg" alt="">
-                                            </button>
-                                        </div>
                                     </div>
                                     <div class="custom-vid-player">
                                         <div class="bottom-controls">
@@ -631,6 +509,7 @@
 
                                     <button class="btn btn-upload-vid">Upload</button>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -690,6 +569,84 @@
                             Yes, Delete
                         </button>
                     </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="screen-select-modal"  role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button class="btn btn-close-modal no-shadow" data-dismiss="modal">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                    <div class="header">
+                        <h1 class="title"> Share Your Screen</h1>
+                        <h6 class="title-desc"> Videocafe App Wants To Share The Content Of Your Screen. Choose What
+                            Your
+                            Want To Share</h6>
+                    </div>
+
+                    <ul class="nav nav-pills nav-fill nav-tab-wrap nav-justified" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="basic-settings-tab" data-toggle="pill" href="#basic-settings"
+                                role="tab" aria-controls="basic-settings" aria-selected="true">
+                                Your Entire Screen
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="team-member-tab" data-toggle="pill" href="#team-member" role="tab"
+                                aria-controls="team-member" aria-selected="false">
+                                Application Window
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-social-tab" data-toggle="pill" href="#pills-social" role="tab"
+                                aria-controls="pills-social" aria-selected="false">
+                                Microsoft Edge Tab
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content mb-3" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="basic-settings" role="tabpanel"
+                            aria-labelledby="basic-settings-tab">
+                            <div class="tab-inner">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="team-member" role="tabpanel" aria-labelledby="team-member-tab">
+                            <div class="tab-inner">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-social" role="tabpanel" aria-labelledby="pills-social-tab">
+                            <div class="tab-inner">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                                <img class="screen-prev" src="../assets/images/Path 1270.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-modal no-shadow mr-3">
+                            Share 
+                        </button>
+                        <button data-dismiss="modal" class="btn btn-modal no-shadow">
+                            Cancel
+                        </button>
+                    </div>
+
 
                 </div>
             </div>

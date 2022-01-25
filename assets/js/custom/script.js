@@ -301,6 +301,10 @@ $(function () {
         }
     });
 
+    $(".vc-btn-add-project").on("click", function() {
+        $( $(this).attr("data-target") ).toggleClass("show");
+    });
+
 
 
 })
