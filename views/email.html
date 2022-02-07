@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Free Music</title>
+    <title>Emails</title>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="collapse" role="button" href="#collapse-media">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-media">
                         <img class="sidebar-icon" src="../assets/icons/media icon.svg" alt="">
                         <span class="nav-text">
                             Media
@@ -76,14 +76,14 @@
                 </li>
                 <li class="collapse" id="collapse-media">
                     <nav class="nav nav-media flex-column">
-                        <a class="nav-link active" href="free-music.html">Free Music</a>
-                        <a class="nav-link" href="stock-image.html">Stock Images</a>
+                        <a class="nav-link" href="free-music.html">Free Music</a>
+                        <a class="nav-link" href="stock-video.html">Stock Images</a>
                         <a class="nav-link" href="text-speech.html">Text To Speech</a>
                         <a class="nav-link" href="stock-video.html">Stock Video</a>
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="email.html">
+                    <a class="nav-link active" href="email.html">
                         <img class="sidebar-icon" src="../assets/icons/email icon.svg" alt="">
                         <span class="nav-text">
                             Emails
@@ -296,207 +296,68 @@
             </div>
             <div class="content-body">
                 <div class="container-fluid">
-                    <div class="d-flex flex-column my-5">
-                        <div class="page-heading py-0 mb-1">
-                            <img class="head-icon" src="../assets/icons/live icon.svg" alt="">
-                            Find The Perfect Background Music For Video
+                    <div class="page-heading">
+                        <img class="head-icon" src="../assets/icons/live icon.svg" alt="">
+                        Emails
+                    </div>
+
+
+                    <div class="email-header purple-header">
+                        <div class="primary-section">
+                            <div class="d-flex align-items-center">
+                                <div class="label">Select Video</div>
+                                <select id="my-select" class="form-control vc-form-input select-vid-name-input" name="">
+                                    <option>Select Video Name</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="page-desc">
-                            Music Sets The Tone Of Videos. Rhythms Make Videos Much <br />
-                            More Appealing, Download And Take Videos To The Next Level
+
+                        <div class="actions-wrap">
+                            <button class="btn btn-modal btn-email-action mr-3">
+                                <img src="../assets/icons/download.svg" alt="download icon">
+                                Selected Campaign
+                            </button>
+                            <button class="btn btn-modal btn-email-action mr-5">
+                                <img src="../assets/icons/download.svg" alt="download icon">
+                                All Campaign
+                            </button>
+
+                            <div class="alert-contact">
+                                <img src="../assets/icons/exclamation_cr.svg" alt="">
+                                Contact Found
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <table class="table table-email">
+                        <thead>
+                            <tr>
+                                <th>Video Name</th>
+                                <th>Emails</th>
+                                <th>Name</th>
+                                <th>Collected At</th>
+                                <th>Sync to</th>
+                                <th>IP Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Shield01-05,20210802</td>
+                                <td>Nick Fury@Shaft.Com</td>
+                                <td>Nick Fury</td>
+                                <td>Askgoogleai</td>
+                                <td>Howwouldiknow</td>
+                                <td>10:222456442Rj22</td>
+                            </tr>
 
-                        <div class="col-4">
-                            <div class="audio-player-container">
-
-                                <audio class="audio-file">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/ogg">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <!-- swaps with pause icon -->
-                                <button class="btn no-shadow play-icon">
-                                    <img class="play-img" src="../assets/icons/play one icon.svg" alt="">
-                                </button>
-
-                                <div>
-                                    <div class="audio-name">
-                                        1940_S_Slow Dance_Sting
-                                        Mp3
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="time-icon" src="../assets/icons/time.svg" alt="">
-                                        <span class="current-time">00:00:00</span>
-                                    </div>
-                                </div>
-
-                                <a class="download-link" href="../assets/audio/Ajebo-Hustlers-Ft.-Omah-Lay-Pronto.mp3"
-                                    download>
-                                    <img src="../assets/icons/download.svg" alt="download icon">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="audio-player-container">
-
-                                <audio class="audio-file">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/ogg">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <!-- swaps with pause icon -->
-                                <button class="btn no-shadow play-icon">
-                                    <img class="play-img" src="../assets/icons/play one icon.svg" alt="">
-                                </button>
-
-                                <div>
-                                    <div class="audio-name">
-                                        1940_S_Slow Dance_Sting
-                                        Mp3
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="time-icon" src="../assets/icons/time.svg" alt="">
-                                        <span class="current-time">00:00:00</span>
-                                    </div>
-                                </div>
-
-                                <a class="download-link" href="../assets/audio/Ajebo-Hustlers-Ft.-Omah-Lay-Pronto.mp3"
-                                    download>
-                                    <img src="../assets/icons/download.svg" alt="download icon">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="audio-player-container">
-
-                                <audio class="audio-file">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/ogg">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <!-- swaps with pause icon -->
-                                <button class="btn no-shadow play-icon">
-                                    <img class="play-img" src="../assets/icons/play one icon.svg" alt="">
-                                </button>
-
-                                <div>
-                                    <div class="audio-name">
-                                        1940_S_Slow Dance_Sting
-                                        Mp3
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="time-icon" src="../assets/icons/time.svg" alt="">
-                                        <span class="current-time">00:00:00</span>
-                                    </div>
-                                </div>
-
-                                <a class="download-link" href="../assets/audio/Ajebo-Hustlers-Ft.-Omah-Lay-Pronto.mp3"
-                                    download>
-                                    <img src="../assets/icons/download.svg" alt="download icon">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="audio-player-container">
-
-                                <audio class="audio-file">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/ogg">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <!-- swaps with pause icon -->
-                                <button class="btn no-shadow play-icon">
-                                    <img class="play-img" src="../assets/icons/play one icon.svg" alt="">
-                                </button>
-
-                                <div>
-                                    <div class="audio-name">
-                                        1940_S_Slow Dance_Sting
-                                        Mp3
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="time-icon" src="../assets/icons/time.svg" alt="">
-                                        <span class="current-time">00:00:00</span>
-                                    </div>
-                                </div>
-
-                                <a class="download-link" href="../assets/audio/Ajebo-Hustlers-Ft.-Omah-Lay-Pronto.mp3"
-                                    download>
-                                    <img src="../assets/icons/download.svg" alt="download icon">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="audio-player-container">
-
-                                <audio class="audio-file">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/ogg">
-                                    <source src="../assets/audio/Ed-Sheeran-Photograph-via-Naijafinix.com_.mp3"
-                                        type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <!-- swaps with pause icon -->
-                                <button class="btn no-shadow play-icon">
-                                    <img class="play-img" src="../assets/icons/play one icon.svg" alt="">
-                                </button>
-
-                                <div>
-                                    <div class="audio-name">
-                                        1940_S_Slow Dance_Sting
-                                        Mp3
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="time-icon" src="../assets/icons/time.svg" alt="">
-                                        <span class="current-time">00:00:00</span>
-                                    </div>
-                                </div>
-
-                                <a class="download-link" href="../assets/audio/Ajebo-Hustlers-Ft.-Omah-Lay-Pronto.mp3"
-                                    download>
-                                    <img src="../assets/icons/download.svg" alt="download icon">
-                                </a>
-
-                            </div>
-                        </div>
+                        </tbody>
+                    </table>
 
 
-
-
-
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination pagination-bottom">
-                              
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                               
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
             </div>
 
         </section>
-
-
 
 
     </div>
@@ -513,9 +374,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
     <script src="../assets/js/custom/chart.js"></script>
-
     <script src="../assets/js/custom/script.js"></script>
-    <script src="../assets/js/select.js"></script>
 
 </body>
 

@@ -19,7 +19,7 @@ $(function () {
         allAudioEls.each(function () {
             var a = $(this).get(0);
             a.pause();
-            $(this).siblings().find(".play-img").attr("src", "../assets/icons/play_cr.svg");
+            $(this).siblings().find(".play-img").attr("src", "../assets/icons/play one icon.svg");
         });
     }
 
@@ -43,12 +43,12 @@ $(function () {
         playIcon.on('click', function () {
             if (audioFile.get(0).paused) {
                 pauseAllAudio();
-                $(this).children().attr('src', '../assets/icons/play time.svg');
+                $(this).children().attr('src', '../assets/icons/time.svg');
                 requestAnimationFrame(whilePlaying);
                 audioFile.trigger('play');
 
             } else {
-                $(this).children().attr('src', '../assets/icons/play_cr.svg');
+                $(this).children().attr('src', '../assets/icons/play one icon.svg');
                 cancelAnimationFrame(raf);
                 audioFile.trigger('pause');
             }
@@ -97,7 +97,7 @@ $(function () {
             currentTimeContainer.get(0).textContent = calculateTime(Math.floor(audioFile.get(0).currentTime));
 
             if (audioFile.get(0).currentTime === audioFile.get(0).duration) {
-                $(this).children().attr('src', '../assets/icons/play_cr.svg');
+                $(this).children().attr('src', '../assets/icons/play one icon.svg');
                 audioFile.get(0).currentTime = 0;
                 raf = null;
                 audioFile.trigger('pause');
@@ -162,7 +162,7 @@ $(function () {
             }
         }
 
-        var fullscreen = $('.full-screen').get(0);
+        var fullscreen = $(this).find('.full-screen').get(0);
 
         var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
 
@@ -192,10 +192,10 @@ $(function () {
             if (type == 'playpause') {
                 if (video.paused || video.ended) {
                     playpause.setAttribute('data-state', 'play');
-                    playpauseImage.src = "../assets/icons/play_sq.svg";
+                    playpauseImage.src = "../assets/icons/play one icon.svg";
                 } else {
                     playpause.setAttribute('data-state', 'pause');
-                    playpauseImage.src = "../assets/icons/play time.svg"
+                    playpauseImage.src = "../assets/icons/time.svg"
                 }
             }
             // Mute button
@@ -225,6 +225,10 @@ $(function () {
         });
 
         video.offsetParent.addEventListener("mouseout", function () {
+            if (video.paused) {
+                return;
+
+            }
             videoControls.get(0).setAttribute('data-state', 'hidden');
         });
 
@@ -301,8 +305,40 @@ $(function () {
         }
     });
 
-    $(".vc-btn-add-project").on("click", function() {
-        $( $(this).attr("data-target") ).toggleClass("show");
+    $(".vc-btn-add-project").on("click", function () {
+        $($(this).attr("data-target")).toggleClass("show");
+    });
+
+    $("[data-toggle='toggle-content']").each(function () {
+        $(this).on("click", function () {
+            if ($(this).get()[0].checked) {
+                $($(this).attr("data-target")).css("display", "block");
+            } else {
+                $($(this).attr("data-target")).css("display", "none");
+            }
+        });
+
+        if ($(this).get()[0].checked) {
+            $($(this).attr("data-target")).css("display", "block");
+        }
+    });
+
+
+
+    $("#play-color-input").on("change", function () {
+        $(".play-icons").css("color", $(this).val());
+    });
+
+    $(".pagination-custom .btn-left").on("click", function () {
+        if ($("#cur-page").get()[0].innerText > 1) {
+            $("#cur-page").get()[0].innerText = Number($("#cur-page").get()[0].innerText) - 1;
+        }
+    });
+
+    $(".pagination-custom .btn-right").on("click", function () {
+        if ($("#cur-page").get()[0].innerText < $("#total-page").get()[0].innerText) {
+            $("#cur-page").get()[0].innerText = Number($("#cur-page").get()[0].innerText) + 1;
+        }
     });
 
 
