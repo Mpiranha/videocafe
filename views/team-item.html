@@ -295,240 +295,199 @@
 
             </div>
             <div class="content-body">
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-between align-items-center my-5">
-                        <div class="page-heading">
-                            <img class="head-icon" src="../assets/icons/live icon.svg" alt="">
-                            Teams
-                        </div>
+                <div class="container-fluid pt-3">
+                    <a class="nav-link nav-backto" href="teams.html">
+                        < Back to Teams </a> 
+                    <div class="flex--content-wrapper">
+                            <div class="team-item-main">
 
-                        <div class="team-stat-wrap">
-                            <div class="team-stat-box">
-                                <div class="value">
-                                    2
-                                </div>
-                                <div class="box-title">
-                                    Total Teams
-                                </div>
-                            </div>
-                            <div class="team-stat-box">
-                                <div class="value">
-                                    0
-                                </div>
-                                <div class="box-title">
-                                    Total Members
-                                </div>
-                            </div>
-                            <div class="team-stat-box">
-                                <div class="value">
-                                    0
-                                </div>
-                                <div class="box-title">
-                                    Total Invited Teams
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="nav nav-pills nav-team mb-5" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview"
-                                role="tab" aria-controls="pills-overview" aria-selected="true">
-                                <img src="../assets/icons/your teams.svg" alt="">
-                                Your Team
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-engagement-nav" data-toggle="pill" href="#pills-engagement"
-                                role="tab" aria-controls="pills-video" aria-selected="false">
-                                <img src="../assets/icons/invited teams.svg" alt="">
-                                Invited Team
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-overview" role="tabpanel"
-                            aria-labelledby="pills-default-tab">
-
-
-
-                            <div class="invited-team-wrap">
-                                <div class="title">
-                                    Your Team
-                                </div>
-
-                                <div class="content-semi-head mb-5">
-                                    <div class="w-100 d-flex justify-content-between">
-
-                                        <div class="sc-market-select">
-                                            <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
-                                            <select>
-                                                <option value="0">Sort by date</option>
-                                                <option value="1">Sort by title</option>
-                                                <option value="2">Yesterday</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="custom-search-form mr-3">
-                                            <input class="form-control no-shadow" type="text" value=""
-                                                placeholder="Search videos and collections">
-                                            <button class="btn no-shadow btn-search">
-                                                <img src="../assets/icons/search icon.svg" alt="search icon">
-                                            </button>
-                                        </div>
-
-
-
-
+                                <div class="team-details">
+                                    <div class="letter-icon">
+                                        H
                                     </div>
-
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="team-member-box">
-                                            <div>
-                                                <div class="member-count">
-                                                    0 Member
-                                                </div>
-                                            </div>
-                                            <div class="letter-icon">
-                                                T
-                                            </div>
-                                            <div class="team-name">
-                                                Titan
-                                            </div>
-                                            <div class="team-created mb-3">
-                                                July 23 2021
-                                            </div>
-
-                                            <div class="d-flex justify-content-end">
-                                                <a class="btn btn-team-box" href="team-item.html">
-                                                    Go To Team
-                                                </a>
-                                            </div>
+                                    <div class="team-name-wrap">
+                                        <div class="team-title">
+                                            Heats
+                                        </div>
+                                        <div class="team-desc">
+                                            Maimi Heats
                                         </div>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="team-member-box">
-                                            <div>
-                                                <div class="member-count">
-                                                    0 Member
-                                                </div>
-                                            </div>
-                                            <div class="letter-icon">
-                                                H
-                                            </div>
-                                            <div class="team-name">
-                                                Titan
-                                            </div>
-                                            <div class="team-created mb-3">
-                                                July 23 2021
-                                            </div>
+                                    <div class="team-privacy">
 
-                                            <div class="d-flex justify-content-end">
-                                                <a class="btn btn-team-box" href="team-item.html">
-                                                    Go To Team
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="team-member-box team-create" data-toggle="modal" data-target="#swap-modal">
-                                            <img class="team-add-icon" src="../assets/icons/add icon.svg"
-                                                alt=" add icon">
-                                            <div class="desc">
-                                                Create New Team
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <div class="vc-input-wrap mr-3">
-                                            <span class="label">View</span>
-                                            <input min="0" value="5" class="form-control no-shadow" type="number"
-                                                size="4">
-                                        </div>
-                                    </div>
-
-                                    <div class="pagination-custom">
-                                        <button class="btn btn-left no-shadow">
-                                            < </button> <div class="page-desc">
-                                                <span id="cur-page">1</span>
-                                                of
-                                                <span id="total-page">2</span>
-                                    </div>
-                                    <button class="btn btn-right no-shadow">></button>
                                 </div>
                             </div>
 
+                            <div class="other-teams-wrap">
 
-                        </div>
-
-
-
-
-                    </div>
-                    <div class="tab-pane fade" id="pills-engagement" role="tabpanel"
-                        aria-labelledby="pills-engagement-tab">
-
-
-
-
-
-
-                    </div>
+                            </div>
 
                 </div>
 
+                <ul class="nav nav-pills nav-team mb-5" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview"
+                            role="tab" aria-controls="pills-overview" aria-selected="true">
+                            <img src="../assets/icons/your teams.svg" alt="">
+                            Your Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-engagement-nav" data-toggle="pill" href="#pills-engagement"
+                            role="tab" aria-controls="pills-video" aria-selected="false">
+                            <img src="../assets/icons/invited teams.svg" alt="">
+                            Invited Team
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-overview" role="tabpanel"
+                        aria-labelledby="pills-default-tab">
 
 
+
+                        <div class="invited-team-wrap">
+                            <div class="title">
+                                Your Team
+                            </div>
+
+                            <div class="content-semi-head mb-5">
+                                <div class="w-100 d-flex justify-content-between">
+
+                                    <div class="sc-market-select">
+                                        <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
+                                        <select>
+                                            <option value="0">Sort by date</option>
+                                            <option value="1">Sort by title</option>
+                                            <option value="2">Yesterday</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="custom-search-form mr-3">
+                                        <input class="form-control no-shadow" type="text" value=""
+                                            placeholder="Search videos and collections">
+                                        <button class="btn no-shadow btn-search">
+                                            <img src="../assets/icons/search icon.svg" alt="search icon">
+                                        </button>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="team-member-box">
+                                        <div>
+                                            <div class="member-count">
+                                                0 Member
+                                            </div>
+                                        </div>
+                                        <div class="letter-icon">
+                                            T
+                                        </div>
+                                        <div class="team-name">
+                                            Titan
+                                        </div>
+                                        <div class="team-created mb-3">
+                                            July 23 2021
+                                        </div>
+
+                                        <div class="d-flex justify-content-end">
+                                            <a class="btn btn-team-box" href="team-item.html">
+                                                Go To Team
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="team-member-box">
+                                        <div>
+                                            <div class="member-count">
+                                                0 Member
+                                            </div>
+                                        </div>
+                                        <div class="letter-icon">
+                                            H
+                                        </div>
+                                        <div class="team-name">
+                                            Titan
+                                        </div>
+                                        <div class="team-created mb-3">
+                                            July 23 2021
+                                        </div>
+
+                                        <div class="d-flex justify-content-end">
+                                            <a class="btn btn-team-box" href="team-item.html">
+                                                Go To Team
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="team-member-box team-create" data-toggle="modal"
+                                        data-target="#swap-modal">
+                                        <img class="team-add-icon" src="../assets/icons/add icon.svg" alt=" add icon">
+                                        <div class="desc">
+                                            Create New Team
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="vc-input-wrap mr-3">
+                                        <span class="label">View</span>
+                                        <input min="0" value="5" class="form-control no-shadow" type="number" size="4">
+                                    </div>
+                                </div>
+
+                                <div class="pagination-custom">
+                                    <button class="btn btn-left no-shadow">
+                                        < </button> <div class="page-desc">
+                                            <span id="cur-page">1</span>
+                                            of
+                                            <span id="total-page">2</span>
+                                </div>
+                                <button class="btn btn-right no-shadow">></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-engagement" role="tabpanel" aria-labelledby="pills-engagement-tab">
+
+
+
+
+
+
+                </div>
 
             </div>
+
+
+
+
+    </div>
     </div>
 
     </section>
 
-    <div class="modal fade add-team-modal" id="swap-modal" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="d-flex justify-content-between">
-                    <h1 class="title">
-                        Let's Build That Team
-                    </h1>
-                    <button data-dismiss="modal" class="btn btn-close-modal no-shadow">
-                        <img src="../assets/icons/close.svg" alt="">
-                    </button>
-                </div>
-                <div class="form-group">
-                    <label for="source-video">Team Name*</label>
-                    <input type="text" id="source-video" class="form-control vc-form-input" name="">
-                    <p class="desc-form">
-                        This Is The Name of Your Organization
-                    </p>
-                </div>
-                <div class="form-group">
-                    <label for="source-video">Text Description</label>
 
-                    <textarea class="form-control vc-form-input" name="" id="" rows="5"></textarea>
-                    <p class="desc-form">
-                        Get Your Members On Board With A Few Words About Your Team
-                    </p>
-                </div>
-                <div class="d-flex justify-content-end align-items-center">
-
-                    <button class="btn btn-submit">
-                        Submit
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

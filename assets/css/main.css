@@ -3468,7 +3468,8 @@ input.clr-color {
     margin-right: 0.5rem;
 }
 
-.nav-vid-proj .nav-link.active, .nav-team .nav-link.active {
+.nav-vid-proj .nav-link.active,
+.nav-team .nav-link.active {
     background: #d840e5;
 }
 
@@ -3558,6 +3559,184 @@ input.clr-color {
 .table-split-test .analytic-content {
     min-width: 115px;
 }
+
+.team-member-box {
+    background-color: #570880;
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    height: 157px;
+}
+
+.team-member-box .member-count {
+    background-color: #d840e5;
+    color: #fff;
+    font-size: 0.7rem;
+    display: inline-block;
+    padding: 0 1.3rem;
+    border-radius: 0.1rem;
+}
+
+.letter-icon {
+    background-color: #6f5dce;
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.team-member-box .team-name,
+.team-created {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.team-member-box .btn-team-box {
+    color: #d840e5;
+    font-size: 0.7rem;
+    border: 2px solid #d840e5;
+    padding: 0 1rem;
+}
+
+.letter-icon,
+.team-name,
+.team-created {
+    align-self: center;
+}
+
+.team-create {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-content: center;
+}
+
+.team-create .team-add-icon {
+    width: 1.8rem;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+.team-create .desc {
+    color: #d840e5;
+    font-size: 0.9rem;
+}
+
+.add-team-modal .desc-form {
+    color: #fff;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.nav-backto {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.navigation-video-settings {
+    width: 350px;
+    padding: 0 0.7rem;
+    background-color: transparent;
+}
+
+.navigation-video-settings .collapse {
+    padding: 0.5rem 1.6rem;
+}
+
+.settings-desc {
+    color: #fff;
+    font-size: 0.7rem;
+    padding-right: 1.5rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.navigation-video-settings .collapse .checkmark {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ab34be;
+}
+
+.navigation-video-settings .collapse .checkmark::after {
+    left: 5px;
+    top: 3px;
+    width: 6px;
+    height: 8px;
+}
+
+.navigation-video-settings .collapse .label-main {
+    color: #ab34be;
+    font-size: 0.8rem;
+}
+
+.navigation-video-settings .collapse .label,
+.navigation-video-settings .collapse label {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+
+.settings-uplooad img {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.settings-uplooad .title {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.settings-uplooad .btn-upload-play {
+    position: relative;
+    background-color: transparent;
+    color: #a933bd;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+}
+
+.settings-uplooad .btn-upload-play input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.settings-uplooad .note {
+    color: red;
+    font-size: 0.7rem;
+}
+
+.image-selected .settings-uplooad img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.selectable {
+    display: none;
+}
+
+.btn-add-more {
+    padding: 0 3rem;
+    color: #c239e7;
+    background-color: transparent;
+    font-size: 0.7rem;
+    border: 2px solid #c239e7;
+}
+
+p.guide {
+    font-size: 0.6rem;
+    text-align: center;
+    color: #fff;
+} 
+
+
+
 @keyframes bg-stretch-out {
     0% {
         height: 300px;

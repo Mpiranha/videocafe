@@ -341,6 +341,24 @@ $(function () {
         }
     });
 
+    $("#cia-type-select").on("change", function () {
+        $(".selectable").each(function () {
+            $(this).css("display", "none");
+        });
+
+        if ($(this).val() == "html") {
+            $(".html-selected").css("display", "block");
+        } else if ($(this).val() == "image") {
+            $(".image-selected").css("display", "block");
+        }
+    });
+
+    if ($("#cia-type-select").val() == "html") {
+        $(".html-selected").css("display", "block");
+    } else if ($("#cia-type-select").val() == "image") {
+        $(".image-selected").css("display", "block");
+    }
+
 
 
 })
