@@ -28,7 +28,9 @@ videoContainer.each(function () {
 
     let vidCurTime = $(this).find('.vid-current-time').get(0);
 
-    let vidLength = $(this).find('.vid-length')
+    let vidLength = $(this).find('.vid-length').get(0);
+
+    vidLength.textContent = calculateTime(Math.floor(video.duration));
 
     let rafVid = null;
 
