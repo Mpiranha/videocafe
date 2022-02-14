@@ -2870,18 +2870,25 @@ path {
     font-size: 0.7rem;
 }
 
-.player-settings-box {
-
+.vid-seetings-outter {
     flex-grow: 1;
-
-
 }
 
-.player-settings-box .tab-content {
+.player-settings-box {
+    flex-grow: 1;
+}
+
+.player-settings-box .tab-content,
+.video-settings-box {
     padding: 1.5rem;
     border: 2px solid #d840e5;
     border-radius: 0.4rem;
 }
+
+.video-settings-box {
+    padding: 0.3rem 1.5rem;
+}
+
 
 .color-input label {
     color: #fff;
@@ -3692,7 +3699,7 @@ input.clr-color {
     font-size: 0.8rem;
 }
 
-.settings-uplooad .btn-upload-play {
+.btn-upload-play {
     position: relative;
     background-color: transparent;
     color: #a933bd;
@@ -3700,7 +3707,7 @@ input.clr-color {
     font-size: 0.8rem;
 }
 
-.settings-uplooad .btn-upload-play input {
+.btn-upload-play input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -3733,7 +3740,217 @@ p.guide {
     font-size: 0.6rem;
     text-align: center;
     color: #fff;
-} 
+}
+
+.red-desc-text {
+    color: red;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.video-settings-head {
+    display: flex;
+    justify-content: end;
+}
+
+.input-url-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-url-wrap img {
+    width: 1rem;
+    margin-right: 0.1rem;
+}
+
+.input-url-wrap input {
+    background-color: transparent !important;
+    border: none;
+    color: #d840e5;
+    font-size: 1.1rem;
+    padding: 0.675rem 0.25rem;
+    width: 300px;
+}
+
+.input-url-wrap .alert-copy {
+    width: 300px;
+    height: 100%;
+    background-color: #ac34be7c;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    display: none;
+
+}
+
+.btn-copy {
+    background-color: transparent;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.btn-copy img {
+    width: 1rem;
+}
+
+.vid-inner-setting {
+    border: 2px solid #ab34be;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.2rem;
+}
+
+.btn-edit-caption {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-edit-caption img {
+    width: 0.9rem;
+}
+
+.editted-text {
+    color: #ab34be;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
+
+.vid-inner-setting label {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.vid-inner-setting textarea {
+    background-color: #570880;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+.vid-inner-setting textarea::placeholder {
+    color: #fff;
+}
+
+.edit-box {
+    display: none;
+}
+
+.video-outter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.video-inner {
+    position: relative;
+    background-color: #000;
+    height: 350px;
+}
+
+.video-inner video {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.btn-play-settings {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    padding: 0;
+    margin-top: -35px;
+    margin-right: -25px;
+}
+
+.btn-play-settings img {
+    width: 4rem;
+}
+
+.vid-controls {
+    display: flex;
+    background-color: #2c0640;
+    align-items: center;
+    padding: 0.4rem 1rem;
+}
+
+.vid-controls .time--progress {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.vid-controls .time--progress .progress {
+    flex-grow: 1;
+    margin: 0 0.7rem;
+    height: 0.3rem;
+    background-color: #b3b5b794;
+    color: #f7fafc;
+    border: none;
+    cursor: pointer;
+}
+
+.vid-controls .time--progress span {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.vid-controls .btn {
+    padding: 0;
+    background-color: transparent;
+}
+
+.vid-controls .btn img {
+    width: 1.2rem;
+}
+
+.vid-controls .btn:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.vid-controls progress::-moz-progress-bar {
+    background-color: #d840e5;
+    max-width: 100%;
+}
+
+
+.vid-controls progress::-webkit-progress-value {
+    background-color: #d840e5;
+    max-width: 100%;
+}
+
+.vid-controls progress span {
+    width: 0%;
+    height: 100%;
+    display: inline-block;
+    background-color: #f7fafc;
+
+}
+
+
+.vid-controls progress {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #0095dd;
+    margin: 0;
+}
 
 
 

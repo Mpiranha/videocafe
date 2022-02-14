@@ -310,7 +310,7 @@ $(function () {
     });
 
     $("[data-toggle='toggle-content']").each(function () {
-        $(this).on("click", function () {
+        $(this).on("change", function () {
             if ($(this).get()[0].checked) {
                 $($(this).attr("data-target")).css("display", "block");
             } else {
@@ -322,6 +322,69 @@ $(function () {
             $($(this).attr("data-target")).css("display", "block");
         }
     });
+
+    $("[data-toggle='toggle-radio']").each(function () {
+        $(this).on("click", function () {
+            removeAllActiveRadio($("[data-toggle='toggle-radio']"));
+            if ($(this).get()[0].checked) {
+                $($(this).attr("data-target")).css("display", "block");
+            } else {
+                $($(this).attr("data-target")).css("display", "none");
+            }
+        });
+
+        if ($(this).get()[0].checked) {
+            removeAllActiveRadio($("[data-toggle='toggle-radio']"));
+            $($(this).attr("data-target")).css("display", "block");
+        }
+    });
+
+    $("[data-toggle='copy']").each(function () {
+        $(this).on("click", function () {
+
+            $($(this).attr("data-target")).select();
+            //testingCodeToCopy.select();
+
+            try {
+                var successful = document.execCommand("copy");
+                var msg = successful ? "successful" : "unsuccessful";
+                $(".alert-copy").css("display", "flex");
+
+                setTimeout(function () {
+                    $(".alert-copy").css("display", "none");
+                }, 2000);
+
+
+
+            } catch (err) {
+
+
+            }
+
+            /* unselect the range */
+            window.getSelection().removeAllRanges();
+        });
+
+        if ($(this).get()[0].checked) {
+            removeAllActiveRadio($("[data-toggle='toggle-radio']"));
+            $($(this).attr("data-target")).css("display", "block");
+        }
+    });
+
+    $(".btn-edit-caption").on("click", function () {
+        
+        $(".edit-box").css("display", "block");
+        $(".editted-text").css("display", "none");
+
+    });
+
+    $(".btn-save-edit").on("click", function() {
+        $(".editted-text").text(  $(".edit-box textarea").val() );
+        $(".edit-box").css("display", "none");
+        $(".editted-text").css("display", "block");
+        
+    });
+
 
 
 
@@ -357,6 +420,12 @@ $(function () {
         $(".html-selected").css("display", "block");
     } else if ($("#cia-type-select").val() == "image") {
         $(".image-selected").css("display", "block");
+    }
+
+    function removeAllActiveRadio(rad) {
+        for (let i = 0; i < rad.length; i++) {
+            $(rad[i].getAttribute("data-target")).css("display", "none");
+        }
     }
 
 

@@ -993,6 +993,7 @@
                                                     class="form-control vc-form-input mb-3 anim-select" name="">
                                                     <option value="none" selected>Do Nothing
                                                     </option>
+                                                    <option value="">Redirect to the Link</option>
 
 
                                                 </select>
@@ -1000,17 +1001,164 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <div class="mb-3">
+                                            <div class="mb-5">
                                                 <label for="my-input">Link URL</label>
                                                 <input id="my-input" class="form-control vc-form-input" type="text"
                                                     name="" placeholder="">
                                             </div>
                                         </div>
 
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input data-toggle="toggle-content" data-target=".player-roll"
+                                                    type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Player Roll Action</span>
+                                        </div>
+                                        <div class="trigger player-roll">
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input data-toggle="toggle-radio" name="play-roll"
+                                                        data-target=".pre-roll" type="radio">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Pre-Roll</span>
+                                            </div>
+                                            <div class="trigger pre-roll">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-1">
+                                                            <label class="mb-0" for="my-input">Video Source Url</label>
+                                                            <button class="btn btn-upload-play">
+                                                                <input type="file" name="" id="">
+                                                                Browse
+                                                            </button>
+                                                        </div>
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <div class="red-desc-text">
+                                                            maximum video size 20md
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+
+                                                        <label class="mb-0" for="my-input">External Link Url</label>
+
+
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name=""
+                                                            placeholder="e.g.http://videocafe.io.com">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input data-toggle="toggle-radio" name="play-roll"
+                                                        data-target=".mid-roll" type="radio">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Mid-Roll</span>
+                                            </div>
+                                            <div class="trigger mid-roll">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-1">
+                                                            <label class="mb-0" for="my-input">Video Source Url</label>
+                                                            <button class="btn btn-upload-play">
+                                                                <input type="file" name="" id="">
+                                                                Browse
+                                                            </button>
+                                                        </div>
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <div class="red-desc-text">
+                                                            maximum video size 20md
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+
+                                                        <label class="mb-0" for="my-input">External Link Url</label>
+
+
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name=""
+                                                            placeholder="e.g.http://videocafe.io.com">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label class="mb-0" for="my-input">Time</label>
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name="" placeholder="00:00">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input data-toggle="toggle-radio" name="play-roll"
+                                                        data-target=".post-roll" type="radio">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Post-Roll</span>
+                                            </div>
+                                            <div class="trigger post-roll">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-1">
+                                                            <label class="mb-0" for="my-input">Video Source Url</label>
+                                                            <button class="btn btn-upload-play">
+                                                                <input type="file" name="" id="">
+                                                                Browse
+                                                            </button>
+                                                        </div>
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <div class="red-desc-text">
+                                                            maximum video size 20md
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+
+                                                        <label class="mb-0" for="my-input">External Link Url</label>
+
+
+                                                        <input id="my-input" class="form-control vc-form-input"
+                                                            type="text" name=""
+                                                            placeholder="e.g.http://videocafe.io.com">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex mt-auto justify-content-center mb-4">
+                                                <button class="btn btn-login px-3">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-player-privacy-tab" data-toggle="collapse"
-                                            href="#pills-player-privacy" role="button">
+                                            href="#collapse-thumbnail" role="button">
                                             <div class="icon-nav-wrap">
                                                 <img src="../assets/icons/thumbnails ( image & VIDEO) ICON.svg"
                                                     alt="appearance icon">
@@ -1021,9 +1169,58 @@
                                             </div>
                                         </a>
                                     </li>
+                                    <li class="collapse" id="collapse-thumbnail">
+                                        <div class="settings-desc">
+                                            Thumbnail is the image your viewers will
+                                            see first before clicking the play button to
+                                            watch the video
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Type</label>
+                                                <select id="my-select"
+                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="image" selected>Image
+                                                    </option>
+                                                    <option value="video">Video</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Select Image</label>
+                                                <select id="my-select"
+                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="default" selected>Default Video Thumbnail
+                                                    </option>
+                                                    <option value="library">Choose From Library</option>
+                                                    <option value="upload">Upload</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Progress Bar Thumbs</span>
+                                        </div>
+
+
+
+                                        <div class="d-flex mt-auto justify-content-center mb-4">
+                                            <button class="btn btn-login px-3">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-player-privacy-tab" data-toggle="collapse"
-                                            href="#pills-player-privacy" role="button">
+                                        <a class="nav-link" id="collapse-video-settings-tab" data-toggle="collapse"
+                                            href="#collapse-video-settings" role="button">
                                             <div class="icon-nav-wrap">
                                                 <img src="../assets/icons/Video setting icon.svg" alt="appearance icon">
                                             </div>
@@ -1033,9 +1230,119 @@
                                             </div>
                                         </a>
                                     </li>
+                                    <li class="collapse" id="collapse-video-settings">
+                                        <div class="settings-desc">
+                                            Customize the look of your video
+                                            player. Choose a color that matches
+                                            your brand
+                                        </div>
+
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input data-toggle="toggle-radio" name="vid-settings"
+                                                    data-target=".context-menu" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Context Menu</span>
+                                        </div>
+                                        <div class="trigger context-menu">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="my-input">Link URL</label>
+                                                    <input id="my-input" class="form-control vc-form-input" type="text"
+                                                        name="" placeholder="e.g. http://videocafe.app">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="my-input">Video Source URL</label>
+                                                    <input id="my-input" class="form-control vc-form-input" type="text"
+                                                        name="" placeholder="enter mid roll src">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mb-5">
+                                                <div class="d-flex settings-uplooad">
+                                                    <!-- <img src="../assets/icons/upload video illustration.png"
+                                                        alt="p;lay icon"> -->
+                                                    <div class="upload-texts">
+                                                        <div class="title">
+                                                            Upload An Image
+                                                        </div>
+                                                        <button class="btn btn-upload-play">
+                                                            <input type="file" name="" id="">
+                                                            Browse
+                                                        </button>
+                                                        <div class="note">
+                                                            Note: Image Max Size 1mb
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input data-toggle="toggle-radio" name="vid-settings"
+                                                    data-target=".related-video" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Related Video</span>
+                                        </div>
+                                        <div class="trigger related-video">
+
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <select id="my-select"
+                                                        class="form-control vc-form-input mb-3 anim-select" name="">
+                                                        <option value="image" selected>Project Videos
+                                                        </option>
+                                                        <option value="video">Account Videos</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Videocafe App</span>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Project Selma</span>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Sallad Man</span>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <div class="d-flex mt-auto justify-content-center mb-4">
+                                            <button class="btn btn-login px-3">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-player-privacy-tab" data-toggle="collapse"
-                                            href="#pills-player-privacy" role="button">
+                                        <a class="nav-link" id="visibility-privacy-tab" data-toggle="collapse"
+                                            href="#visibility-privacy" role="button">
                                             <div class="icon-nav-wrap">
                                                 <img src="../assets/icons/visibility and privacy icon.svg"
                                                     alt="appearance icon">
@@ -1047,6 +1354,57 @@
                                         </a>
                                     </li>
 
+                                    <li class="collapse" id="visibility-privacy">
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Who Can Watch This Video?</label>
+                                                <select id="my-select"
+                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="default" selected>Anyone
+                                                    </option>
+                                                    <option value="me">Only Me</option>
+                                                    <option value="upload">People With The Private Link</option>
+                                                    <option value="password">People With The Password</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Who Can Comment on This Video?</label>
+                                                <select id="my-select"
+                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="default" selected>Anyone
+                                                    </option>
+                                                    <option value="me">Only Me</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Where Can This Video Be Embeded?</label>
+                                                <select id="my-select"
+                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="default" selected>Any Domain
+                                                    </option>
+                                                    <option value="no">No Domain</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="d-flex mt-auto justify-content-center mb-4">
+                                            <button class="btn btn-login px-3">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </li>
+
 
                                 </ul>
 
@@ -1054,235 +1412,107 @@
 
                             </div>
                         </div>
-
-                        <div class="player-settings-box">
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-player-apperance" role="tabpanel"
-                                    aria-labelledby="pills-player-apperance-tab">
-                                    <div class="d-flex flex-column h-100">
-                                        <div class="form-group d-flex flex-column color-input">
-                                            <label for="">Player Skin Color</label>
-                                            <div>
-                                                <input class="form-control" type="text" name="" id="" data-coloris>
-                                            </div>
+                        <div class="vid-seetings-outter">
+                            <div class="d-flex justify-content-end mb-5">
+                                <button class="btn btn-video-head py-2">
+                                    <img src="../assets/icons/options icon.svg" alt="options icon">
+                                    Options
+                                </button>
+                            </div>
+                            <div class="video-settings-box">
+                                <div class="video-settings-head">
+                                    <div class="input-url-wrap">
+                                        <div class="alert-copy">
+                                            Copied
                                         </div>
-
-
-                                        <div class="custom-form-group">
-                                            <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".player-brand-trigger"
-                                                    type="checkbox">
-                                                <span class="checkmark"></span>
-
-                                            </label>
-                                            <span class="label-main">Player Branding</span>
-                                        </div>
-
-
-                                        <div class="trigger player-brand-trigger">
-                                            <div class="custom-form-group">
-                                                <label class="custom-check">
-                                                    <input data-toggle="toggle-content" data-target=".show-logo-trigger"
-                                                        type="checkbox">
-                                                    <span class="checkmark"></span>
-
-                                                </label>
-                                                <span class="label">Show Logo</span>
-                                            </div>
-
-                                            <div class="trigger show-logo-trigger form-group">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="mb-3">
-                                                            <label for="my-input">Logo Title</label>
-                                                            <input id="my-input" class="form-control vc-form-input"
-                                                                type="text" name="" placeholder="Enter Logo Title">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="my-input">Logo Position</label>
-
-                                                            <select class="form-control vc-form-input" name="" id="">
-                                                                <option>Top</option>
-                                                                <option>Top Left</option>
-                                                                <option>Top Right</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div class="mb-3">
-                                                            <label for="my-input">Video Url</label>
-                                                            <input id="my-input" class="form-control vc-form-input"
-                                                                type="url" name=""
-                                                                placeholder="http://youtube.com/eyahsdgsd">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="my-input">Logo Size</label>
-                                                            <div class="logo-size-inputs">
-                                                                <input id="my-input" class="form-control vc-form-input"
-                                                                    type="number" name="">
-
-                                                                <img class="lock-icon" src="../assets/icons/lock_1.svg"
-                                                                    alt="lock icon">
-                                                                <input id="my-input" class="form-control vc-form-input"
-                                                                    type="number" name="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-form-group">
-                                                <label class="custom-check">
-                                                    <input data-toggle="toggle-content" data-target=".play-btn-trigger"
-                                                        type="checkbox">
-                                                    <span class="checkmark"></span>
-
-                                                </label>
-                                                <span class="label">Play Button</span>
-                                            </div>
-                                            <div class="trigger play-btn-trigger">
-
-                                                <div class="play-icons">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <i class="fa fa-play"></i>
-                                                    <i class="fa fa-circle-play"></i>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="form-group play-btn-color">
-                                                            <label for="">Play Button Colour</label>
-                                                            <input value="#ffffff" id="play-color-input" type="color"
-                                                                name="" id="" class="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div class="form-group">
-                                                            <label for="">Play Button Animation</label>
-                                                            <select id="my-select"
-                                                                class="form-control vc-form-input anim-select" name="">
-                                                                <option value="none" selected>Select An Animation
-                                                                </option>
-                                                                <option value="bounce">Bounce</option>
-                                                                <option value="splash">Splash</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex mt-auto justify-content-end">
-                                            <button class="btn btn-login px-3">
-                                                Save
-                                            </button>
-                                        </div>
-
+                                        <img src="../assets/icons/share_2_u_sq.svg" alt="link icon">
+                                        <input class="form-control no-shadow" value="http://videocafe.com/watch/wghttj"
+                                            id="copy-vid-link" type="text" readonly>
                                     </div>
-
-
-                                </div>
-                                <div class="tab-pane fade" id="pills-player-control" role="tabpanel"
-                                    aria-labelledby="pills-player-control-tab">
-                                    <div class="controls-settings d-flex flex-column">
-                                        <h5 class="title">
-                                            Select Which Video Control Options Are Available
-                                            To Your Viewers
-                                        </h5>
-
-                                        <h6 class="sub-title">
-                                            Controls
-                                        </h6>
-
-                                        <div class="custom-form-group">
-                                            <label class="custom-check">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-
-                                            </label>
-                                            <span class="label">Playbar</span>
-                                        </div>
-                                        <div class="custom-form-group">
-                                            <label class="custom-check">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-
-                                            </label>
-                                            <span class="label">Volume</span>
-                                        </div>
-                                        <div class="custom-form-group">
-                                            <label class="custom-check">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-
-                                            </label>
-                                            <span class="label">etc</span>
-                                        </div>
-
-                                        <div class="d-flex mt-auto justify-content-end">
-                                            <button class="btn btn-login px-3">
-                                                Save
-                                            </button>
-                                        </div>
-
-
-
-
-                                    </div>
-
-
-
+                                    <button class="btn btn-copy no-shadow" data-toggle="copy"
+                                        data-target="#copy-vid-link">
+                                        <img src="../assets/icons/copy icon.svg" alt="copy icon">
+                                        Copy
+                                    </button>
                                 </div>
 
-                                <div class="tab-pane fade " id="pills-player-privacy" role="tabpanel"
-                                    aria-labelledby="pills-player-privacy-tab">
-                                    <div class="privacy-settings d-flex flex-column">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label for="">Who Can Watch This Video?</label>
-                                                    <select class="form-control vc-form-input" name="" id="">
-                                                        <option selected value="anyone">Anyone</option>
-                                                        <option></option>
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="">Who Can Comment on This Video?</label>
-                                                    <select class="form-control vc-form-input" name="" id="">
-                                                        <option selected value="anyone">Anyone</option>
-                                                        <option></option>
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label for="">Where Can This Video Be Embeded?</label>
-                                                    <select class="form-control vc-form-input" name="" id="">
-                                                        <option selected value="anyone">Any Domain</option>
-                                                        <option></option>
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="d-flex mt-auto justify-content-end">
-                                            <button class="btn btn-login px-3">
-                                                Save
-                                            </button>
-                                        </div>
-
+                                <div class="video-outter">
+                                    <div class="video-inner">
+                                        <button class="btn no-shadow btn-play-settings">
+                                            <img src="../assets/icons/play frame.svg" alt="">
+                                        </button>
+                                        <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
                                     </div>
+                                    <div class="vid-controls">
+                                        <button class="btn no-shadow btn-vid-play-pause">
+                                            <img src="../assets/icons/play one icon.svg" alt="play icon">
+                                        </button>
+                                        <button class="btn no-shadow btn-play-back">
+                                            <img src="../assets/icons/play back icon.svg" alt="play back icon">
+                                        </button>
 
+                                        <div class="time--progress">
+                                            <span class="vid-current-time">
+                                                00:00:00
+                                            </span>
+                                            <div class="progress">
+                                                <progress id="progress" value="0" min="0" max="">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                            <span class="vid-length">00:00:00</span>
+                                        </div>
+
+                                        <button class="btn no-shadow btn-volume">
+                                            <img src="../assets/icons/volume.svg" alt="volume-icon">
+                                        </button>
+
+                                        <button class="btn no-shadow btn-set-vid">
+                                            <img src="../assets/icons/full screen icon.svg" alt="setting icon">
+                                        </button>
+
+                                        <button class="btn no-shadow  btn-picture">
+                                            <img src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
+                                        </button>
+
+                                        <button class="btn btn-fs">
+                                            <img src="../assets/icons/full screen icon.svg" alt="fullscreen icon">
+                                        </button>
+                                    </div>
                                 </div>
 
+                                <div class="vid-inner-setting pb-4">
+                                    <button class="btn btn-edit-caption no-shadow">
+                                        <img src="../assets/icons/edit icon.svg" alt=""> Edit
+                                    </button>
+                                    <div class="edit-box">
+                                        <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                        <button class="btn btn-submit btn-save-edit px-3 py-1">Save</button>
+                                    </div>
+                                    <div class="editted-text">
+                                        Before We Were All White We Were First Black
+                                    </div>
+                                </div>
 
+                                <div class="vid-inner-setting">
+                                    <label for="">Comments</label>
+                                    <textarea placeholder="Write a Comment" class="form-control" name="" id=""
+                                        rows="3"></textarea>
+                                </div>
+
+                                <div class="d-flex mb-5">
+                                    <label class="custom-check light">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="label text-light">0:00 include timestamp</span>
+                                </div>
+
+                                <button class="btn btn-submit">
+                                    Comment
+                                </button>
                             </div>
                         </div>
-
                     </div>
 
 
@@ -1536,6 +1766,7 @@
     <script src="../assets/js/select.js"></script>
     <script src="../assets/js/coloris/coloris.js"></script>
     <script src="../assets/js/custom/script.js"></script>
+    <script src="../assets/js/custom/vid-settings.js"></script>
 
 </body>
 
