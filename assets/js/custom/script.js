@@ -388,9 +388,7 @@ $(function () {
 
 
 
-    $("#play-color-input").on("change", function () {
-        $(".play-icons").css("color", $(this).val());
-    });
+   
 
     $(".pagination-custom .btn-left").on("click", function () {
         if ($("#cur-page").get()[0].innerText > 1) {
@@ -413,13 +411,17 @@ $(function () {
             $(".html-selected").css("display", "block");
         } else if ($(this).val() == "image") {
             $(".image-selected").css("display", "block");
-        }
+        } else if ($(this).val() == "text") {
+            $(".text-selected").css("display", "block");
+        } 
     });
 
     if ($("#cia-type-select").val() == "html") {
         $(".html-selected").css("display", "block");
     } else if ($("#cia-type-select").val() == "image") {
         $(".image-selected").css("display", "block");
+    } else if ($("#cia-type-select").val() == "text") {
+        $(".text-selected").css("display", "block");
     }
 
     function removeAllActiveRadio(rad) {

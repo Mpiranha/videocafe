@@ -20,6 +20,8 @@ videoContainer.each(function () {
     // let videoControls = $(this).find('.controls');
 
     let playpause = $(this).find('.btn-vid-play-pause').get(0);
+    let bigPlay = $(this).find('.btn-play-settings').get(0);
+    // let bigPlayImg = $(this).find('.btn-play-settings img').get(0);
     let playpauseImage = $(this).find('.btn-vid-play-pause img').get(0);
 
     let progress = $(this).find('#progress').get(0);
@@ -30,6 +32,8 @@ videoContainer.each(function () {
 
     let vidLength = $(this).find('.vid-length').get(0);
 
+    let vidInnerContainer = $(this).find('.video-inner');
+
     vidLength.textContent = calculateTime(Math.floor(video.duration));
 
     let rafVid = null;
@@ -37,6 +41,7 @@ videoContainer.each(function () {
     var handleFullscreen = function () {
         // If fullscreen mode is active...	
         if (isFullScreen()) {
+            vidInnerContainer.css('height', '350px');
             // ...exit fullscreen mode
             // (Note: this can only be called on document)
             if (document.exitFullscreen) document.exitFullscreen();
@@ -45,6 +50,7 @@ videoContainer.each(function () {
             else if (document.msExitFullscreen) document.msExitFullscreen();
             setFullscreenData(false);
         } else {
+            //vidInnerContainer.css('height', '100%');
             // ...otherwise enter fullscreen mode
             // (Note: can be called on document, but here the specific element is used as it will also ensure that the element's children, e.g. the custom controls, go fullscreen also)
             if (container.requestFullscreen) container.requestFullscreen();
@@ -91,9 +97,11 @@ videoContainer.each(function () {
             if (video.paused || video.ended) {
                 playpause.setAttribute('data-state', 'play');
                 playpauseImage.src = "../assets/icons/play one icon.svg";
+                // bigPlayImg.src = "../assets/icons/play frame.svg";
             } else {
                 playpause.setAttribute('data-state', 'pause');
                 playpauseImage.src = "../assets/icons/time.svg"
+                // bigPlayImg.src = "../assets/icons/time.svg";
             }
         }
         // Mute button
@@ -125,7 +133,6 @@ videoContainer.each(function () {
     video.offsetParent.addEventListener("mouseout", function () {
         if (video.paused) {
             return;
-
         }
         // videoControls.get(0).setAttribute('data-state', 'hidden');
     });
@@ -136,6 +143,16 @@ videoContainer.each(function () {
     }, false);
 
     playpause.addEventListener('click', function (e) {
+        if (video.paused || video.ended) {
+            video.play();
+            requestAnimationFrame(whilePlayingVideo);
+        } else {
+            video.pause();
+            cancelAnimationFrame(rafVid);
+        };
+    });
+
+    bigPlay.addEventListener('click', function (e) {
         if (video.paused || video.ended) {
             video.play();
             requestAnimationFrame(whilePlayingVideo);
@@ -182,4 +199,147 @@ videoContainer.each(function () {
         // audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
         rafVid = requestAnimationFrame(whilePlayingVideo);
     }
+
+    $('#reset-player-color').click(function () {
+        if ($(this).is(':checked')) {
+            $('#skin-color-input').val('#2c0640');
+            $('.clr-field').css('color', '#2c0640');
+            $('#skin-color-input').trigger('change');
+        }
+    });
+
+    $('#skin-color-input').on('change', function () {
+        $('.vid-controls').css('background-color', $(this).val());
+    });
+
+
+    $('.logo-width').on('input', function () {
+        $('.logo-height').val(Math.ceil($(this).val() / 1.5));
+        // $('.logo-height').trigger('input');
+        $('.vid-logo').css('width', $(this).val() + 'px');
+        $('.vid-logo').css('height', $('.logo-height').val() + 'px');
+    });
+
+    $('.logo-height').on('input', function () {
+        $('.logo-width').val(1.5 * $(this).val());
+        // $('.logo-width').trigger('input');
+
+        $('.vid-logo').css('height', $(this).val() + 'px');
+        $('.vid-logo').css('width', $('.logo-width').val() + 'px');
+    });
+
+    const REGEXP = /[0-9]/;
+    $('.number-input').each(function () {
+        $(this).on('keypress', function (event) {
+            console.log(event.key);
+            if (!REGEXP.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+    });
+
+    $('#vid-logo-pos-input').on('change', function () {
+
+        if ($(this).val() == 'top-left') {
+            $('.vid-logo-display').css({
+                'display': 'block',
+                'position': 'absolute',
+                'left': '16px',
+                'right': 'initial',
+            });
+            $('.logo-size-wrap').css('display', 'block');
+        } else if ($(this).val() == 'top-right') {
+            $('.vid-logo-display').css({
+                'display': 'block',
+                'position': 'absolute',
+                'right': '16px',
+                'left': 'initial',
+            });
+            $('.logo-size-wrap').css('display', 'block');
+        } else if ($(this).val() == 'play-bar') {
+            $('.vid-logo-display').css(
+                'display', 'none');
+            $('.vid-controls .vid-logo-display').css({
+                'display': 'table',
+                'position': 'static'
+            });
+
+            $('.vid-controls .vid-logo-display img').css('width', 'auto');
+
+
+
+            $('.logo-size-wrap').css('display', 'none');
+
+
+        }
+    });
+
+    $('[data-target=".show-logo-trigger"]').on('click', function () {
+        if ($(this).is(':checked')) {
+            $('.vid-logo-display').css('display', 'block');
+        } else {
+            $('.vid-logo-display').css('display', 'none');
+        }
+
+    });
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#selected-logo').attr('src', e.target.result);
+                $('.vid-logo').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#vid-img-upload").change(function () {
+        readURL(this);
+    });
+
+    $("#play-color-input").on("change", function () {
+        $(".btn-play-select").css("color", $(this).val());
+        $(".btn-play-settings").css("color", $(this).val());
+    });
+
+    $('.btn-play-select').each(function () {
+        $(this).on('click', function () {
+            removeSelected($('.btn-play-select'));
+
+            $(this).addClass('selected');
+
+            $('.btn-play-settings i').attr('class', $(this).children('i').attr('class'));
+        });
+    });
+
+    $('.anim-select').on('change', function () {
+        $(".btn-play-settings").attr('class', 'btn no-shadow btn-play-settings ' + $(this).val());
+        if ($('#set-infinite').is(':checked')) {
+            $(".btn-play-settings").addClass('animate__infinite');
+        }
+    });
+
+    $('#set-infinite').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(".btn-play-settings").addClass('animate__infinite');
+        } else {
+            $(".btn-play-settings").removeClass('animate__infinite');
+        }
+    });
+
+    function removeSelected(arr) {
+        for (let i = 0; i < arr.length; i++) {
+
+            arr[i].classList.remove('selected');
+        }
+
+    }
+
+
+
+
 });

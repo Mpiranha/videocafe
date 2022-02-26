@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/coloris.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -328,9 +329,19 @@
                                         <div class="form-group d-flex flex-column color-input">
                                             <label for="">Player Skin Color</label>
                                             <div>
-                                                <input class="form-control" type="text" name="" id="" data-coloris>
+                                                <input class="form-control" type="text" value="#2c0640" name=""
+                                                    id="skin-color-input" data-coloris>
                                             </div>
                                         </div>
+                                        <div class="d-flex mb-2">
+                                            <label class="custom-check">
+                                                <input id="reset-player-color" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label-main">Reset Player Color</span>
+                                        </div>
+
                                         <div class="d-flex mb-2">
                                             <label class="custom-check">
                                                 <input data-toggle="toggle-content" data-target=".player-brand-trigger"
@@ -357,13 +368,14 @@
                                                 <div class="row">
                                                     <div class="col-12 mb-5">
                                                         <div class="d-flex justify-content-center settings-uplooad">
-                                                            <img src="../assets/icons/play 4.svg" alt="p;lay icon">
+                                                            <img id="selected-logo"
+                                                                src="../assets/icons/login image.svg" alt="play icon">
                                                             <div class="upload-texts">
                                                                 <div class="title">
                                                                     Upload An Image
                                                                 </div>
                                                                 <button class="btn btn-upload-play">
-                                                                    <input type="file" name="" id="">
+                                                                    <input type="file" name="" id="vid-img-upload">
                                                                     Browse
                                                                 </button>
                                                                 <div class="note">
@@ -372,15 +384,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
+                                                    <div class="col-12 logo-size-wrap">
                                                         <div class="mb-3">
                                                             <label for="my-input">Logo Size</label>
                                                             <div class="logo-size-inputs">
                                                                 <input id="my-input"
-                                                                    class="form-control vc-form-input mr-2"
-                                                                    type="number" name="">
-                                                                <input id="my-input" class="form-control vc-form-input"
-                                                                    type="number" name="">
+                                                                    class="form-control vc-form-input number-input logo-width mr-2"
+                                                                    value="" type="text" name="">
+                                                                <input id="my-input" value=""
+                                                                    class="form-control vc-form-input number-input logo-height"
+                                                                    type="text" name="">
                                                                 <img class="lock-icon" src="../assets/icons/lock_1.svg"
                                                                     alt="lock icon">
                                                             </div>
@@ -395,10 +408,11 @@
                                                         <div class="mb-3">
                                                             <label for="my-input">Logo Position</label>
 
-                                                            <select class="form-control vc-form-input" name="" id="">
-                                                                <option>Play Bar</option>
-                                                                <option>Top Left</option>
-                                                                <option>Top Right</option>
+                                                            <select class="form-control vc-form-input" name=""
+                                                                id="vid-logo-pos-input">
+                                                                <option value="top-left" selected>Top Left</option>
+                                                                <option value="top-right">Top Right</option>
+                                                                <option value="play-bar">Play Bar</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -426,9 +440,14 @@
                                             <div class="trigger play-btn-trigger">
 
                                                 <div class="play-icons">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <i class="fa fa-play"></i>
-                                                    <i class="fa fa-circle-play"></i>
+                                                    <button class="btn btn-play-select selected">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="fa fa-play"></i></button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="fa fa-circle-play"></i>
+                                                    </button>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
@@ -444,15 +463,73 @@
                                                             <select id="my-select"
                                                                 class="form-control vc-form-input mb-3 anim-select"
                                                                 name="">
-                                                                <option value="none" selected>Select An Animation
+                                                                <option value="animate__animated animate__" selected>
+                                                                    Select An Animation
                                                                 </option>
-                                                                <option value="bounce">Bounce</option>
-                                                                <option value="splash">Splash</option>
-                                                                <option value="splash">Pulse</option>
+                                                                <option value="animate__animated animate__bounce">
+                                                                    Bounce
+                                                                </option>
+                                                                <option value="animate__animated animate__flash">
+                                                                    Flash
+                                                                </option>
+                                                                <option value="animate__animated animate__pulse">
+                                                                    Pulse
+                                                                </option>
+                                                                <option value="animate__animated animate__rubberBand">
+                                                                    RubberBand
+                                                                </option>
+                                                                <option value="animate__animated animate__shakeX">
+                                                                    ShakeX
+                                                                </option>
+                                                                <option value="animate__animated animate__shakeY">
+                                                                    ShakeY
+                                                                </option>
+                                                                <option value="animate__animated animate__headShake">
+                                                                    HeadShake
+                                                                </option>
+                                                                <option value="animate__animated animate__swing">
+                                                                    Swing
+                                                                </option>
+                                                                <option value="animate__animated animate__tada">
+                                                                    Tada
+                                                                </option>
+                                                                <option value="animate__animated animate__wobble">
+                                                                    Wobble
+                                                                </option>
+                                                                <option value="animate__animated animate__jello">
+                                                                    Jello
+                                                                </option>
+                                                                <option value="animate__animated animate__heartBeat">
+                                                                    HeartBeat
+                                                                </option>
+                                                                <option value="animate__animated animate__rotateIn">
+                                                                    Rotate In
+                                                                </option>
+                                                                <option value="animate__animated animate__flip">
+                                                                    Flip
+                                                                </option>
+                                                                <option value="animate__animated animate__fadeIn">
+                                                                    FadeIn
+                                                                </option>
+                                                                <option value="animate__animated animate__fadeOut">
+                                                                    FadeOut
+                                                                </option>
+                                                                <option value="animate__animated animate__zoomIn">
+                                                                    ZoomIn
+                                                                </option>
+                                                                <option value="animate__animated animate__backInDown">
+                                                                    BackInDown
+                                                                </option>
+                                                                <option value="animate__animated animate__slideInDown">
+                                                                    SlideInDown
+                                                                </option>
+                                                                <option value="animate__animated animate__slideInUp">
+                                                                    SlideInUp
+                                                                </option>
                                                             </select>
                                                             <div class="d-flex mb-3">
                                                                 <label class="custom-check">
-                                                                    <input type="checkbox">
+                                                                    <input type="checkbox" id="set-infinite">
                                                                     <span class="checkmark"></span>
 
                                                                 </label>
@@ -494,16 +571,52 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="">CIA Type</label>
+                                                <label for="">CTA Type</label>
                                                 <select id="cia-type-select"
                                                     class="form-control vc-form-input mb-3 anim-select" name="">
                                                     <option selected value="none" selected>Select
                                                     </option>
-                                                    <option value="none">Text</option>
+                                                    <option value="text">Text</option>
                                                     <option value="image">Image</option>
                                                     <option value="html">HTML</option>
 
                                                 </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="selectable text-selected">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="my-input">Text</label>
+                                                    <textarea class="form-control vc-form-input" name="" id=""
+                                                        rows="3"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Add Button</span>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="my-input">ClickThrough Link</label>
+                                                    <textarea class="form-control vc-form-input" name="" id=""
+                                                        rows="2"></textarea>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="my-input">Time</label>
+                                                    <input id="my-input" class="form-control vc-form-input" type="text"
+                                                        name="" placeholder="">
+                                                </div>
                                             </div>
                                         </div>
 
@@ -1438,8 +1551,12 @@
 
                                 <div class="video-outter">
                                     <div class="video-inner">
-                                        <button class="btn no-shadow btn-play-settings">
-                                            <img src="../assets/icons/play frame.svg" alt="">
+                                        <div class="vid-logo-display">
+                                            <img class="vid-logo" src="../assets/icons/login image.svg"
+                                                alt="video  logo">
+                                        </div>
+                                        <button class="btn no-shadow btn-play-settings animate__animated">
+                                            <i class="fa fa-play-circle"></i>
                                         </button>
                                         <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
                                     </div>
@@ -1465,19 +1582,29 @@
 
                                         <button class="btn no-shadow btn-volume">
                                             <img src="../assets/icons/volume.svg" alt="volume-icon">
+
+                                            <div class="btn-drop-up">
+                                                <input min="0" max="100" value="100" type="range" name="" id="">
+                                            </div>
                                         </button>
 
                                         <button class="btn no-shadow btn-set-vid">
-                                            <img src="../assets/icons/full screen icon.svg" alt="setting icon">
+                                            <img src="../assets/icons/Video setting icon.svg" alt="setting icon">
                                         </button>
 
                                         <button class="btn no-shadow  btn-picture">
                                             <img src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
                                         </button>
 
-                                        <button class="btn btn-fs">
+                                        <div class="vid-logo-display">
+                                            <img class="vid-logo" src="../assets/icons/login image.svg"
+                                                alt="video  logo">
+                                        </div>
+
+                                        <button class="btn no-shadow btn-fs">
                                             <img src="../assets/icons/full screen icon.svg" alt="fullscreen icon">
                                         </button>
+
                                     </div>
                                 </div>
 
