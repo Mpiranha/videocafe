@@ -2150,9 +2150,7 @@
     color: #fff;
 }
 
-.btn-play-select 
-
-.play-icon .play-img {
+.btn-play-select .play-icon .play-img {
     width: 2.1rem;
 }
 
@@ -3985,7 +3983,7 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 4px;
+    height: 7px;
     cursor: pointer;
     /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
     background: #d840e5;
@@ -4002,7 +4000,7 @@ input[type=range]::-webkit-slider-thumb {
     background: #ffffff;
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -14px;
+    margin-top: -4px;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -4071,7 +4069,10 @@ input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
 }
 
-.vid-controls .btn .btn-drop-up {
+.vid-controls .ps-relative {
+    position: relative;
+}
+.vid-controls .btn-drop-up {
     position: absolute;
     top: -23px;
     width: 80px;
@@ -4080,9 +4081,10 @@ input[type=range]:focus::-ms-fill-upper {
     transform-origin: -11px;
     left: 50%;
     margin-left: 22px;
+    display: none;
 }
 
-.vid-controls .btn .btn-drop-up input {
+.vid-controls .btn-drop-up input {
     background-color: transparent;
 }
 
@@ -4109,7 +4111,200 @@ input[type=range]:focus::-ms-fill-upper {
     width: auto;
 }
 
+.text-on-vid-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    z-index: 3;
+}
+
+.image-on-vid-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #be22e9ac;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.html-on-vid-display {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: #be22e9ac;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-on-vid-display img {
+    width: 30%;
+    height: 60%;
+}
+
+.text-on-vid-display .text {
+    color: #fff;
+    margin-bottom: 0.7rem;
+    max-width: 300px;
+    font-size: 0.9rem;
+}
+
+.text-on-vid-display .btn-with-text {
+    background-color: #e9e9ed;
+    color: #000;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.cta-type {
+    display: none;
+}
+
+.email-lead-wrap {
+    background-color: #540d78;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 2.5rem 2.5rem 4rem;
+    display: none;
+}
+
+.email-lead-wrap .header-text {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.email-lead-wrap .sub-head-text {
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.mail-form-wrap {
+    display: flex;
+}
+
+.email-lead-wrap .email-lead-top {
+    margin-bottom: 2.5rem;
+}
+
+.mail-form-wrap .email-illustration {
+    width: 11rem;
+    margin-right: 1rem;
+}
+
+.mail-form-wrap .vc-form-input {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.mail-form-wrap .vc-form-input:focus {
+    background-color: transparent;
+}
+
+.mail-form-wrap .vc-form-input::placeholder {
+    color: #fff;
+}
+
+.mail-form-wrap .lead-forms {
+    flex-grow: 1;
+}
+
+.mail-form-wrap .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#email-name {
+    display: none;
+}
+
+.vid-pop--over {
+    position: absolute;
+    background-color: #570880;
+    bottom: 150%;
+    right: 0;
+    padding: 0.5rem 0.4rem 0.5rem 0.4rem;
+    border-radius: 0.2rem;
+    display: none;
+}
+
+.vid-pop--over .nav-item {
+    margin-bottom: 0.3rem;
+}
+
+.vid-pop--over .share {
+    margin-right: 1rem;
+}
+
+.vid-pop--over .nav-link {
+    color: #fff;
+    position: relative;
+    font-size: 0.8rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.more-option::after {
+    content: "";
+    border-color: transparent transparent transparent #d840e5;
+    border-width: 4px;
+    border-style: solid;
+    margin-left: 0.5rem;
+    top: 50%;
+    right: 0;
+
+}
+
+.back-to::before {
+    content: "";
+    border-color: transparent #d840e5 transparent transparent;
+    border-width: 4px;
+    border-style: solid;
+    margin-right: 0.5rem;
+}
+
+.select-item {
+    border-radius: 0.3rem;
+    transition: all 0.5s;
+}
+
+.select-item[selected] {
+    border: 2px solid #d840e5;
+    padding-right: 0.5rem;
+}
+
+.vid-pop--over .active {
+    display: flex !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.hidden {
+    display: none;
+}
 
 @keyframes bg-stretch-out {
     0% {

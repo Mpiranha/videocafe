@@ -1,5 +1,6 @@
 $(function () {
 
+
     const calculateTime = (secs) => {
         const hour = Math.floor(secs / 3600);
         const minutes = Math.floor(secs / 60);
@@ -372,23 +373,23 @@ $(function () {
     });
 
     $(".btn-edit-caption").on("click", function () {
-        
+
         $(".edit-box").css("display", "block");
         $(".editted-text").css("display", "none");
 
     });
 
-    $(".btn-save-edit").on("click", function() {
-        $(".editted-text").text(  $(".edit-box textarea").val() );
+    $(".btn-save-edit").on("click", function () {
+        $(".editted-text").text($(".edit-box textarea").val());
         $(".edit-box").css("display", "none");
         $(".editted-text").css("display", "block");
-        
+
     });
 
 
 
 
-   
+
 
     $(".pagination-custom .btn-left").on("click", function () {
         if ($("#cur-page").get()[0].innerText > 1) {
@@ -402,27 +403,7 @@ $(function () {
         }
     });
 
-    $("#cia-type-select").on("change", function () {
-        $(".selectable").each(function () {
-            $(this).css("display", "none");
-        });
 
-        if ($(this).val() == "html") {
-            $(".html-selected").css("display", "block");
-        } else if ($(this).val() == "image") {
-            $(".image-selected").css("display", "block");
-        } else if ($(this).val() == "text") {
-            $(".text-selected").css("display", "block");
-        } 
-    });
-
-    if ($("#cia-type-select").val() == "html") {
-        $(".html-selected").css("display", "block");
-    } else if ($("#cia-type-select").val() == "image") {
-        $(".image-selected").css("display", "block");
-    } else if ($("#cia-type-select").val() == "text") {
-        $(".text-selected").css("display", "block");
-    }
 
     function removeAllActiveRadio(rad) {
         for (let i = 0; i < rad.length; i++) {

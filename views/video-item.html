@@ -588,25 +588,61 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">Text</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
-                                                        rows="3"></textarea>
+                                                    <textarea class="form-control vc-form-input" name=""
+                                                        id="text-on-vid-input" rows="3"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input type="checkbox">
+                                                    <input id="add-btn-to-vid-check" type="checkbox"
+                                                        data-toggle="toggle-content"
+                                                        data-target=".add-btn-text-trigger">
                                                     <span class="checkmark"></span>
 
                                                 </label>
                                                 <span class="label">Add Button</span>
                                             </div>
 
+                                            <div class="trigger add-btn-text-trigger">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label for="my-input">Text</label>
+                                                        <input id="add-btn-text" class="form-control vc-form-input"
+                                                            type="text" name="" placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group play-btn-color">
+                                                        <label for="">Button Text Colour</label>
+                                                        <input value="#000" id="add-btn-color-text-input" type="color"
+                                                            name="" id="" class="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group play-btn-color">
+                                                        <label for="">Button Colour</label>
+                                                        <input value="#e9e9ed" id="add-btn-color-input" type="color"
+                                                            name="" id="" class="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label for="my-input">Border radius</label>
+                                                        <input id="add-btn-border-radius"
+                                                            class="form-control number-input vc-form-input"
+                                                            type="number" name="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">ClickThrough Link</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
-                                                        rows="2"></textarea>
+                                                    <input type="text" class="form-control vc-form-input" name="" id="">
                                                 </div>
                                             </div>
 
@@ -615,7 +651,7 @@
                                                 <div class="mb-3">
                                                     <label for="my-input">Time</label>
                                                     <input id="my-input" class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                        name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -624,15 +660,15 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">HTML</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
-                                                        rows="3"></textarea>
+                                                    <textarea class="form-control vc-form-input" name=""
+                                                        id="cta-html-input" rows="3"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">Time</label>
                                                     <input id="my-input" class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                        name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -641,14 +677,15 @@
 
                                             <div class="col-12 mb-5">
                                                 <div class="d-flex settings-uplooad">
-                                                    <img src="../assets/icons/upload video illustration.png"
+                                                    <img id="call-action-img-selected"
+                                                        src="../assets/icons/upload video illustration.png"
                                                         alt="p;lay icon">
                                                     <div class="upload-texts">
                                                         <div class="title">
                                                             Upload An Image
                                                         </div>
                                                         <button class="btn btn-upload-play">
-                                                            <input type="file" name="" id="">
+                                                            <input type="file" name="" id="call-to-action-image-input">
                                                             Browse
                                                         </button>
                                                         <div class="note">
@@ -670,7 +707,7 @@
                                                 <div class="mb-3">
                                                     <label for="my-input">Time</label>
                                                     <input id="my-input" class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                        name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -719,8 +756,8 @@
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".activate-leads"
-                                                    type="checkbox">
+                                                <input id="activate-lead-input" data-toggle="toggle-content"
+                                                    data-target=".activate-leads" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -729,7 +766,7 @@
                                         <div class="trigger activate-leads">
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input type="checkbox">
+                                                    <input id="email-name-request" type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -739,8 +776,9 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">Headline Text</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
-                                                        rows="3"></textarea>
+                                                    <textarea class="form-control vc-form-input" name=""
+                                                        id="email-header-input"
+                                                        rows="3">Continue Watching This Video</textarea>
                                                 </div>
                                             </div>
 
@@ -748,24 +786,26 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">Sub-Headline Text</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
-                                                        rows="3"></textarea>
+                                                    <textarea class="form-control vc-form-input" name=""
+                                                        id="email-sub-head-input"
+                                                        rows="3">Enter Your Email Below</textarea>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label for="my-input">Button Text</label>
-                                                    <input id="my-input" class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input id="email-lead-btn-text-input"
+                                                        class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="" value="Submit">
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="form-group play-btn-color">
-                                                    <label for="">Play Button Colour</label>
-                                                    <input value="#ffffff" id="play-color-input" type="color" name=""
-                                                        id="" class="">
+                                                    <label for="">Button Colour</label>
+                                                    <input value="#ffffff" id="email-lead--btn-color-input" type="color"
+                                                        name="" id="" class="">
                                                 </div>
                                             </div>
 
@@ -773,7 +813,7 @@
                                                 <div class="mb-3">
                                                     <label for="my-input">Time</label>
                                                     <input id="my-input" class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                        name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -1551,6 +1591,53 @@
 
                                 <div class="video-outter">
                                     <div class="video-inner">
+                                        <div class="email-lead-wrap">
+                                            <div class="email-lead-top">
+                                                <h1 id="email-lead-header-text" class="header-text">
+                                                    Continue Watching This Video
+                                                </h1>
+                                                <h2 id="email-lead-sub-header-text" class="sub-head-text">
+                                                    Enter Your Email Below
+                                                </h2>
+                                            </div>
+
+                                            <div class="mail-form-wrap">
+                                                <img class="email-illustration"
+                                                    src="../assets/icons/enter email icon.svg" alt="email illustration">
+                                                <div class="lead-forms">
+                                                    <div class="form-group" id="email-name">
+                                                        <input type="text" name="" id=""
+                                                            class="form-control no-shadow vc-form-input"
+                                                            placeholder="Enter Your Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="" id=""
+                                                            class="form-control no-shadow vc-form-input"
+                                                            placeholder="Enter Your Email">
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-end">
+                                                        <button id="email-lead-btn"
+                                                            class="btn btn-submit py-1 px-3">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cta-type text-on-vid-display">
+                                            <div class="text">
+                                                test Text
+                                            </div>
+                                            <button class="btn no-shadow btn-with-text">
+                                                Dummy
+                                            </button>
+                                        </div>
+                                        <div class="cta-type image-on-vid-display">
+                                            <img class="cta--image" src="../assets/icons/upload video illustration.png"
+                                                alt="image on video">
+                                        </div>
+                                        <div class="cta-type html-on-vid-display">
+
+                                        </div>
                                         <div class="vid-logo-display">
                                             <img class="vid-logo" src="../assets/icons/login image.svg"
                                                 alt="video  logo">
@@ -1558,7 +1645,11 @@
                                         <button class="btn no-shadow btn-play-settings animate__animated">
                                             <i class="fa fa-play-circle"></i>
                                         </button>
-                                        <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                        <!-- <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video> -->
+                                        <video>
+                                            <source src="../assets/video/video_2021-02-21_11-56-46.mp4"
+                                                type="video/mp4">
+                                        </video>
                                     </div>
                                     <div class="vid-controls">
                                         <button class="btn no-shadow btn-vid-play-pause">
@@ -1580,19 +1671,59 @@
                                             <span class="vid-length">00:00:00</span>
                                         </div>
 
-                                        <button class="btn no-shadow btn-volume">
-                                            <img src="../assets/icons/volume.svg" alt="volume-icon">
-
-                                            <div class="btn-drop-up">
-                                                <input min="0" max="100" value="100" type="range" name="" id="">
+                                        <div class="ps-relative">
+                                            <button class="btn no-shadow click-btn btn-volume">
+                                                <img src="../assets/icons/volume.svg" alt="volume-icon">
+                                            </button>
+                                            <div class="btn-drop-up close-click-outside">
+                                                <input min="0" max="100" value="100" type="range" name=""
+                                                    id="vid-volume-controls">
                                             </div>
-                                        </button>
+                                        </div>
+
 
                                         <button class="btn no-shadow btn-set-vid">
+                                            <div class="vid-pop--over animate__animated animate__slideInUp">
+                                                <nav class="nav flex-column" id="main-vid-settings">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link share" href="#">Share</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link more-option" href="#speed-cont">Speed</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link more-option pl-4"
+                                                            href="#resolution-cont">Resolution</a>
+                                                    </li>
+
+                                                </nav>
+                                                <nav id="speed-cont"
+                                                    class="nav flex-column select-speed custom-selector d-none"
+                                                    value="1">
+                                                    <a class="nav-link back-to" href="#main-vid-settings">Speed</a>
+                                                    <a class="nav-link select-item" val="0.25" href="#">0.25x</a>
+                                                    <a class="nav-link select-item" val="0.5" href="#">0.5x</a>
+                                                    <a class="nav-link select-item" val="1" selected href="#">1x</a>
+                                                    <a class="nav-link select-item" val="1.25" href="#"> 1.25x</a>
+                                                    <a class="nav-link select-item" val="1.5" href="#">1.5x</a>
+                                                    <a class="nav-link select-item" val="2" href="#">2x</a>
+                                                </nav>
+
+                                                <nav id="resolution-cont"
+                                                    class="nav flex-column select-resolution custom-selector d-none"
+                                                    value="780">
+                                                    <a class="nav-link back-to" href="#main-vid-settings">Resolution</a>
+                                                    <a class="nav-link select-item" val="1080" href="#">1080p</a>
+                                                    <a class="nav-link select-item" val="780" selected href="#">780p</a>
+                                                    <a class="nav-link select-item" val="480" href="#">480p</a>
+                                                    <a class="nav-link select-item" val="380" href="#">380p</a>
+                                                    <a class="nav-link select-item" val="240" href="#">240p</a>
+                                                </nav>
+                                            </div>
                                             <img src="../assets/icons/Video setting icon.svg" alt="setting icon">
                                         </button>
 
-                                        <button class="btn no-shadow  btn-picture">
+                                        <button class="btn no-shadow btn-picture hidden" disabled>
                                             <img src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
                                         </button>
 
