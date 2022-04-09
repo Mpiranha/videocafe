@@ -39,6 +39,10 @@ videoContainer.each(function () {
 
     let btnPictureInPicture = $(this).find('.btn-picture').get(0);
 
+    let btnVideoSettings = $(this).find('.btn-set-vid').get(0);
+
+    let vidSettingsContainer = $(this).find('.vid-pop--over');
+
     let btnVolume = $(this).find('.btn-volume').get(0);
 
     let volumeControlContainer = $(this).find('.btn-drop-up');
@@ -77,7 +81,7 @@ videoContainer.each(function () {
     }
 
 
-
+    
     let rafVid = null;
 
     var handleFullscreen = function () {
@@ -215,8 +219,14 @@ videoContainer.each(function () {
     });
 
     btnVolume.addEventListener('click', function () {
-        volumeControlContainer.toggleClass('show');
+        volumeControlContainer.toggleClass('show-visible');
     });
+
+    btnVideoSettings.addEventListener('click', function() {
+        vidSettingsContainer.toggleClass('show-visible');
+    });
+
+
 
     volumeControl.addEventListener('input', function () {
         console.log(video.volume);
@@ -510,6 +520,42 @@ videoContainer.each(function () {
         $(".image-selected").css("display", "block");
     } else if ($("#cia-type-select").val() == "text") {
         $(".text-selected").css("display", "block");
+    }
+
+    // Thumnail select 
+    $("#thumbnail-type-select").on("change", function () {
+        $(".thumbnail-type").each(function () {
+            $(this).css("display", "none");
+        });
+
+        $(".cta-type").each(function () {
+            $(this).css("display", "none");
+        });
+
+        if ($(this).val() == "image") {
+            $(".thumb-image-selected").css("display", "block");
+            // $(".html-on-vid-display").css("display", "flex");
+        } else if ($(this).val() == "video") {
+            $(".thumb-video-selected").css("display", "flex");
+            // $(".image-on-vid-display").css("display", "flex");
+        } 
+    });
+
+    gifshot.createGIF({
+        'video': ['example.mp4', 'example.ogv']
+      },function(obj) {
+        if(!obj.error) {
+          var image = obj.image,
+          animatedImage = document.createElement('img');
+          animatedImage.src = image;
+          document.body.appendChild(animatedImage);
+        }
+      });
+
+    if ($("#thumbnail-type-select").val() == "image") {
+        $(".thumb-image-selected").css("display", "block");
+    } else if ($("#thumbnail-type-select").val() == "video") {
+        $(".thumb-video-selected").css("display", "flex");
     }
 
     // Email Lead

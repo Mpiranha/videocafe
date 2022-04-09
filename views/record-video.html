@@ -468,11 +468,12 @@
                                 <div class="tab-pane fade" id="pills-audio-video" role="tabpanel"
                                     aria-labelledby="pills-audio-video-tab">
                                     <div class="navigation-audio-video">
-                                        <button class="btn btn-record no-shadow">
+                                        <button class="btn btn-record btn-record-audio-video no-shadow">
                                             <img class="rec-icon" src="../assets/icons/audio-video icon.svg" alt="">
                                         </button>
+                                        <!-- <video id="video-audio-video" autoplay></video> -->
                                         <div class="static-controls">
-                                            <button class="btn btn-vol">
+                                            <button id="btn-video-audio-toggle-audio" class="btn btn-vol">
                                                 <img src="../assets/icons/volume.svg" alt="">
                                             </button>
                                             <button class="btn btn-fs">
@@ -481,20 +482,23 @@
                                         </div>
                                     </div>
                                     <div class="custom-vid-player">
+                                        <video id="video-audio-video"></video>
+                                        <video id="video-playback-audio-video"></video>
                                         <div class="bottom-controls">
                                             <div class="main-controls">
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                <button class="btn no-shadow btn-rec" id="btn-start-rec--audio-video">
+                                                    <img src="../assets/icons/record.png" alt="start record icon">
                                                 </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/player roll action icon.svg" alt="">
+                                                <button class="btn no-shadow btn-stop" id="btn-stop-rec--audio-video">
+                                                    <img src="../assets/icons/square.png" alt="stop icon">
                                                 </button>
-                                                <button class="btn no-shadow btn-stop">
-                                                    <img src="../assets/icons/play on icon.svg" alt="">
+                                                <button class="btn no-shadow btn-play" id="btn-play-rec-audio-video">
+                                                    <img src="../assets/icons/play on icon.svg" alt="play icon">
                                                 </button>
 
                                                 <div class="vid-text-desc">
-                                                    00:00 / 02:00:00
+                                                    <span id="vid-audio--cur-time">00:00</span> /
+                                                    <span id="vid-audio--max-time">02:00:00</span>
                                                 </div>
                                             </div>
                                             <div class="fs-wrap">
@@ -709,6 +713,7 @@
 
     <script src="../assets/js/custom/chart.js"></script>
     <script src="../assets/js/custom/script.js"></script>
+    <script src="../assets/js/custom/recording.js"></script>
 
 </body>
 

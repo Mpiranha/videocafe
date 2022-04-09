@@ -1332,7 +1332,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Type</label>
-                                                <select id="my-select"
+                                                <select id="thumbnail-type-select"
                                                     class="form-control vc-form-input mb-3 anim-select" name="">
                                                     <option value="image" selected>Image
                                                     </option>
@@ -1341,16 +1341,28 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
+                                        <div class="col-12 thumbnail-type thumb-image-selected">
                                             <div class="form-group">
                                                 <label for="">Select Image</label>
-                                                <select id="my-select"
-                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                <select id="my-select" class="form-control vc-form-input mb-3" name="">
                                                     <option value="default" selected>Default Video Thumbnail
                                                     </option>
                                                     <option value="library">Choose From Library</option>
                                                     <option value="upload">Upload</option>
                                                 </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 thumbnail-type thumb-video-selected">
+                                            <div class="form-group mr-3">
+                                                <label for="">Start</label>
+                                                <input id="my-select" class="form-control vc-form-input mb-3" name=""
+                                                    placeholder="00:00" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">End</label>
+                                                <input id="my-select" class="form-control vc-form-input mb-3" name=""
+                                                    placeholder="00:05" />
                                             </div>
                                         </div>
 
@@ -1591,6 +1603,34 @@
 
                                 <div class="video-outter">
                                     <div class="video-inner">
+                                        <div class="share-wrap">
+                                            <div class="form-group">
+                                                <label for="">Link</label>
+                                                <input id="" class="form-control vc-form-input" type="text" name=""
+                                                    value="http://videocafe.com/watch/ftghtt">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="">Embed</label>
+                                                <input id="" class="form-control vc-form-input" type="text" name=""
+                                                    value="Display on Hover">
+                                            </div>
+
+                                            <nav class="nav justify-content-between">
+                                                <a class="nav-link active" href="#">
+                                                    <img src="../assets/icons/facebook.svg" alt="facebook icon">
+                                                </a>
+                                                <a class="nav-link" href="#">
+                                                    <img src="../assets/icons/pinterest.svg" alt="pinterest icon">
+                                                </a>
+                                                <a class="nav-link" href="#">
+                                                    <img src="../assets/icons/twitter.svg" alt="twitter icon">
+                                                </a>
+                                                <a class="nav-link" href="#">
+                                                    <img src="../assets/icons/linkedin.svg" alt="facebook icon">
+                                                </a>
+                                            </nav>
+                                        </div>
                                         <div class="email-lead-wrap">
                                             <div class="email-lead-top">
                                                 <h1 id="email-lead-header-text" class="header-text">
@@ -1682,7 +1722,12 @@
                                         </div>
 
 
-                                        <button class="btn no-shadow btn-set-vid">
+
+                                        <div class="ps-relative">
+                                            <button class="btn no-shadow btn-set-vid">
+
+                                                <img src="../assets/icons/Video setting icon.svg" alt="setting icon">
+                                            </button>
                                             <div class="vid-pop--over animate__animated animate__slideInUp">
                                                 <nav class="nav flex-column" id="main-vid-settings">
                                                     <li class="nav-item">
@@ -1720,8 +1765,7 @@
                                                     <a class="nav-link select-item" val="240" href="#">240p</a>
                                                 </nav>
                                             </div>
-                                            <img src="../assets/icons/Video setting icon.svg" alt="setting icon">
-                                        </button>
+                                        </div>
 
                                         <button class="btn no-shadow btn-picture hidden" disabled>
                                             <img src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
@@ -2019,6 +2063,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
         integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="../assets/js/gifMaker/gifshot.js"></script>
 
     <script src="../assets/js/custom/chart.js"></script>
     <script src="../assets/js/select.js"></script>
