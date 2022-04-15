@@ -1,29 +1,14 @@
-let camera_button = $(".btn-record-audio-video").get(0);
-let video = $("#video-audio-video").get(0);
-let videoPlayBack = $("#video-playback-audio-video").get(0);
-let willUseAudio = true;
-let toggleAudio = $('#btn-video-audio-toggle-audio');
+let btn_start = $("#record-screen-only-btn");
+let video = $("#video-display").get(0);
+let videoPlayBack = $("#video-playback").get(0);
+let currentTimeElem = $('#vid-audio--cur-time');
+let maxTimeElem = $('#vid-audio--max-time');
 let start_button = $("#btn-start-rec--audio-video").get(0);
 let stop_button = $("#btn-stop-rec--audio-video").get(0);
 let play_button = $('#btn-play-rec-audio-video').get(0);
-let download_link = $("#download-video").get(0);
-let currentTimeElem = $('#vid-audio--cur-time');
-let maxTimeElem = $('#vid-audio--max-time');
 let updateInterval;
 
-
-
-// let logElement = document.getElementById("log");
-
 let recordingTimeMS = 5000;
-
-let camera_stream = null;
-let media_recorder = null;
-let blobs_recorded = [];
-
-toggleAudio.on('click', function () {
-    willUseAudio = !willUseAudio;
-});
 
 function markPresent() {
     window.markDate = new Date();
@@ -42,47 +27,6 @@ function updateClock() {
     // setTimeout(function () {
     //     updateClock()
     // }, 1000);
-}
-
-const whilePlayingVideo = () => {
-    currentTimeElem.text(calculateTime(Math.floor(videoPlayBack.currentTime)));
-
-
-
-    // audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
-    rafVid = requestAnimationFrame(whilePlayingVideo);
-}
-
-const calculateTime = (secs) => {
-    const hour = Math.floor(secs / 3600);
-    const minutes = Math.floor(secs / 60);
-    const seconds = Math.floor(secs % 60);
-    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-    const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-    const returnedHour = hour < 10 ? `0${hour}` : `${hour}`;
-    return `${returnedHour}:${returnedMinutes}:${returnedSeconds}`;
-}
-
-
-function format(seconds) {
-    var numhours = parseInt(Math.floor(((seconds % 31536000) % 86400) / 3600), 10);
-    var numminutes = parseInt(Math.floor((((seconds % 31536000) % 86400) % 3600) / 60), 10);
-    var numseconds = parseInt((((seconds % 31536000) % 86400) % 3600) % 60, 10);
-    return ((numhours < 10) ? "0" + numhours : numhours) +
-        ":" + ((numminutes < 10) ? "0" + numminutes : numminutes) +
-        ":" + ((numseconds < 10) ? "0" + numseconds : numseconds);
-}
-
-function checkIsApproved() {
-    return navigator.mediaDevices.enumerateDevices()
-        .then(infos => {
-            console.log([...infos].map(i => i.label));
-            return [...infos].some(info => info.label !== "")
-        });
-}
-
-function wait(delayInMS) {
-    return new Promise(resolve => setTimeout(resolve, delayInMS));
 }
 
 function startRecording(stream, lengthInMS) {
@@ -168,32 +112,60 @@ function startRecording(stream, lengthInMS) {
         .then(() => data);
 }
 
-function stop(stream) {
-    stream.getTracks().forEach(track => track.stop());
-}
-
 function startVideoDisplay() {
-    navigator.mediaDevices.getUserMedia({
+    navigator.mediaDevices.getDisplayMedia({
         video: true,
-        audio: willUseAudio
     }).then(stream => {
         video.srcObject = stream;
         video.play();
-        // downloadButton.href = stream;
+
         video.captureStream = video.captureStream || video.mozCaptureStream;
         video.style.display = 'block';
         videoPlayBack.style.display = 'none';
-        play_button.style.display = 'none';
-        currentTimeElem.text(calculateTime(0));
-        $('.navigation-audio-video').css('display', 'none');
-        $('.navigation-audio-video').parent().children('.custom-vid-player').css('display', 'block');
-        $("#video-audio-video").parent().css('background-color', '#000000');
-        camera_button.style.display = 'none';
+        $('.navigation-screen-only').css('display', 'none');
+        $('.navigation-screen-only').parent().children('.custom-vid-player').css('display', 'block');
+        $("#video-display").parent().css('background-color', '#000000');
+        // camera_button.style.display = 'none';
         return new Promise(resolve => video.onplaying = resolve);
     });
 }
 
-camera_button.addEventListener("click", function () {
+const calculateTime = (secs) => {
+    const hour = Math.floor(secs / 3600);
+    const minutes = Math.floor(secs / 60);
+    const seconds = Math.floor(secs % 60);
+    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+    const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
+    const returnedHour = hour < 10 ? `0${hour}` : `${hour}`;
+    return `${returnedHour}:${returnedMinutes}:${returnedSeconds}`;
+}
+
+function format(seconds) {
+    var numhours = parseInt(Math.floor(((seconds % 31536000) % 86400) / 3600), 10);
+    var numminutes = parseInt(Math.floor((((seconds % 31536000) % 86400) % 3600) / 60), 10);
+    var numseconds = parseInt((((seconds % 31536000) % 86400) % 3600) % 60, 10);
+    return ((numhours < 10) ? "0" + numhours : numhours) +
+        ":" + ((numminutes < 10) ? "0" + numminutes : numminutes) +
+        ":" + ((numseconds < 10) ? "0" + numseconds : numseconds);
+}
+
+function checkIsApproved() {
+    return navigator.mediaDevices.enumerateDevices()
+        .then(infos => {
+            console.log([...infos].map(i => i.label));
+            return [...infos].some(info => info.label !== "")
+        });
+}
+
+function wait(delayInMS) {
+    return new Promise(resolve => setTimeout(resolve, delayInMS));
+}
+
+function stop(stream) {
+    stream.getTracks().forEach(track => track.stop());
+}
+
+btn_start.on("click", async function () {
     startVideoDisplay();
 });
 
@@ -231,6 +203,8 @@ start_button.addEventListener("click", function () {
 stop_button.addEventListener("click", function () {
     stop(video.srcObject);
 }, false);
+
+
 
 play_button.addEventListener('click', function () {
     if (videoPlayBack.paused || videoPlayBack.ended) {

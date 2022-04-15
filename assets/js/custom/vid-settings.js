@@ -33,6 +33,10 @@ videoContainer.each(function () {
 
     let vidLength = $(this).find('.vid-length').get(0);
 
+    let btnShare = $(this).find('.share').get(0);
+
+    let shareWrap = $(this).find('.share-wrap');
+
     //let vidInnerContainer = $(this).find('.video-inner');
 
     let playBack = $(this).find('.btn-play-back').get(0);
@@ -70,7 +74,7 @@ videoContainer.each(function () {
                     });
             }
         });
-
+        // picture in picture implementation
         video.addEventListener('enterpictureinpicture', () => {
             pipButton.textContent = 'Exit Picture-in-Picture mode';
         });
@@ -81,7 +85,7 @@ videoContainer.each(function () {
     }
 
 
-    
+
     let rafVid = null;
 
     var handleFullscreen = function () {
@@ -156,7 +160,13 @@ videoContainer.each(function () {
         }
     }
 
+    btnShare.addEventListener('click', function () {
+        shareWrap.css('display', 'flex');
+    });
 
+    $('.close-share').on('click', function() {
+        $(this).parent().css('display', 'none');
+    });
 
     video.addEventListener('loadedmetadata', function () {
         vidLength.textContent = calculateTime(Math.floor(video.duration));
@@ -222,7 +232,7 @@ videoContainer.each(function () {
         volumeControlContainer.toggleClass('show-visible');
     });
 
-    btnVideoSettings.addEventListener('click', function() {
+    btnVideoSettings.addEventListener('click', function () {
         vidSettingsContainer.toggleClass('show-visible');
     });
 
@@ -538,19 +548,19 @@ videoContainer.each(function () {
         } else if ($(this).val() == "video") {
             $(".thumb-video-selected").css("display", "flex");
             // $(".image-on-vid-display").css("display", "flex");
-        } 
+        }
     });
 
     gifshot.createGIF({
         'video': ['example.mp4', 'example.ogv']
-      },function(obj) {
-        if(!obj.error) {
-          var image = obj.image,
-          animatedImage = document.createElement('img');
-          animatedImage.src = image;
-          document.body.appendChild(animatedImage);
+    }, function (obj) {
+        if (!obj.error) {
+            var image = obj.image,
+                animatedImage = document.createElement('img');
+            animatedImage.src = image;
+            document.body.appendChild(animatedImage);
         }
-      });
+    });
 
     if ($("#thumbnail-type-select").val() == "image") {
         $(".thumb-image-selected").css("display", "block");
