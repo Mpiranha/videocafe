@@ -898,13 +898,15 @@
     margin-bottom: 2rem;
 }
 
-#video-audio-video, #video-display {
+#video-audio-video,
+#video-display {
     width: 100%;
     max-width: 100%;
     height: 100%;
 }
 
-#video-playback-audio-video, #video-playback {
+#video-playback-audio-video,
+#video-playback {
     display: none;
     width: 100%;
     max-width: 100%;
@@ -3548,8 +3550,9 @@ input.clr-color {
 
 .table-engagement thead tr td {
     border: 2px solid #d840e5;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 0.3rem 0.75rem;
+    vertical-align: middle;
 }
 
 .table-engagement tbody {
@@ -3580,6 +3583,15 @@ input.clr-color {
 
 .vid-select select {
     width: 300px;
+}
+
+.status-active {
+    background-color: #00b06e;
+    color: #fff;
+    display: inline-block;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
 }
 
 .table-engagement-lg-font tbody tr td {
@@ -3686,6 +3698,8 @@ input.clr-color {
     width: 350px;
     padding: 0 0.7rem;
     background-color: transparent;
+    height: 80vh !important;
+    overflow-y: auto;
 }
 
 .navigation-video-settings .collapse {
