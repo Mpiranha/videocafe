@@ -1,0 +1,157 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?0f8ac1c4d83320b6f7f8947d0a040eb0") format("truetype"),
+url("./flaticon.woff?0f8ac1c4d83320b6f7f8947d0a040eb0") format("woff"),
+url("./flaticon.woff2?0f8ac1c4d83320b6f7f8947d0a040eb0") format("woff2"),
+url("./flaticon.eot?0f8ac1c4d83320b6f7f8947d0a040eb0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?0f8ac1c4d83320b6f7f8947d0a040eb0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "play-button-arrowhead": "\f101",
+    "play-button": "\f102",
+    "play": "\f103",
+    "play-1": "\f104",
+    "play-button-1": "\f105",
+    "play-button-2": "\f106",
+    "play-button-3": "\f107",
+    "play-store": "\f108",
+    "play-2": "\f109",
+    "media-player": "\f10a",
+    "play-button-4": "\f10b",
+    "youtube": "\f10c",
+    "play-button-5": "\f10d",
+    "pause-play": "\f10e",
+    "play-button-6": "\f10f",
+    "play-3": "\f110",
+    "film": "\f111",
+    "play-4": "\f112",
+    "play-button-7": "\f113",
+    "movie": "\f114",
+    "play-button-8": "\f115",
+    "play-button-9": "\f116",
+    "play-button-10": "\f117",
+    "video": "\f118",
+    "video-player": "\f119",
+    "multimedia-player": "\f11a",
+    "video-player-1": "\f11b",
+    "pause": "\f11c",
+    "google-play": "\f11d",
+    "play-button-11": "\f11e",
+    "film-1": "\f11f",
+    "play-5": "\f120",
+    "play-button-12": "\f121",
+);
+
+.flaticon-play-button-arrowhead:before {
+    content: map-get($flaticon-map, "play-button-arrowhead");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
+.flaticon-play:before {
+    content: map-get($flaticon-map, "play");
+}
+.flaticon-play-1:before {
+    content: map-get($flaticon-map, "play-1");
+}
+.flaticon-play-button-1:before {
+    content: map-get($flaticon-map, "play-button-1");
+}
+.flaticon-play-button-2:before {
+    content: map-get($flaticon-map, "play-button-2");
+}
+.flaticon-play-button-3:before {
+    content: map-get($flaticon-map, "play-button-3");
+}
+.flaticon-play-store:before {
+    content: map-get($flaticon-map, "play-store");
+}
+.flaticon-play-2:before {
+    content: map-get($flaticon-map, "play-2");
+}
+.flaticon-media-player:before {
+    content: map-get($flaticon-map, "media-player");
+}
+.flaticon-play-button-4:before {
+    content: map-get($flaticon-map, "play-button-4");
+}
+.flaticon-youtube:before {
+    content: map-get($flaticon-map, "youtube");
+}
+.flaticon-play-button-5:before {
+    content: map-get($flaticon-map, "play-button-5");
+}
+.flaticon-pause-play:before {
+    content: map-get($flaticon-map, "pause-play");
+}
+.flaticon-play-button-6:before {
+    content: map-get($flaticon-map, "play-button-6");
+}
+.flaticon-play-3:before {
+    content: map-get($flaticon-map, "play-3");
+}
+.flaticon-film:before {
+    content: map-get($flaticon-map, "film");
+}
+.flaticon-play-4:before {
+    content: map-get($flaticon-map, "play-4");
+}
+.flaticon-play-button-7:before {
+    content: map-get($flaticon-map, "play-button-7");
+}
+.flaticon-movie:before {
+    content: map-get($flaticon-map, "movie");
+}
+.flaticon-play-button-8:before {
+    content: map-get($flaticon-map, "play-button-8");
+}
+.flaticon-play-button-9:before {
+    content: map-get($flaticon-map, "play-button-9");
+}
+.flaticon-play-button-10:before {
+    content: map-get($flaticon-map, "play-button-10");
+}
+.flaticon-video:before {
+    content: map-get($flaticon-map, "video");
+}
+.flaticon-video-player:before {
+    content: map-get($flaticon-map, "video-player");
+}
+.flaticon-multimedia-player:before {
+    content: map-get($flaticon-map, "multimedia-player");
+}
+.flaticon-video-player-1:before {
+    content: map-get($flaticon-map, "video-player-1");
+}
+.flaticon-pause:before {
+    content: map-get($flaticon-map, "pause");
+}
+.flaticon-google-play:before {
+    content: map-get($flaticon-map, "google-play");
+}
+.flaticon-play-button-11:before {
+    content: map-get($flaticon-map, "play-button-11");
+}
+.flaticon-film-1:before {
+    content: map-get($flaticon-map, "film-1");
+}
+.flaticon-play-5:before {
+    content: map-get($flaticon-map, "play-5");
+}
+.flaticon-play-button-12:before {
+    content: map-get($flaticon-map, "play-button-12");
+}

@@ -174,7 +174,7 @@
     min-width: 250px;
     height: 100vh;
     overflow-y: auto;
-    padding: 6rem 1.2rem 1rem 0.7rem;
+    padding: 1rem 1.2rem 1rem 0.7rem;
     display: flex;
     flex-direction: column;
 }
@@ -1032,6 +1032,7 @@
 
 .media-desc .desc {
     font-size: 0.7rem;
+    text-align: left !important;
 }
 
 .media-desc .box-actions {
@@ -3775,7 +3776,7 @@ input.clr-color {
     height: 4rem;
 }
 
-.selectable {
+.selectable, .vis-selectable {
     display: none;
 }
 
@@ -4391,6 +4392,89 @@ input[type=range]:focus::-ms-fill-upper {
     display: none;
 }
 
+.video-passworded .form-group {
+    max-width: 300px;
+}
+
+.video-passworded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #020202b0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.video-passworded label {
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+    display: block;
+    word-break: break-all;
+}
+
+.video-passworded .custom-pwd-input {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.custom-pwd-input input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+}
+
+.custom-pwd-input input:focus {
+    background-color: transparent;
+}
+
+.custom-pwd-input .btn-access-vid {
+    background-color: #d840e5;
+    color: #fff;
+}
+
+.logo-link {
+    margin-bottom: 5rem;
+}
+
+.logo-link img {
+    width: 200px;
+}
+
+.btn-choose-design {
+    background-color: #dd0da2;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.btn-skip-popup {
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    right: 10px; 
+    bottom: 10px;
+    display: none;
+}
+
+.btn-skip-popup i {
+    font-size: 0.8rem;
+    margin-left: .5rem;
+
+}
+
+.email-lead-wrap.skipable .btn-skip-popup {
+    display: inline-block;
+}
+
 @keyframes bg-stretch-out {
     0% {
         height: 300px;
@@ -4463,5 +4547,13 @@ input[type=range]:focus::-ms-fill-upper {
 
     100% {
         height: 136px;
+    }
+}
+
+@media (min-width: 1900px) {
+
+    .pr-lg-5,
+    .px-lg-5 {
+        padding-right: 11rem !important;
     }
 }
