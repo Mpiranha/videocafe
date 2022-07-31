@@ -436,6 +436,8 @@ videoContainer.each(function () {
         readURL(this, '#call-action-img-selected', '.cta--image');
     });
 
+
+
     $("#play-color-input").on("change", function () {
         $(".btn-play-select").css("color", $(this).val());
         $(".btn-play-settings").css("color", $(this).val());
@@ -628,7 +630,7 @@ videoContainer.each(function () {
         }
     });
 
-    $("[data-dismiss='popup']").on("click", function() {
+    $("[data-dismiss='popup']").on("click", function () {
         $("" + $(this).attr('data-target') + "").css("display", "none");
     });
 
@@ -680,6 +682,76 @@ videoContainer.each(function () {
         });
     });
 
+    // Toggle Controls
+    $("#play-button-display").on("change", function () {
+        if ($(this).val() == "display-on-hover") {
+            $(".video-inner").addClass("play-show-hover");
+        } else {
+            $(".video-inner").removeClass("play-show-hover");
+        }
+    });
+    // Playbar
+    $('#show-hide-playbar').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.vid-controls').css('display', 'flex')
+        } else {
+            $('.vid-controls').css('display', 'none')
+        }
+    });
+
+    // Volume
+    $('#show-hide-volume').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-volume').css('display', 'flex')
+        } else {
+            $('.btn-volume').css('display', 'none')
+        }
+    });
+
+    // Share
+    $('#show-hide-share').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.share').css('display', 'flex')
+        } else {
+            $('.share').css('display', 'none')
+        }
+    });
+
+    // Play speed
+    $('#show-hide-play--speed').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.play-speed').css('display', 'flex')
+        } else {
+            $('.play-speed').css('display', 'none')
+        }
+    });
+
+    // Fullscreen
+    $('#show-hide-fullscreen').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-fs').css('display', 'flex')
+        } else {
+            $('.btn-fs').css('display', 'none')
+        }
+    });
+
+    // Rewind Button
+    $('#show-hide-rewind').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-play-back').css('display', 'flex')
+        } else {
+            $('.btn-play-back').css('display', 'none')
+        }
+    });
+
+    // Picture in Picture
+    $('#show-hide-picture--in--picture').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-picture').css('display', 'flex')
+        } else {
+            $('.btn-picture').css('display', 'none')
+        }
+    });
 
 
 

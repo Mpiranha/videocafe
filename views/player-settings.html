@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/coloris.css" />
@@ -52,7 +53,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                       <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -77,7 +78,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                       <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -105,26 +106,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="collapse" role="button" href="#collapse-settings">
+                    <a class="nav-link active" data-toggle="collapse" role="button" href="player-settings.html">
                         <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
                         <span class="nav-text">
-                            Settings
+                            Player Settings
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
                     </a>
                 </li>
-                <li class="collapse" id="collapse-settings">
-                    <nav class="nav nav-media flex-column">
-                        <a class="nav-link active" href="player-settings.html">Player Settings</a>
-                    </nav>
-                </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                       <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -463,7 +459,34 @@
                                             </div>
 
                                             <div class="trigger show-logo-trigger form-group">
+                                                <div class="row mb-4">
+                                                    <div class="col-6">
+                                                        <div class="d-flex h-100 align-items-end settings-uplooad">
+                                                            <img id="default-selected-logo"
+                                                                src="" alt="play icon">
+                                                            <div class="upload-texts">
+                                                                <div class="title">
+                                                                    Upload An Image
+                                                                </div>
+                                                                <button class="btn btn-upload-play">
+                                                                    <input type="file" name="" id="logo-img-upload">
+                                                                    Browse
+                                                                </button>
+                                                                <div class="note">
+                                                                    Note: Image Max Size 1mb
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="default-logo-img-prev">
+                                                            <img class="default-logo-prev"
+                                                            src="" alt="play icon">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="row">
+                                                   
                                                     <div class="col-6">
                                                         <div class="mb-3">
                                                             <label for="my-input">Logo Title</label>
@@ -474,9 +497,10 @@
                                                             <label for="my-input">Logo Position</label>
 
                                                             <select class="form-control vc-form-input" name="" id="">
-                                                                <option>Top</option>
-                                                                <option>Top Left</option>
-                                                                <option>Top Right</option>
+                                                               
+                                                                <option value="top-left" selected>Top Left</option>
+                                                                <option value="top-right">Top Right</option>
+                                                                <option value="playbar">Playbar</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -514,9 +538,109 @@
                                             <div class="trigger play-btn-trigger">
 
                                                 <div class="play-icons">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <i class="fa fa-play"></i>
-                                                    <i class="fa fa-circle-play"></i>
+                                                    <button class="btn btn-play-select selected">
+                                                        <i class="flaticon-play-button-arrowhead"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-1"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-1"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-2"></i>
+                                                    </button>
+
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-3"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-store"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-2"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-media-player"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-4"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-youtube"></i>
+                                                    </button>
+
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-5"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-pause-play"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-6"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-3"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-film"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-4"></i>
+                                                    </button>
+
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-7"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-movie"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-8"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-9"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-10"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-video"></i>
+                                                    </button>
+
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-video-player"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-multimedia-player"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-video-player-1"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-pause"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-google-play"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-11"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-film-1"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-5"></i>
+                                                    </button>
+                                                    <button class="btn btn-play-select">
+                                                        <i class="flaticon-play-button-12"></i>
+                                                    </button>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-6">
@@ -528,14 +652,81 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-group">
-                                                            <label for="">Play Button Animation</label>
-                                                            <select id="my-select"
-                                                                class="form-control vc-form-input anim-select" name="">
-                                                                <option value="none" selected>Select An Animation
+                                                            <label class="text-light" for="">Play Button Animation</label>
+                                                            <select class="form-control vc-form-input mb-3 anim-select"
+                                                                name="">
+                                                                <option value="animate__animated animate__" selected>
+                                                                    Select An Animation
                                                                 </option>
-                                                                <option value="bounce">Bounce</option>
-                                                                <option value="splash">Splash</option>
+                                                                <option value="animate__animated animate__bounce">
+                                                                    Bounce
+                                                                </option>
+                                                                <option value="animate__animated animate__flash">
+                                                                    Flash
+                                                                </option>
+                                                                <option value="animate__animated animate__pulse">
+                                                                    Pulse
+                                                                </option>
+                                                                <option value="animate__animated animate__rubberBand">
+                                                                    RubberBand
+                                                                </option>
+                                                                <option value="animate__animated animate__shakeX">
+                                                                    ShakeX
+                                                                </option>
+                                                                <option value="animate__animated animate__shakeY">
+                                                                    ShakeY
+                                                                </option>
+                                                                <option value="animate__animated animate__headShake">
+                                                                    HeadShake
+                                                                </option>
+                                                                <option value="animate__animated animate__swing">
+                                                                    Swing
+                                                                </option>
+                                                                <option value="animate__animated animate__tada">
+                                                                    Tada
+                                                                </option>
+                                                                <option value="animate__animated animate__wobble">
+                                                                    Wobble
+                                                                </option>
+                                                                <option value="animate__animated animate__jello">
+                                                                    Jello
+                                                                </option>
+                                                                <option value="animate__animated animate__heartBeat">
+                                                                    HeartBeat
+                                                                </option>
+                                                                <option value="animate__animated animate__rotateIn">
+                                                                    Rotate In
+                                                                </option>
+                                                                <option value="animate__animated animate__flip">
+                                                                    Flip
+                                                                </option>
+                                                                <option value="animate__animated animate__fadeIn">
+                                                                    FadeIn
+                                                                </option>
+                                                                <option value="animate__animated animate__fadeOut">
+                                                                    FadeOut
+                                                                </option>
+                                                                <option value="animate__animated animate__zoomIn">
+                                                                    ZoomIn
+                                                                </option>
+                                                                <option value="animate__animated animate__backInDown">
+                                                                    BackInDown
+                                                                </option>
+                                                                <option value="animate__animated animate__slideInDown">
+                                                                    SlideInDown
+                                                                </option>
+                                                                <option value="animate__animated animate__slideInUp">
+                                                                    SlideInUp
+                                                                </option>
                                                             </select>
+                                                            <div class="d-flex mb-3">
+                                                                <label class="custom-check">
+                                                                    <input type="checkbox" id="set-infinite">
+                                                                    <span class="checkmark"></span>
+
+                                                                </label>
+                                                                <span class="label text-light">Infinite Animation</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -567,7 +758,7 @@
 
                                         <div class="custom-form-group">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-playbar" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -575,7 +766,7 @@
                                         </div>
                                         <div class="custom-form-group">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-volume" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -583,12 +774,72 @@
                                         </div>
                                         <div class="custom-form-group">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-share" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
-                                            <span class="label">etc</span>
+                                            <span class="label">Share and Embed</span>
                                         </div>
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-play--speed" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Play Speed</span>
+                                        </div>
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-fullscreen" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Fullscreen</span>
+                                        </div>
+
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-rewind" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Rewind Button</span>
+                                        </div>
+
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-playback--resume" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Playback Resume</span>
+                                        </div>
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-theater" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Theater Mode</span>
+                                        </div>
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-picture--in--picture" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Picture-in-Picture</span>
+                                        </div>
+
+                                        <div class="custom-form-group">
+                                            <label class="custom-check">
+                                                <input id="show-hide-vr" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">VR/360</span>
+                                        </div>
+
 
                                         <div class="d-flex mt-auto justify-content-end">
                                             <button class="btn btn-login px-3">
@@ -613,9 +864,10 @@
                                                 <div class="form-group">
                                                     <label for="">Who Can Watch This Video?</label>
                                                     <select class="form-control vc-form-input" name="" id="">
-                                                        <option selected value="anyone">Anyone</option>
-                                                        <option></option>
-                                                        <option></option>
+                                                        <option selected value="none">Anyone</option>
+                                                        <option value="private">Only Me</option>
+                                                        <option value="link">People With The Private Link</option>
+                                                        <option value="password">People With The Password</option>
                                                     </select>
                                                 </div>
 
@@ -623,8 +875,7 @@
                                                     <label for="">Who Can Comment on This Video?</label>
                                                     <select class="form-control vc-form-input" name="" id="">
                                                         <option selected value="anyone">Anyone</option>
-                                                        <option></option>
-                                                        <option></option>
+                                                        <option value="private">Only Me</option>
                                                     </select>
                                                 </div>
 
@@ -632,9 +883,8 @@
                                                 <div class="form-group">
                                                     <label for="">Where Can This Video Be Embeded?</label>
                                                     <select class="form-control vc-form-input" name="" id="">
-                                                        <option selected value="anyone">Any Domain</option>
-                                                        <option></option>
-                                                        <option></option>
+                                                        <option selected value="public">Any Domain</option>
+                                                        <option value="private">No Domain</option>
                                                     </select>
                                                 </div>
                                             </div>

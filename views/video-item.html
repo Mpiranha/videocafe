@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/coloris.css" />
@@ -54,7 +56,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -79,7 +81,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -107,26 +109,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-settings">
+                    <a class="nav-link " href="player-settings.html">
                         <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
                         <span class="nav-text">
-                            Settings
+                            Player Settings
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
                     </a>
                 </li>
-                <li class="collapse" id="collapse-settings">
-                    <nav class="nav nav-media flex-column">
-                        <a class="nav-link" href="player-settings.html">Player Settings</a>
-                    </nav>
-                </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                        <i class="flaticon-up-chevron icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -1183,22 +1180,22 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Play Button Animation</label>
-                                                <select class="form-control vc-form-input mb-3 anim-select" name="">
-                                                    <option value="none" selected>Display on Hover
+                                                <select id="play-button-display" class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <option value="display-on-hover">Display on Hover
                                                     </option>
-                                                    <option value="bounce">Always Display</option>
+                                                    <option value="permanent" selected>Always Display</option>
 
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <h6 class="sub-title">
+                                        <h6 class="sub-title text-light">
                                             Controls
                                         </h6>
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-playbar" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -1206,7 +1203,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-volume" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -1214,11 +1211,70 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input type="checkbox">
+                                                <input id="show-hide-share" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
-                                            <span class="label">etc</span>
+                                            <span class="label">Share and Embed</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-play--speed" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Play Speed</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-fullscreen" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Fullscreen</span>
+                                        </div>
+
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-rewind" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Rewind Button</span>
+                                        </div>
+
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-playback--resume" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Playback Resume</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-theater" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Theater Mode</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-picture--in--picture" checked type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Picture-in-Picture</span>
+                                        </div>
+
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-vr" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">VR/360</span>
                                         </div>
 
                                         <div class="d-flex mt-auto justify-content-center mb-4">
@@ -1885,10 +1941,10 @@
                                                         <a class="nav-link share" href="#">Share</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link more-option" href="#speed-cont">Speed</a>
+                                                        <a class="nav-link more-option play-speed" href="#speed-cont">Speed</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link more-option pl-4"
+                                                        <a class="nav-link more-option pl-4 vid-resolution"
                                                             href="#resolution-cont">Resolution</a>
                                                     </li>
 
