@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
@@ -51,7 +51,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -76,7 +76,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -103,7 +103,7 @@
                         </span>
                     </a>
                 </li>
-               <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="player-settings.html">
                         <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
                         <span class="nav-text">
@@ -111,14 +111,14 @@
                         </span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -388,7 +388,7 @@
                                             data-placement="top" title="Edit">
                                             <img src="../assets/icons/edit icon.svg" alt="">
                                         </button>
-                                        <button type="button" class="btn btn-vc-project-action" data-toggle="tooltip"
+                                        <button id="add-image-btn" type="button" class="btn btn-vc-project-action" data-toggle="tooltip"
                                             data-placement="bottom" title="Add Images">
                                             <img src="../assets/icons/add icon.svg" alt="">
                                         </button>
@@ -543,6 +543,39 @@
             </div>
 
         </section>
+
+        <div class="modal fade" id="add-image-project" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="bg-modal-purple-header">
+
+                    </div>
+                    <button data-dismiss="modal" class="btn btn-close-modal">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+
+                    <div class="modal-inner">
+
+                        <div class="form-group">
+                            <label for="">Add Image to your Project</label>
+                            <input type="file" class="form-control" id="customFile" />
+
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-auto">
+
+                            <button data-dismiss="modal" class="btn btn-cancel mr-2">
+                                Cancel
+                            </button>
+                            <button class="btn btn-submit">
+                                Add Image
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <div class="modal fade" id="delete-modal" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-md">

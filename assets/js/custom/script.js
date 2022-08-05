@@ -403,6 +403,10 @@ $(function () {
         }
     });
 
+    $("#add-image-btn").on("click", function() {
+        $("#add-image-project").modal("show");
+    })
+
 
 
     function removeAllActiveRadio(rad) {

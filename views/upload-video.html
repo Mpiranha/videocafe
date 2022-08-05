@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Record Screen</title>
+    <title>Upload Video</title>
 </head>
 
 <body>
@@ -301,7 +301,7 @@
                         Upload Video
                     </div>
 
-                    <div class="bg-upload-wrap">
+                    <div id="drop-area" class="bg-upload-wrap">
                         <div class="left-section">
                             <div class="upload-desc">
                                 <span>Note:</span> You Can Select 10 Files At A Time, Support
@@ -309,7 +309,7 @@
                                 File Of 5GB
                             </div>
                             <button class="btn btn-upload">Upload
-                                <input type="file" class="form-control-file" name="" id="" placeholder="">
+                                <input type="file" class="form-control-file" multiple name="" id="fileElem" accept="image/*" placeholder="">
                             </button>
                         </div>
                         <div class="right-section">
@@ -352,6 +352,72 @@
 
     <script src="../assets/js/custom/chart.js"></script>
     <script src="../assets/js/custom/script.js"></script>
+
+    <script>
+
+        let dropArea = document.getElementById('drop-area');
+        let inputELem = document.getElementById('fileElem');
+
+        ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ;['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false)
+        });
+
+        ;['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false)
+        });
+
+        dropArea.addEventListener('drop', handleDrop, false)
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer
+            let files = dt.files
+
+            handleFiles(files)
+        }
+
+        function handleFiles(files) {
+            ([...files]).forEach(uploadFile)
+        }
+
+        function uploadFile(file) {
+
+            
+           
+           
+            let url = 'YOUR URL HERE'
+            let formData = new FormData()
+
+            formData.append('file', file)
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => { /* Done. Inform the user */ })
+            .catch(() => { /* Error. Inform the user */ })
+        }
+        
+        function highlight(e) {
+            dropArea.classList.add('highlight')
+        }
+
+        function unhighlight(e) {
+            dropArea.classList.remove('highlight')
+        }
+
+        function preventDefaults (e) {
+            e.preventDefault()
+            e.stopPropagation()
+        }
+
+
+
+      
+    </script>
 
 </body>
 
