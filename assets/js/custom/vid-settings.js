@@ -453,11 +453,14 @@ videoContainer.each(function () {
         });
     });
 
-    $('.anim-select').on('change', function () {
-        $(".btn-play-settings").attr('class', 'btn no-shadow btn-play-settings ' + $(this).val());
-        if ($('#set-infinite').is(':checked')) {
-            $(".btn-play-settings").addClass('animate__infinite');
-        }
+    $('.anim-select').each(function () {
+
+        $(this).on('change', function () {
+            $($(this).attr('data-target')).attr('class', 'btn no-shadow btn-play-settings ' + $(this).val());
+            if ($('#set-infinite').is(':checked')) {
+                $(".btn-play-settings").addClass('animate__infinite');
+            }
+        });
     });
 
     $('#set-infinite').on('change', function () {
@@ -473,30 +476,56 @@ videoContainer.each(function () {
         $('.text-on-vid-display .text').text($(this).val());
     });
 
-    $('#add-btn-text').on('input', function () {
-        $('.btn-with-text').text($(this).val());
+    $('.add-btn-text').each(function () {
+        $(this).on('input', function () {
+            $($(this).attr('data-target')).text($(this).val());
+        });
     });
 
-    $('#add-btn-color-input').on('change', function () {
-        $('.btn-with-text').css('background-color', $(this).val());
+    $('.add-btn-color-input').each(function () {
+
+        $(this).on('change', function () {
+            $($(this).attr('data-target')).css('background-color', $(this).val());
+        });
+
     });
 
 
-    $('#add-btn-color-text-input').on('change', function () {
-        $('.btn-with-text').css('color', $(this).val());
+    $('.add-btn-color-text-input').each(function () {
+        $(this).on('change', function () {
+            $($(this).attr('data-target')).css('color', $(this).val());
+        });
     });
 
 
 
-    $('#add-btn-border-radius').on('input', function () {
-        $('.btn-with-text').css('border-radius', $(this).val() + 'px');
-    });
+    $('.add-btn-border-radius').each(function () {
+        $(this).on('input', function () {
+            $($(this).attr('data-target')).css('border-radius', $(this).val() + 'px');
+        });
+    })
 
     $('#add-btn-to-vid-check').on('change', function () {
         if ($(this).is(':checked')) {
             $('.btn-with-text').css('display', 'block')
         } else {
             $('.btn-with-text').css('display', 'none')
+        }
+    });
+
+    $('#add-btn-2-to-vid-check').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-with-text-2').css('display', 'block')
+        } else {
+            $('.btn-with-text-2').css('display', 'none')
+        }
+    });
+
+    $('#add-btn-3-to-vid-check').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.btn-with-text-3').css('display', 'block')
+        } else {
+            $('.btn-with-text-3').css('display', 'none')
         }
     });
 
@@ -568,6 +597,8 @@ videoContainer.each(function () {
         $(".text-selected").css("display", "block");
     }
 
+    // Call to action end
+
     // Thumnail select 
     $("#thumbnail-type-select").on("change", function () {
         $(".thumbnail-type").each(function () {
@@ -603,6 +634,84 @@ videoContainer.each(function () {
     } else if ($("#thumbnail-type-select").val() == "video") {
         $(".thumb-video-selected").css("display", "flex");
     }
+
+    // Thumbnail End
+
+
+
+    // Overlay
+
+
+    // Watch Time Limit
+    $("#wtl-type-select").on("change", function () {
+        $(".wtl-selectable").each(function () {
+            $(this).css("display", "none");
+        });
+
+        //console.log($(".wtl-selectable").children());
+        if ($(this).val() == "text") {
+            $(".wtl-selectable.text-selected").css("display", "block");
+
+            //$(".html-on-vid-display").css("display", "flex");
+        } else if ($(this).val() == "image") {
+            $(".wtl-selectable.image-selected").css("display", "block");
+            //$(".image-on-vid-display").css("display", "flex");
+        }
+    });
+
+    if ($("#wtl-type-select").val() == "text") {
+        $(".wtl-selectable.text-selected").css("display", "block");
+    } else if ($("#wtl-type-select").val() == "image") {
+        $(".wtl-selectable.image-selected").css("display", "block");
+    }
+
+    // Overlay Ads
+
+    $("#overlay-ad-type-select").on("change", function () {
+        $(".overlay-ads-selectable").each(function () {
+            $(this).css("display", "none");
+        });
+
+        //console.log($(".overlay-ads-selectable").children());
+        if ($(this).val() == "text") {
+            $(".overlay-ads-selectable.text-selected").css("display", "block");
+
+            //$(".html-on-vid-display").css("display", "flex");
+        } else if ($(this).val() == "image") {
+            $(".overlay-ads-selectable.image-selected").css("display", "block");
+            //$(".image-on-vid-display").css("display", "flex");
+        }
+    });
+
+    if ($("#overlay-ad-type-select").val() == "text") {
+        $(".overlay-ads-selectable.text-selected").css("display", "block");
+    } else if ($("#overlay-ad-type-select").val() == "image") {
+        $(".overlay-ads-selectable.image-selected").css("display", "block");
+    }
+
+    // Overlay Text
+    $('#font-select').on('change', function () {
+        // console.log($(this).val().split(','));
+        //var junction_font = new FontFace($(this).val().split(',')[1], $(this).val().split(',')[0]);
+        
+        //console.log(url);
+        var name = $(this).val().split(',')[1];
+        var junction_font = new FontFace($(this).val().split(',')[1], 'url(' + $(this).val().split(',')[0] + ')');
+        // https://fonts.googleapis.com/css?family=Roboto:Regular
+        // console.log(junction_font);
+        junction_font.load().then(function (loaded_face) {
+            console.log(loaded_face);
+            console.log(name);
+            //console.log('Loaded');
+            document.fonts.add(loaded_face);
+            $('body').css('font-family', name);
+            //document.body.style.fontFamily = $(this).val().split(',')[1];
+        }).catch(function (error) {
+            // error occurred
+        });
+    });
+
+    // Overlay End
 
     // Email Lead
 
@@ -769,6 +878,9 @@ videoContainer.each(function () {
         }
 
     }
+
+    // Font
+
 
 
 

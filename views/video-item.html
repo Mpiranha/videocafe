@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet"
+          href="https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=AIzaSyBfgyd2DNKcv3rcUgMC9SHbIvzw6ngD7OY"> -->
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/coloris.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -116,7 +118,7 @@
                         </span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
@@ -403,8 +405,8 @@
                                                     <div class="col-12">
                                                         <div class="mb-3">
                                                             <label>Logo Title</label>
-                                                            <input class="form-control vc-form-input"
-                                                                type="text" name="" placeholder="Enter Logo Title">
+                                                            <input class="form-control vc-form-input" type="text"
+                                                                name="" placeholder="Enter Logo Title">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label>Logo Position</label>
@@ -420,8 +422,7 @@
                                                     <div class="col-12">
                                                         <div class="mb-3">
                                                             <label>Video Url</label>
-                                                            <input class="form-control vc-form-input"
-                                                                type="url" name=""
+                                                            <input class="form-control vc-form-input" type="url" name=""
                                                                 placeholder="http://youtube.com/eyahsdgsd">
                                                         </div>
                                                     </div>
@@ -550,14 +551,14 @@
                                                         <div class="form-group play-btn-color">
                                                             <label for="">Play Button Colour</label>
                                                             <input value="#ffffff" id="play-color-input" type="color"
-                                                                name="" id="" class="">
+                                                                name="">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="">Play Button Animation</label>
                                                             <select class="form-control vc-form-input mb-3 anim-select"
-                                                                name="">
+                                                                name="" data-target=".btn-play-settings">
                                                                 <option value="animate__animated animate__" selected>
                                                                     Select An Animation
                                                                 </option>
@@ -667,7 +668,7 @@
                                             <div class="form-group">
                                                 <label for="">CTA Type</label>
                                                 <select id="cia-type-select"
-                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option selected value="none" selected>Select
                                                     </option>
                                                     <option value="text">Text</option>
@@ -702,41 +703,138 @@
                                                 <div class="col-12">
                                                     <div class="mb-3">
                                                         <label>Text</label>
-                                                        <input id="add-btn-text" class="form-control vc-form-input"
-                                                            type="text" name="" placeholder="">
+                                                        <input class="form-control vc-form-input add-btn-text"
+                                                            data-target=".btn-with-text" type="text" name=""
+                                                            placeholder="">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-12">
                                                     <div class="form-group play-btn-color">
                                                         <label for="">Button Text Colour</label>
-                                                        <input value="#000" id="add-btn-color-text-input" type="color"
-                                                            name="" id="" class="">
+                                                        <input value="#000000" class="add-btn-color-text-input"
+                                                            data-target=".btn-with-text" type="color" name="">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-12">
                                                     <div class="form-group play-btn-color">
                                                         <label for="">Button Colour</label>
-                                                        <input value="#e9e9ed" id="add-btn-color-input" type="color"
-                                                            name="" id="" class="">
+                                                        <input value="#e9e9ed" class="add-btn-color-input" type="color"
+                                                            data-target=".btn-with-text" name="">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-12">
                                                     <div class="mb-3">
                                                         <label>Border radius</label>
-                                                        <input id="add-btn-border-radius"
-                                                            class="form-control number-input vc-form-input"
+                                                        <input data-target=".btn-with-text"
+                                                            class="form-control number-input vc-form-input add-btn-border-radius"
                                                             type="number" name="">
                                                     </div>
+                                                </div>
+
+                                                <div class="d-flex mb-3">
+                                                    <label class="custom-check">
+                                                        <input id="add-btn-2-to-vid-check" type="checkbox"
+                                                            data-toggle="toggle-content"
+                                                            data-target=".add-btn-text-trigger-2">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <span class="label">Button 2</span>
+                                                </div>
+                                                <div class="trigger add-btn-text-trigger-2">
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label>Text</label>
+                                                            <input data-target=".btn-with-text-2"
+                                                                class="form-control vc-form-input add-btn-text"
+                                                                type="text" name="" placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group play-btn-color">
+                                                            <label for="">Button Text Colour</label>
+                                                            <input value="#000000" class="add-btn-color-text-input"
+                                                                data-target=".btn-with-text-2" type="color" name=""
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group play-btn-color">
+                                                            <label for="">Button Colour</label>
+                                                            <input value="#e9e9ed" class="add-btn-color-input"
+                                                                data-target=".btn-with-text-2" type="color" name=""
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label>Border radius</label>
+                                                            <input
+                                                                class="form-control number-input vc-form-input add-btn-border-radius"
+                                                                data-target=".btn-with-text-2" type="number" name="">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <label class="custom-check">
+                                                        <input id="add-btn-3-to-vid-check" type="checkbox"
+                                                            data-toggle="toggle-content"
+                                                            data-target=".add-btn-text-trigger-3">
+                                                        <span class="checkmark"></span>
+
+                                                    </label>
+                                                    <span class="label">Button 3</span>
+                                                </div>
+                                                <div class="trigger add-btn-text-trigger-3">
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label>Text</label>
+                                                            <input class="form-control vc-form-input add-btn-text"
+                                                                data-target=".btn-with-text-3" type="text" name=""
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group play-btn-color">
+                                                            <label for="">Button Text Colour</label>
+                                                            <input value="#000000" class="add-btn-color-text-input"
+                                                                data-target=".btn-with-text-3" type="color" name=""
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group play-btn-color">
+                                                            <label for="">Button Colour</label>
+                                                            <input value="#e9e9ed" class="add-btn-color-input"
+                                                                data-target=".btn-with-text-3" type="color" name=""
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label>Border radius</label>
+                                                            <input
+                                                                class="form-control number-input vc-form-input add-btn-border-radius"
+                                                                data-target=".btn-with-text-3" type="number" name="">
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>ClickThrough Link</label>
-                                                    <input type="text" class="form-control vc-form-input" name="" id="">
+                                                    <input type="text" class="form-control vc-form-input" name="">
                                                 </div>
                                             </div>
 
@@ -744,8 +842,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -761,8 +859,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -773,7 +871,7 @@
                                                 <div class="d-flex settings-uplooad">
                                                     <img id="call-action-img-selected"
                                                         src="../assets/icons/upload video illustration.png"
-                                                        alt="p;lay icon">
+                                                        alt="play icon">
                                                     <div class="upload-texts">
                                                         <div class="title">
                                                             Upload An Image
@@ -793,15 +891,15 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>ClickThrough Link</label>
-                                                    <textarea class="form-control vc-form-input" name="" id=""
+                                                    <textarea class="form-control vc-form-input" name=""
                                                         rows="2"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -836,7 +934,7 @@
                                             <div class="form-group">
                                                 <label for="">Email List</label>
                                                 <select id="cia-type-select"
-                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option selected value="none">Select
                                                     </option>
                                                     <option value="">Get Mailchimp List</option>
@@ -858,14 +956,13 @@
                                             <span class="label">Activate Leads</span>
                                         </div>
 
-                                       
+
                                         <div class="trigger activate-leads">
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input id="skip-option-input"
-                                                         type="checkbox">
+                                                    <input id="skip-option-input" type="checkbox">
                                                     <span class="checkmark"></span>
-    
+
                                                 </label>
                                                 <span class="label">Skip Option</span>
                                             </div>
@@ -912,15 +1009,15 @@
                                                 <div class="form-group play-btn-color">
                                                     <label for="">Button Colour</label>
                                                     <input value="#ffffff" id="email-lead--btn-color-input" type="color"
-                                                        name="" id="" class="">
+                                                        name="">
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="00:00:00">
                                                 </div>
                                             </div>
                                         </div>
@@ -965,26 +1062,60 @@
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="">Text</label>
-                                                    <select id="cia-type-select"
-                                                        class="form-control vc-form-input mb-3 anim-select" name="">
-                                                        <option value="">Text</option>
-                                                        <option value="">Image</option>
+                                                    <select id="wtl-type-select"
+                                                        class="form-control vc-form-input mb-3 vid-select-input" name="">
+                                                        <option value="text">Text</option>
+                                                        <option value="image">Image</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="wtl-selectable text-selected">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Text</label>
+                                                        <textarea class="form-control vc-form-input" name=""
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wtl-selectable image-selected">
+
+                                                <div class="col-12 mb-5">
+                                                    <div class="d-flex settings-uplooad">
+                                                        <img id="call-action-img-selected"
+                                                            src="../assets/icons/upload video illustration.png"
+                                                            alt="play icon">
+                                                        <div class="upload-texts">
+                                                            <div class="title">
+                                                                Upload An Image
+                                                            </div>
+                                                            <button class="btn btn-upload-play">
+                                                                <input type="file" name=""
+                                                                    id="call-to-action-image-input">
+                                                                Browse
+                                                            </button>
+                                                            <div class="note">
+                                                                Note: Image Max Size 1mb
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Limit</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Limit URL</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
@@ -1003,21 +1134,21 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Share URL</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
                                             <div class="col-12 mb-5">
                                                 <div class="d-flex settings-uplooad">
-                                                    <!-- <img src="../assets/icons/upload video illustration.png"
-                                                        alt="p;lay icon"> -->
+                                                    <img src="../assets/icons/upload video illustration.png"
+                                                        alt="play icon">
                                                     <div class="upload-texts">
                                                         <div class="title">
                                                             Upload An Image
                                                         </div>
                                                         <button class="btn btn-upload-play">
-                                                            <input type="file" name="" id="">
+                                                            <input type="file" name="">
                                                             Browse
                                                         </button>
                                                         <div class="note">
@@ -1030,8 +1161,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Info Text</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
                                         </div>
@@ -1049,19 +1180,68 @@
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="">Ad Type</label>
-                                                    <select id="cia-type-select"
-                                                        class="form-control vc-form-input mb-3 anim-select" name="">
-                                                        <option selected value="">Select</option>
-                                                        <option value="">Image</option>
+                                                    <select id="overlay-ad-type-select"
+                                                        class="form-control vc-form-input mb-3 vid-select-input" name="">
+                                                        <option selected value="none">Select</option>
+                                                        <option value="image">Image</option>
+                                                        <option value="text">Text</option>
                                                     </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="overlay-ads-selectable text-selected">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Text</label>
+                                                        <textarea class="form-control vc-form-input" name="" rows="3"
+                                                            placeholder="Please Enter Overlay Text"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="overlay-ads-selectable image-selected">
+
+                                                <div class="col-12 mb-5">
+                                                    <div class="d-flex settings-uplooad">
+                                                        <img id="call-action-img-selected"
+                                                            src="../assets/icons/upload video illustration.png"
+                                                            alt="play icon">
+                                                        <div class="upload-texts">
+                                                            <div class="title">
+                                                                Upload An Image
+                                                            </div>
+                                                            <button class="btn btn-upload-play">
+                                                                <input type="file" name=""
+                                                                    id="call-to-action-image-input">
+                                                                Browse
+                                                            </button>
+                                                            <div class="note">
+                                                                Note: Image Max Size 1mb
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 logo-size-wrap">
+                                                    <div class="mb-3">
+                                                        <label>Logo Size</label>
+                                                        <div class="logo-size-inputs">
+                                                            <input
+                                                                class="form-control vc-form-input number-input logo-width mr-2"
+                                                                value="" type="text" name="">
+                                                            <input value=""
+                                                                class="form-control vc-form-input number-input logo-height"
+                                                                type="text" name="">
+                                                            <img class="lock-icon" src="../assets/icons/lock_1.svg"
+                                                                alt="lock icon">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Delay Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input number-input" type="text"
+                                                        name="" placeholder="Enter Delay Time">
                                                 </div>
                                             </div>
                                         </div>
@@ -1079,18 +1259,17 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Text</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="">Font</label>
-                                                    <select id="cia-type-select"
-                                                        class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <select id="font-select"
+                                                        class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                         <option selected value="">Select Font</option>
-
                                                     </select>
                                                 </div>
                                             </div>
@@ -1099,8 +1278,17 @@
                                                 <div class="form-group">
                                                     <label for="">Text Position</label>
                                                     <select id="cia-type-select"
-                                                        class="form-control vc-form-input mb-3 anim-select" name="">
-                                                        <option selected value="">Center Center</option>
+                                                        class="form-control vc-form-input mb-3 vid-select-input" name="">
+                                                        <option selected value="">Select Text Position</option>
+                                                        <option value="top-left">Top Left</option>
+                                                        <option value="top-center">Top Center</option>
+                                                        <option value="top-right">Top Right</option>
+                                                        <option value="center-left">Center Left</option>
+                                                        <option value="center">Center</option>
+                                                        <option value="center-right">Center Right</option>
+                                                        <option value="bottom-left">Bottom Left</option>
+                                                        <option value="bottom-center">Bottom Center</option>
+                                                        <option value="bottom-right">Bottom Right</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -1109,23 +1297,23 @@
                                                 <div class="form-group play-btn-color">
                                                     <label for="">Color</label>
                                                     <input value="#ffffff" id="play-color-input" type="color" name=""
-                                                        id="" class="">
+                                                    >
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>URL</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Start Time</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
@@ -1133,11 +1321,69 @@
                                                 <div class="form-group">
                                                     <label for="">Play Button Animation</label>
                                                     <select class="form-control vc-form-input mb-3 anim-select" name="">
-                                                        <option value="none" selected>Select An Animation
+                                                        <option value="animate__animated animate__" selected>
+                                                            Select An Animation
                                                         </option>
-                                                        <option value="bounce">Bounce</option>
-                                                        <option value="splash">Splash</option>
-                                                        <option value="splash">Pulse</option>
+                                                        <option value="animate__animated animate__bounce">
+                                                            Bounce
+                                                        </option>
+                                                        <option value="animate__animated animate__flash">
+                                                            Flash
+                                                        </option>
+                                                        <option value="animate__animated animate__pulse">
+                                                            Pulse
+                                                        </option>
+                                                        <option value="animate__animated animate__rubberBand">
+                                                            RubberBand
+                                                        </option>
+                                                        <option value="animate__animated animate__shakeX">
+                                                            ShakeX
+                                                        </option>
+                                                        <option value="animate__animated animate__shakeY">
+                                                            ShakeY
+                                                        </option>
+                                                        <option value="animate__animated animate__headShake">
+                                                            HeadShake
+                                                        </option>
+                                                        <option value="animate__animated animate__swing">
+                                                            Swing
+                                                        </option>
+                                                        <option value="animate__animated animate__tada">
+                                                            Tada
+                                                        </option>
+                                                        <option value="animate__animated animate__wobble">
+                                                            Wobble
+                                                        </option>
+                                                        <option value="animate__animated animate__jello">
+                                                            Jello
+                                                        </option>
+                                                        <option value="animate__animated animate__heartBeat">
+                                                            HeartBeat
+                                                        </option>
+                                                        <option value="animate__animated animate__rotateIn">
+                                                            Rotate In
+                                                        </option>
+                                                        <option value="animate__animated animate__flip">
+                                                            Flip
+                                                        </option>
+                                                        <option value="animate__animated animate__fadeIn">
+                                                            FadeIn
+                                                        </option>
+                                                        <option value="animate__animated animate__fadeOut">
+                                                            FadeOut
+                                                        </option>
+                                                        <option value="animate__animated animate__zoomIn">
+                                                            ZoomIn
+                                                        </option>
+                                                        <option value="animate__animated animate__backInDown">
+                                                            BackInDown
+                                                        </option>
+                                                        <option value="animate__animated animate__slideInDown">
+                                                            SlideInDown
+                                                        </option>
+                                                        <option value="animate__animated animate__slideInUp">
+                                                            SlideInUp
+                                                        </option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -1180,7 +1426,8 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Play Button Animation</label>
-                                                <select id="play-button-display" class="form-control vc-form-input mb-3 anim-select" name="">
+                                                <select id="play-button-display"
+                                                    class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option value="display-on-hover">Display on Hover
                                                     </option>
                                                     <option value="permanent" selected>Always Display</option>
@@ -1306,7 +1553,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Action Type</label>
-                                                <select class="form-control vc-form-input mb-3 anim-select" name="">
+                                                <select class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option value="none" selected>Do Nothing
                                                     </option>
                                                     <option value="">Redirect to the Link</option>
@@ -1319,8 +1566,8 @@
                                         <div class="col-12">
                                             <div class="mb-5">
                                                 <label>Link URL</label>
-                                                <input class="form-control vc-form-input" type="text"
-                                                    name="" placeholder="">
+                                                <input class="form-control vc-form-input" type="text" name=""
+                                                    placeholder="">
                                             </div>
                                         </div>
 
@@ -1350,12 +1597,12 @@
                                                             class="d-flex align-items-center justify-content-between mb-1">
                                                             <label class="mb-0">Video Source Url</label>
                                                             <button class="btn btn-upload-play">
-                                                                <input type="file" name="" id="">
+                                                                <input type="file" name="">
                                                                 Browse
                                                             </button>
                                                         </div>
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <input class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="enter pre-roll src">
                                                         <div class="red-desc-text">
                                                             maximum video size 20md
                                                         </div>
@@ -1367,8 +1614,7 @@
                                                         <label class="mb-0">External Link Url</label>
 
 
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name=""
+                                                        <input class="form-control vc-form-input" type="text" name=""
                                                             placeholder="e.g.http://videocafe.io.com">
 
                                                     </div>
@@ -1390,12 +1636,12 @@
                                                             class="d-flex align-items-center justify-content-between mb-1">
                                                             <label class="mb-0">Video Source Url</label>
                                                             <button class="btn btn-upload-play">
-                                                                <input type="file" name="" id="">
+                                                                <input type="file" name="">
                                                                 Browse
                                                             </button>
                                                         </div>
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <input class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="enter pre-roll src">
                                                         <div class="red-desc-text">
                                                             maximum video size 20md
                                                         </div>
@@ -1407,8 +1653,7 @@
                                                         <label class="mb-0">External Link Url</label>
 
 
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name=""
+                                                        <input class="form-control vc-form-input" type="text" name=""
                                                             placeholder="e.g.http://videocafe.io.com">
 
                                                     </div>
@@ -1417,8 +1662,8 @@
                                                 <div class="col-12">
                                                     <div class="mb-3">
                                                         <label class="mb-0">Time</label>
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name="" placeholder="00:00">
+                                                        <input class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="00:00">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1439,12 +1684,12 @@
                                                             class="d-flex align-items-center justify-content-between mb-1">
                                                             <label class="mb-0">Video Source Url</label>
                                                             <button class="btn btn-upload-play">
-                                                                <input type="file" name="" id="">
+                                                                <input type="file" name="">
                                                                 Browse
                                                             </button>
                                                         </div>
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name="" placeholder="enter pre-roll src">
+                                                        <input class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="enter pre-roll src">
                                                         <div class="red-desc-text">
                                                             maximum video size 20md
                                                         </div>
@@ -1456,8 +1701,7 @@
                                                         <label class="mb-0">External Link Url</label>
 
 
-                                                        <input class="form-control vc-form-input"
-                                                            type="text" name=""
+                                                        <input class="form-control vc-form-input" type="text" name=""
                                                             placeholder="e.g.http://videocafe.io.com">
 
                                                     </div>
@@ -1496,7 +1740,7 @@
                                             <div class="form-group">
                                                 <label for="">Type</label>
                                                 <select id="thumbnail-type-select"
-                                                    class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option value="image" selected>Image
                                                     </option>
                                                     <option value="video">Video</option>
@@ -1578,16 +1822,16 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Link URL</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="e.g. http://videocafe.app">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="e.g. http://videocafe.app">
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Video Source URL</label>
-                                                    <input class="form-control vc-form-input" type="text"
-                                                        name="" placeholder="enter mid roll src">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="enter mid roll src">
                                                 </div>
                                             </div>
 
@@ -1600,7 +1844,7 @@
                                                             Upload An Image
                                                         </div>
                                                         <button class="btn btn-upload-play">
-                                                            <input type="file" name="" id="">
+                                                            <input type="file" name="">
                                                             Browse
                                                         </button>
                                                         <div class="note">
@@ -1623,7 +1867,7 @@
 
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <select class="form-control vc-form-input mb-3 anim-select" name="">
+                                                    <select class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                         <option value="image" selected>Project Videos
                                                         </option>
                                                         <option value="video">Account Videos</option>
@@ -1701,8 +1945,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Private Link</label>
-                                                    <input class="form-control vc-form-input"
-                                                        type="text" name="" placeholder="">
+                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                        placeholder="">
                                                 </div>
                                             </div>
 
@@ -1712,7 +1956,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Text</label>
-                                                    <textarea id="text-password-input" class="form-control vc-form-input"
+                                                    <textarea id="text-password-input"
+                                                        class="form-control vc-form-input"
                                                         rows="3">Enter the password to access the Video</textarea>
                                                 </div>
                                             </div>
@@ -1731,7 +1976,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Who Can Comment on This Video?</label>
-                                                <select class="form-control vc-form-input mb-3 anim-select" name="">
+                                                <select class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option value="default" selected>Anyone
                                                     </option>
                                                     <option value="me">Only Me</option>
@@ -1742,7 +1987,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="">Where Can This Video Be Embeded?</label>
-                                                <select class="form-control vc-form-input mb-3 anim-select" name="">
+                                                <select class="form-control vc-form-input mb-3 vid-select-input" name="">
                                                     <option value="default" selected>Any Domain
                                                     </option>
                                                     <option value="no">No Domain</option>
@@ -1780,8 +2025,7 @@
                                         Edit
                                     </a>
                                     <a class="dropdown-item" href="#">
-                                        <img src="../assets/icons/share icon.svg"
-                                            alt="share">
+                                        <img src="../assets/icons/share icon.svg" alt="share">
                                         Share
                                     </a>
                                     <a class="dropdown-item" href="#">
@@ -1789,8 +2033,7 @@
                                         Add to Project
                                     </a>
                                     <a class="dropdown-item" href="#">
-                                        <img src="../assets/icons/download thumbnail.svg"
-                                            alt="download">
+                                        <img src="../assets/icons/download thumbnail.svg" alt="download">
                                         Download
                                     </a>
                                     <a class="dropdown-item" href="#">
@@ -1801,7 +2044,7 @@
                                         <img src="../assets/icons/exclamation_cr.svg" alt="download">
                                         Experiment
                                     </a>
-                                   
+
                                 </div>
                             </div>
                             <div class="video-settings-box">
@@ -1829,13 +2072,13 @@
                                             </button>
                                             <div class="form-group">
                                                 <label for="">Link</label>
-                                                <input id="" class="form-control vc-form-input" type="text" name=""
+                                                <input class="form-control vc-form-input" type="text" name=""
                                                     value="http://videocafe.com/watch/ftghtt">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="">Embed</label>
-                                                <input id="" class="form-control vc-form-input" type="text" name=""
+                                                <input class="form-control vc-form-input" type="text" name=""
                                                     value="Display on Hover">
                                             </div>
 
@@ -1869,12 +2112,12 @@
                                                     src="../assets/icons/enter email icon.svg" alt="email illustration">
                                                 <div class="lead-forms">
                                                     <div class="form-group" id="email-name">
-                                                        <input type="text" name="" id=""
+                                                        <input type="text" name=""
                                                             class="form-control no-shadow vc-form-input"
                                                             placeholder="Enter Your Name">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="" id=""
+                                                        <input type="text" name=""
                                                             class="form-control no-shadow vc-form-input"
                                                             placeholder="Enter Your Email">
                                                     </div>
@@ -1886,13 +2129,21 @@
                                                 </div>
                                             </div>
 
-                                            <button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                            <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                                data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right"
+                                                    aria-hidden="true"></i></button>
                                         </div>
                                         <div class="cta-type text-on-vid-display">
                                             <div class="text">
                                                 test Text
                                             </div>
-                                            <button class="btn no-shadow btn-with-text">
+                                            <button class="btn no-shadow mb-3 btn-with-text">
+                                                Dummy
+                                            </button>
+                                            <button class="btn no-shadow mb-3 btn-with-text-2">
+                                                Dummy
+                                            </button>
+                                            <button class="btn no-shadow mb-3 btn-with-text-3">
                                                 Dummy
                                             </button>
                                         </div>
@@ -1912,13 +2163,15 @@
                                         </button>
                                         <div class="video-passworded">
                                             <div class="form-group">
-                                                <label id="pwd-label" for="">Enter The Password to access the Video</label>
+                                                <label id="pwd-label" for="">Enter The Password to access the
+                                                    Video</label>
                                                 <div>
-                                                <div class="custom-pwd-input">
-                                                    <input type="password" name="" id="" class="form-control no-shadow">
-                                                    <button class="btn no-shadow btn-access-vid">Access</button>
+                                                    <div class="custom-pwd-input">
+                                                        <input type="password" name=""
+                                                            class="form-control no-shadow">
+                                                        <button class="btn no-shadow btn-access-vid">Access</button>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             </div>
                                         </div>
                                         <!-- <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video> -->
@@ -1970,7 +2223,8 @@
                                                         <a class="nav-link share" href="#">Share</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link more-option play-speed" href="#speed-cont">Speed</a>
+                                                        <a class="nav-link more-option play-speed"
+                                                            href="#speed-cont">Speed</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link more-option pl-4 vid-resolution"
@@ -2024,7 +2278,7 @@
                                         <img src="../assets/icons/edit icon.svg" alt=""> Edit
                                     </button>
                                     <div class="edit-box">
-                                        <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                        <textarea class="form-control" name="" rows="3"></textarea>
                                         <button class="btn btn-submit btn-save-edit px-3 py-1">Save</button>
                                     </div>
                                     <div class="editted-text">
@@ -2034,7 +2288,7 @@
 
                                 <div class="vid-inner-setting">
                                     <label for="">Comments</label>
-                                    <textarea placeholder="Write a Comment" class="form-control" name="" id=""
+                                    <textarea placeholder="Write a Comment" class="form-control" name=""
                                         rows="3"></textarea>
                                 </div>
 
@@ -2107,7 +2361,7 @@
                     <div class="video-item">
                         <div class="form-check pl-0 mr-3">
                             <label class="custom-check-label">
-                                <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                <input type="checkbox" class="form-check-input" name="" value="select all">
                                 <span class="check-mark rounded"></span>
                             </label>
                         </div>
@@ -2139,7 +2393,7 @@
                     <div class="video-item">
                         <div class="form-check pl-0 mr-3">
                             <label class="custom-check-label">
-                                <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                <input type="checkbox" class="form-check-input" name="" value="select all">
                                 <span class="check-mark rounded"></span>
                             </label>
                         </div>
@@ -2171,7 +2425,7 @@
                     <div class="video-item">
                         <div class="form-check pl-0 mr-3">
                             <label class="custom-check-label">
-                                <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                <input type="checkbox" class="form-check-input" name="" value="select all">
                                 <span class="check-mark rounded"></span>
                             </label>
                         </div>
@@ -2306,6 +2560,8 @@
     <script src="../assets/js/coloris/coloris.js"></script>
     <script src="../assets/js/custom/script.js"></script>
     <script src="../assets/js/custom/vid-settings.js"></script>
+
+    <script src="../assets/js/custom/google-webfont.js"></script>
 
 </body>
 
