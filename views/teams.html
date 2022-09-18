@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
@@ -51,7 +51,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -76,7 +76,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -103,7 +103,7 @@
                         </span>
                     </a>
                 </li>
-               <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link " href="player-settings.html">
                         <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
                         <span class="nav-text">
@@ -111,14 +111,14 @@
                         </span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -436,7 +436,8 @@
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="team-member-box team-create" data-toggle="modal" data-target="#swap-modal">
+                                        <div class="team-member-box team-create" data-toggle="modal"
+                                            data-target="#swap-modal">
                                             <img class="team-add-icon" src="../assets/icons/add icon.svg"
                                                 alt=" add icon">
                                             <div class="desc">
@@ -447,88 +448,222 @@
                                 </div>
 
 
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between mt-auto">
                                     <div>
-                                        <div class="vc-input-wrap mr-3">
+                                        <div class="sc-market-select mr-3">
                                             <span class="label">View</span>
-                                            <input min="0" value="5" class="form-control no-shadow" type="number"
-                                                size="4">
+                                            <select>
+                                                <option value="0">5</option>
+                                                <option value="1">10</option>
+                                                <option value="2">50</option>
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="pagination-custom">
                                         <button class="btn btn-left no-shadow">
-                                            < </button> <div class="page-desc">
-                                                <span id="cur-page">1</span>
-                                                of
-                                                <span id="total-page">2</span>
+                                            ❰
+                                        </button>
+                                        <div class="page-desc">
+                                            <span id="cur-page">1</span>
+                                            of
+                                            <span id="total-page">2</span>
+                                        </div>
+                                        <button class="btn btn-right no-shadow">❱</button>
                                     </div>
-                                    <button class="btn btn-right no-shadow">></button>
                                 </div>
+
+
                             </div>
+
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-engagement" role="tabpanel"
+                            aria-labelledby="pills-engagement-tab">
+
+                            <div class="vc-import-wrap no-team-wrap mb-5">
+                                <h1 class="title">Invited Teams</h1>
+                                <p>&#9888; You are not invited in any teams yet so far</p>
+                            </div>
+
+                            <div class="invited-team-wrap">
+                                <div class="title">
+                                    Invited Teams
+                                </div>
+
+                                <div class="content-semi-head mb-5">
+                                    <div class="w-100 d-flex justify-content-between">
+
+                                        <div class="sc-market-select">
+                                            <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
+                                            <select>
+                                                <option value="0">Sort by date</option>
+                                                <option value="1">Sort by title</option>
+                                                <option value="2">Yesterday</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="custom-search-form mr-3">
+                                            <input class="form-control no-shadow" type="text" value=""
+                                                placeholder="Search videos and collections">
+                                            <button class="btn no-shadow btn-search">
+                                                <img src="../assets/icons/search icon.svg" alt="search icon">
+                                            </button>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="team-member-box invitation-box">
+                                            <div>
+                                                <div class="member-count">
+                                                    0 Member
+                                                </div>
+                                            </div>
+                                            <div class="letter-icon">
+                                                T
+                                            </div>
+                                            <div class="team-name">
+                                                Titan
+                                            </div>
+                                            <div class="team-created mb-3">
+                                                July 23 2021
+                                            </div>
+
+                                            <div class="d-flex justify-content-end">
+                                                <a class="btn btn-team-box" href="team-item.html">
+                                                    Go To Invited Team ➪
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="team-member-box invitation-box">
+                                            <div>
+                                                <div class="member-count">
+                                                    0 Member
+                                                </div>
+                                            </div>
+                                            <div class="letter-icon">
+                                                H
+                                            </div>
+                                            <div class="team-name">
+                                                Titan
+                                            </div>
+                                            <div class="team-created mb-3">
+                                                July 23 2021
+                                            </div>
+
+                                            <div class="d-flex justify-content-end">
+                                                <a class="btn btn-team-box" href="team-item.html">
+                                                    Go To Invited Team ➪
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="team-member-box team-create" data-toggle="modal"
+                                            data-target="#swap-modal">
+                                            <img class="team-add-icon" src="../assets/icons/add icon.svg"
+                                                alt=" add icon">
+                                            <div class="desc">
+                                                Create New Team
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <div>
+                                        <div class="sc-market-select mr-3">
+                                            <span class="label">View</span>
+                                            <select>
+                                                <option value="0">5</option>
+                                                <option value="1">10</option>
+                                                <option value="2">50</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="pagination-custom">
+                                        <button class="btn btn-left no-shadow">
+                                            ❰
+                                        </button>
+                                        <div class="page-desc">
+                                            <span id="cur-page">1 - 2</span>
+                                            of
+                                            <span id="total-page">2</span>
+                                        </div>
+                                        <button class="btn btn-right no-shadow">
+                                            ❱
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+
+
 
 
                         </div>
 
-
-
-
                     </div>
-                    <div class="tab-pane fade" id="pills-engagement" role="tabpanel"
-                        aria-labelledby="pills-engagement-tab">
 
 
 
-
-
-
-                    </div>
 
                 </div>
-
-
-
-
             </div>
-    </div>
 
-    </section>
+        </section>
 
-    <div class="modal fade add-team-modal" id="swap-modal" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="d-flex justify-content-between">
-                    <h1 class="title">
-                        Let's Build That Team
-                    </h1>
-                    <button data-dismiss="modal" class="btn btn-close-modal no-shadow">
-                        <img src="../assets/icons/close.svg" alt="">
-                    </button>
-                </div>
-                <div class="form-group">
-                    <label for="source-video">Team Name*</label>
-                    <input type="text" id="source-video" class="form-control vc-form-input" name="">
-                    <p class="desc-form">
-                        This Is The Name of Your Organization
-                    </p>
-                </div>
-                <div class="form-group">
-                    <label for="source-video">Text Description</label>
+        <div class="modal fade add-team-modal" id="swap-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between">
+                        <h1 class="title">
+                            Let's Build That Team
+                        </h1>
+                        <button data-dismiss="modal" class="btn btn-close-modal no-shadow">
+                            <img src="../assets/icons/close.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label for="source-video">Team Name*</label>
+                        <input type="text" id="source-video" class="form-control vc-form-input" name="">
+                        <p class="desc-form">
+                            This Is The Name of Your Organization
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="source-video">Text Description</label>
 
-                    <textarea class="form-control vc-form-input" name="" id="" rows="5"></textarea>
-                    <p class="desc-form">
-                        Get Your Members On Board With A Few Words About Your Team
-                    </p>
-                </div>
-                <div class="d-flex justify-content-end align-items-center">
+                        <textarea class="form-control vc-form-input" name="" id="" rows="5"></textarea>
+                        <p class="desc-form">
+                            Get Your Members On Board With A Few Words About Your Team
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
 
-                    <button class="btn btn-submit">
-                        Submit
-                    </button>
+                        <button class="btn btn-submit">
+                            Submit
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 

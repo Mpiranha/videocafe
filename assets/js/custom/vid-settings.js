@@ -11,6 +11,7 @@ const calculateTime = (secs) => {
 
 let videoContainer = $('.video-outter');
 
+
 videoContainer.each(function () {
     //let container = $(this).get(0);
     let container = $(this).find('.video-inner').get(0);
@@ -236,6 +237,18 @@ videoContainer.each(function () {
         vidSettingsContainer.toggleClass('show-visible');
     });
 
+    $('#speed-cont').on('val-change', function () {
+        console.log($(this).attr('value'));
+        video.playbackRate = $(this).attr('value');
+    });
+
+    video.addEventListener("timeupdate", function(){
+        //currentTime use second, if you want min *60
+    if(video.currentTime >= 5) {
+            video.pause();
+        }
+    });
+
 
 
     volumeControl.addEventListener('input', function () {
@@ -363,6 +376,17 @@ videoContainer.each(function () {
         $(this).on('keypress', function (event) {
             console.log(event.key);
             if (!REGEXP.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+    });
+
+    //const timeREGEXP = /(((0[1-9])|[^0]\d):)?[0-5]\d:[0-5]\d$/;
+    const timeREGEXP = /[0-9|:]/;
+    $('.time-input').each(function () {
+        $(this).on('keypress', function (event) {
+            console.log(event.key);
+            if (!timeREGEXP.test(event.key)) {
                 event.preventDefault();
             }
         });
@@ -693,7 +717,7 @@ videoContainer.each(function () {
     $('#font-select').on('change', function () {
         // console.log($(this).val().split(','));
         //var junction_font = new FontFace($(this).val().split(',')[1], $(this).val().split(',')[0]);
-        
+
         //console.log(url);
         var name = $(this).val().split(',')[1];
         var junction_font = new FontFace($(this).val().split(',')[1], 'url(' + $(this).val().split(',')[0] + ')');
@@ -762,6 +786,7 @@ videoContainer.each(function () {
         $('#email-lead-btn').css('background', $(this).val());
     });
 
+    const customEvent = new Event('val-change');
     $('.custom-selector').each(function () {
         let parent = $(this);
         let selectable = $(this).find('.select-item');
@@ -769,10 +794,14 @@ videoContainer.each(function () {
             $(this).on('click', function () {
                 unSelectAll(selectable);
                 parent.attr('value', $(this).attr('val'));
+                parent.get()[0].dispatchEvent(customEvent);
+                //parent.get()[0].trigger(customEvent);
                 $(this).attr('selected', 'true');
             });
         });
     });
+
+
 
     $('#main-vid-settings .more-option').each(function () {
         $(this).on('click', function () {

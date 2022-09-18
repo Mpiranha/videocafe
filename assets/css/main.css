@@ -172,17 +172,26 @@
 
 
 .sidebar {
+    position: relative;
     background-color: #27124a;
     min-width: 250px;
     height: 100vh;
     overflow-y: auto;
-    padding: 1rem 1.2rem 1rem 0.7rem;
+    padding: 1rem 1.2rem 0rem 0.7rem;
     display: flex;
     flex-direction: column;
 }
 
 .sidebar .nav-item {
     margin-bottom: 0.2rem;
+}
+
+.sidebar .nav-item:last-child {
+    margin-bottom: 5rem;
+}
+
+.sidebar .nav {
+    /* margin-bottom: 2rem; */
 }
 
 .sidebar .nav-link {
@@ -291,6 +300,11 @@
     color: #fff;
     font-size: 0.7rem;
     font-weight: bold;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.9rem 0.5rem;
+    background-color: inherit;
 }
 
 .bottom-stat span {
@@ -688,7 +702,7 @@
     display: flex;
     align-items: center;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1.2rem 0;
 }
 
@@ -702,6 +716,213 @@
     display: flex;
 }
 
+.team-main-section {
+    flex-basis: 65%;
+}
+
+.nav-team-actions,
+.team-item-main {
+    border: 2px solid #d63fe3;
+    margin-bottom: 2rem;
+}
+
+.nav-team-actions {
+    justify-content: space-between;
+    padding: 0.7rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+.nav-team-actions .nav-link {
+    color: #fff;
+    border: 3px dashed transparent;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+}
+
+.nav-team-actions .nav-link img {
+    width: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.nav-team-actions .nav-link.active {
+    background-color: inherit;
+    border: 3px dashed #d63fe3;
+}
+
+.team-project-box {
+    background-color: #570880;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 96px;
+}
+
+.team-project-box .project-title {
+    font-size: 1rem;
+}
+
+.team-project-box .project-date {
+    font-size: 0.9rem;
+}
+
+.create-project-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+}
+
+.team-project-box .project-video-count {
+    background-color: #d840e5;
+    color: #fff;
+    position: absolute;
+    font-size: 0.8rem;
+    right: 16px;
+    bottom: 16px;
+    width: 100px;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.team-members-invited {
+    display: flex !important;
+    flex-direction: column;
+    align-items: initial !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 0.3rem !important;
+    min-height: 300px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.team-item-main {
+    border: 2px solid #d63fe3;
+    padding: 1rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.bordered-table {
+    border: 3px solid #d63fe3;
+    padding: 0 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.team-settings-wrap {
+    display: block !important;
+}
+
+.team-settings-wrap .title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.select-team-privacy-input {
+    min-width: 150px;
+    font-size: 1.2rem !important;
+    height: calc(2.8rem + 2px) !important;
+    border-radius: 0.5rem;
+}
+
+.btn-delete-settings {
+}
+
+.team-type-stat {
+    display: flex;
+    align-items: center;
+}
+
+.team-type-stat .team-type {
+    margin-right: 1rem;
+}
+
+.team-type-stat .stat-desc {
+    color: #fff;
+}
+
+.table-team-invited thead tr th,
+.table-team-invited tbody tr td {
+    border: none;
+    color: #fff;
+}
+
+.table-team-invited thead tr th {
+    border-bottom: 3px solid #d63fe3;
+    padding: 0.2rem 0.75rem;
+}
+
+.other-team-outter {
+    flex-basis: 30%;
+    margin-left: auto;
+}
+
+.other-teams-wrap {
+    background-color: #8b2de4;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    min-height: 350px;
+}
+
+.other-teams-wrap .title {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 3px solid #f33a40;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.other-teams-wrap .title .team-icon {
+    width: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+.team-select-wrap {
+    border: 3px solid #fff;
+    padding: 0.9rem 0.7rem;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.team-select-wrap .team-member-count {
+    margin-left: auto;
+}
+
+.team-details {
+    display: flex;
+    align-items: center;
+}
+
+.team-details .team-name-wrap {
+    color: #fff;
+}
+
+.team-details .team-name-wrap .team-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.team-details .team-name-wrap .team-type {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.team-details .letter-icon {
+    margin-right: 1rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.9rem;
+}
+
 .navigation-box {
     background-color: #570880;
     margin-right: 2rem;
@@ -711,6 +932,7 @@
     height: 136px;
     width: 442px;
 }
+
 
 .navigation-box .btn-fall-wrap {
     background-color: #9413e6;
@@ -1101,7 +1323,7 @@
 
 .btn-submit {
     background: linear-gradient(to right, #7d32e1, #517be1);
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #fff;
     padding: 0.5rem 2rem;
 }
@@ -1372,19 +1594,21 @@
 .sc-market-select {
     border-radius: 0.3rem;
     position: relative;
-    font-size: 0.75rem;
-    width: 150px;
+    font-size: 1rem;
+    /* width: 150px; */
     background-color: #583381;
     display: flex;
     align-items: center;
     padding: 0.1rem 1rem;
+    color: #fff;
 }
 
 .sc-market-select .sort-icon {
     width: 0.8rem;
 }
 
-.sc-market-select select {
+.sc-market-select select,
+.vc-input-wrap select {
     display: none;
     /*hide original SELECT element: */
 }
@@ -1666,7 +1890,7 @@
 
 .modal-content label {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #swap-modal .modal-content select,
@@ -3333,7 +3557,7 @@ input.clr-color {
 }
 
 .agency-stat-box .box-title {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .team-stat-wrap {
@@ -3344,7 +3568,7 @@ input.clr-color {
     width: 150px;
     background-color: #5091f1;
     margin-right: 1.4rem;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -3354,24 +3578,28 @@ input.clr-color {
 }
 
 .team-stat-box .value {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold
 }
 
 .team-stat-box .box-title {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .invited-team-wrap {
     border: 2px solid #d840e5;
     padding: 0.3rem 1rem 1.5rem 1rem;
     border-radius: 0.2rem;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
 }
 
 .invited-team-wrap .title {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .table-teams {
@@ -3392,6 +3620,8 @@ input.clr-color {
 .table-teams tr td {
     font-size: 0.9rem;
 }
+
+
 
 
 .pagination-custom {
@@ -3534,7 +3764,7 @@ input.clr-color {
 .nav-team .nav-link {
     background: linear-gradient(to right, #570880, #9a14f0);
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-right: 1rem;
 }
 
@@ -3667,7 +3897,7 @@ input.clr-color {
 .letter-icon {
     background-color: #6f5dce;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3679,12 +3909,12 @@ input.clr-color {
 .team-member-box .team-name,
 .team-created {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .team-member-box .btn-team-box {
     color: #d840e5;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     border: 2px solid #d840e5;
     padding: 0 1rem;
 }
@@ -3713,15 +3943,23 @@ input.clr-color {
     font-size: 0.9rem;
 }
 
-.add-team-modal .desc-form {
+.invitation-box .btn-team-box {
+    color: #fff;
+}
+
+.desc-form {
     color: #fff;
     margin-top: 0.4rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .nav-backto {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
+}
+
+.nav-backto:hover {
+    color: #fff;
 }
 
 .navigation-video-settings {
@@ -4574,6 +4812,57 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .media-desc-head .vid-dur {}
+
+.btn-invite-team {
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.team-members-invited .no-team-data {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #070707;
+    border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+.no-team-wrap {
+    display: block;
+    height: 300px;
+}
+
+.no-team-wrap .title,
+.no-team-wrap p {
+    color: #fff;
+}
+
+.no-team-wrap p {
+    font-size: 1.1rem;
+}
+
+
+
+.no-team-wrap .title {
+    font-size: 1.2rem;
+}
 
 @keyframes bg-stretch-out {
     0% {
