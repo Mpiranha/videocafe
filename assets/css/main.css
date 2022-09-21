@@ -830,8 +830,7 @@
     border-radius: 0.5rem;
 }
 
-.btn-delete-settings {
-}
+.btn-delete-settings {}
 
 .team-type-stat {
     display: flex;
@@ -4382,14 +4381,15 @@ input[type=range]:focus::-ms-fill-upper {
 
 .vid-controls .btn-drop-up {
     position: absolute;
-    top: -23px;
+    top: -14px;
     width: 80px;
     bottom: 0;
     transform: rotateZ(-90deg);
     transform-origin: -11px;
     left: 50%;
-    margin-left: 22px;
+    margin-left: 6px;
     display: none;
+    height: 30px;
 }
 
 .vid-controls .btn-drop-up input {

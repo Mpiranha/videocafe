@@ -242,17 +242,17 @@ videoContainer.each(function () {
         video.playbackRate = $(this).attr('value');
     });
 
-    video.addEventListener("timeupdate", function(){
+    video.addEventListener("timeupdate", function () {
         //currentTime use second, if you want min *60
-    if(video.currentTime >= 5) {
-            video.pause();
-        }
+        // if (video.currentTime >= 5) {
+        //     video.pause();
+        // }
     });
 
 
 
     volumeControl.addEventListener('input', function () {
-        console.log(video.volume);
+        // console.log(video.volume);
         video.volume = this.value / 100;
     });
 
@@ -888,6 +888,18 @@ videoContainer.each(function () {
             $('.btn-picture').css('display', 'flex')
         } else {
             $('.btn-picture').css('display', 'none')
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $(".close-click-outside");
+        
+        if (container.hasClass('show-visible')) {
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.removeClass('show-visible');
+            }
         }
     });
 
