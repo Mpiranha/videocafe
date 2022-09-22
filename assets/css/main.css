@@ -4463,8 +4463,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .image-on-vid-display img {
-    width: 30%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
 }
 
 .text-on-vid-display .text {
