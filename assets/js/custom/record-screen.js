@@ -43,6 +43,8 @@ function startRecording(stream, lengthInMS) {
 
     });
 
+
+
     let recorded = wait(lengthInMS).then(
         () => recorder.state == "recording" && recorder.stop()
     );
@@ -203,6 +205,15 @@ start_button.addEventListener("click", function () {
 stop_button.addEventListener("click", function () {
     stop(video.srcObject);
 }, false);
+
+const whilePlayingVideo = () => {
+    currentTimeElem.text(calculateTime(Math.floor(videoPlayBack.currentTime)));
+
+
+
+    // audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
+    rafVid = requestAnimationFrame(whilePlayingVideo);
+}
 
 
 

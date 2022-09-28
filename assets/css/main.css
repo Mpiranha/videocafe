@@ -702,13 +702,14 @@
     display: flex;
     align-items: center;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     padding: 1.2rem 0;
 }
 
 .page-heading .head-icon {
-    width: 1.7rem;
-    margin-right: 0.2rem;
+    width: 1rem;
+    margin-right: 0.5rem;
 }
 
 
@@ -972,7 +973,7 @@
 }
 
 .navigation-box .nav-pills .nav-link.active {
-    background: linear-gradient(135deg, #8f3ae6, #d359fb);
+    background: linear-gradient(135deg, rgb(167 58 230), rgb(235 112 214))
 }
 
 .navigation-box .nav-pills .nav-link img {
@@ -1241,6 +1242,7 @@
     background-color: #9413e6;
     height: 150px;
     padding: 0.9rem;
+    border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .media--box video {
@@ -1257,6 +1259,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .media-desc .title {
@@ -1417,7 +1420,7 @@
     width: 100%;
     background-color: #570880;
     border-radius: 0.6rem;
-    height: 340px;
+    min-height: 340px;
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
@@ -2938,6 +2941,11 @@ path {
     border-radius: 0.4rem;
 }
 
+.purple-wrap {
+    background-color: #570880;
+    border-radius: 0.6rem;
+}
+
 .email-header {
     display: flex;
     align-items: center;
@@ -3144,7 +3152,10 @@ path {
 
 .vid-seetings-outter {
     flex-grow: 1;
+    max-width: 1050px;
 }
+
+
 
 .player-settings-box {
     flex-grow: 1;
@@ -4174,7 +4185,7 @@ p.guide {
 .video-inner {
     position: relative;
     background-color: #000;
-    height: 350px;
+    height: 400px;
 }
 
 .video-inner video {
@@ -4862,6 +4873,120 @@ input[type=range]:focus::-ms-fill-upper {
 
 .no-team-wrap .title {
     font-size: 1.2rem;
+}
+
+.account-form-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 1.5rem;
+}
+
+.account-card-wrap {}
+
+.account-img-wrap {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.account-img-wrap .account-img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.account-img-wrap .btn-upload-account-image {
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    margin-top: -12px;
+    background-color: #7354f0;
+    color: #fff;
+    padding: 0.1rem 0.75rem;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+
+}
+
+.account-img-wrap .btn-upload-account-image .upload-icon {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.account-img-wrap .btn-upload-account-image input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.account-form-item label {
+    color: #fff;
+}
+
+.account-form-item .vc-form-input {
+    padding: 0.575rem .75rem;
+}
+
+.account-illuz {
+    width: 80%;
+}
+
+.plan-upgrade-box {
+    box-shadow: -1px 2px 5px 0.2rem rgb(0 0 0 / 9%);
+    padding: 1.5rem 1.8rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #e15fff;
+    color: #fff;
+}
+
+.plan-upgrade-box .card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.plan-upgrade-box .card-desc {
+    font-size: 0.8rem;
+}
+
+.plan-upgrade-box .btn-upgrade-plan {
+    background-color: #9157f4;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.plan-upgrade-box .billing-price {
+    margin-left: auto;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.bil-title {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.btn-view-all {
+    background-color: #6c3fd2;
+    color: #fff;
+    border-radius: 0.5rem;
 }
 
 @keyframes bg-stretch-out {
