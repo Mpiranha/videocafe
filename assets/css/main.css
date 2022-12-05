@@ -603,11 +603,17 @@
 }
 
 .media-box {
-    background-color: #6174f1;
+    background-color: #000000;
     border-radius: 0.3rem;
     position: relative;
-    height: 160px;
+    height: 180px;
     margin-bottom: 1rem;
+}
+
+.media-box video {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .media-box .media-header {
@@ -1463,10 +1469,9 @@
 }
 
 .bg-upload-wrap .right-section .manage-width {
-    max-width: 220px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -4433,7 +4438,7 @@ input[type=range]:focus::-ms-fill-upper {
 .text-on-vid-display {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-color: #00000080;
     left: 0;
     top: 0;
@@ -4744,7 +4749,7 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 60px;
     display: none;
 }
 
@@ -4754,7 +4759,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 }
 
-.email-lead-wrap.skipable .btn-skip-popup {
+.skipable .btn-skip-popup {
     display: inline-block;
 }
 
@@ -4807,6 +4812,47 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
+
+.watch-ad-overlay {
+    width: 100%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.644);
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-close-ad {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 0.1rem 0.5rem;
+    z-index: 999999;
+}
+
+.watch-ad-overlay p {
+    color: #fff;
+    display: none;
+}
+
+.watch-ad-overlay .watch-ad-img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: none;
+}
+
+.btn-close-ad i {
+    font-size: 1rem;
+    color: #fff;
+}
+
+
 
 
 

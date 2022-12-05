@@ -876,10 +876,20 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
-                                                    <input class="form-control time-input vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                    <input class="form-control time-input vc-form-input time-text"
+                                                        type="text" name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input class="skip-option-cta" data-target=".cta-type"
+                                                        type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Skip Option</span>
+                                            </div>
+
                                         </div>
 
                                         <div class="selectable html-selected">
@@ -896,6 +906,15 @@
                                                     <input class="form-control time-input vc-form-input" type="text"
                                                         name="" placeholder="00:00:00">
                                                 </div>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input class="skip-option-cta" data-target=".cta-type"
+                                                        type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Skip Option</span>
                                             </div>
                                         </div>
 
@@ -936,10 +955,20 @@
                                                         name="" placeholder="00:00:00">
                                                 </div>
                                             </div>
+                                            <div class="d-flex mb-3">
+                                                <label class="custom-check">
+                                                    <input class="skip-option-cta" data-target=".cta-type"
+                                                        type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Skip Option</span>
+                                            </div>
                                         </div>
 
+
                                         <div class="d-flex mt-auto justify-content-center mb-4">
-                                            <button class="btn btn-login px-3">
+                                            <button class="btn btn-login px-3" id="save-cta">
                                                 Save
                                             </button>
                                         </div>
@@ -1048,6 +1077,14 @@
                                             </div>
 
                                             <div class="col-12">
+                                                <div class="form-group play-btn-color">
+                                                    <label for="">Button Text Colour</label>
+                                                    <input value="#ffffff" id="email-lead--btn-text-color-input"
+                                                        type="color" name="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Time</label>
                                                     <input class="form-control time-input vc-form-input" type="text"
@@ -1085,8 +1122,8 @@
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".watch-time-limit"
-                                                    type="checkbox">
+                                                <input id="wtl-type" data-toggle="toggle-content"
+                                                    data-target=".watch-time-limit" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -1095,7 +1132,7 @@
                                         <div class="trigger watch-time-limit">
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <label for="">Text</label>
+                                                    <!-- <label for="">Text</label> -->
                                                     <select id="wtl-type-select"
                                                         class="form-control vc-form-input mb-3 vid-select-input"
                                                         name="">
@@ -1108,8 +1145,10 @@
                                                 <div class="col-12">
                                                     <div class="mb-3">
                                                         <label>Text</label>
-                                                        <textarea class="form-control vc-form-input" name=""
-                                                            rows="3"></textarea>
+                                                        <textarea data-update="text" data-target=".watch-ad-text"
+                                                            placeholder="" title="Text"
+                                                            class="form-control vc-form-input" name="" rows="3"
+                                                            value=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1117,7 +1156,7 @@
 
                                                 <div class="col-12 mb-5">
                                                     <div class="d-flex settings-uplooad">
-                                                        <img id="call-action-img-selected"
+                                                        <img id="watch-ad-img-selected"
                                                             src="../assets/icons/upload video illustration.png"
                                                             alt="play icon">
                                                         <div class="upload-texts">
@@ -1126,7 +1165,7 @@
                                                             </div>
                                                             <button class="btn btn-upload-play">
                                                                 <input type="file" name=""
-                                                                    id="call-to-action-image-input">
+                                                                    id="" data-update="img-upload" data-target="#watch-ad-img-selected .watch-ad-img">
                                                                 Browse
                                                             </button>
                                                             <div class="note">
@@ -1621,8 +1660,8 @@
                                         <div class="trigger player-roll">
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-radio" name="play-roll"
-                                                        data-target=".pre-roll" type="radio">
+                                                    <input data-toggle="toggle-content"
+                                                        data-target=".pre-roll" type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -1660,8 +1699,8 @@
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-radio" name="play-roll"
-                                                        data-target=".mid-roll" type="radio">
+                                                    <input data-toggle="toggle-content"
+                                                        data-target=".mid-roll" type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -1708,8 +1747,8 @@
 
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-radio" name="play-roll"
-                                                        data-target=".post-roll" type="radio">
+                                                    <input data-toggle="toggle-content"
+                                                        data-target=".post-roll" type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -2174,6 +2213,19 @@
                                                 data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right"
                                                     aria-hidden="true"></i></button>
                                         </div>
+
+                                        <div class="watch-ad-overlay">
+                                            <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                                data-target=".watch-ad-overlay">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+
+                                            <p class="watch-ad-text">
+                                                Write Overlay Text Here
+                                            </p>
+
+                                            <img class="watch-ad-img" src="../assets/images/karma-quote.jpg" alt="ads image">
+                                        </div>
                                         <div class="cta-type text-on-vid-display">
                                             <div class="text">
                                                 test Text
@@ -2187,13 +2239,22 @@
                                             <button class="btn no-shadow mb-3 btn-with-text-3">
                                                 Dummy
                                             </button>
+                                            <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                                data-target=".text-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                    aria-hidden="true"></i></button>
                                         </div>
                                         <div class="cta-type image-on-vid-display">
                                             <img class="cta--image" src="../assets/icons/upload video illustration.png"
                                                 alt="image on video">
+                                            <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                                data-target=".image-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                    aria-hidden="true"></i></button>
                                         </div>
                                         <div class="cta-type html-on-vid-display">
 
+                                            <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                                data-target=".html-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                    aria-hidden="true"></i></button>
                                         </div>
                                         <div class="vid-logo-display">
                                             <img class="vid-logo" src="../assets/icons/login image.svg"

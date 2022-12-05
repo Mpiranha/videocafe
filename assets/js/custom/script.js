@@ -415,6 +415,18 @@ $(function () {
         }
     }
 
+    $('.vc-video-wrap').each(function() {
+        $(this).on('mouseover', function() {
+            $(this).find('video').get(0).play();
+        });
+    });
+
+    $('.vc-video-wrap').each(function() {
+        $(this).on('mouseout', function() {
+            $(this).find('video').get(0).pause();
+        });
+    });
+
 
 
 })
