@@ -1014,13 +1014,13 @@
 }
 
 .bg-play-icon {
-    background-image: url(../icons/play\ one\ icon.svg);
+    background-image: url(../icons/newones/play.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
     padding: 1rem 7rem 0.5rem 1rem;
-    background-size: 4rem;
+    background-size: 5rem;
 }
 
 .navigation-default .title {
