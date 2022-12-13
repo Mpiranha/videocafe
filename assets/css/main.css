@@ -610,6 +610,7 @@
     margin-bottom: 1rem;
 }
 
+
 .media-box video {
     height: 100%;
     width: 100%;
@@ -623,7 +624,13 @@
     position: absolute;
     left: 0;
     top: 0;
-    padding: 0.3rem 0.9rem;
+    padding: 0.4rem 0.9rem;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.media-box:hover  .media-header {
+    background-color: #00000030;
 }
 
 .media-box .media-header .type-text {
@@ -643,7 +650,7 @@
 }
 
 .media-box .actions .nav-link:not(:last-child) {
-    margin-right: 0.3rem;
+    margin-right: 0.5rem;
 }
 
 .media-box .actions .icon {
@@ -674,6 +681,10 @@
     bottom: 0px;
     border-radius: 0 0 0.3rem 0.3rem;
     padding: 0.3rem 0.9rem;
+}
+
+.media-box:hover .media-footer {
+    background-color: #00000030;
 }
 
 .media-footer .btn-play-pause {
@@ -5033,6 +5044,13 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #6c3fd2;
     color: #fff;
     border-radius: 0.5rem;
+}
+
+#audio_visual {
+    width: 100%;
+    height: 135px;
+    position: absolute;
+    top: 10px;
 }
 
 @keyframes bg-stretch-out {
