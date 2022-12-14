@@ -440,6 +440,7 @@ $(function () {
     $(this)
       .find(".btn-bg-play")
       .on("click", function () {
+        stopAllMedia();
         _this.find("video").get(0).play();
       });
 
