@@ -436,7 +436,6 @@ $(function () {
   });
 
   $(".video-media-box").each(function () {
-
     let _this = $(this);
     $(this)
       .find(".btn-bg-play")
@@ -446,11 +445,7 @@ $(function () {
 
     _this.find(".btn-play-pause").on("click", function () {
       if (_this.find("video").get(0).paused) {
-        $(".media-box").each(function() {
-          console.log( $(this).find("video").get(0));
-          let elem = $(this).find("video")
-          $(this).find("video").find;
-        })
+        stopAllMedia();
         _this.find("video").get(0).play();
       } else {
         _this.find("video").get(0).pause();
@@ -474,6 +469,16 @@ $(function () {
     });
   });
 
+  function stopAllMedia() {
+    $(".media-box").each(function () {
+      // console.log( $(this).find("video").get(0));
+      let elem = Boolean($(this).find("video").get(0))
+        ? $(this).find("video")
+        : $(this).find("audio");
+      elem.get(0).pause();
+    });
+  }
+
   $(".audio-box").each(function () {
     let _this = $(this);
     let audioElement = _this.find("audio").get(0);
@@ -492,12 +497,12 @@ $(function () {
     //   })
     // );
 
-   // Expert example: add multiple animations with options
+    // Expert example: add multiple animations with options
     wave.addAnimation(
       new wave.animations.Square({
         count: 50,
         diamater: 300,
-        lineColor: "#A7F008"
+        lineColor: "#A7F008",
       })
     );
 
@@ -517,6 +522,7 @@ $(function () {
 
     _this.find(".btn-play-pause").on("click", function () {
       if (_this.find("audio").get(0).paused) {
+        stopAllMedia();
         _this.find("audio").get(0).play();
       } else {
         _this.find("audio").get(0).pause();
@@ -532,7 +538,7 @@ $(function () {
     _this.find("audio").on("play", function () {
       _this
         .find(".btn-play-pause img")
-        .attr("src", "assets/icons/pause-button.png");
+        .attr("src", "assets/icons/vidcloud/Group 142.svg");
     });
   });
 });
