@@ -1,7 +1,7 @@
 var settings = {
-  "url": "https://webfonts.googleapis.com/v1/webfonts?sort=POPULARITY&key=AIzaSyBfgyd2DNKcv3rcUgMC9SHbIvzw6ngD7OY",
-  "method": "GET",
-  "timeout": 0,
+  url: "https://webfonts.googleapis.com/v1/webfonts?sort=POPULARITY&key=AIzaSyBfgyd2DNKcv3rcUgMC9SHbIvzw6ngD7OY",
+  method: "GET",
+  timeout: 0,
 };
 
 $.ajax(settings).done(function (response) {
@@ -12,7 +12,15 @@ $.ajax(settings).done(function (response) {
       return;
     }
 
-    $('#font-select').append($("<option />").val(item.files.regular + ',' + item.family).text(item.family));
+    $(".font-select").each(function () {
+      $(this).append(
+        $("<option />")
+          .val(item.files.regular + "," + item.family)
+          .text(item.family)
+      );
+    });
+
+    //$('#font-select').append($("<option />").val(item.files.regular + ',' + item.family).text(item.family));
   });
 });
 

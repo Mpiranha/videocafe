@@ -359,6 +359,7 @@ videoContainer.each(function () {
   $(".logo-width").on("input", function () {
     $(".logo-height").val(Math.ceil($(this).val() / 1.5));
     // $('.logo-height').trigger('input');
+
     $(".vid-logo").css("width", $(this).val() + "px");
     $(".vid-logo").css("height", $(".logo-height").val() + "px");
   });
@@ -369,6 +370,27 @@ videoContainer.each(function () {
 
     $(".vid-logo").css("height", $(this).val() + "px");
     $(".vid-logo").css("width", $(".logo-width").val() + "px");
+  });
+
+  $(".img-width").on("input", function () {
+    $(".img-height").val(Math.ceil($(this).val() / 1.5));
+    // $('.logo-height').trigger('input');
+
+    $(".overlay-img").css("width", $(this).val() + "px");
+    $(".overlay-img").css("height", $(".img-height").val() + "px");
+  });
+
+  $(".img-height").on("input", function () {
+    $(".img-width").val(1.5 * $(this).val());
+    // $('.logo-width').trigger('input');
+
+    $(".overlay-img").css("height", $(this).val() + "px");
+    $(".overlay-img").css("width", $(".img-width").val() + "px");
+  });
+
+  $("#img-opacity").on("input", function () {
+    $(".overlay-img").css("opacity", $(this).val());
+    $(".opaque-value").text($(this).val());
   });
 
   const REGEXP = /[0-9]/;
@@ -693,6 +715,8 @@ videoContainer.each(function () {
     $(".watch-ad-img").css("display", "inline");
   }
 
+  // info overlay
+
   // Overlay Ads
 
   $("#overlay-ad-type-select").on("change", function () {
@@ -703,21 +727,38 @@ videoContainer.each(function () {
     //console.log($(".overlay-ads-selectable").children());
     if ($(this).val() == "text") {
       $(".overlay-ads-selectable.text-selected").css("display", "block");
-
+      $(".overlay-ads .overlay-text").css("display", "block");
+      $(".overlay-ads .overlay-img").css("display", "none");
       //$(".html-on-vid-display").css("display", "flex");
     } else if ($(this).val() == "image") {
       $(".overlay-ads-selectable.image-selected").css("display", "block");
       //$(".image-on-vid-display").css("display", "flex");
+      $(".overlay-ads .overlay-img").css("display", "block");
+      $(".overlay-ads .overlay-text").css("display", "none");
     }
   });
 
   if ($("#overlay-ad-type-select").val() == "text") {
     $(".overlay-ads-selectable.text-selected").css("display", "block");
+    $(".overlay-ads .overlay-text").css("display", "block");
   } else if ($("#overlay-ad-type-select").val() == "image") {
     $(".overlay-ads-selectable.image-selected").css("display", "block");
+    $(".overlay-ads .overlay-img").css("display", "block");
   }
 
   // Overlay Text
+  var overlay_text_count = 1;
+  $(".btn-add-more").on("click", function () {
+    if (overlay_text_count < 4) {
+      overlay_text_count++;
+    }
+
+    for (var i = 1; i <= overlay_text_count; i++) {
+      $(".overlay-text-inner-" + i).css("display", "block");
+      $(".overlay-text-" + i).css("display", "block");
+    }
+  });
+
   $("#font-select").on("change", function () {
     // console.log($(this).val().split(','));
     //var junction_font = new FontFace($(this).val().split(',')[1], $(this).val().split(',')[0]);
@@ -1007,7 +1048,107 @@ videoContainer.each(function () {
     $($(this).attr("data-target")).text($(this).val());
   });
 
-  function makeVideo(src, parent) {
-    
-  }
+  $('[data-update="font"]').on("change", function () {
+    var _this = $(this);
+    //alert('Yeah');
+    var name = $(this).val().split(",")[1];
+    var junction_font = new FontFace(
+      $(this).val().split(",")[1],
+      "url(" + $(this).val().split(",")[0] + ")"
+    );
+    // https://fonts.googleapis.com/css?family=Roboto:Regular
+    // console.log(junction_font);
+    junction_font
+      .load()
+      .then(function (loaded_face) {
+        // console.log(loaded_face);
+        // console.log(name);
+        //console.log('Loaded');
+        document.fonts.add(loaded_face);
+        //  console.log(_this.attr("data-target"));
+        $(_this.attr("data-target")).css("font-family", name);
+        //document.body.style.fontFamily = $(this).val().split(',')[1];
+      })
+      .catch(function (error) {
+        // error occurred
+      });
+    // $($(this).attr("data-target")).css("font-family", $(this).val());
+  });
+
+  $('[data-update="text-position"]').on("change", function () {
+    //$(".vid-logo-display").css("display", "none");
+
+    $($(this).attr("data-target")).attr(
+      "class",
+      String($(this).attr("data-target")).substring(1)
+    );
+
+    if ($(this).val() == "top-left") {
+      $($(this).attr("data-target")).addClass("top-left");
+    } else if ($(this).val() == "top-center") {
+      $($(this).attr("data-target")).addClass("top-center");
+    } else if ($(this).val() == "top-right") {
+      $($(this).attr("data-target")).addClass("top-right");
+    } else if ($(this).val() == "center-left") {
+      $($(this).attr("data-target")).addClass("center-left");
+    } else if ($(this).val() == "center") {
+      $($(this).attr("data-target")).addClass("center");
+    } else if ($(this).val() == "center-right") {
+      $($(this).attr("data-target")).addClass("center-right");
+    } else if ($(this).val() == "bottom-left") {
+      $($(this).attr("data-target")).addClass("bottom-left");
+    } else if ($(this).val() == "bottom-center") {
+      $($(this).attr("data-target")).addClass("bottom-center");
+    } else if ($(this).val() == "bottom-right") {
+      $($(this).attr("data-target")).addClass("bottom-right");
+    }
+  });
+
+  $('[data-update="text-color"]').on("input", function () {
+    $($(this).attr("data-target")).css("color", $(this).val());
+  });
+
+  $('[data-update="url"]').on("input", function () {
+    $($(this).attr("data-target")).attr("href", $(this).val());
+  });
+
+  $('[data-update="animation"]').on("change", function () {
+    $($(this).attr("data-target")).attr(
+      "class",
+      String($(this).attr("data-target")).substring(1)
+    );
+    $($(this).attr("data-target")).addClass($(this).val());
+  });
+
+  // Info Overlay
+
+  $("#info-overlay-toggle").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".info-overlay--wrap").css("display", "flex");
+    } else {
+      $(".info-overlay--wrap").css("display", "none");
+    }
+  });
+
+  // Overlay Ads
+
+  $("#overlay-ad--toggle").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".overlay-ads").css("display", "flex");
+    } else {
+      $(".overlay-ads").css("display", "none");
+    }
+  });
+
+  // Overlay text
+
+  $("#overlay-ad--cus-text").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".overlay-text-wrap").css("display", "flex");
+    } else {
+      $(".overlay-text-wrap").css("display", "none");
+    }
+  });
+
+  function makeVideo(src, parent) {}
 });

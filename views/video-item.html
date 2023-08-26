@@ -1164,8 +1164,9 @@
                                                                 Upload An Image
                                                             </div>
                                                             <button class="btn btn-upload-play">
-                                                                <input type="file" name=""
-                                                                    id="" data-update="img-upload" data-target="#watch-ad-img-selected .watch-ad-img">
+                                                                <input type="file" name="" id=""
+                                                                    data-update="img-upload"
+                                                                    data-target="#watch-ad-img-selected .watch-ad-img">
                                                                 Browse
                                                             </button>
                                                             <div class="note">
@@ -1197,8 +1198,8 @@
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".info-overlay"
-                                                    type="checkbox">
+                                                <input id="info-overlay-toggle" data-toggle="toggle-content"
+                                                    data-target=".info-overlay" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -1215,14 +1216,17 @@
 
                                             <div class="col-12 mb-5">
                                                 <div class="d-flex settings-uplooad">
-                                                    <img src="../assets/icons/upload video illustration.png"
+                                                    <img id="info-overlay--logo"
+                                                        src="../assets/icons/upload video illustration.png"
                                                         alt="play icon">
                                                     <div class="upload-texts">
                                                         <div class="title">
                                                             Upload An Image
                                                         </div>
                                                         <button class="btn btn-upload-play">
-                                                            <input type="file" name="">
+                                                            <input type="file" name="" data-update="img-upload"
+                                                                data-target="#info-overlay--logo .info-overlay--logo"
+                                                                accept="image/*">
                                                             Browse
                                                         </button>
                                                         <div class="note">
@@ -1235,7 +1239,8 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label>Info Text</label>
-                                                    <input class="form-control vc-form-input" type="text" name=""
+                                                    <input data-update="text" data-target=".info-overlay--text"
+                                                        class="form-control vc-form-input" type="text" name=""
                                                         placeholder="">
                                                 </div>
                                             </div>
@@ -1243,8 +1248,8 @@
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".overlay-ad"
-                                                    type="checkbox">
+                                                <input id="overlay-ad--toggle" data-toggle="toggle-content"
+                                                    data-target=".overlay-ad" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -1268,7 +1273,9 @@
                                                 <div class="col-12">
                                                     <div class="mb-3">
                                                         <label>Text</label>
-                                                        <textarea class="form-control vc-form-input" name="" rows="3"
+                                                        <textarea data-update="text"
+                                                            data-target=".overlay-ads .overlay-text"
+                                                            class="form-control vc-form-input" name="" rows="3"
                                                             placeholder="Please Enter Overlay Text"></textarea>
                                                     </div>
                                                 </div>
@@ -1277,7 +1284,7 @@
 
                                                 <div class="col-12 mb-5">
                                                     <div class="d-flex settings-uplooad">
-                                                        <img id="call-action-img-selected"
+                                                        <img id="overlay-ad-img-selected"
                                                             src="../assets/icons/upload video illustration.png"
                                                             alt="play icon">
                                                         <div class="upload-texts">
@@ -1285,8 +1292,9 @@
                                                                 Upload An Image
                                                             </div>
                                                             <button class="btn btn-upload-play">
-                                                                <input type="file" name=""
-                                                                    id="call-to-action-image-input">
+                                                                <input type="file" data-update="img-upload"
+                                                                    data-target="#overlay-ad-img-selected .overlay-img"
+                                                                    name="" id="call-to-action-image-input">
                                                                 Browse
                                                             </button>
                                                             <div class="note">
@@ -1297,18 +1305,27 @@
                                                 </div>
                                                 <div class="col-12 logo-size-wrap">
                                                     <div class="mb-3">
-                                                        <label>Logo Size</label>
+                                                        <label>Image Size</label>
                                                         <div class="logo-size-inputs">
                                                             <input
-                                                                class="form-control vc-form-input number-input logo-width mr-2"
+                                                                class="form-control vc-form-input number-input img-width mr-2"
                                                                 value="" type="text" name="">
                                                             <input value=""
-                                                                class="form-control vc-form-input number-input logo-height"
+                                                                class="form-control vc-form-input number-input img-height"
                                                                 type="text" name="">
                                                             <img class="lock-icon" src="../assets/icons/lock_1.svg"
                                                                 alt="lock icon">
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="">
+                                                        <label>Transparency</label>
+                                                        <input title="Image transparency" id="img-opacity"
+                                                            class="form-control vc-form-input" type="range" min="0"
+                                                            step="0.1" max="1" value="1">
+                                                    </div>
+                                                    <div class="opaque-value">1</div>
                                                 </div>
                                             </div>
 
@@ -1316,151 +1333,446 @@
                                                 <div class="mb-3">
                                                     <label>Delay Time</label>
                                                     <input class="form-control vc-form-input number-input" type="text"
-                                                        name="" placeholder="Enter Delay Time">
+                                                        name="" placeholder="00:00">
                                                 </div>
                                             </div>
+
+
                                         </div>
 
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input data-toggle="toggle-content" data-target=".overlay-text"
-                                                    type="checkbox">
+                                                <input id="overlay-ad--cus-text" data-toggle="toggle-content"
+                                                    data-target=".overlay-text" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
                                             <span class="label">Overlay Text</span>
                                         </div>
                                         <div class="trigger overlay-text">
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label>Text</label>
-                                                    <input class="form-control vc-form-input" type="text" name=""
-                                                        placeholder="">
+                                            <div class="overlay-text-inner-1">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Text 1</label>
+                                                        <input data-update="text" data-target=".overlay-text-1"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Font</label>
+                                                        <select title="select font" data-update="font"
+                                                            data-target=".overlay-text-1"
+                                                            class="form-control vc-form-input mb-3 vid-select-input font-select"
+                                                            name="">
+                                                            <option selected value="">Select Font</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Text Position</label>
+                                                        <select data-update="text-position"
+                                                            data-target=".overlay-text-1" title="select text position"
+                                                            id="cia-type-select"
+                                                            class="form-control vc-form-input mb-3 vid-select-input"
+                                                            name="">
+                                                            <option selected value="">Select Text Position</option>
+                                                            <option value="top-left">Top Left</option>
+                                                            <option value="top-center">Top Center</option>
+                                                            <option value="top-right">Top Right</option>
+                                                            <option value="center-left">Center Left</option>
+                                                            <option value="center">Center</option>
+                                                            <option value="center-right">Center Right</option>
+                                                            <option value="bottom-left">Bottom Left</option>
+                                                            <option value="bottom-center">Bottom Center</option>
+                                                            <option value="bottom-right">Bottom Right</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group play-btn-color">
+                                                        <label for="">Color</label>
+                                                        <input data-update="text-color" data-target=".overlay-text-1"
+                                                            title="text color" value="#ffffff" id="play-color-input"
+                                                            type="color" name="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>URL</label>
+                                                        <input data-update="url" data-target=".overlay-text-1"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Start Time</label>
+                                                        <input class="form-control time-input vc-form-input" type="text"
+                                                            name="" placeholder="00:00:00">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Play Button Animation</label>
+                                                        <select data-update="animation" data-target=".overlay-text-1"
+                                                            class="form-control vc-form-input mb-3" name="">
+                                                            <option value="animate__animated animate__" selected>
+                                                                Select An Animation
+                                                            </option>
+                                                            <option value="animate__animated animate__bounce">
+                                                                Bounce
+                                                            </option>
+                                                            <option value="animate__animated animate__flash">
+                                                                Flash
+                                                            </option>
+                                                            <option value="animate__animated animate__pulse">
+                                                                Pulse
+                                                            </option>
+                                                            <option value="animate__animated animate__rubberBand">
+                                                                RubberBand
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeX">
+                                                                ShakeX
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeY">
+                                                                ShakeY
+                                                            </option>
+                                                            <option value="animate__animated animate__headShake">
+                                                                HeadShake
+                                                            </option>
+                                                            <option value="animate__animated animate__swing">
+                                                                Swing
+                                                            </option>
+                                                            <option value="animate__animated animate__tada">
+                                                                Tada
+                                                            </option>
+                                                            <option value="animate__animated animate__wobble">
+                                                                Wobble
+                                                            </option>
+                                                            <option value="animate__animated animate__jello">
+                                                                Jello
+                                                            </option>
+                                                            <option value="animate__animated animate__heartBeat">
+                                                                HeartBeat
+                                                            </option>
+                                                            <option value="animate__animated animate__rotateIn">
+                                                                Rotate In
+                                                            </option>
+                                                            <option value="animate__animated animate__flip">
+                                                                Flip
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeIn">
+                                                                FadeIn
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeOut">
+                                                                FadeOut
+                                                            </option>
+                                                            <option value="animate__animated animate__zoomIn">
+                                                                ZoomIn
+                                                            </option>
+                                                            <option value="animate__animated animate__backInDown">
+                                                                BackInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInDown">
+                                                                SlideInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInUp">
+                                                                SlideInUp
+                                                            </option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <label for="">Font</label>
-                                                    <select id="font-select"
-                                                        class="form-control vc-form-input mb-3 vid-select-input"
-                                                        name="">
-                                                        <option selected value="">Select Font</option>
-                                                    </select>
+                                            <div class="overlay-text-inner-2">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Text 2</label>
+                                                        <input data-update="text" data-target=".overlay-text-2"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Font</label>
+                                                        <select title="select font" data-update="font"
+                                                            data-target=".overlay-text-2"
+                                                            class="form-control vc-form-input mb-3 vid-select-input font-select"
+                                                            name="">
+                                                            <option selected value="initial">Select Font</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Text Position</label>
+                                                        <select data-update="text-position"
+                                                            data-target=".overlay-text-2" title="select text position"
+                                                            class="form-control vc-form-input mb-3 vid-select-input"
+                                                            name="">
+                                                            <option selected value="">Select Text Position</option>
+                                                            <option value="top-left">Top Left</option>
+                                                            <option value="top-center">Top Center</option>
+                                                            <option value="top-right">Top Right</option>
+                                                            <option value="center-left">Center Left</option>
+                                                            <option value="center">Center</option>
+                                                            <option value="center-right">Center Right</option>
+                                                            <option value="bottom-left">Bottom Left</option>
+                                                            <option value="bottom-center">Bottom Center</option>
+                                                            <option value="bottom-right">Bottom Right</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group play-btn-color">
+                                                        <label for="">Color</label>
+                                                        <input data-update="text-color" data-target=".overlay-text-2"
+                                                            title="text color" value="#ffffff" type="color" name="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>URL</label>
+                                                        <input data-update="url" data-target=".overlay-text-2"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Start Time</label>
+                                                        <input class="form-control time-input vc-form-input" type="text"
+                                                            name="" placeholder="00:00:00">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Play Button Animation</label>
+                                                        <select data-update="animation" data-target=".overlay-text-2"
+                                                            class="form-control vc-form-input mb-3" name="">
+                                                            <option value="animate__animated animate__" selected>
+                                                                Select An Animation
+                                                            </option>
+                                                            <option value="animate__animated animate__bounce">
+                                                                Bounce
+                                                            </option>
+                                                            <option value="animate__animated animate__flash">
+                                                                Flash
+                                                            </option>
+                                                            <option value="animate__animated animate__pulse">
+                                                                Pulse
+                                                            </option>
+                                                            <option value="animate__animated animate__rubberBand">
+                                                                RubberBand
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeX">
+                                                                ShakeX
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeY">
+                                                                ShakeY
+                                                            </option>
+                                                            <option value="animate__animated animate__headShake">
+                                                                HeadShake
+                                                            </option>
+                                                            <option value="animate__animated animate__swing">
+                                                                Swing
+                                                            </option>
+                                                            <option value="animate__animated animate__tada">
+                                                                Tada
+                                                            </option>
+                                                            <option value="animate__animated animate__wobble">
+                                                                Wobble
+                                                            </option>
+                                                            <option value="animate__animated animate__jello">
+                                                                Jello
+                                                            </option>
+                                                            <option value="animate__animated animate__heartBeat">
+                                                                HeartBeat
+                                                            </option>
+                                                            <option value="animate__animated animate__rotateIn">
+                                                                Rotate In
+                                                            </option>
+                                                            <option value="animate__animated animate__flip">
+                                                                Flip
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeIn">
+                                                                FadeIn
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeOut">
+                                                                FadeOut
+                                                            </option>
+                                                            <option value="animate__animated animate__zoomIn">
+                                                                ZoomIn
+                                                            </option>
+                                                            <option value="animate__animated animate__backInDown">
+                                                                BackInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInDown">
+                                                                SlideInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInUp">
+                                                                SlideInUp
+                                                            </option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <label for="">Text Position</label>
-                                                    <select id="cia-type-select"
-                                                        class="form-control vc-form-input mb-3 vid-select-input"
-                                                        name="">
-                                                        <option selected value="">Select Text Position</option>
-                                                        <option value="top-left">Top Left</option>
-                                                        <option value="top-center">Top Center</option>
-                                                        <option value="top-right">Top Right</option>
-                                                        <option value="center-left">Center Left</option>
-                                                        <option value="center">Center</option>
-                                                        <option value="center-right">Center Right</option>
-                                                        <option value="bottom-left">Bottom Left</option>
-                                                        <option value="bottom-center">Bottom Center</option>
-                                                        <option value="bottom-right">Bottom Right</option>
-                                                    </select>
+                                            <div class="overlay-text-inner-3">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Text 3</label>
+                                                        <input data-update="text" data-target=".overlay-text-3"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-12">
-                                                <div class="form-group play-btn-color">
-                                                    <label for="">Color</label>
-                                                    <input value="#ffffff" id="play-color-input" type="color" name="">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Font</label>
+                                                        <select title="select font" data-update="font"
+                                                            data-target=".overlay-text-3"
+                                                            class="form-control vc-form-input mb-3 vid-select-input font-select"
+                                                            name="">
+                                                            <option selected value="">Select Font</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label>URL</label>
-                                                    <input class="form-control vc-form-input" type="text" name=""
-                                                        placeholder="">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Text Position</label>
+                                                        <select data-update="text-position"
+                                                            data-target=".overlay-text-3" title="select text position"
+                                                            class="form-control vc-form-input mb-3 vid-select-input"
+                                                            name="">
+                                                            <option selected value="none">Select Text Position</option>
+                                                            <option value="top-left">Top Left</option>
+                                                            <option value="top-center">Top Center</option>
+                                                            <option value="top-right">Top Right</option>
+                                                            <option value="center-left">Center Left</option>
+                                                            <option value="center">Center</option>
+                                                            <option value="center-right">Center Right</option>
+                                                            <option value="bottom-left">Bottom Left</option>
+                                                            <option value="bottom-center">Bottom Center</option>
+                                                            <option value="bottom-right">Bottom Right</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label>Start Time</label>
-                                                    <input class="form-control time-input vc-form-input" type="text"
-                                                        name="" placeholder="00:00:00">
+                                                <div class="col-12">
+                                                    <div class="form-group play-btn-color">
+                                                        <label for="">Color</label>
+                                                        <input data-update="text-color" data-target=".overlay-text-3"
+                                                            title="text color" value="#ffffff" id="play-color-input"
+                                                            type="color" name="">
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <label for="">Play Button Animation</label>
-                                                    <select class="form-control vc-form-input mb-3 anim-select" name="">
-                                                        <option value="animate__animated animate__" selected>
-                                                            Select An Animation
-                                                        </option>
-                                                        <option value="animate__animated animate__bounce">
-                                                            Bounce
-                                                        </option>
-                                                        <option value="animate__animated animate__flash">
-                                                            Flash
-                                                        </option>
-                                                        <option value="animate__animated animate__pulse">
-                                                            Pulse
-                                                        </option>
-                                                        <option value="animate__animated animate__rubberBand">
-                                                            RubberBand
-                                                        </option>
-                                                        <option value="animate__animated animate__shakeX">
-                                                            ShakeX
-                                                        </option>
-                                                        <option value="animate__animated animate__shakeY">
-                                                            ShakeY
-                                                        </option>
-                                                        <option value="animate__animated animate__headShake">
-                                                            HeadShake
-                                                        </option>
-                                                        <option value="animate__animated animate__swing">
-                                                            Swing
-                                                        </option>
-                                                        <option value="animate__animated animate__tada">
-                                                            Tada
-                                                        </option>
-                                                        <option value="animate__animated animate__wobble">
-                                                            Wobble
-                                                        </option>
-                                                        <option value="animate__animated animate__jello">
-                                                            Jello
-                                                        </option>
-                                                        <option value="animate__animated animate__heartBeat">
-                                                            HeartBeat
-                                                        </option>
-                                                        <option value="animate__animated animate__rotateIn">
-                                                            Rotate In
-                                                        </option>
-                                                        <option value="animate__animated animate__flip">
-                                                            Flip
-                                                        </option>
-                                                        <option value="animate__animated animate__fadeIn">
-                                                            FadeIn
-                                                        </option>
-                                                        <option value="animate__animated animate__fadeOut">
-                                                            FadeOut
-                                                        </option>
-                                                        <option value="animate__animated animate__zoomIn">
-                                                            ZoomIn
-                                                        </option>
-                                                        <option value="animate__animated animate__backInDown">
-                                                            BackInDown
-                                                        </option>
-                                                        <option value="animate__animated animate__slideInDown">
-                                                            SlideInDown
-                                                        </option>
-                                                        <option value="animate__animated animate__slideInUp">
-                                                            SlideInUp
-                                                        </option>
-                                                    </select>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>URL</label>
+                                                        <input data-update="url" data-target=".overlay-text-3"
+                                                            class="form-control vc-form-input" type="text" name=""
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label>Start Time</label>
+                                                        <input class="form-control time-input vc-form-input" type="text"
+                                                            name="" placeholder="00:00:00">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Play Button Animation</label>
+                                                        <select data-update="animation" data-target=".overlay-text-3"
+                                                            class="form-control vc-form-input mb-3" name="">
+                                                            <option value="animate__animated animate__" selected>
+                                                                Select An Animation
+                                                            </option>
+                                                            <option value="animate__animated animate__bounce">
+                                                                Bounce
+                                                            </option>
+                                                            <option value="animate__animated animate__flash">
+                                                                Flash
+                                                            </option>
+                                                            <option value="animate__animated animate__pulse">
+                                                                Pulse
+                                                            </option>
+                                                            <option value="animate__animated animate__rubberBand">
+                                                                RubberBand
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeX">
+                                                                ShakeX
+                                                            </option>
+                                                            <option value="animate__animated animate__shakeY">
+                                                                ShakeY
+                                                            </option>
+                                                            <option value="animate__animated animate__headShake">
+                                                                HeadShake
+                                                            </option>
+                                                            <option value="animate__animated animate__swing">
+                                                                Swing
+                                                            </option>
+                                                            <option value="animate__animated animate__tada">
+                                                                Tada
+                                                            </option>
+                                                            <option value="animate__animated animate__wobble">
+                                                                Wobble
+                                                            </option>
+                                                            <option value="animate__animated animate__jello">
+                                                                Jello
+                                                            </option>
+                                                            <option value="animate__animated animate__heartBeat">
+                                                                HeartBeat
+                                                            </option>
+                                                            <option value="animate__animated animate__rotateIn">
+                                                                Rotate In
+                                                            </option>
+                                                            <option value="animate__animated animate__flip">
+                                                                Flip
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeIn">
+                                                                FadeIn
+                                                            </option>
+                                                            <option value="animate__animated animate__fadeOut">
+                                                                FadeOut
+                                                            </option>
+                                                            <option value="animate__animated animate__zoomIn">
+                                                                ZoomIn
+                                                            </option>
+                                                            <option value="animate__animated animate__backInDown">
+                                                                BackInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInDown">
+                                                                SlideInDown
+                                                            </option>
+                                                            <option value="animate__animated animate__slideInUp">
+                                                                SlideInUp
+                                                            </option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -1600,6 +1912,66 @@
                                             <span class="label">VR/360</span>
                                         </div>
 
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="subtitle-toggler" data-toggle="toggle-content"
+                                                    data-target=".subtitle-wrap" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Subtitle</span>
+                                        </div>
+
+                                        <div class="trigger subtitle-wrap">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="">Select file format</label>
+                                                    <select id="wtl-type-select"
+                                                        class="form-control vc-form-input mb-3 vid-select-input"
+                                                        name="">
+                                                        <option value="text">Text</option>
+                                                        <option value="image">Image</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="">Select subtitle language</label>
+                                                    <select id="wtl-type-select"
+                                                        class="form-control vc-form-input mb-3 vid-select-input"
+                                                        name="">
+                                                        <option value="none">Select file</option>
+                                                        <option value="vtt">.VTT</option>
+                                                        <option value="srt">.SRT</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex mb-3 pl-4">
+                                                <label class="custom-check">
+                                                    <input id="show-hide-vr" type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                </label>
+                                                <span class="label">Make selected language default</span>
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-vr" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Zoom</span>
+                                        </div>
+
                                         <div class="d-flex mt-auto justify-content-center mb-4">
                                             <button class="btn btn-login px-3">
                                                 Save
@@ -1660,8 +2032,8 @@
                                         <div class="trigger player-roll">
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-content"
-                                                        data-target=".pre-roll" type="checkbox">
+                                                    <input data-toggle="toggle-content" data-target=".pre-roll"
+                                                        type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -1699,8 +2071,8 @@
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-content"
-                                                        data-target=".mid-roll" type="checkbox">
+                                                    <input data-toggle="toggle-content" data-target=".mid-roll"
+                                                        type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -1747,8 +2119,8 @@
 
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
-                                                    <input data-toggle="toggle-content"
-                                                        data-target=".post-roll" type="checkbox">
+                                                    <input data-toggle="toggle-content" data-target=".post-roll"
+                                                        type="checkbox">
                                                     <span class="checkmark"></span>
 
                                                 </label>
@@ -1914,8 +2286,8 @@
 
                                             <div class="col-12 mb-5">
                                                 <div class="d-flex settings-uplooad">
-                                                    <!-- <img src="../assets/icons/upload video illustration.png"
-                                                        alt="p;lay icon"> -->
+                                                    <img src="../assets/icons/upload video illustration.png"
+                                                        alt="play icon">
                                                     <div class="upload-texts">
                                                         <div class="title">
                                                             Upload An Image
@@ -2224,8 +2596,51 @@
                                                 Write Overlay Text Here
                                             </p>
 
-                                            <img class="watch-ad-img" src="../assets/images/karma-quote.jpg" alt="ads image">
+                                            <img class="watch-ad-img" src="../assets/images/karma-quote.jpg"
+                                                alt="ads image">
                                         </div>
+                                        <div class="info-overlay--wrap">
+                                            <div class="info-overlay-section">
+                                                <img class="info-overlay--logo" src="../assets/images/wedding.jpg"
+                                                    alt="info overlay logo">
+
+                                                <div class="info-overlay--text">
+                                                    Text will display here
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="overlay-ads">
+                                            <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                                data-target=".overlay-ads">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+
+                                            <p class="overlay-text">
+                                                Write Overlay Text Here
+                                            </p>
+
+                                            <img class="overlay-img" src="../assets/images/arrt-love.jpg"
+                                                alt="ads image">
+                                        </div>
+                                        <div class="overlay-text-wrap">
+                                            <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                                data-target=".overlay-ads">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+
+                                            <a href="" target="_blank" class="overlay-text-1">
+                                                Write Overlay Text Here
+                                            </a>
+                                            <a href="" target="_blank" class="overlay-text-2">
+                                                Write Overlay Text Here
+                                            </a>
+                                            <a href="" target="_blank" class="overlay-text-3">
+                                                Write Overlay Text Here
+                                            </a>
+
+
+                                        </div>
+
                                         <div class="cta-type text-on-vid-display">
                                             <div class="text">
                                                 test Text
