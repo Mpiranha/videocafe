@@ -1250,14 +1250,14 @@
 }
 
 .uploaded-box {
-    height: 315px;
+    height: 375px;
     display: flex;
     flex-direction: column;
 }
 
 .uploaded-box .media--box {
     background-color: #9413e6;
-    height: 150px;
+    height: 180px;
     padding: 0.9rem;
     border-radius: 0.4rem 0.4rem 0 0;
 }
@@ -1280,31 +1280,33 @@
 }
 
 .media-desc .title {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
 .media-desc .desc {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: left !important;
+    margin-bottom: 1rem;
 }
 
 .media-desc .box-actions {
     margin-top: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .media-desc .box-actions .btn {
     background-color: transparent;
     color: #fff;
-    font-size: 0.7rem;
-    flex-grow: 1;
+    font-size: 0.9rem;
+    padding: 0 !important;
 }
 
 .media-desc .box-actions .btn img {
-    width: 0.8rem;
+    width: 1rem;
     margin-right: 0.3rem;
 }
 
@@ -1774,11 +1776,24 @@
     flex-direction: column;
     width: 48%;
     margin-right: 1rem;
+    position: relative;
+}
+
+.video-main-wrap .video-source {
+    background-color: #0088bf;
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    padding: 0.1rem 0.7rem;
+    border-radius: 0.6rem 0 0.6rem 0;
+    font-size: 0.8rem;
+    left: -1rem;
+    top: 0.5rem;
 }
 
 .vc-video-wrap {
     position: relative;
-    height: 125px;
+    height: 175px;
     background-color: #000;
     border-radius: 0.7rem;
     margin-bottom: 0.7rem;
@@ -1825,6 +1840,13 @@
 
 .video-wrap-inner .video-stat {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrap-inner .video-stat .vc-vid-details {
+    margin-top: auto;
+    text-align: right;
 }
 
 .vc-stat-box-wrap {
