@@ -1347,6 +1347,10 @@
     padding: 0.5rem 2rem;
 }
 
+.btn-submit-sm {
+    padding: 0.2rem 0.2rem !important;
+}
+
 .navigation-audio .static-controls {
     background: linear-gradient(to right, #a239bb, #ac19a6);
     border-radius: 0 0 0.4rem 0.4rem;
@@ -3392,6 +3396,16 @@ input.clr-color {
     transition: all 0.7s
 }
 
+.btn-prev {
+    border-radius: 50% 0 0 50%;
+    padding: .5rem 0.4rem 0.5rem 1.3rem;
+}
+
+.btn-next {
+    border-radius: 0 50% 50% 0;
+    padding: .5rem 1.9rem 0.5rem 0.6rem;
+}
+
 .play-icons {
     margin-bottom: 1rem;
 }
@@ -3693,7 +3707,7 @@ input.clr-color {
 }
 
 .duration-wrap-inner {
-    padding: 0 2.5rem 0 0;
+    padding: 0 1.5rem 0 0;
     min-width: 300px;
 }
 
@@ -4857,6 +4871,7 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
     margin-bottom: 1rem;
 }
+
 .overlay-text {
     color: #fff;
 }
@@ -4886,7 +4901,10 @@ input[type=range]:focus::-ms-fill-upper {
     max-width: 100%;
 }
 
-.overlay-text-inner-2, .overlay-text-inner-3, .overlay-text-2, .overlay-text-3 {
+.overlay-text-inner-2,
+.overlay-text-inner-3,
+.overlay-text-2,
+.overlay-text-3 {
     display: none;
 }
 
