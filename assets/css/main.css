@@ -1256,13 +1256,12 @@
 }
 
 .uploaded-box .media--box {
-    background-color: #9413e6;
-    height: 180px;
-    padding: 0.9rem;
     border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .media--box video {
+    height: 180px;
+    border-radius: 0.4rem 0.4rem 0 0;
     height: 100%;
     width: 100%;
     max-width: 100%;
@@ -1272,7 +1271,7 @@
     background-color: #570880;
     flex-grow: 1;
     color: #fff;
-    padding: 2rem 1rem 1rem 1.5rem;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1817,7 +1816,11 @@
     background-color: transparent;
     color: #fff;
     font-size: 0.8rem;
-    padding: 0;
+    padding: 0.1rem 0.2rem;
+}
+
+.vc-vid-actions button:hover {
+    background-color: #a34ceb;
 }
 
 .vid-action-icon {
@@ -1829,7 +1832,6 @@
 }
 
 .vc-vid-details .title {
-    font-weight: bold;
     font-size: 1rem;
     word-break: break-all;
 }
@@ -5013,6 +5015,20 @@ input[type=range]:focus::-ms-fill-upper {
     z-index: 999999;
 }
 
+.btn-remove-text {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.4rem;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+
+
 .watch-ad-overlay p {
     color: #fff;
     display: none;
@@ -5028,6 +5044,10 @@ input[type=range]:focus::-ms-fill-upper {
 .btn-close-ad i {
     font-size: 1rem;
     color: #fff;
+}
+
+.btn-remove-text i {
+    font-size: 0.7rem;
 }
 
 
