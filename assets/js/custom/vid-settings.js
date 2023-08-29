@@ -1078,10 +1078,46 @@ videoContainer.each(function () {
   $('[data-update="text-position"]').on("change", function () {
     //$(".vid-logo-display").css("display", "none");
 
-    $($(this).attr("data-target")).attr(
-      "class",
-      String($(this).attr("data-target")).substring(1)
-    );
+    var possible_positions = [
+      "top-left",
+      "top-center",
+      "top-right",
+      "center-left",
+      "center",
+      "center-right",
+      "bottom-left",
+      "bottom-center",
+      "bottom-right",
+    ];
+
+    for (let i = 0; i < possible_positions.length; i++) {
+      // console.log($($(this).attr("data-target")).attr("class"));
+      console.log(possible_positions[i]);
+      console.log(
+        String($($(this).attr("data-target")).attr("class")).includes(
+          possible_positions[i]
+        )
+      );
+
+      if (
+        String($($(this).attr("data-target")).attr("class")).includes(
+          possible_positions[i]
+        )
+      ) {
+        $($(this).attr("data-target")).attr(
+          "class",
+          String($($(this).attr("data-target")).attr("class")).replace(
+            possible_positions[i],
+            ""
+          )
+        );
+      }
+    }
+
+    // $($(this).attr("data-target")).attr(
+    //   "class",
+    //   String($(this).attr("data-target")).substring(1)
+    // );
 
     if ($(this).val() == "top-left") {
       $($(this).attr("data-target")).addClass("top-left");
@@ -1113,10 +1149,50 @@ videoContainer.each(function () {
   });
 
   $('[data-update="animation"]').on("change", function () {
-    $($(this).attr("data-target")).attr(
-      "class",
-      String($(this).attr("data-target")).substring(1)
-    );
+    // $($(this).attr("data-target")).attr(
+    //   "class",
+    //   String($(this).attr("data-target")).substring(1)
+    // );
+
+    var possible_animation = [
+      "animate__animated animate__bounce",
+      "animate__animated animate__flash",
+      "animate__animated animate__pulse",
+      "animate__animated animate__rubberBand",
+      "animate__animated animate__shakeX",
+      "animate__animated animate__shakeY",
+      "animate__animated animate__headShake",
+      "animate__animated animate__swing",
+      "animate__animated animate__tada",
+      "animate__animated animate__wobble",
+      "animate__animated animate__jello",
+      "animate__animated animate__heartBeat",
+      "animate__animated animate__rotateIn",
+      "animate__animated animate__flip",
+      "animate__animated animate__fadeIn",
+      "animate__animated animate__fadeOut",
+      "animate__animated animate__zoomIn",
+      "animate__animated animate__backInDown",
+      "animate__animated animate__slideInDown",
+      "animate__animated animate__slideInUp",
+    ];
+
+    for (let i = 0; i < possible_animation.length; i++) {
+      if (
+        String($($(this).attr("data-target")).attr("class")).includes(
+          possible_animation[i]
+        )
+      ) {
+        $($(this).attr("data-target")).attr(
+          "class",
+          String($($(this).attr("data-target")).attr("class")).replace(
+            possible_animation[i],
+            ""
+          )
+        );
+      }
+    }
+
     $($(this).attr("data-target")).addClass($(this).val());
   });
 

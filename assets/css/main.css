@@ -4984,7 +4984,7 @@ input[type=range]:focus::-ms-fill-upper {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #0000003d;
+    /* background-color: #0000003d; */
 }
 
 .info-overlay--wrap .info-overlay-section {
