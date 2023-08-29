@@ -1868,6 +1868,11 @@
     font-size: 0.7rem;
     padding: 0.3rem;
     margin-bottom: 1rem;
+    transition: all  0.5s;
+}
+
+.vc-vid-stat-box:hover {
+    background-color: #a34ceb;
 }
 
 .vc-vid-stat-box .share-icon {
