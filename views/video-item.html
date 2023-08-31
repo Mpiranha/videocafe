@@ -2499,19 +2499,19 @@
                                         <img src="../assets/icons/edit icon.svg" alt="edit">
                                         Edit
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="#share-modal" data-toggle="modal">
                                         <img src="../assets/icons/share icon.svg" alt="share">
                                         Share
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="#add-project" data-toggle="modal">
                                         <img src="../assets/icons/add to project.svg" alt="download">
-                                        Add to project/
+                                        Add to project
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="#add-channel" data-toggle="modal">
                                         <img src="../assets/icons/add to project.svg" alt="download">
                                         Add to channel
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="#download-video_modal" data-toggle="modal">
                                         <img src="../assets/icons/download thumbnail.svg" alt="download">
                                         Download
                                     </a>
@@ -3011,6 +3011,65 @@
         </div>
     </div>
 
+    <div class="modal fade modal-select-vid show" style="display: block;" id="download-video_modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button data-dismiss="modal" class="btn btn-close-modal">
+                    <img src="../assets/icons/close.svg" alt="">
+                </button>
+                <div class="new-project-modal--head border-0 mb-0">
+
+                    <span class="label">Are you sure?</span>
+                </div>
+
+               
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-select-vid" id="download-video_modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button data-dismiss="modal" class="btn btn-close-modal">
+                    <img src="../assets/icons/close.svg" alt="">
+                </button>
+                <div class="new-project-modal--head border-0 mb-0">
+
+                    <span class="label">Select resolution to download</span>
+                </div>
+
+                <div class="download-wrap">
+                    <h2 class="label">
+                        Download the video in the format you want
+                    </h2>
+
+                    <div class="available_formats">
+                        <button class="btn btn_video_format">
+                            <img class="download_icon" src="../assets/icons/download thumbnail.svg" alt="">
+                            720p
+                        </button>
+
+                        <button class="btn btn_video_format">
+                            <img class="download_icon" src="../assets/icons/download thumbnail.svg" alt="">
+                            480p
+                        </button>
+
+                        <button class="btn btn_video_format">
+                            <img class="download_icon" src="../assets/icons/download thumbnail.svg" alt="">
+                            360p
+                        </button>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade modal-select-vid" id="add-project" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
@@ -3018,61 +3077,58 @@
                     <img src="../assets/icons/close.svg" alt="">
                 </button>
                 <div class="new-project-modal--head mb-0">
-                    <label class="custom-check light">
-                        <input data-toggle="toggle-content" data-target=".show-logo-trigger" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <span class="label">All Project</span>
+
+                    <span class="label">Add/Remove Project</span>
                 </div>
 
                 <div class="video-listing-wrap">
-                    <div class="project-item">
+                    <div class="project-item border-0">
                         <div class="check-side">
                             <label class="custom-check light">
-                                <input data-toggle="toggle-content" data-target=".show-logo-trigger" type="checkbox">
+                                <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="label">Videocafe App</span>
+                            <span class="label">Videocafe App (1)</span>
                         </div>
                         <div class="desc-project mt-2">
                             Description For The Project Should Be Here
                         </div>
-                        <div class="upload-date">
+                        <!-- <div class="upload-date">
                             Uploaded Jun 25, 2020 At 07:58 PM
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="project-item">
+                    <div class="project-item border-0">
                         <div class="check-side">
                             <label class="custom-check light">
-                                <input data-toggle="toggle-content" data-target=".show-logo-trigger" type="checkbox">
+                                <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="label">Videocafe App</span>
+                            <span class="label">Videocafe App (5)</span>
                         </div>
                         <div class="desc-project mt-2">
                             Description For The Project Should Be Here
                         </div>
-                        <div class="upload-date">
+                        <!-- <div class="upload-date">
                             Uploaded Jun 25, 2020 At 07:58 PM
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="project-item">
+                    <div class="project-item border-0">
                         <div class="check-side">
                             <label class="custom-check light">
-                                <input data-toggle="toggle-content" data-target=".show-logo-trigger" type="checkbox">
+                                <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="label">Videocafe App</span>
+                            <span class="label">Videocafe App (10)</span>
                         </div>
                         <div class="desc-project mt-2">
                             Description For The Project Should Be Here
                         </div>
-                        <div class="upload-date">
+                        <!-- <div class="upload-date">
                             Uploaded Jun 25, 2020 At 07:58 PM
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="d-flex justify-content-between">
+                <!-- <div class="d-flex justify-content-between">
                     <div class="selected-count align-self-end">
                         0 Project selected
                     </div>
@@ -3080,10 +3136,194 @@
                     <button class="btn btn-submit">
                         Add Project
                     </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-select-vid" id="add-channel" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button data-dismiss="modal" class="btn btn-close-modal">
+                    <img src="../assets/icons/close.svg" alt="">
+                </button>
+                <div class="new-project-modal--head mb-0">
+
+                    <span class="label">Add/Remove Channel</span>
+                </div>
+
+                <div class="video-listing-wrap">
+                    <div class="project-item border-0">
+                        <div class="check-side">
+                            <label class="custom-check light">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span class="label">Videocafe App (1)</span>
+                        </div>
+                        <div class="desc-project mt-2">
+                            Description For The Project Should Be Here
+                        </div>
+                        <!-- <div class="upload-date">
+                            Uploaded Jun 25, 2020 At 07:58 PM
+                        </div> -->
+                    </div>
+                    <div class="project-item border-0">
+                        <div class="check-side">
+                            <label class="custom-check light">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span class="label">Videocafe App (5)</span>
+                        </div>
+                        <div class="desc-project mt-2">
+                            Description For The Project Should Be Here
+                        </div>
+                        <!-- <div class="upload-date">
+                            Uploaded Jun 25, 2020 At 07:58 PM
+                        </div> -->
+                    </div>
+                    <div class="project-item border-0">
+                        <div class="check-side">
+                            <label class="custom-check light">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span class="label">Videocafe App (10)</span>
+                        </div>
+                        <div class="desc-project mt-2">
+                            Description For The Project Should Be Here
+                        </div>
+                        <!-- <div class="upload-date">
+                            Uploaded Jun 25, 2020 At 07:58 PM
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                    <div class="selected-count align-self-end">
+                        0 Project selected
+                    </div>
+
+                    <button class="btn btn-submit">
+                        Add Project
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="share-modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="title">Share & Embed Project</div>
+
+                <ul class="nav nav-pills share-navs" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-default-tab" data-toggle="pill" href="#pills-default"
+                            role="tab" aria-controls="pills-default" aria-selected="true">
+                            <img src="../assets/icons/inline embed.svg" alt="Inline Embed">
+                            Inline Embed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-pop-tab" data-toggle="pill" href="#pills-pop" role="tab"
+                            aria-controls="pills-pop" aria-selected="false">
+                            <img src="../assets/icons/pop-over embed.svg" alt="Video">
+                            Pop-Over Embed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-audio-tab" data-toggle="pill" href="#pills-share" role="tab"
+                            aria-controls="pills-audio" aria-selected="false">
+                            <img src="../assets/icons/share link icon.svg" alt="Audio">
+                            Share Link
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-default" role="tabpanel"
+                        aria-labelledby="pills-default-tab">
+                        <div class="form-group">
+                            <label for="">Embed Code</label>
+
+                            <textarea id="my-textarea" class="form-control vc-form-input" name="" rows="5"></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="">Video Size</label>
+                            <div class="vid-size-wrap">
+                                <input type="number" name="" id="" class="form-control vc-form-input" placeholder=""
+                                    size="4">
+                                <img class="lock-icon" src="../assets/icons/lock.svg" alt="Lock">
+                                <input type="number" name="" id="" class="form-control vc-form-input" placeholder=""
+                                    size="4">
+                            </div>
+                        </div>
+
+                        <div class="vc-check-size-type">
+
+                            <label class="custom-check-label d-flex align-items-center">
+                                <input type="radio" class="form-check-input" name="size-type" id="" value="select all">
+                                <span class="check-mark rounded mr-2"></span>
+                                Responsiveness
+                            </label>
+
+                            <label class="custom-check-label d-flex align-items-center">
+                                <input type="radio" class="form-check-input" name="size-type" id="" value="select all">
+                                <span class="check-mark rounded mr-2"></span>
+                                Fixed Size
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-pop" role="tabpanel" aria-labelledby="pills-pop">
+                        <div class="form-group">
+                            <label for="">Embed Code</label>
+
+                            <textarea id="my-textarea" class="form-control vc-form-input" name="" rows="5"></textarea>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Text</label>
+                            <input type="text" name="" id="" class="form-control vc-form-input w-50" placeholder=""
+                                aria-describedby="helpId">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Preview</label>
+
+                            <div class="prev-item">
+                                This is my preview
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-share" role="tabpanel" aria-labelledby="pills-video-tab">
+
+                        <div class="form-group">
+                            <label for="">Public Link For Sharing</label>
+                            <div class="d-flex">
+                                <input type="text" name="" id="" class="form-control vc-form-input mr-5" placeholder="">
+                                <button class="btn btn-submit">
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
 
     <script src="../assets/js/jquery/jquery-3.5.1.min.js"></script>

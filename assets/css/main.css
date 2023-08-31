@@ -1250,7 +1250,7 @@
 }
 
 .uploaded-box {
-    height: 375px;
+    height: 325px;
     display: flex;
     flex-direction: column;
 }
@@ -1270,6 +1270,7 @@
 .uploaded-box .media-desc {
     background-color: #570880;
     flex-grow: 1;
+    font-size: 0.8rem;
     color: #fff;
     padding: 2rem 0.5rem 0.5rem 0.5rem;
     display: flex;
@@ -1285,7 +1286,7 @@
 }
 
 .media-desc .desc {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: left !important;
     margin-bottom: 1rem;
 }
@@ -1868,7 +1869,7 @@
     font-size: 0.7rem;
     padding: 0.3rem;
     margin-bottom: 1rem;
-    transition: all  0.5s;
+    transition: all 0.5s;
 }
 
 .vc-vid-stat-box:hover {
@@ -2175,9 +2176,40 @@
 }
 
 #new-project .modal-content,
-#add-project .modal-content {
+#add-project .modal-content,
+#add-channel .modal-content,
+#download-video_modal .modal-content {
     background-color: #570880;
     padding: 2rem 3rem 2rem 2rem;
+}
+
+.download-wrap {
+    padding: 2rem;
+}
+
+.download-wrap .label {
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.download-wrap .available_formats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.available_formats .btn_video_format {
+    background-color: #d840e5;
+    color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
 }
 
 
