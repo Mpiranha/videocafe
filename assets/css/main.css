@@ -1457,17 +1457,18 @@
 
 .upload-desc {
     color: #fff;
-    max-width: 350px;
-    font-size: 0.85rem;
+    max-width: 385px;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
 .upload-illus {
-    width: 150px;
+    width: 280px;
+    margin-bottom: 0.5rem;
 }
 
 .desc {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #fff;
     text-align: center;
 }
@@ -1479,25 +1480,26 @@
 
 .bg-upload-wrap .right-section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-grow: 1;
 
 
 }
 
 .bg-upload-wrap .right-section .manage-width {
-    max-width: 500px;
+    max-width: 300px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 .btn-upload {
     position: relative;
     background: linear-gradient(to right, #7d32e1, #517be1);
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #fff;
-    padding: 0.3rem 5rem;
+    padding: 0.6rem 5rem;
+    border-radius: 0.5rem;
 }
 
 .btn-upload input {
@@ -1872,7 +1874,8 @@
     transition: all 0.5s;
 }
 
-.vc-vid-stat-box:hover {
+.vc-vid-stat-box.share:hover {
+    cursor: pointer;
     background-color: #a34ceb;
 }
 
@@ -2067,7 +2070,7 @@
 
 .vc-import-wrap .illus--image-wrap {
     margin-left: auto;
-    width: 42%;
+    width: 30%;
 }
 
 .vc-import-wrap label {
@@ -2185,6 +2188,30 @@
 
 .download-wrap {
     padding: 2rem;
+}
+
+.btn-cancel-delete {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-cancel-delete, .btn-del-vid {
+    padding: 0.35rem 1.6rem;
+    font-size: 0.9rem;
+}
+
+
+
+.table-del tr th, .table-del tr td{
+    border: none;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0.2rem 0.75rem;
+}
+
+.table-del tr th {
+    border-bottom: 1px solid #e15fff;
 }
 
 .download-wrap .label {

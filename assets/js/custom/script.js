@@ -1,4 +1,14 @@
 $(function () {
+  $(".confirm__del_input").on("input", function () {
+   
+    if ($(this).val() == "DELETE") {
+     
+      $(".btn-del-vid").removeAttr("disabled", "false");
+    } else {
+      $(".btn-del-vid").attr("disabled", "disabled");
+    }
+  });
+  
   const calculateTime = (secs) => {
     const hour = Math.floor(secs / 3600);
     const minutes = Math.floor(secs / 60);
