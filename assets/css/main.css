@@ -2181,14 +2181,40 @@
 #new-project .modal-content,
 #add-project .modal-content,
 #add-channel .modal-content,
-#download-video_modal .modal-content {
+#download-video_modal .modal-content,
+#delete-video_modal .modal-content,
+#choose-design_modal .modal-content {
     background-color: #570880;
     padding: 2rem 3rem 2rem 2rem;
 }
 
+.designs_wrap .title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.designs_prev_container {
+    min-height: 300px;
+    border: 2px solid #e15fff;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.design_image {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
 .download-wrap {
     padding: 2rem;
+
 }
+
+
 
 .btn-cancel-delete {
     background-color: transparent;

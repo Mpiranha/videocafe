@@ -1030,7 +1030,7 @@
                                                 <span class="label">Skip Option</span>
                                             </div>
 
-                                            <button class="btn btn-block btn-choose-design">Choose Design</button>
+                                            <button class="btn btn-block btn-choose-design" data-toggle="modal" data-target="#choose-design_modal">Choose Design</button>
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
                                                     <input id="email-name-request" type="checkbox">
@@ -2543,7 +2543,7 @@
                                         <img src="../assets/icons/download thumbnail.svg" alt="download">
                                         Download
                                     </a>
-                                    <a class="dropdown-item" href="#download-video_modal" data-toggle="modal">
+                                    <a class="dropdown-item" href="#delete-video_modal" data-toggle="modal">
                                         <img src="../assets/icons/delete_4.svg" alt="download">
                                         Delete
                                     </a>
@@ -3039,7 +3039,54 @@
         </div>
     </div>
 
-    <div class="modal fade modal-select-vid" id="download-video_modal" role="dialog">
+    <div class="modal fade modal-select-vid" id="choose-design_modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button data-dismiss="modal" class="btn btn-close-modal">
+                    <img src="../assets/icons/close.svg" alt="">
+                </button>
+                <div class="new-project-modal--head d-flex flex-column align-items-start border-0 mb-4">
+                    <span class="label">Choose Design</span>
+                   
+                </div>
+
+                <div class="designs_wrap">
+                    <div class="title">Designs</div>
+                    <div class="designs_prev_container">
+                        <div class="row p-2">
+                            <div class="col-12 col-md-4">
+                                <img class="design_image" src="../assets/images/karma-quote.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img class="design_image" src="../assets/images/wedding.jpg" alt="">
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <img class="design_image" src="../assets/images/wedding.jpg" alt="">
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <img class="design_image" src="../assets/images/wedding.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-cancel-delete mr-3" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-submit btn-del-vid">Submit</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-select-vid" id="delete-video_modal" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <button data-dismiss="modal" class="btn btn-close-modal">
