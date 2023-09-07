@@ -747,16 +747,43 @@ videoContainer.each(function () {
   }
 
   // Overlay Text
-  var overlay_text_count = 1;
-  $(".btn-add-more").on("click", function () {
-    if (overlay_text_count < 4) {
-      overlay_text_count++;
-    }
+  // var overlay_text_count = 1;
+  // $(".btn-add-more").on("click", function () {
+  //   if (overlay_text_count < 4) {
+  //     overlay_text_count++;
+  //   }
 
-    for (var i = 1; i <= overlay_text_count; i++) {
-      $(".overlay-text-inner-" + i).css("display", "block");
-      $(".overlay-text-" + i).css("display", "block");
+  //   for (var i = 1; i <= overlay_text_count; i++) {
+  //     $(".overlay-text-inner-" + i).css("display", "block");
+  //     $(".overlay-text-" + i).css("display", "block");
+  //   }
+  // });
+
+  $("#toggle__text-1").on("change", function () {
+    if($(this).is(":checked")) {
+      $(".overlay-text-1").css("display", "block");
+    } else {
+      $(".overlay-text-1").css("display", "none");
     }
+    
+  });
+
+  $("#toggle__text-2").on("change", function () {
+    if($(this).is(":checked")) {
+      $(".overlay-text-2").css("display", "block");
+    } else {
+      $(".overlay-text-2").css("display", "none");
+    }
+    
+  });
+
+  $("#toggle__text-3").on("change", function () {
+    if($(this).is(":checked")) {
+      $(".overlay-text-3").css("display", "block");
+    } else {
+      $(".overlay-text-3").css("display", "none");
+    }
+    
   });
 
   $("#font-select").on("change", function () {
