@@ -1030,7 +1030,8 @@
                                                 <span class="label">Skip Option</span>
                                             </div>
 
-                                            <button class="btn btn-block btn-choose-design" data-toggle="modal" data-target="#choose-design_modal">Choose Design</button>
+                                            <button class="btn btn-block btn-choose-design" data-toggle="modal"
+                                                data-target="#choose-design_modal">Choose Design</button>
                                             <div class="d-flex mb-3">
                                                 <label class="custom-check">
                                                     <input id="email-name-request" type="checkbox">
@@ -1357,8 +1358,9 @@
                                                             class="d-flex justify-content-between mb-3 align-items-center">
                                                             <label>Text 1</label>
                                                             <label class="switch">
-                                                                <input id="toggle__text-1" checked data-toggle="toggle-content"
-                                                                    data-target=".text__1" type="checkbox">
+                                                                <input id="toggle__text-1" checked
+                                                                    data-toggle="toggle-content" data-target=".text__1"
+                                                                    type="checkbox">
                                                                 <span class="slider round"></span>
                                                             </label>
                                                         </div>
@@ -1946,7 +1948,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input id="show-hide-picture--in--picture" checked type="checkbox">
+                                                <input id="show-hide-theater-mode" checked type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -2016,7 +2018,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input id="show-hide-vr" type="checkbox">
+                                                <input id="show-hide-zoom" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -2791,6 +2793,10 @@
                                                 class="vid-pop--over animate__animated animate__slideInUp close-click-outside">
                                                 <nav class="nav flex-column" id="main-vid-settings">
                                                     <li class="nav-item">
+                                                        <a class="nav-link more-option zoom-btn" style="display: none;"
+                                                            href="#zoom-cont">Zoom</a>
+                                                    </li>
+                                                    <li class="nav-item">
                                                         <a class="nav-link share" href="#">Share</a>
                                                     </li>
                                                     <li class="nav-item">
@@ -2825,6 +2831,17 @@
                                                     <a class="nav-link select-item" val="380" href="#">380p</a>
                                                     <a class="nav-link select-item" val="240" href="#">240p</a>
                                                 </nav>
+
+                                                <nav id="zoom-cont"
+                                                    class="nav flex-column select-zoom custom-selector d-none"
+                                                    value="780">
+                                                    <a class="nav-link back-to zoom-head"
+                                                        href="#main-vid-settings">Zoom</a>
+                                                    <div class="zoom-controls close-click-outside">
+                                                        <input min="1" max="2.5" value="1" step="0.1" type="range"
+                                                            name="" id="zoom-input">
+                                                    </div>
+                                                </nav>
                                             </div>
                                         </div>
 
@@ -2836,6 +2853,17 @@
                                             <img class="vid-logo" src="../assets/icons/login image.svg"
                                                 alt="video  logo">
                                         </div>
+
+                                        <button class="btn no-shadow btn-subtitle" style="display: none;">
+                                            <img src="../assets/icons/newones/subtitles.svg" alt="subtitle icon">
+                                        </button>
+
+                                        <button class="btn no-shadow btn-theater-mode" style="display: none;">
+                                            <img src="../assets/icons/newones/Theatre Mood.svg" alt="theater icon">
+                                        </button>
+
+
+
 
                                         <button class="btn no-shadow btn-fs">
                                             <img src="../assets/icons/full screen icon.svg" alt="fullscreen icon">
@@ -3047,7 +3075,7 @@
                 </button>
                 <div class="new-project-modal--head d-flex flex-column align-items-start border-0 mb-4">
                     <span class="label">Choose Design</span>
-                   
+
                 </div>
 
                 <div class="designs_wrap">
@@ -3072,7 +3100,7 @@
                     </div>
                 </div>
 
-        
+
 
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-cancel-delete mr-3" data-dismiss="modal">Cancel</button>

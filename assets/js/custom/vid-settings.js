@@ -256,6 +256,11 @@ videoContainer.each(function () {
     video.playbackRate = $(this).attr("value");
   });
 
+  $("#zoom-input").on("input", function () {
+    console.log($(this).attr("value"));
+    video.style.transform = "scale(" + $(this).val() + ")";
+  });
+
   video.addEventListener("timeupdate", function () {
     //currentTime use second, if you want min *60
     // if (video.currentTime >= 5) {
@@ -760,30 +765,27 @@ videoContainer.each(function () {
   // });
 
   $("#toggle__text-1").on("change", function () {
-    if($(this).is(":checked")) {
+    if ($(this).is(":checked")) {
       $(".overlay-text-1").css("display", "block");
     } else {
       $(".overlay-text-1").css("display", "none");
     }
-    
   });
 
   $("#toggle__text-2").on("change", function () {
-    if($(this).is(":checked")) {
+    if ($(this).is(":checked")) {
       $(".overlay-text-2").css("display", "block");
     } else {
       $(".overlay-text-2").css("display", "none");
     }
-    
   });
 
   $("#toggle__text-3").on("change", function () {
-    if($(this).is(":checked")) {
+    if ($(this).is(":checked")) {
       $(".overlay-text-3").css("display", "block");
     } else {
       $(".overlay-text-3").css("display", "none");
     }
-    
   });
 
   $("#font-select").on("change", function () {
@@ -971,6 +973,36 @@ videoContainer.each(function () {
       $(".play-speed").css("display", "flex");
     } else {
       $(".play-speed").css("display", "none");
+    }
+  });
+
+  // Zoom
+
+  $("#show-hide-zoom").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".zoom-btn").css("display", "flex");
+    } else {
+      $(".zoom-btn").css("display", "none");
+    }
+  });
+
+  // Theater Mode
+
+  $("#show-hide-theater").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".btn-theater-mode").css("display", "inline-block");
+    } else {
+      $(".btn-theater-mode").css("display", "none");
+    }
+  });
+
+  // Subtitle
+
+  $("#subtitle-toggler").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".btn-subtitle").css("display", "inline-block");
+    } else {
+      $(".btn-subtitle").css("display", "none");
     }
   });
 

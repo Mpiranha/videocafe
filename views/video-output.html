@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Video Editor</title>
+</head>
+
+<body>
+
+    <div class="flex-wrapper">
+        <div class="sidebar">
+            <a class="logo-link" href="../index.html">
+                <img src="../assets/images/vclawd-Logo.png" alt="logo">
+            </a>
+            <nav class="nav flex-column nav-wrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                        <img class="sidebar-icon" src="../assets/icons/dash icon.svg" alt="">
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="record-video.html">
+                        <img class="sidebar-icon" src="../assets/icons/live icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Video
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="record-screen.html">
+                        <img class="sidebar-icon" src="../assets/icons/record scren icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Screen
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="collapse" role="button" href="#collapse-video">
+                        <img class="sidebar-icon" src="../assets/icons/video-camera.svg" alt="">
+                        <span class="nav-text">
+                            Videos
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-video">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="upload-video.html">Upload Video</a>
+                        <a class="nav-link active" href="all-video.html">All Videos</a>
+                        <a class="nav-link" href="import-video.html">Import Videos</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        <img class="sidebar-icon" src="../assets/icons/project icon.svg" alt="">
+                        <span class="nav-text">
+                            Projects
+                        </span>
+                    </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-media">
+                        <img class="sidebar-icon" src="../assets/icons/media icon.svg" alt="">
+                        <span class="nav-text">
+                            Media
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-media">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="free-music.html">Free Music</a>
+                        <a class="nav-link" href="stock-video.html">Stock Images</a>
+                        <a class="nav-link" href="text-speech.html">Text To Speech</a>
+                        <a class="nav-link" href="stock-video.html">Stock Video</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="email.html">
+                        <img class="sidebar-icon" src="../assets/icons/email icon.svg" alt="">
+                        <span class="nav-text">
+                            Emails
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="integrations.html">
+                        <img class="sidebar-icon" src="../assets/icons/integration icon.svg" alt="">
+                        <span class="nav-text">
+                            Integrations
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="player-settings.html">
+                        <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
+                        <span class="nav-text">
+                            Player Settings
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
+                        <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
+                        <span class="nav-text">
+                            Agency
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-agency">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="agency-reseller.html">Agency Reseller</a>
+                        <a class="nav-link" href="manage-client.html">Manage Client</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">
+                        <img class="sidebar-icon" src="../assets/icons/help icon.svg" alt="">
+                        <span class="nav-text">
+                            Help
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bonuses.html">
+                        <img class="sidebar-icon" src="../assets/icons/bonus icon.svg" alt="">
+                        <span class="nav-text">
+                            Bonuses
+                        </span>
+                    </a>
+                </li>
+
+            </nav>
+            <div class="bottom-stat">
+                <canvas id="myChart" width="400" height="400"></canvas>
+                Usage 0.02GB/50GB <span>(0.04%)</span>
+            </div>
+
+        </div>
+        <section class="content">
+            <div class="content-head">
+                <nav class="nav nav-top">
+                    <a class="nav-link" href="video-git.html">
+                        <img class="icon-top" src="../assets/icons/video to gif.svg" alt="video to gif">
+                        Video to GIF
+                    </a>
+                    <a class="nav-link" href="analytics.html">
+                        <img class="icon-top" src="../assets/icons/analysis icon.svg" alt="analytics">
+                        Analytics</a>
+                    <a class="nav-link" href="teams.html">
+                        <img class="icon-top" src="../assets/icons/team icon.svg" alt="team">
+                        Teams
+                    </a>
+                    <a class="nav-link" href="record-screen.html">
+                        <img class="icon-top" src="../assets/icons/record scren icon.svg" alt="record screen">
+                        Record Screen
+                    </a>
+                    <a class="nav-link" href="go-live.html">
+                        <img class="icon-top" src="../assets/icons/live icon.svg" alt="go live">
+                        Go Live
+                    </a>
+                    <div class="nav-link dropdown">
+                        <button class="btn upload-dropdown dropdown-toggle" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Upload
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">Add Video</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown nav-link">
+                        <button class="btn notification-dropdown no-shadow" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="notification-icon" src="../assets/icons/notification bell.svg"
+                                alt="notification bell">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <div class="notification-inner">
+                                <div class="notification-head">
+                                    <img class="bell-icon" src="../assets/icons/notification bell.svg" alt="">
+                                    <h2 class="title">
+                                        Latest Changes
+                                    </h2>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-link" href="#">
+                        <div class="workspace-prev">
+                            <div class="dropdown">
+                                <div class="btn user-dropdown dropdown-toggle" type="button" id="triggerId"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="workspace-details">
+                                        Welcome <br>
+                                        @Dwaynejohnson
+                                    </div>
+                                    <img class="user-logo" src="../assets/icons/usage icon.svg" alt="Workspace Logo">
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="triggerId">
+                                    <div class="dropdown-top">
+                                        @Therockjohnson <br>
+                                        Dwaynejohnson@Gmail.Com
+                                    </div>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/my account icon.svg"
+                                            alt="">
+                                        My Account
+                                    </a>
+
+
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/billings icon.svg" alt="">
+                                        Billing
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/upgrade icon.svg" alt="">
+                                        Upgrade
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/log out icon.svg" alt="">
+                                        Logout
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!-- <nav class="nav nav-secondary">
+                    
+                  
+                </nav> -->
+
+
+            </div>
+            <div class="content-body">
+                <div class="container-fluid">
+                    <div class="video-display-page theater-mode">
+
+                        <div class="video_content">
+                            <div class="video-outter">
+                                <div class="video-inner">
+                                    <div class="share-wrap">
+                                        <button class="btn no-shadow close-share">
+                                            <img src="../assets/icons/close.svg" alt="">
+                                        </button>
+                                        <div class="form-group">
+                                            <label for="">Link</label>
+                                            <input class="form-control vc-form-input" type="text" name=""
+                                                value="http://videocafe.com/watch/ftghtt">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Embed</label>
+                                            <input class="form-control vc-form-input" type="text" name=""
+                                                value="Display on Hover">
+                                        </div>
+
+                                        <nav class="nav justify-content-between">
+                                            <a class="nav-link active" href="#">
+                                                <img src="../assets/icons/facebook.svg" alt="facebook icon">
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <img src="../assets/icons/pinterest.svg" alt="pinterest icon">
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <img src="../assets/icons/twitter.svg" alt="twitter icon">
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <img src="../assets/icons/linkedin.svg" alt="facebook icon">
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="email-lead-wrap">
+                                        <div class="email-lead-top">
+                                            <h1 id="email-lead-header-text" class="header-text">
+                                                Continue Watching This Video
+                                            </h1>
+                                            <h2 id="email-lead-sub-header-text" class="sub-head-text">
+                                                Enter Your Email Below
+                                            </h2>
+                                        </div>
+
+                                        <div class="mail-form-wrap">
+                                            <img class="email-illustration" src="../assets/icons/enter email icon.svg"
+                                                alt="email illustration">
+                                            <div class="lead-forms">
+                                                <div class="form-group" id="email-name">
+                                                    <input type="text" name=""
+                                                        class="form-control no-shadow vc-form-input"
+                                                        placeholder="Enter Your Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" name=""
+                                                        class="form-control no-shadow vc-form-input"
+                                                        placeholder="Enter Your Email">
+                                                </div>
+
+                                                <div class="d-flex justify-content-end">
+                                                    <button id="email-lead-btn"
+                                                        class="btn btn-submit py-1 px-3">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                            data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+
+                                    <div class="watch-ad-overlay">
+                                        <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                            data-target=".watch-ad-overlay">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+
+                                        <p class="watch-ad-text">
+                                            Write Overlay Text Here
+                                        </p>
+
+                                        <img class="watch-ad-img" src="../assets/images/karma-quote.jpg"
+                                            alt="ads image">
+                                    </div>
+                                    <div class="info-overlay--wrap">
+                                        <div class="info-overlay-section">
+                                            <img class="info-overlay--logo" src="../assets/images/wedding.jpg"
+                                                alt="info overlay logo">
+
+                                            <div class="info-overlay--text">
+                                                Text will display here
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-ads">
+                                        <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                            data-target=".overlay-ads">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+
+                                        <p class="overlay-text">
+                                            Write Overlay Text Here
+                                        </p>
+
+                                        <img class="overlay-img" src="../assets/images/arrt-love.jpg" alt="ads image">
+                                    </div>
+                                    <div class="overlay-text-wrap">
+                                        <button class="btn no-shadow btn-close-ad" data-dismiss="popup"
+                                            data-target=".overlay-ads">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+
+                                        <a href="" target="_blank" class="overlay-text-1">
+                                            Write Overlay Text Here
+                                        </a>
+                                        <a href="" target="_blank" class="overlay-text-2">
+                                            Write Overlay Text Here
+                                        </a>
+                                        <a href="" target="_blank" class="overlay-text-3">
+                                            Write Overlay Text Here
+                                        </a>
+
+
+                                    </div>
+
+                                    <div class="cta-type text-on-vid-display">
+                                        <div class="text">
+                                            test Text
+                                        </div>
+                                        <button class="btn no-shadow mb-3 btn-with-text">
+                                            Dummy
+                                        </button>
+                                        <button class="btn no-shadow mb-3 btn-with-text-2">
+                                            Dummy
+                                        </button>
+                                        <button class="btn no-shadow mb-3 btn-with-text-3">
+                                            Dummy
+                                        </button>
+                                        <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                            data-target=".text-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="cta-type image-on-vid-display">
+                                        <img class="cta--image" src="../assets/icons/upload video illustration.png"
+                                            alt="image on video">
+                                        <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                            data-target=".image-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="cta-type html-on-vid-display">
+
+                                        <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
+                                            data-target=".html-on-vid-display">Skip <i class="fa fa-arrow-right"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="vid-logo-display">
+                                        <img class="vid-logo" src="../assets/icons/login image.svg" alt="video  logo">
+                                    </div>
+                                    <button class="btn no-shadow btn-play-settings animate__animated">
+                                        <i class="fa fa-play-circle"></i>
+                                    </button>
+                                    <div class="video-passworded">
+                                        <div class="form-group">
+                                            <label id="pwd-label" for="">Enter The Password to access the
+                                                Video</label>
+                                            <div>
+                                                <div class="custom-pwd-input">
+                                                    <input type="password" name="" class="form-control no-shadow">
+                                                    <button class="btn no-shadow btn-access-vid">Access</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video> -->
+                                    <video>
+                                        <source src="../assets/video/mov_bbb.mp4">
+                                    </video>
+                                </div>
+                                <div class="vid-controls">
+                                    <button class="btn no-shadow btn-vid-play-pause">
+                                        <img src="../assets/icons/play one icon.svg" alt="play icon">
+                                    </button>
+                                    <button class="btn no-shadow btn-play-back">
+                                        <img src="../assets/icons/play back icon.svg" alt="play back icon">
+                                    </button>
+
+                                    <div class="time--progress">
+                                        <span class="vid-current-time">
+                                            00:00:00
+                                        </span>
+                                        <div class="progress">
+                                            <progress id="progress" value="0" min="0" max="">
+                                                <span id="progress-bar"></span>
+                                            </progress>
+                                        </div>
+                                        <span class="vid-length">00:00:00</span>
+                                    </div>
+
+                                    <div class="ps-relative">
+                                        <button class="btn no-shadow click-btn btn-volume">
+                                            <img src="../assets/icons/volume.svg" alt="volume-icon">
+                                        </button>
+                                        <div class="btn-drop-up close-click-outside">
+                                            <input min="0" max="100" value="100" type="range" name=""
+                                                id="vid-volume-controls">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="ps-relative">
+                                        <button class="btn no-shadow btn-set-vid">
+
+                                            <img src="../assets/icons/Video setting icon.svg" alt="setting icon">
+                                        </button>
+                                        <div
+                                            class="vid-pop--over animate__animated animate__slideInUp close-click-outside">
+                                            <nav class="nav flex-column" id="main-vid-settings">
+                                                <li class="nav-item">
+                                                    <a class="nav-link more-option zoom-btn" style="display: none;"
+                                                        href="#zoom-cont">Zoom</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link share" href="#">Share</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link more-option play-speed"
+                                                        href="#speed-cont">Speed</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link more-option pl-4 vid-resolution"
+                                                        href="#resolution-cont">Resolution</a>
+                                                </li>
+
+                                            </nav>
+                                            <nav id="speed-cont"
+                                                class="nav flex-column select-speed custom-selector d-none" value="1">
+                                                <a class="nav-link back-to" href="#main-vid-settings">Speed</a>
+                                                <a class="nav-link select-item" val="0.25" href="#">0.25x</a>
+                                                <a class="nav-link select-item" val="0.5" href="#">0.5x</a>
+                                                <a class="nav-link select-item" val="1" selected href="#">1x</a>
+                                                <a class="nav-link select-item" val="1.25" href="#"> 1.25x</a>
+                                                <a class="nav-link select-item" val="1.5" href="#">1.5x</a>
+                                                <a class="nav-link select-item" val="2" href="#">2x</a>
+                                            </nav>
+
+                                            <nav id="resolution-cont"
+                                                class="nav flex-column select-resolution custom-selector d-none"
+                                                value="780">
+                                                <a class="nav-link back-to" href="#main-vid-settings">Resolution</a>
+                                                <a class="nav-link select-item" val="1080" href="#">1080p</a>
+                                                <a class="nav-link select-item" val="780" selected href="#">780p</a>
+                                                <a class="nav-link select-item" val="480" href="#">480p</a>
+                                                <a class="nav-link select-item" val="380" href="#">380p</a>
+                                                <a class="nav-link select-item" val="240" href="#">240p</a>
+                                            </nav>
+
+                                            <nav id="zoom-cont"
+                                                class="nav flex-column select-zoom custom-selector d-none" value="780">
+                                                <a class="nav-link back-to zoom-head" href="#main-vid-settings">Zoom</a>
+                                                <div class="zoom-controls close-click-outside">
+                                                    <input min="1" max="2.5" value="1" step="0.1" type="range" name=""
+                                                        id="zoom-input">
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn no-shadow btn-picture hidden" disabled>
+                                        <img src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
+                                    </button>
+
+                                    <div class="vid-logo-display">
+                                        <img class="vid-logo" src="../assets/icons/login image.svg" alt="video  logo">
+                                    </div>
+
+                                    <button class="btn no-shadow btn-subtitle" style="display: none;">
+                                        <img src="../assets/icons/newones/subtitles.svg" alt="subtitle icon">
+                                    </button>
+
+                                    <button class="btn no-shadow btn-theater-mode" style="display: inline-block;">
+                                        <img src="../assets/icons/newones/Theatre Mood.svg" alt="theater icon">
+                                    </button>
+
+
+
+
+                                    <button class="btn no-shadow btn-fs">
+                                        <img src="../assets/icons/full screen icon.svg" alt="fullscreen icon">
+                                    </button>
+
+                                </div>
+                            </div>
+
+                            <div class="video_live_action">
+                                <div class="vid-inner-setting pb-4">
+                                    <button class="btn btn-edit-caption no-shadow">
+                                        <img src="../assets/icons/edit icon.svg" alt=""> Edit
+                                    </button>
+                                    <div class="edit-box">
+                                        <textarea class="form-control" name="" rows="3"></textarea>
+                                        <button class="btn btn-submit btn-save-edit px-3 py-1">Save</button>
+                                    </div>
+                                    <div class="editted-text">
+                                        Before We Were All White We Were First Black
+                                    </div>
+
+                                </div>
+
+                                <div class="vid-inner-setting">
+                                    <label for="">Comments</label>
+                                    <textarea placeholder="Write a Comment" class="form-control" name=""
+                                        rows="3"></textarea>
+                                </div>
+
+                                <div class="d-flex mb-5">
+                                    <label class="custom-check light">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="label text-light">0:00 include timestamp</span>
+                                </div>
+
+                                <button class="btn btn-submit">
+                                    Comment
+                                </button>
+                            </div>
+                        </div>
+                        <div class="theater-action-outter">
+                            <div class="theater-actions">
+                                <div class="vid-inner-setting pb-4">
+                                    <button class="btn btn-edit-caption no-shadow">
+                                        <img src="../assets/icons/edit icon.svg" alt=""> Edit
+                                    </button>
+                                    <div class="edit-box">
+                                        <textarea class="form-control" name="" rows="3"></textarea>
+                                        <button class="btn btn-submit btn-save-edit px-3 py-1">Save</button>
+                                    </div>
+                                    <div class="editted-text">
+                                        Before We Were All White We Were First Black
+                                    </div>
+
+                                </div>
+
+                                <div class="vid-inner-setting">
+                                    <label for="">Comments</label>
+                                    <textarea placeholder="Write a Comment" class="form-control" name=""
+                                        rows="3"></textarea>
+                                </div>
+
+                                <div class="d-flex mb-5">
+                                    <label class="custom-check light">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="label text-light">0:00 include timestamp</span>
+                                </div>
+
+                                <button class="btn btn-submit">
+                                    Comment
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="playlist_wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/karma-quote.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went tp
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="relatedvideos-item" id="">
+                                        <a class="video-link-wrap" href="https://app.vidkreate.io/watch/5spf7/">
+                                            <div class="relatedvideos-tmb"
+                                                style="background-image: url('../assets/images/wedding.jpg');">
+                                            </div>
+                                            <span class="relatedvideos-timespan"> 00:02:14</span>
+                                        </a>
+                                        <div class="video_informations">
+
+                                            <a class="related-videos-title" href="https://app.vidkreate.io/watch/5spf7/"
+                                                style="word-break: break-word;">Screenshot of the day i went to the
+                                                market and came back
+                                            </a>
+
+                                            <p class="text-light3-grey-color related-videos-username">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/general User.svg"></img>
+                                                General
+                                            </p>
+                                            <span class="related-videos-date">
+                                                <img class="video_display_icon"
+                                                    src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"></img>
+                                                Sep 12, 2023
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-block btn-submit">Show more</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="modal fade" id="delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
+                    <div class="title">Are You Sure?</div>
+                    <div class="desc">
+                        Are You Sure That You Want To Delete This Video
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button data-dismiss="modal" class="btn btn-cancel mr-5">
+                            Cancel
+                        </button>
+                        <button class="btn btn-submit">
+                            Yes, Delete
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="new-project" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button data-dismiss="modal" class="btn btn-close-modal">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                    <div class="new-project-modal--head">
+                        <div class="new-project-modal--title">
+                            <img src="../assets/icons/new project icon.svg" alt="new project icon">
+                            New Project
+                        </div>
+
+                        <div>
+                            <div class="d-flex">
+                                <button data-dismiss="modal" class="btn btn-video-head py-2 px-4 mr-3">Cancel</button>
+                                <button class="btn btn-video-head py-2 px-4">Create Project</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-semi-head mb-5">
+                        <div class="new-project-name-input">
+                            <label for="my-input">Project Name</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="ml-auto d-flex align-self-end">
+                            <div class="custom-search-form mr-3">
+                                <input class="form-control no-shadow" type="text" value=""
+                                    placeholder="Search videos and collections">
+                                <button class="btn no-shadow btn-search">
+                                    <img src="../assets/icons/search icon.svg" alt="search icon">
+                                </button>
+                            </div>
+                            <div class="sc-market-select">
+                                <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
+                                <select>
+                                    <option value="0">Sort by date</option>
+                                    <option value="1">Sort by title</option>
+                                    <option value="2">Yesterday</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="video-listing-wrap">
+                        <div class="video-item">
+                            <div class="form-check pl-0 mr-3">
+                                <label class="custom-check-label">
+                                    <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                    <span class="check-mark rounded"></span>
+                                </label>
+                            </div>
+                            <div class="vc-video-wrap vc-video-new-project mr-3">
+                                <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                <div class="controls--outter">
+                                    <div id="video-controls" class="controls" data-state="visible">
+                                        <div class="time--progress">
+                                            <div class="progress">
+                                                <progress id="progress" value="50" min="0" max="100">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                            <div class="vid-control-bottom">
+                                                <span class="vid-size">20mb</span>
+                                                <span class="vid-current-time">
+                                                    00:00:00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vc-vid-details align-self-center">
+                                <div class="title"> Screenrecording20210830at2am</div>
+                                <div class="more-details">Uploaded June 30, 2021 At 02:05 PM</div>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <div class="form-check pl-0 mr-3">
+                                <label class="custom-check-label">
+                                    <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                    <span class="check-mark rounded"></span>
+                                </label>
+                            </div>
+                            <div class="vc-video-wrap vc-video-new-project mr-3">
+                                <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                <div class="controls--outter">
+                                    <div id="video-controls" class="controls" data-state="visible">
+                                        <div class="time--progress">
+                                            <div class="progress">
+                                                <progress id="progress" value="50" min="0" max="100">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                            <div class="vid-control-bottom">
+                                                <span class="vid-size">20mb</span>
+                                                <span class="vid-current-time">
+                                                    00:00:00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vc-vid-details align-self-center">
+                                <div class="title"> Screenrecording20210830at2am</div>
+                                <div class="more-details">Uploaded June 30, 2021 At 02:05 PM</div>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <div class="form-check pl-0 mr-3">
+                                <label class="custom-check-label">
+                                    <input type="checkbox" class="form-check-input" name="" id="" value="select all">
+                                    <span class="check-mark rounded"></span>
+                                </label>
+                            </div>
+                            <div class="vc-video-wrap vc-video-new-project mr-3">
+                                <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                <div class="controls--outter">
+                                    <div id="video-controls" class="controls" data-state="visible">
+                                        <div class="time--progress">
+                                            <div class="progress">
+                                                <progress id="progress" value="50" min="0" max="100">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                            <div class="vid-control-bottom">
+                                                <span class="vid-size">20mb</span>
+                                                <span class="vid-current-time">
+                                                    00:00:00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vc-vid-details align-self-center">
+                                <div class="title"> Screenrecording20210830at2am</div>
+                                <div class="more-details">Uploaded June 30, 2021 At 02:05 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selected-count">
+                        0 video selected
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="import-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button class="btn btn-close-modal no-shadow" data-dismiss="modal">
+                        <img src="../assets/icons/close.svg" alt="close modal">
+                    </button>
+
+                    <div class="form-group mb-5">
+                        <label for="">Import Media</label>
+                        <button class="btn btn-block btn-choose-file">
+                            Choose File
+                            <input type="file" class="form-control-file" name="" id="" placeholder="Choose File"
+                                aria-describedby="fileHelpId">
+                        </button>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+
+                        <button class="btn btn-video-head py-2 px-4">Click to Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
+                    <div class="title">Are You Sure?</div>
+                    <div class="desc">
+                        Are You Sure That You Want To Delete This Video
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button data-dismiss="modal" class="btn btn-cancel mr-5">
+                            Cancel
+                        </button>
+                        <button class="btn btn-submit">
+                            Yes, Delete
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="../assets/js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/popper/popper.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+        integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
+        integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="../assets/js/custom/chart.js"></script>
+
+    <script src="../assets/js/custom/script.js"></script>
+    <script src="../assets/js/select.js"></script>
+
+    <script>
+        $(".btn-theater-mode").on("click", function() {
+            $(".video-display-page").toggleClass("theater-mode");
+        });
+    </script>
+
+</body>
+
+</html>

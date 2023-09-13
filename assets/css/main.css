@@ -1463,7 +1463,7 @@
 }
 
 .upload-illus {
-    width: 280px;
+    width: 320px;
     margin-bottom: 0.5rem;
 }
 
@@ -4338,6 +4338,7 @@ p.guide {
     position: relative;
     background-color: #000;
     height: 400px;
+    overflow: hidden;
 }
 
 .video-inner video {
@@ -4540,6 +4541,27 @@ input[type=range]:focus::-ms-fill-upper {
 
 .vid-controls .ps-relative {
     position: relative;
+}
+
+.zoom-controls {
+    transform: rotateZ(-90deg);
+    transform-origin: 25px;
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.zoom-controls input {
+    background-color: transparent;
+}
+
+.select-zoom {
+    padding: 0 0 5.3rem 0;
 }
 
 .vid-controls .btn-drop-up {
@@ -5025,7 +5047,7 @@ input[type=range]:focus::-ms-fill-upper {
 .overlay-text-2,
 .overlay-text-3 {
     display: none;
-} 
+}
 
 .top-left {
     position: absolute;
@@ -5343,6 +5365,14 @@ input[type=range]:focus::-ms-fill-upper {
     transform: rotateZ(180deg) rotateY(180deg);
 }
 
+.no-video-added {
+    height: calc(100vh - 300px);
+    background-image: url("../icons/newones/remain\ icons\ and\ illustrators/illustor two.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -5405,6 +5435,130 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.video-display-page {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.video-display-page .video_content {
+    width: 68%;
+    border: 2px solid #e15fff;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-right: 3rem;
+}
+
+.video-display-page .playlist_wrap {
+    width: 30%;
+    border: 2px solid #e15fff;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.relatedvideos-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.video-link-wrap {
+    position: relative;
+}
+
+.relatedvideos-tmb {
+    width: 140px;
+    height: 80px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 0.8rem;
+}
+
+.relatedvideos-timespan {
+    position: absolute;
+    right: 12px;
+    top: 59px;
+    background-color: #000000cc;
+    color: #fff;
+    padding: 0px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+a.related-videos-title {
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    text-decoration: none;
+    color: #fff !important;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.related-videos-title {
+    /* font-size: 1.6rem !important; */
+    font-weight: 500 !important;
+    line-height: 1;
+    letter-spacing: 0px;
+    font-family: "Poppins", Poppins, sans-serif;
+    color: #31313c;
+    transition: all 0.2s ease;
+}
+
+.related-videos-username,
+.related-videos-date {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.related-videos-username {
+    margin-bottom: 0.2rem;
+}
+
+.video_display_icon {
+    margin-right: 0.5rem;
+    width: 0.8rem;
+}
+
+.video_information {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.theater-mode {
+    flex-wrap: wrap;
+}
+
+.theater-action-outter {
+    display: none;
+}
+
+.theater-mode .video_content {
+    border: none;
+    margin-right: 0;
+    width: 100%;
+}
+
+.theater-mode .video_content .video_live_action {
+    display: none;
+}
+
+.theater-mode .theater-action-outter {
+    display: block;
+    width: 65%;
+    margin-right: 3rem;
+}
+.theater-mode .theater-actions {
+    border: 2px solid #e15fff;
+    padding: 1rem;
+    border-radius: 0.4rem;
 }
 
 @keyframes bg-stretch-out {
