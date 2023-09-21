@@ -5504,7 +5504,7 @@ input:checked+.slider:before {
     border: 2px solid #e15fff;
     padding: 1rem;
     border-radius: 0.4rem;
-    margin-right: 3rem;
+    margin-right: 1.5rem;
 }
 
 .video-display-page .playlist_wrap {
@@ -5527,13 +5527,14 @@ input:checked+.slider:before {
 }
 
 .relatedvideos-tmb {
-    width: 140px;
-    height: 80px;
+    width: 150px;
+    height: 84px;
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     float: left;
     margin-right: 0.8rem;
+    border-radius: 0.3rem;
 }
 
 .relatedvideos-timespan {
@@ -5548,7 +5549,7 @@ input:checked+.slider:before {
 }
 
 a.related-videos-title {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     font-weight: 500 !important;
     text-decoration: none;
     color: #fff !important;
@@ -5571,7 +5572,7 @@ a.related-videos-title {
     color: #fff;
     display: flex;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .related-videos-username {
