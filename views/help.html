@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Help & Support</title>
+</head>
+
+<body>
+
+    <div class="flex-wrapper">
+        <div class="sidebar">
+            <a class="logo-link" href="../index.html">
+                <img src="../assets/images/vclawd-Logo.png" alt="logo">
+            </a>
+            <nav class="nav flex-column nav-wrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                        <img class="sidebar-icon" src="../assets/icons/dash icon.svg" alt="">
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="record-video.html">
+                        <img class="sidebar-icon" src="../assets/icons/live icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Video
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="record-screen.html">
+                        <img class="sidebar-icon" src="../assets/icons/record scren icon.svg" alt="">
+                        <span class="nav-text">
+                            Record Screen
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-video">
+                        <img class="sidebar-icon" src="../assets/icons/video-camera.svg" alt="">
+                        <span class="nav-text">
+                            Videos
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-video">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="upload-video.html">Upload Video</a>
+                        <a class="nav-link" href="all-video.html">All Videos</a>
+                        <a class="nav-link" href="import-video.html">Import Videos</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        <img class="sidebar-icon" src="../assets/icons/project icon.svg" alt="">
+                        <span class="nav-text">
+                            Projects
+                        </span>
+                    </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-media">
+                        <img class="sidebar-icon" src="../assets/icons/media icon.svg" alt="">
+                        <span class="nav-text">
+                            Media
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-media">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="free-music.html">Free Music</a>
+                        <a class="nav-link" href="stock-video.html">Stock Images</a>
+                        <a class="nav-link" href="text-speech.html">Text To Speech</a>
+                        <a class="nav-link" href="stock-video.html">Stock Video</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="email.html">
+                        <img class="sidebar-icon" src="../assets/icons/email icon.svg" alt="">
+                        <span class="nav-text">
+                            Emails
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="integrations.html">
+                        <img class="sidebar-icon" src="../assets/icons/integration icon.svg" alt="">
+                        <span class="nav-text">
+                            Integrations
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="player-settings.html">
+                        <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
+                        <span class="nav-text">
+                            Player Settings
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
+                        <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
+                        <span class="nav-text">
+                            Agency
+                        </span>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
+                    </a>
+                </li>
+                <li class="collapse" id="collapse-agency">
+                    <nav class="nav nav-media flex-column">
+                        <a class="nav-link" href="agency-reseller.html">Agency Reseller</a>
+                        <a class="nav-link" href="manage-client.html">Manage Client</a>
+                    </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="help.html">
+                        <img class="sidebar-icon" src="../assets/icons/help icon.svg" alt="">
+                        <span class="nav-text">
+                            Help
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bonuses.html">
+                        <img class="sidebar-icon" src="../assets/icons/bonus icon.svg" alt="">
+                        <span class="nav-text">
+                            Bonuses
+                        </span>
+                    </a>
+                </li>
+
+            </nav>
+            <div class="bottom-stat">
+                <canvas id="myChart" width="400" height="400"></canvas>
+                Usage 0.02GB/50GB <span>(0.04%)</span>
+            </div>
+
+        </div>
+        <section class="content h-100">
+            <div class="content-head">
+                <nav class="nav nav-top">
+                    <a class="nav-link" href="video-git.html">
+                        <img class="icon-top" src="../assets/icons/video to gif.svg" alt="video to gif">
+                        Video to GIF
+                    </a>
+                    <a class="nav-link" href="analytics.html">
+                        <img class="icon-top" src="../assets/icons/analysis icon.svg" alt="analytics">
+                        Analytics</a>
+                    <a class="nav-link" href="teams.html">
+                        <img class="icon-top" src="../assets/icons/team icon.svg" alt="team">
+                        Teams
+                    </a>
+                    <a class="nav-link" href="record-screen.html">
+                        <img class="icon-top" src="../assets/icons/record scren icon.svg" alt="record screen">
+                        Record Screen
+                    </a>
+                    <a class="nav-link" href="go-live.html">
+                        <img class="icon-top" src="../assets/icons/live icon.svg" alt="go live">
+                        Go Live
+                    </a>
+                    <div class="nav-link dropdown">
+                        <button class="btn upload-dropdown dropdown-toggle" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Upload
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">Add Video</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown nav-link">
+                        <button class="btn notification-dropdown no-shadow" type="button" id="triggerId"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="notification-icon" src="../assets/icons/notification bell.svg"
+                                alt="notification bell">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <div class="notification-inner">
+                                <div class="notification-head">
+                                    <img class="bell-icon" src="../assets/icons/notification bell.svg" alt="">
+                                    <h2 class="title">
+                                        Latest Changes
+                                    </h2>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="top">
+                                        <span class="tag">
+                                            New
+                                        </span>
+                                        <span class="title">
+                                            New Improvement And Updates
+                                        </span>
+                                    </div>
+                                    <div class="notification-body">
+                                        Good news! New upgrades & improvement are LIVE!
+                                        TEXT to speech, we have more..
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-link" href="#">
+                        <div class="workspace-prev">
+                            <div class="dropdown">
+                                <div class="btn user-dropdown dropdown-toggle" type="button" id="triggerId"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="workspace-details">
+                                        Welcome <br>
+                                        @Dwaynejohnson
+                                    </div>
+                                    <img class="user-logo" src="../assets/icons/usage icon.svg" alt="Workspace Logo">
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="triggerId">
+                                    <div class="dropdown-top">
+                                        @Therockjohnson <br>
+                                        Dwaynejohnson@Gmail.Com
+                                    </div>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/my account icon.svg"
+                                            alt="">
+                                        My Account
+                                    </a>
+
+
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/billings icon.svg" alt="">
+                                        Billing
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/upgrade icon.svg" alt="">
+                                        Upgrade
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img class="user--dropdown-icon" src="../assets/icons/log out icon.svg" alt="">
+                                        Logout
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!-- <nav class="nav nav-secondary">
+                    
+                  
+                </nav> -->
+
+
+            </div>
+            <div class="content-body x-min-h">
+                <div class="container-fluid ">
+                    <div class="page-heading">
+                        <img class="head-icon" src="../assets/icons/help icon.svg" alt="">
+                        Help and Support
+                    </div>
+
+                    <div class="bg-helper">
+                        <div class="help_title">
+                            Customer Support
+                        </div>
+                        <div class="help_standout">
+                            Can't Find Your Answer?
+                        </div>
+                        <div class="help_desc">
+                            We are here to help! from general communication to specific tech business platform question,
+                            please reach out so we can assist.
+                        </div>
+
+                        <div class="help_actions_wrap">
+                            <a class="btn btn-help_actions">
+                                Contact Support
+                            </a>
+
+                            <a class="btn btn-help_actions">
+                                Knowledge Base
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="stock-video-wrap help_video">
+                                <video class="stock-video" src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                <div class="controls--outter">
+                                    <div id="video-controls" class="controls" data-state="visible">
+                                        <button class="btn no-shadow playpause" type="button" data-state="play">
+                                            <img src="../assets/icons/play one icon.svg" alt="">
+                                        </button>
+                                        <div class="time--progress">
+                                            <span class="vid-current-time">00:00:00</span>
+                                            <div class="progress">
+                                                <progress id="progress">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn no-shadow full-screen" type="button"
+                                            data-state="go-fullscreen">
+                                            <img class="fs-icon" src="../assets/icons/full screen icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="stock-video-wrap help_video">
+                                <video class="stock-video" src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                <div class="controls--outter">
+                                    <div id="video-controls" class="controls" data-state="visible">
+                                        <button class="btn no-shadow playpause" type="button" data-state="play">
+                                            <img src="../assets/icons/play one icon.svg" alt="">
+                                        </button>
+                                        <div class="time--progress">
+                                            <span class="vid-current-time">00:00:00</span>
+                                            <div class="progress">
+                                                <progress id="progress">
+                                                    <span id="progress-bar"></span>
+                                                </progress>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn no-shadow full-screen" type="button"
+                                            data-state="go-fullscreen">
+                                            <img class="fs-icon" src="../assets/icons/full screen icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+    </div>
+
+    <script src="../assets/js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/popper/popper.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+        integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
+        integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="../assets/js/custom/chart.js"></script>
+    <script src="../assets/js/custom/script.js"></script>
+
+
+</body>
+
+</html>

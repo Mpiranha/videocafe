@@ -326,10 +326,16 @@
                                 Pixel Intergration
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-integration-tab" data-toggle="pill" href="#pills-bandwidth"
+                                role="tab" aria-controls="pills-bandwidth" aria-selected="false">
+                                Bandwidth
+                            </a>
+                        </li>
                     </ul>
 
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-overview" role="tabpanel"
+                        <div class="tab-pane show active" id="pills-overview" role="tabpanel"
                             aria-labelledby="pills-default-tab">
 
                             <div class=" mb-4">
@@ -1367,6 +1373,209 @@
                                         alt="import video illustration">
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-bandwidth" role="tabpanel"
+                            aria-labelledby="pills-split-tab">
+
+
+                            <div class=" mt-2 mb-4">
+                                <!-- <div class="d-flex justify-content-end">
+                                    <div class="analytic-content">
+                                        <div class="analytic-title">
+                                            Watch Time
+                                        </div>
+                                        <div class="analytic-value">
+                                            00:00:00
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <table class="table table-analytics table-split-test">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5" class="duration-wrap">
+                                                <div class="duration-wrap-inner d-flex">
+                                                    <div class="form-group mr-5">
+                                                        <label for="my-select">Duration</label>
+                                                        <select id="select-duration"
+                                                            class="form-control vc-form-input vc-form-input-sm" name="">
+                                                            <option>Yesterday</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex mb-2">
+                                                            <label class="custom-check check-sm">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                            <label class="label-main">Custom Date Range</label>
+                                                        </div>
+
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-group mr-3">
+                                                                <label for="my-select">From</label>
+                                                                <input type="date" id="my-select"
+                                                                    class="form-control vc-form-input vc-form-input-sm"
+                                                                    name="">
+
+                                                            </div>
+                                                            <div class="form-group mr-3">
+                                                                <label for="my-select">To</label>
+                                                                <input type="date" id="my-select"
+                                                                    class="form-control vc-form-input vc-form-input-sm"
+                                                                    name="">
+
+                                                            </div>
+                                                            <div>
+                                                                <button
+                                                                    class="btn btn-submit btn-submit-sm btn-submit-curved">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <!-- <td>
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        Total Videos
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="border-right-0">
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        TOTAL
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-left-0 border-right-0">
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        THIS MONTH
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        00:00:00
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-right-0 border-left-0">
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        LAST MONTH
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-right-0 border-left-0">
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        THIS YEAR
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                             <td class="border-left-0">
+                                                <div class="analytic-content">
+                                                    <div class="analytic-title">
+                                                        LAST YEAR
+                                                    </div>
+                                                    <div class="analytic-value">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-video" role="tabpanel"
+                                    aria-labelledby="pills-video-tab">
+
+                                    <div class="analytic-tab-inner">
+                                        <div class="title">Bandwidth Logs</div>
+
+                                        <div class="d-flex justify-content-between analytic-table-head mb-4">
+                                            <div class="sc-market-select mr-3">
+                                                <span class="label">Show Entries</span>
+                                                <select>
+                                                    <option value="0">5</option>
+                                                    <option value="1">10</option>
+                                                    <option value="2">50</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="custom-search-form mr-3">
+                                                <input class="form-control no-shadow" type="text" value=""
+                                                    placeholder="Search videos and collections">
+                                                <button class="btn no-shadow btn-search">
+                                                    <img src="../assets/icons/search icon.svg" alt="search icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class=" mb-5">
+                                            <table class="table table-vid-proj">
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Date <i class='fas fa-sort fa-sm'
+                                                                style='color:#ffffff'></i></td>
+                                                        <td>Videos <i class='fas fa-sort fa-sm'
+                                                                style='color:#ffffff'></i></td>
+                                                        <td>View <i class='fas fa-sort fa-sm' style='color:#ffffff'></i>
+                                                        </td>
+                                                       
+                                                        <td>Total Consumption <i class='fas fa-sort fa-sm'
+                                                                style='color:#ffffff'></i></td>
+                                                        <td>Action <i class='fas fa-sort fa-sm' style='color:#ffffff'></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">July 27, 2021</td>
+                                                        <td>Variation 1</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                       
+                                                        <td>
+                                                            <button class="btn px-3 status-active">
+                                                                View
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+
+                                        
+                                        </div>
+
+
+                                      
+                              
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
 
                         </div>
 
