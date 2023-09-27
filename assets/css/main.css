@@ -1488,12 +1488,13 @@
 }
 
 .help_video {
-    height: 300px !important;
+    height: 221px !important;
 }
 
 .help_video video {
     width: 100%;
     max-width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .help_video .controls {
@@ -1807,6 +1808,15 @@
 .vc-vid-actions .dropdown-menu a:hover,
 .vc-dropdown .dropdown-menu a:hover {
     background-color: transparent !important;
+}
+
+.vc-vid-actions .vc-btn-edit ~ .dropdown-menu  {
+    width: 300px !important;
+    background-color: #eb75ca;
+}
+
+.vc-vid-actions .vc-btn-edit ~ .dropdown-menu .vc-form-edit {
+    border-color: #fff;
 }
 
 .vc-vid-actions .dropdown-menu a img,
@@ -3210,21 +3220,103 @@ path {
 }
 
 .int-soc-box {
-    border: 2px solid #d840e5;
+    background-color: var(--color-primary);
     display: flex;
-    padding: 1rem 1rem 0.5rem 1.4em;
-    border-radius: 0.3rem;
+   
+    padding: 1rem;
+    border-radius: 0.6rem;
     margin-bottom: 2.5rem;
     height: 179px;
+    position: relative;
+}
+
+.int-soc-box.main-box {
+    padding: 3.2rem 3rem 1rem 1rem;
+}
+
+.int-soc-box.create {
+    align-items: center;
+}
+
+.int-soc-box .create-text {
+    color: #fff;
 }
 
 .int-soc-content {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+}
+
+.int-title {
+    color: #fff;
+}
+
+.int-soc-box .responder-inner {
+    display: flex;
+}
+
+.int-soc-box .responder-inner .responder-content {
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.int-soc-box .int-soc-floating-action {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #e15fff;
+    right: 1rem;
+    bottom: 0.5rem;
+}
+
+.int-soc-box .int-soc-floating-action .status {
+    margin-right: 0.5rem;
+}
+.int-soc-box .btn-int-soc {
+    background-color: transparent;
+    padding: 0;
+}
+
+.int-soc-box .btn-refresh {
+    margin-right: 0.5rem;
+}
+.int-soc-box .btn-int-soc img {
+    width: 1rem;
+}
+
+.int-soc-box .int-soc-icon-wrap {
+    margin-right: 0.5rem;
+}
+
+.int-soc-box .social-name {
+    color: #fff;
+}
+
+.int-soc-box .social-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.int-soc-box .icon-display{
+    display: flex;
 }
 
 .int-soc-box .icon {
-    width: 2.7rem;
+    width: 3rem;
+    border-radius: 0.4rem;
+}
+
+.int-soc-box .icon-display:not(:last-child) {
+    margin-bottom: 0.8rem;
+}
+
+.int-soc-box .icon:not(:last-child) {
+    margin-right: 0.8rem;
 }
 
 .int-soc-content-inner {
@@ -4394,8 +4486,9 @@ p.guide {
 .video-inner {
     position: relative;
     background-color: #000;
-    height: 500px;
+    /* height: 500px; */
     overflow: hidden;
+    aspect-ratio: 16/9;
 }
 
 .video-inner video {
@@ -5514,6 +5607,7 @@ input:checked+.slider:before {
     padding: 1rem;
     max-height: 85vh;
     overflow-y: auto;
+    max-width: 415px;
 }
 
 .relatedvideos-item {
@@ -5575,9 +5669,9 @@ a.related-videos-title {
     font-size: 0.8rem;
 }
 
-.related-videos-username {
+/* .related-videos-username {
     margin-bottom: 0.2rem;
-}
+} */
 
 .video_display_icon {
     margin-right: 0.5rem;
@@ -5602,8 +5696,17 @@ a.related-videos-title {
     border: none;
     margin-right: 0;
     width: 100%;
+    /* height: 56.25vw; */
+    max-height: calc(100vh - 169px);
+    min-height: 480px;
+    padding: 0;
+    margin-bottom: 1rem;
 }
 
+.theater-mode .video_content .video-outter {
+    margin-bottom: 0;
+    height: 100%;
+}
 .theater-mode .video_content .video_live_action {
     display: none;
 }
@@ -5611,12 +5714,13 @@ a.related-videos-title {
 .theater-mode .theater-action-outter {
     display: block;
     width: 65%;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
+
 .theater-mode .theater-actions {
     border: 2px solid #e15fff;
     padding: 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0.4rem; 
 }
 
 @keyframes bg-stretch-out {
@@ -5708,4 +5812,10 @@ a.related-videos-title {
     .content .content-body>.container-fluid {
         padding-right: 20rem;
     }
+
+    .content-body-video>.container-fluid {
+        padding-right: 0 !important;
+        max-width: 1754px;
+    }
+
 }

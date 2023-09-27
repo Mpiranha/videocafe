@@ -157,7 +157,7 @@ videoContainer.each(function () {
         // bigPlayImg.src = "../assets/icons/play frame.svg";
       } else {
         playpause.setAttribute("data-state", "pause");
-        playpauseImage.src = "../assets/icons/time.svg";
+        playpauseImage.src = "../assets/icons/newones/icons/Pause White.png";
         // bigPlayImg.src = "../assets/icons/time.svg";
       }
     }

@@ -1,14 +1,30 @@
 $(function () {
   $(".confirm__del_input").on("input", function () {
-   
     if ($(this).val() == "DELETE") {
-     
       $(".btn-del-vid").removeAttr("disabled", "false");
     } else {
       $(".btn-del-vid").attr("disabled", "disabled");
     }
   });
-  
+
+  $(document).mouseup(function (e) {
+    var container = $(".close-click-outside");
+
+    if (container.hasClass("show-visible")) {
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass("show-visible");
+      }
+    }
+
+    if (container.hasClass("show")) {
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass("show");
+      }
+    }
+  });
+
   const calculateTime = (secs) => {
     const hour = Math.floor(secs / 3600);
     const minutes = Math.floor(secs / 60);
@@ -221,7 +237,7 @@ $(function () {
           playpauseImage.src = "../assets/icons/play one icon.svg";
         } else {
           playpause.setAttribute("data-state", "pause");
-          playpauseImage.src = "../assets/icons/time.svg";
+          playpauseImage.src = "../assets/icons/newones/icons/Pause White.png";
         }
       }
       // Mute button

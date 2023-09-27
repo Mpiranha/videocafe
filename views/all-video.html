@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
@@ -51,7 +51,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -76,7 +76,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -103,7 +103,7 @@
                         </span>
                     </a>
                 </li>
-               <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link " href="player-settings.html">
                         <img class="sidebar-icon" src="../assets/icons/setting icon.svg" alt="">
                         <span class="nav-text">
@@ -111,14 +111,14 @@
                         </span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -322,7 +322,7 @@
                     </div>
 
                     <div class="no-video-added">
-                        
+
                     </div>
 
                     <div class="content-semi-head mb-5">
@@ -385,7 +385,7 @@
                         </button>
                     </div>
 
-                   
+
 
                     <div class="row">
                         <div class="col-6">
@@ -401,7 +401,8 @@
                                     <div class="video-main-wrap">
                                         <div class="video-source">Direct Link</div>
                                         <div class="vc-video-wrap vc-video-new-project">
-                                            <video loop muted src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
+                                            <video loop muted
+                                                src="../assets/video/video_2021-02-21_11-56-46.mp4"></video>
                                             <div class="controls--outter">
                                                 <div id="video-controls" class="controls" data-state="visible">
                                                     <div class="time--progress">
@@ -421,11 +422,32 @@
                                             </div>
                                         </div>
                                         <div class="vc-vid-actions">
-                                            <button class="btn vc-btn-edit no-shadow">
-                                                <img class="vid-action-icon" src="../assets/icons/edit icon.svg"
-                                                    alt="eidt icon">
-                                                Edit
-                                            </button>
+
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn vc-btn-add-project vc-btn-edit no-shadow"
+                                                    data-target=".edit-dropdown">
+                                                    <img class="vid-action-icon" src="../assets/icons/edit icon.svg"
+                                                        alt="eidt icon">
+                                                    Edit
+                                                </button>
+                                                <div class="dropdown-menu edit-dropdown close-click-outside">
+                                                    <div class="form-group">
+                                                        <input type="text" name="" id="" class="form-control vc-form-input vc-form-edit"
+                                                            placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea cols="3" rows="3" type="text" name="" id="" class="form-control vc-form-input vc-form-edit"
+                                                            placeholder=""></textarea>
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-end">
+                                                        <button class="btn btn-submit">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
@@ -463,7 +485,7 @@
 
                                         <div class="vc-vid-details">
                                             <div class="title"> Screenrecording20210830at2am</div>
-                                           
+
                                         </div>
                                     </div>
                                     <div class="video-stat">
@@ -523,15 +545,15 @@
 
                                         </div>
                                         <div class="vc-vid-details">
-                                           
+
                                             <div class="more-details">Uploaded June 30, 2021 At 02:05 PM</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                       
+
+
 
                     </div>
 
