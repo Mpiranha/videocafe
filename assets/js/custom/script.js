@@ -237,7 +237,7 @@ $(function () {
           playpauseImage.src = "../assets/icons/play one icon.svg";
         } else {
           playpause.setAttribute("data-state", "pause");
-          playpauseImage.src = "../assets/icons/newones/icons/Pause White.png";
+          playpauseImage.src = "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
         }
       }
       // Mute button

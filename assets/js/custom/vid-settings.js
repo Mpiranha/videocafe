@@ -157,7 +157,7 @@ videoContainer.each(function () {
         // bigPlayImg.src = "../assets/icons/play frame.svg";
       } else {
         playpause.setAttribute("data-state", "pause");
-        playpauseImage.src = "../assets/icons/newones/icons/Pause White.png";
+        playpauseImage.src = "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
         // bigPlayImg.src = "../assets/icons/time.svg";
       }
     }
@@ -830,8 +830,10 @@ videoContainer.each(function () {
   $("#email-name-request").on("change", function () {
     if ($(this).is(":checked")) {
       $("#email-name").css("display", "block");
+      $(".sub-head-text").text("Enter Your Email and Name Below");
     } else {
       $("#email-name").css("display", "none");
+      $(".sub-head-text").text("Enter Your Email Below");
     }
   });
 
