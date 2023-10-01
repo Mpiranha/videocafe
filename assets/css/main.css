@@ -2291,7 +2291,8 @@
 
 .nav-login {
     border: 1px solid #eb75ca !important;
-    border-radius: ;
+    border-radius: 1.5rem;
+    padding: 0.3rem 1.7rem;
 }
 
 .design_image {
@@ -4863,7 +4864,7 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #540d78;
     position: absolute;
     width: 100%;
-    height: 106%;
+    height: 100%;
     display: none;
     z-index: 2;
 }
@@ -4925,6 +4926,14 @@ input[type=range]:focus::-ms-fill-upper {
 .option-one .email-lead-wrap .email-lead-top {
     margin-bottom: 10.5rem;
 }
+.option-one {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 .option-two,
 .option-three,
@@ -5024,6 +5033,10 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: -76px;
 }
 
+.option-one .email-lead-top {
+    margin-bottom: 3rem;
+}
+
 .translucent-type .email-lead-top {
     margin-bottom: 2rem;
 }
@@ -5040,8 +5053,12 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .option-one .mail-form-wrap .email-illustration {
-    width: 11rem;
+    width: 15rem;
     margin-right: 1rem;
+}
+
+.option-one .mail-form-wrap {
+    align-items: center;
 }
 
 .option-two .mail-form-wrap .email-illustration {

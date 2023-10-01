@@ -1287,5 +1287,9 @@ videoContainer.each(function () {
     }
   });
 
+  $("[name=email_optin").on("change", function() {
+    
+  });
+
   function makeVideo(src, parent) {}
 });
