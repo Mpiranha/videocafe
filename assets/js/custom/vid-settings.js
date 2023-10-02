@@ -157,7 +157,8 @@ videoContainer.each(function () {
         // bigPlayImg.src = "../assets/icons/play frame.svg";
       } else {
         playpause.setAttribute("data-state", "pause");
-        playpauseImage.src = "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
+        playpauseImage.src =
+          "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
         // bigPlayImg.src = "../assets/icons/time.svg";
       }
     }
@@ -1287,8 +1288,192 @@ videoContainer.each(function () {
     }
   });
 
-  $("[name=email_optin").on("change", function() {
-    
+  var newChild;
+  $("[name=email_optin").on("change", function () {
+    var key = $(this).val();
+    switch (key) {
+      case "option-one":
+        newChild =
+          '<div class="option-one">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="mail-form-wrap">' +
+          '<img class="email-illustration" src="../assets/icons/enter email icon.svg" alt="email illustration">' +
+          '<div class="lead-forms">' +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="form-group">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Email">' +
+          "</div>" +
+          '<div class="d-flex justify-content-end">' +
+          '<button id="email-lead-btn" class="btn btn-submit py-1 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+        
+        break;
+      case "option-two":
+        newChild =
+          '<div class="option-two">' +
+          '<div class="neon-type">' +
+          '<div class="mail-form-wrap">' +
+          '<img class="email-illustration" src="../assets/icons/newones/icons/comments.png" alt="email illustration">' +
+          '<div class="lead-forms">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="form-group">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Email">' +
+          "</div>" +
+          '<div class="d-flex">' +
+          '<button id="email-lead-btn" class="btn btn-block btn-submit py-2 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+        
+        break;
+      case "option-three":
+        newChild =
+          '<div class="option-three">' +
+          '<div class="translucent-type">' +
+          '<div class="mail-form-wrap">' +
+          '<img class="email-illustration" src="../assets/icons/newones/icons/ICONS fRESH/mail and backGround.png" alt="email illustration">' +
+          '<div class="lead-forms">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="d-flex">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input mr-1" placeholder="Enter Your Email">' +
+          '<button id="email-lead-btn" class="btn btn-submit py-1 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+       
+        break;
+      case "option-four":
+        newChild =
+          '<div class="option-four">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="head_outside-type">' +
+          '<div class="mail-form-wrap">' +
+          '<div class="lead-forms">' +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="form-group">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Email">' +
+          "</div>" +
+          '<div class="d-flex">' +
+          '<button id="email-lead-btn" class="btn btn-block btn-submit py-2 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+       
+        break;
+      case "option-five":
+        newChild =
+          '<div class="option-five">' +
+          '<div class="email-section">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="mail-form-wrap">' +
+          '<div class="lead-forms">' +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="form-group">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Email">' +
+          "</div>" +
+          '<div class="d-flex">' +
+          '<button id="email-lead-btn" class="btn btn-block btn-submit py-2 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+        
+        break;
+      case "option-six":
+        newChild =
+          '<div class="option-six">' +
+          '<div class="head_outside-type">' +
+          '<div class="email-lead-top">' +
+          '<h1 id="email-lead-header-text" class="header-text">' +
+          "Continue Watching This Video" +
+          "</h1>" +
+          '<h2 id="email-lead-sub-header-text" class="sub-head-text">' +
+          "Enter Your Email Below" +
+          "</h2>" +
+          "</div>" +
+          '<div class="mail-form-wrap">' +
+          '<div class="lead-forms">' +
+          '<div class="form-group" id="email-name">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
+          "</div>" +
+          '<div class="form-group">' +
+          '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Email">' +
+          "</div>" +
+          '<div class="d-flex">' +
+          '<button id="email-lead-btn" class="btn btn-block btn-submit py-2 px-3">Submit</button>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+        
+        break;
+      default:
+        break;
+    }
+  });
+
+  $(".btn-submit-design").on("click", function () {
+    $(".email-lead-wrap").get(0).replaceChildren();
+    $(".email-lead-wrap").append(newChild);
+    $('#choose-design_modal').modal('toggle');
   });
 
   function makeVideo(src, parent) {}
