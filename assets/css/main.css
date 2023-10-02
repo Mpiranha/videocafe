@@ -2285,7 +2285,7 @@
     opacity: 0;
 }
 
-.email-optin_options input:checked ~ .design_image {
+.email-optin_options input:checked~.design_image {
     transform: scale(0.8);
 }
 
@@ -4446,6 +4446,7 @@ p.guide {
 .video-settings-box.light-mode .input-url-wrap input {
     color: var(--color-primary);
 }
+
 .input-url-wrap .alert-copy {
     width: 300px;
     height: 100%;
@@ -4598,6 +4599,10 @@ p.guide {
 .vid-controls .time--progress span {
     color: #fff;
     font-size: 0.9rem;
+}
+
+.video-settings-box.light-mode .vid-controls .time--progress span {
+    color: var(--color-primary);
 }
 
 .vid-controls .btn {
@@ -4947,6 +4952,7 @@ input[type=range]:focus::-ms-fill-upper {
 .option-one .email-lead-wrap .email-lead-top {
     margin-bottom: 10.5rem;
 }
+
 .option-one {
     height: 100%;
     display: flex;
@@ -5987,6 +5993,45 @@ a.related-videos-title {
     padding: 1rem;
     border-radius: 0.4rem;
     max-width: ;
+}
+
+.light-icon {
+    display: none;
+}
+
+.video-settings-box.light-mode .light-icon {
+    display: inline;
+}
+
+.video-settings-box.light-mode .dark-icon {
+    display: none;
+}
+
+.video-settings-box.light-mode .btn-edit-caption,
+.video-settings-box.light-mode .vid-inner-setting label {
+    color: var(--color-primary);
+}
+
+.video-settings-box.light-mode .vid-inner-setting textarea {
+    background-color: #fff;
+    border: 2px solid #eeeeee;
+}
+
+.video-settings-box.light-mode .vid-inner-setting {
+    border: 2px solid #fff;
+    box-shadow: -3px 4px 8px #e0efe3;
+}
+
+.video-settings-box.light-mode .text-light {
+    color: var(--color-primary) !important;
+}
+
+.video-settings-box.light-mode .custom-check.light .checkmark {
+    border: 2px solid var(--color-primary);
+}
+
+.video-settings-box.light-mode .custom-check.light .checkmark::after {
+    border: solid var(--color-primary);
 }
 
 @keyframes bg-stretch-out {
