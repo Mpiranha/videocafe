@@ -1477,5 +1477,13 @@ videoContainer.each(function () {
     $("#choose-design_modal").modal("toggle");
   });
 
+  $("#toggle-page-mode").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".video-settings-box").addClass("light-mode");
+    } else {
+      $(".video-settings-box").removeClass("light-mode");
+    }
+  });
+
   function makeVideo(src, parent) {}
 });

@@ -1536,6 +1536,7 @@
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+    padding-right: 15%;
 
 
 }
@@ -2133,7 +2134,9 @@
 
 .vc-import-wrap .illus--image-wrap {
     margin-left: auto;
-    width: 30%;
+    /* width: 30%; */
+    height: 100%;
+    padding-right: 5rem;
 }
 
 .vc-import-wrap label {
@@ -6015,6 +6018,7 @@ a.related-videos-title {
 .video-settings-box.light-mode .vid-inner-setting textarea {
     background-color: #fff;
     border: 2px solid #eeeeee;
+    color: #000;
 }
 
 .video-settings-box.light-mode .vid-inner-setting {
