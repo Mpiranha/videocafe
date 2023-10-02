@@ -1318,7 +1318,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-        
+
         break;
       case "option-two":
         newChild =
@@ -1348,7 +1348,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-        
+
         break;
       case "option-three":
         newChild =
@@ -1376,7 +1376,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-       
+
         break;
       case "option-four":
         newChild =
@@ -1405,7 +1405,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-       
+
         break;
       case "option-five":
         newChild =
@@ -1434,7 +1434,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-        
+
         break;
       case "option-six":
         newChild =
@@ -1463,7 +1463,7 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>";
-        
+
         break;
       default:
         break;
@@ -1471,9 +1471,10 @@ videoContainer.each(function () {
   });
 
   $(".btn-submit-design").on("click", function () {
+    $("#email-name-request").prop("checked", false);
     $(".email-lead-wrap").get(0).replaceChildren();
     $(".email-lead-wrap").append(newChild);
-    $('#choose-design_modal').modal('toggle');
+    $("#choose-design_modal").modal("toggle");
   });
 
   function makeVideo(src, parent) {}

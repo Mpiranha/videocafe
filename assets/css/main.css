@@ -3486,6 +3486,10 @@ path {
     padding: 0.3rem 1.5rem;
 }
 
+.video-settings-box.light-mode {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
 
 .color-input label {
     color: #fff;
@@ -4439,6 +4443,9 @@ p.guide {
     width: 300px;
 }
 
+.video-settings-box.light-mode .input-url-wrap input {
+    color: var(--color-primary);
+}
 .input-url-wrap .alert-copy {
     width: 300px;
     height: 100%;
@@ -4458,6 +4465,10 @@ p.guide {
     padding: 0.2rem 0.5rem;
     color: #fff;
     font-size: 1.1rem;
+}
+
+.video-settings-box.light-mode .btn-copy {
+    color: var(--color-primary);
 }
 
 .btn-copy img {
@@ -4523,6 +4534,11 @@ p.guide {
     /* height: 500px; */
     overflow: hidden;
     aspect-ratio: 16/9;
+    border-radius: 0.7rem;
+}
+
+.video-settings-box.light-mode .video-inner {
+    box-shadow: 0rem 0.1rem 0.5rem #00000069;
 }
 
 .video-inner video {
@@ -4555,6 +4571,11 @@ p.guide {
     width: 100%;
     position: absolute;
     bottom: 0;
+    border-radius: 0 0 0.7rem 0.7rem;
+}
+
+.video-settings-box.light-mode .vid-controls {
+    background-color: #fff;
 }
 
 .vid-controls .time--progress {
@@ -6059,7 +6080,7 @@ a.related-videos-title {
     }
 
     .content-body-video>.container-fluid {
-        padding-right: 0 !important;
+        padding-right: 1rem !important;
         /* max-width: 1754px; */
     }
 
