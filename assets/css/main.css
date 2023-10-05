@@ -1607,6 +1607,7 @@
     padding: 0.175rem .75rem;
     font-size: 0.9rem;
     flex-grow: 1;
+    color: #fff !important;
 }
 
 .custom-search-form button {
@@ -2136,7 +2137,11 @@
     margin-left: auto;
     /* width: 30%; */
     height: 100%;
-    padding-right: 5rem;
+    /* padding-right: 10rem; */
+    width: 480px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .vc-import-wrap label {
@@ -2158,7 +2163,7 @@
 }
 
 .vc-import-wrap .illus--image-wrap img {
-    width: 100%;
+    width: 50%;
 }
 
 .vc-import-wrap .form-control::placeholder {
@@ -4618,6 +4623,16 @@ p.guide {
     width: 1.2rem;
 }
 
+.btn-vid-play-pause i {
+    color: #fff;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.video-settings-box.light-mode .btn-vid-play-pause i {
+    color: var(--color-primary);
+
+}
 
 
 .vid-controls .btn:not(:last-child) {
@@ -4996,7 +5011,25 @@ input[type=range]:focus::-ms-fill-upper {
 
 .option-six .head_outside-type {
     flex-direction: column;
-    background-color: #c7c7c7;
+    background-color: #ffffff;
+    align-items: flex-start;
+    position: relative;
+    width: 60%;
+}
+
+.option-six .head_outside-type-inner {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.option-six .head_outside-type-inner .illus-image {
+    position: absolute;
+    right: -100px;
+    width: 50%;
 }
 
 .option-five .email-section {
@@ -5054,13 +5087,15 @@ input[type=range]:focus::-ms-fill-upper {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-left: 5rem;
 }
 
 .translucent-type .email-illustration {
     position: absolute;
-    left: -76px;
+    left: -64px;
     top: 50%;
-    margin-top: -76px;
+    margin-top: -64px;
+    width: 130px;
 }
 
 .option-one .email-lead-top {
@@ -5129,8 +5164,9 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: transparent;
 }
 
-.option-five .mail-form-wrap .vc-form-input::placeholder {
-    color: gray;
+.option-five .mail-form-wrap .vc-form-input::placeholder,
+.option-six .mail-form-wrap .vc-form-input::placeholder {
+    color: rgb(168, 166, 166);
 }
 
 .mail-form-wrap .vc-form-input::placeholder {
@@ -5773,6 +5809,154 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 0.5rem;
 }
 
+.billing-page-main {
+    min-height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-page-main .no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../icons/newones/remain\ icons\ and\ illustrators/illustrator three.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-size: 40%;
+}
+
+
+.no-data .no-data-text {
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: auto;
+}
+
+.no-data .btn-submit {
+
+}
+
+.modal-add-card {
+    background-color: var(--color-primary);
+    border-radius: 1.5rem;
+}
+
+.modal-add-card .modal-add-card-header .modal-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+
+    margin-bottom: 2rem;
+
+}
+
+.shared-card-input {
+    display: flex;
+    align-items: center;
+}
+
+.shared-card-input .other-card-details {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid #e15fff;
+    border-radius: 0.3rem;
+    padding: 0.15rem 0.75rem;
+}
+
+.other-card-details input {
+    padding: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8rem;
+    color: #fff !important;
+
+}
+
+.other-card-details input:focus {
+    background-color: transparent;
+}
+
+.other-card-details input::placeholder {
+    color: #e15fff;
+}
+
+.other-card-details .custom-slash {
+    color: #fff;
+    margin: 0 0.5rem 0 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.table-socio {
+    margin-bottom: 8rem;
+}
+
+.table-socio tr th, .table-socio tr td {
+    border: none;
+}
+
+.table-socio tr td {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid #fff;
+    vertical-align: middle;
+}
+
+.table-socio tr th {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.btn-card-action {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-card-action ~ .dropdown-menu .dropdown-item {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-card-action ~ .dropdown-menu .dropdown-item i {
+    vertical-align: middle;
+    margin-right: 0.2rem;
+}
+
+.payment_history-wrap {
+    background-color: #f74bec;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin: 0 3rem;
+
+    margin-bottom: 3rem;
+}
+
+
+.payment_history-wrap .title {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.payment_history-wrap table tr th, .payment_history-wrap table tr td {
+    border: none;
+    font-size: 1rem;
+    border-bottom: 2px solid #fff;
+    vertical-align: middle;
+    color: #fff;
+}
+
+
 #audio_visual {
     width: 100%;
     height: 135px;
@@ -6023,7 +6207,7 @@ a.related-videos-title {
 
 .video-settings-box.light-mode .vid-inner-setting {
     border: 2px solid #fff;
-    box-shadow: -3px 4px 8px #e0efe3;
+    box-shadow: -3px 3px 9px #90979163, 5px -4px 9px #a6ada870;
 }
 
 .video-settings-box.light-mode .text-light {

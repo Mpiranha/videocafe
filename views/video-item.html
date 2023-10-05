@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <title>Video Setup</title>
@@ -2001,6 +2004,14 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for=""></label>
+                                                    <input type="file" class="form-control-file text-light" name=""
+                                                        id="" placeholder="" aria-describedby="fileHelpId">
+
+                                                </div>
+                                            </div>
 
                                             <div class="col-12">
                                                 <div class="form-group">
@@ -2570,21 +2581,23 @@
 
                                 </div>
                             </div>
-                            <div class="video-settings-box">
+                            <div class="video-settings-box light-mode">
                                 <div class="video-settings-head">
                                     <div class="input-url-wrap">
                                         <div class="alert-copy">
                                             Copied
                                         </div>
                                         <img class="dark-icon" src="../assets/icons/share_2_u_sq.svg" alt="link icon">
-                                        <img class="light-icon" src="../assets/icons/newones/icons/expand big screen.png" alt="link icon">
+                                        <img class="light-icon" src="../assets/icons/newones/icons/HTTP link purple.svg"
+                                            alt="link icon">
                                         <input class="form-control no-shadow" value="http://videocafe.com/watch/wghttj"
                                             id="copy-vid-link" type="text" readonly>
                                     </div>
                                     <button class="btn btn-copy no-shadow" data-toggle="copy"
                                         data-target="#copy-vid-link">
                                         <img class="dark-icon" src="../assets/icons/copy icon.svg" alt="copy icon">
-                                        <img class="light-icon" src="../assets/icons/newones/icons/play back.png" alt="copy icon">
+                                        <img class="light-icon" src="../assets/icons/newones/icons/copy purple.svg"
+                                            alt="copy icon">
                                         Copy
                                     </button>
                                 </div>
@@ -2623,21 +2636,22 @@
                                             </nav>
                                         </div>
                                         <div class="email-lead-wrap">
-                                             <div class="option-one">
-                                                <div class="email-lead-top">
-                                                    <h1 id="email-lead-header-text" class="header-text">
-                                                        Continue Watching This Video
-                                                    </h1>
-                                                    <h2 id="email-lead-sub-header-text" class="sub-head-text">
-                                                        Enter Your Email Below
-                                                    </h2>
-                                                </div>
+                                            <div class="option-one">
+
 
                                                 <div class="mail-form-wrap">
                                                     <img class="email-illustration"
                                                         src="../assets/icons/enter email icon.svg"
                                                         alt="email illustration">
                                                     <div class="lead-forms">
+                                                        <div class="email-lead-top">
+                                                            <h1 id="email-lead-header-text" class="header-text">
+                                                                Continue Watching This Video
+                                                            </h1>
+                                                            <h2 id="email-lead-sub-header-text" class="sub-head-text">
+                                                                Enter Your Email Below
+                                                            </h2>
+                                                        </div>
                                                         <div class="form-group" id="email-name">
                                                             <input type="text" name=""
                                                                 class="form-control no-shadow vc-form-input"
@@ -2657,14 +2671,14 @@
                                                 </div>
                                             </div>
 
-                                            
 
-                                            
 
-                                            
 
-                                           
-                                           
+
+
+
+
+
 
                                             <button class="btn no-shadow btn-skip-popup" data-dismiss="popup"
                                                 data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right"
@@ -2782,12 +2796,17 @@
                                     </div>
                                     <div class="vid-controls">
                                         <button class="btn no-shadow btn-vid-play-pause">
-                                            <img class="dark-icon" src="../assets/icons/play one icon.svg" alt="play icon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/play.svg" alt="play icon">
+                                            <!-- <img class="dark-icon" src="../assets/icons/play one icon.svg"
+                                                alt="play icon">
+                                            <img class="light-icon" src="../assets/icons/newones/icons/play purple.png"
+                                                alt="play icon"> -->
+                                            <i class="fa-regular fa-circle-play"></i>
                                         </button>
                                         <button class="btn no-shadow btn-play-back">
-                                            <img class="dark-icon" src="../assets/icons/play back icon.svg" alt="play back icon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/play back.svg" alt="play back icon">
+                                            <img class="dark-icon" src="../assets/icons/play back icon.svg"
+                                                alt="play back icon">
+                                            <img class="light-icon" src="../assets/icons/newones/icons/play back.svg"
+                                                alt="play back icon">
                                         </button>
 
                                         <div class="time--progress">
@@ -2804,8 +2823,10 @@
 
                                         <div class="ps-relative">
                                             <button class="btn no-shadow click-btn btn-volume">
-                                                <img class="dark-icon" src="../assets/icons/volume.svg" alt="volume-icon">
-                                                <img class="light-icon" src="../assets/icons/newones/icons/sound_3.svg" alt="volume-icon">
+                                                <img class="dark-icon" src="../assets/icons/volume.svg"
+                                                    alt="volume-icon">
+                                                <img class="light-icon" src="../assets/icons/newones/icons/sound_3.svg"
+                                                    alt="volume-icon">
                                             </button>
                                             <div class="btn-drop-up close-click-outside">
                                                 <input min="0" max="100" value="100" type="range" name=""
@@ -2818,8 +2839,11 @@
                                         <div class="ps-relative">
                                             <button class="btn no-shadow btn-set-vid">
 
-                                                <img class="dark-icon" src="../assets/icons/Video setting icon.svg" alt="setting icon">
-                                                <img class="light-icon" src="../assets/icons/newones/icons/settings_1.svg" alt="setting icon">
+                                                <img class="dark-icon" src="../assets/icons/Video setting icon.svg"
+                                                    alt="setting icon">
+                                                <img class="light-icon"
+                                                    src="../assets/icons/newones/icons/settings_1.svg"
+                                                    alt="setting icon">
                                             </button>
                                             <div
                                                 class="vid-pop--over animate__animated animate__slideInUp close-click-outside">
@@ -2878,8 +2902,10 @@
                                         </div>
 
                                         <button class="btn no-shadow btn-picture hidden" disabled>
-                                            <img class="dark-icon" src="../assets/icons/pic in pic.svg" alt="picture in pictureicon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/small screen.svg" alt="picture in pictureicon">
+                                            <img class="dark-icon" src="../assets/icons/pic in pic.svg"
+                                                alt="picture in pictureicon">
+                                            <img class="light-icon" src="../assets/icons/newones/icons/small screen.svg"
+                                                alt="picture in pictureicon">
                                         </button>
 
                                         <div class="vid-logo-display">
@@ -2888,21 +2914,30 @@
                                         </div>
 
                                         <button class="btn no-shadow btn-subtitle" style="display: none;">
-                                            <img class="dark-icon" src="../assets/icons/newones/subtitles.svg" alt="subtitle icon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/play back.svg" alt="subtitle icon">
+                                            <img class="dark-icon" src="../assets/icons/newones/subtitles.svg"
+                                                alt="subtitle icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/subtitles purple.svg"
+                                                alt="subtitle icon">
                                         </button>
 
                                         <button class="btn no-shadow btn-theater-mode" style="display: none;">
-                                            <img class="dark-icon" src="../assets/icons/newones/Theatre Mood.svg" alt="theater icon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/views.svg" alt="theater icon">
+                                            <img class="dark-icon" src="../assets/icons/newones/Theatre Mood.svg"
+                                                alt="theater icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/theater mode purple.svg"
+                                                alt="theater icon">
                                         </button>
 
 
 
 
                                         <button class="btn no-shadow btn-fs">
-                                            <img class="dark-icon" src="../assets/icons/full screen icon.svg" alt="fullscreen icon">
-                                            <img class="light-icon" src="../assets/icons/newones/icons/expand big screen.svg" alt="fullscreen icon">
+                                            <img class="dark-icon" src="../assets/icons/full screen icon.svg"
+                                                alt="fullscreen icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/expand big screen.svg"
+                                                alt="fullscreen icon">
                                         </button>
 
                                     </div>
@@ -3122,24 +3157,24 @@
                         <div class="row p-2">
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-one" name="email_optin" id=""
-                                        value="checkedValue" checked>
+                                    <input type="radio" class="form-check-input" value="option-one" name="email_optin"
+                                        id="" value="checkedValue" checked>
                                     <img class="design_image" src="../assets/icons/newones/icons/first email Opting.png"
                                         alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-four" name="email_optin" id=""
-                                        value="checkedValue">
+                                    <input type="radio" class="form-check-input" value="option-four" name="email_optin"
+                                        id="" value="checkedValue">
                                     <img class="design_image" src="../assets/icons/newones/icons/Email Optin 1.png"
                                         alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-three" name="email_optin" id=""
-                                        value="checkedValue">
+                                    <input type="radio" class="form-check-input" value="option-three" name="email_optin"
+                                        id="" value="checkedValue">
                                     <img class="design_image" src="../assets/icons/newones/icons/Email Optins 2.png"
                                         alt="">
                                 </div>
@@ -3147,8 +3182,8 @@
 
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-six" name="email_optin" id=""
-                                        value="checkedValue" >
+                                    <input type="radio" class="form-check-input" value="option-six" name="email_optin"
+                                        id="" value="checkedValue">
                                     <img class="design_image" src="../assets/icons/newones/icons/Email Optin 3.png"
                                         alt="">
                                 </div>
@@ -3156,16 +3191,16 @@
 
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-five" name="email_optin" id=""
-                                        value="checkedValue">
+                                    <input type="radio" class="form-check-input" value="option-five" name="email_optin"
+                                        id="" value="checkedValue">
                                     <img class="design_image" src="../assets/icons/newones/icons/email Optin 4.png"
                                         alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="email-optin_options">
-                                    <input type="radio" class="form-check-input" value="option-two" name="email_optin" id=""
-                                        value="checkedValue">
+                                    <input type="radio" class="form-check-input" value="option-two" name="email_optin"
+                                        id="" value="checkedValue">
                                     <img class="design_image" src="../assets/icons/newones/icons/email Optin 5.png"
                                         alt="">
                                 </div>

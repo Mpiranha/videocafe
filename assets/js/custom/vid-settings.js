@@ -21,7 +21,7 @@ videoContainer.each(function () {
   let playpause = $(this).find(".btn-vid-play-pause").get(0);
   let bigPlay = $(this).find(".btn-play-settings").get(0);
   // let bigPlayImg = $(this).find('.btn-play-settings img').get(0);
-  let playpauseImage = $(this).find(".btn-vid-play-pause img").get(0);
+  let playpauseImage = $(this).find(".btn-vid-play-pause i").get(0);
 
   let progress = $(this).find("#progress").get(0);
 
@@ -153,13 +153,20 @@ videoContainer.each(function () {
     if (type == "playpause") {
       if (video.paused || video.ended) {
         playpause.setAttribute("data-state", "play");
-        playpauseImage.src = "../assets/icons/play one icon.svg";
+        // playpauseImage.src = $(".video-settings-box").hasClass("light-mode")
+        //   ? "../assets/icons/newones/icons/play purple.png"
+        //   : "../assets/icons/play one icon.svg";
+          playpauseImage.classList.remove("fa-circle-pause");
+          playpauseImage.classList.add("fa-circle-play");
         // bigPlayImg.src = "../assets/icons/play frame.svg";
       } else {
         playpause.setAttribute("data-state", "pause");
-        playpauseImage.src =
-          "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
+        // playpauseImage.src = $(".video-settings-box").hasClass("light-mode")
+        //   ? "../assets/icons/newones/icons/PAUSE purple.png"
+        //   : "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
         // bigPlayImg.src = "../assets/icons/time.svg";
+        playpauseImage.classList.remove("fa-circle-play");
+        playpauseImage.classList.add("fa-circle-pause");
       }
     }
     // Mute button
@@ -1295,6 +1302,9 @@ videoContainer.each(function () {
       case "option-one":
         newChild =
           '<div class="option-one">' +
+          '<div class="mail-form-wrap">' +
+          '<img class="email-illustration" src="../assets/icons/enter email icon.svg" alt="email illustration">' +
+          '<div class="lead-forms">' +
           '<div class="email-lead-top">' +
           '<h1 id="email-lead-header-text" class="header-text">' +
           "Continue Watching This Video" +
@@ -1303,9 +1313,6 @@ videoContainer.each(function () {
           "Enter Your Email Below" +
           "</h2>" +
           "</div>" +
-          '<div class="mail-form-wrap">' +
-          '<img class="email-illustration" src="../assets/icons/enter email icon.svg" alt="email illustration">' +
-          '<div class="lead-forms">' +
           '<div class="form-group" id="email-name">' +
           '<input type="text" name="" class="form-control no-shadow vc-form-input" placeholder="Enter Your Name">' +
           "</div>" +
@@ -1440,6 +1447,8 @@ videoContainer.each(function () {
         newChild =
           '<div class="option-six">' +
           '<div class="head_outside-type">' +
+          '<div class="head_outside-type-inner">' +
+          '<img class="illus-image" src="../assets/icons/newones/icons/illustrator 3d1.png" alt="illustration image">' +
           '<div class="email-lead-top">' +
           '<h1 id="email-lead-header-text" class="header-text">' +
           "Continue Watching This Video" +
@@ -1458,6 +1467,7 @@ videoContainer.each(function () {
           "</div>" +
           '<div class="d-flex">' +
           '<button id="email-lead-btn" class="btn btn-block btn-submit py-2 px-3">Submit</button>' +
+          "</div>" +
           "</div>" +
           "</div>" +
           "</div>" +
