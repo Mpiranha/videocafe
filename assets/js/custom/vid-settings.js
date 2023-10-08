@@ -51,6 +51,58 @@ videoContainer.each(function () {
 
   let volumeControl = $(this).find("#vid-volume-controls").get(0);
 
+  const thumbnailImg = document.querySelector(".thumbnail-img");
+  const timelineContainer = document.querySelector(".timeline-container");
+  const previewImg = document.querySelector(".preview-img")
+
+  // Timeline
+  timelineContainer.addEventListener("mousemove", handleTimelineUpdate);
+  timelineContainer.addEventListener("mousedown", toggleScrubbing);
+  document.addEventListener("mouseup", (e) => {
+    if (isScrubbing) toggleScrubbing(e);
+  });
+  document.addEventListener("mousemove", (e) => {
+    if (isScrubbing) handleTimelineUpdate(e);
+  });
+
+  let isScrubbing = false;
+  let wasPaused;
+  function toggleScrubbing(e) {
+    const rect = timelineContainer.getBoundingClientRect();
+    const percent =
+      Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
+    isScrubbing = (e.buttons & 1) === 1;
+    videoContainer.get(0).classList.toggle("scrubbing", isScrubbing);
+    if (isScrubbing) {
+      wasPaused = video.paused;
+      video.pause();
+    } else {
+      video.currentTime = percent * video.duration;
+      if (!wasPaused) video.play();
+    }
+
+    handleTimelineUpdate(e);
+  }
+
+  function handleTimelineUpdate(e) {
+    const rect = timelineContainer.getBoundingClientRect();
+    const percent =
+      Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
+    const previewImgNumber = Math.max(
+      1,
+      Math.floor((percent * video.duration) / 10)
+    );
+    const previewImgSrc = `../assets/previewImgs/preview${previewImgNumber}.jpg`;
+    previewImg.src = previewImgSrc;
+    timelineContainer.style.setProperty("--preview-position", percent);
+
+    if (isScrubbing) {
+      e.preventDefault();
+      thumbnailImg.src = previewImgSrc;
+      timelineContainer.style.setProperty("--progress-position", percent);
+    }
+  }
+
   console.log(document.pictureInPictureEnabled);
 
   if (document.pictureInPictureEnabled) {
@@ -153,18 +205,12 @@ videoContainer.each(function () {
     if (type == "playpause") {
       if (video.paused || video.ended) {
         playpause.setAttribute("data-state", "play");
-        // playpauseImage.src = $(".video-settings-box").hasClass("light-mode")
-        //   ? "../assets/icons/newones/icons/play purple.png"
-        //   : "../assets/icons/play one icon.svg";
-          playpauseImage.classList.remove("fa-circle-pause");
-          playpauseImage.classList.add("fa-circle-play");
-        // bigPlayImg.src = "../assets/icons/play frame.svg";
+
+        playpauseImage.classList.remove("fa-circle-pause");
+        playpauseImage.classList.add("fa-circle-play");
       } else {
         playpause.setAttribute("data-state", "pause");
-        // playpauseImage.src = $(".video-settings-box").hasClass("light-mode")
-        //   ? "../assets/icons/newones/icons/PAUSE purple.png"
-        //   : "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
-        // bigPlayImg.src = "../assets/icons/time.svg";
+
         playpauseImage.classList.remove("fa-circle-play");
         playpauseImage.classList.add("fa-circle-pause");
       }
@@ -185,22 +231,21 @@ videoContainer.each(function () {
 
   video.addEventListener("loadedmetadata", function () {
     vidLength.textContent = calculateTime(Math.floor(video.duration));
-    progress.setAttribute("max", video.duration);
+    // progress.setAttribute("max", video.duration);
   });
 
   if (video.readyState >= 2) {
     vidLength.textContent = calculateTime(Math.floor(video.duration));
-    progress.setAttribute("max", video.duration);
+    // progress.setAttribute("max", video.duration);
   }
 
   video.addEventListener("timeupdate", function () {
     // For mobile browsers, ensure that the progress element's max attribute is set
-
-    if (!progress.getAttribute("max"))
-      progress.setAttribute("max", video.duration);
-    progress.value = video.currentTime;
-    progressBar.style.width =
-      Math.floor((video.currentTime / video.duration) * 100) + "%";
+    // if (!progress.getAttribute("max"))
+    //   progress.setAttribute("max", video.duration);
+    // progress.value = video.currentTime;
+    // progressBar.style.width =
+    //   Math.floor((video.currentTime / video.duration) * 100) + "%";
   });
 
   playBack.addEventListener("click", function () {
@@ -215,20 +260,33 @@ videoContainer.each(function () {
     function () {
       changeButtonState("playpause");
       bigPlay.style.visibility = "hidden";
+      $(".vid-controls").css("visibility", "visible");
       // videoControls.get(0).setAttribute('data-state', 'hidden');
     },
     false
   );
 
-  video.offsetParent.addEventListener("mouseover", function () {
-    // videoControls.get(0).setAttribute('data-state', 'visible');
-  });
+  // video.offsetParent.addEventListener("mouseover", function () {
+  //   // videoControls.get(0).setAttribute('data-state', 'visible');
+  //   if (video.paused) {
+  //     return;
+  //   }
+  //   $(".vid-controls").css("visibility", "visible");
+  // });
 
-  video.offsetParent.addEventListener("mouseout", function () {
-    if (video.paused) {
-      return;
-    }
-    // videoControls.get(0).setAttribute('data-state', 'hidden');
+  // video.offsetParent.addEventListener("mouseout", function () {
+  //   // if (video.paused) {
+  //   //   return;
+  //   // }
+  //   $(".vid-controls").css("visibility", "hidden");
+  //   // videoControls.get(0).setAttribute('data-state', 'hidden');
+  // });
+
+  $(".vid-controls").on("mouseover", function () {
+    // if (video.paused) {
+    //   return;
+    // }
+    $(".vid-controls").css("visibility", "visible");
   });
 
   video.addEventListener(
@@ -274,6 +332,8 @@ videoContainer.each(function () {
     // if (video.currentTime >= 5) {
     //     video.pause();
     // }
+    const percent = video.currentTime / video.duration;
+    timelineContainer.style.setProperty("--progress-position", percent);
   });
 
   volumeControl.addEventListener("input", function () {
@@ -319,18 +379,18 @@ videoContainer.each(function () {
     }
   });
 
-  progress.addEventListener(
-    "click",
-    function (e) {
-      // var pos = (e.pageX - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
-      // video.currentTime = pos * video.duration;
-      var pos = e.offsetX;
-      video.currentTime = (pos * video.duration) / this.offsetWidth;
-      vidCurTime.textContent = calculateTime(Math.floor(video.currentTime));
-      // console.log(pos);
-    },
-    false
-  );
+  // progress.addEventListener(
+  //   "click",
+  //   function (e) {
+  //     // var pos = (e.pageX - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
+  //     // video.currentTime = pos * video.duration;
+  //     var pos = e.offsetX;
+  //     video.currentTime = (pos * video.duration) / this.offsetWidth;
+  //     vidCurTime.textContent = calculateTime(Math.floor(video.currentTime));
+  //     // console.log(pos);
+  //   },
+  //   false
+  // );
 
   fullscreen.addEventListener("click", function (e) {
     handleFullscreen();
@@ -359,9 +419,15 @@ videoContainer.each(function () {
 
   $("#reset-player-color").click(function () {
     if ($(this).is(":checked")) {
-      $("#skin-color-input").val("#2c0640");
-      $(".clr-field").css("color", "#2c0640");
-      $("#skin-color-input").trigger("change");
+      if ($(".video-settings-box").hasClass("light-mode")) {
+        $("#skin-color-input").val("#ffffff4d");
+        $(".clr-field").css("color", "#ffffff4d");
+        $("#skin-color-input").trigger("change");
+      } else {
+        $("#skin-color-input").val("#2c0640");
+        $(".clr-field").css("color", "#2c0640");
+        $("#skin-color-input").trigger("change");
+      }
     }
   });
 
@@ -1324,7 +1390,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       case "option-two":
@@ -1332,7 +1399,9 @@ videoContainer.each(function () {
           '<div class="option-two">' +
           '<div class="neon-type">' +
           '<div class="mail-form-wrap">' +
+          "<div class='d-flex align-items-center'>" +
           '<img class="email-illustration" src="../assets/icons/newones/icons/comments.png" alt="email illustration">' +
+          "</div>" +
           '<div class="lead-forms">' +
           '<div class="email-lead-top">' +
           '<h1 id="email-lead-header-text" class="header-text">' +
@@ -1354,7 +1423,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       case "option-three":
@@ -1382,7 +1452,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       case "option-four":
@@ -1411,7 +1482,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       case "option-five":
@@ -1440,7 +1512,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       case "option-six":
@@ -1472,7 +1545,8 @@ videoContainer.each(function () {
           "</div>" +
           "</div>" +
           "</div>" +
-          "</div>";
+          "</div>" +
+          '<button class="btn no-shadow btn-skip-popup" data-dismiss="popup" data-target=".email-lead-wrap">Skip <i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
 
         break;
       default:
@@ -1490,8 +1564,12 @@ videoContainer.each(function () {
   $("#toggle-page-mode").on("change", function () {
     if ($(this).is(":checked")) {
       $(".video-settings-box").addClass("light-mode");
+      $("#skin-color-input").val("#ffffff4d");
+      $("#skin-color-input").trigger("change");
     } else {
       $(".video-settings-box").removeClass("light-mode");
+      $("#skin-color-input").val("#2c064054");
+      $("#skin-color-input").trigger("change");
     }
   });
 
