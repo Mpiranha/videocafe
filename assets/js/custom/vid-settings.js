@@ -1573,5 +1573,22 @@ videoContainer.each(function () {
     }
   });
 
+  $(".thumbnail-type-input").on("change", function () {
+    var val = $(this).val();
+    switch (val) {
+      case "library":
+        $(".upload-thumb").css("display", "none");
+        $("#choose-library-image").modal("show");
+        break;
+      case "upload":
+        $(".upload-thumb").css("display", "block");
+        break;
+    
+      default:
+        $(".upload-thumb").css("display", "none");
+        break;
+    }
+  });
+
   function makeVideo(src, parent) {}
 });
