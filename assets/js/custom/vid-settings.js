@@ -369,7 +369,17 @@ videoContainer.each(function () {
     // }
   });
 
-  bigPlay.addEventListener("click", function (e) {
+  // bigPlay.addEventListener("click", function (e) {
+  //   if (video.paused || video.ended) {
+  //     video.play();
+  //     requestAnimationFrame(whilePlayingVideo);
+  //   } else {
+  //     video.pause();
+  //     cancelAnimationFrame(rafVid);
+  //   }
+  // });
+
+  $(".play-area").on("click", function (e) {
     if (video.paused || video.ended) {
       video.play();
       requestAnimationFrame(whilePlayingVideo);

@@ -4567,7 +4567,8 @@ p.guide {
     margin-top: -35px;
     margin-right: -25px;
     color: #fff;
-    z-index: 1;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .btn-play-settings i {
@@ -4586,6 +4587,7 @@ p.guide {
     visibility: hidden;
     opacity: 1;
     transition: all 0.5s linear;
+    z-index: 2;
 }
 
 .video-settings-box.light-mode .vid-controls {
@@ -4915,7 +4917,7 @@ input[type=range]:focus::-ms-fill-upper {
     width: 100%;
     height: 100%;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 
 .email-lead-wrap .header-text {
@@ -6356,6 +6358,16 @@ audio::-webkit-media-controls-rewind-button,
 audio::-webkit-media-controls-return-to-realtime-button,
 audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
+}
+
+.play-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    z-index: 1;
 }
 
 
