@@ -268,9 +268,9 @@ videoContainer.each(function () {
 
   // video.offsetParent.addEventListener("mouseover", function () {
   //   // videoControls.get(0).setAttribute('data-state', 'visible');
-  //   if (video.paused) {
-  //     return;
-  //   }
+  //   // if (video.paused) {
+  //   //   return;
+  //   // }
   //   $(".vid-controls").css("visibility", "visible");
   // });
 
@@ -282,12 +282,12 @@ videoContainer.each(function () {
   //   // videoControls.get(0).setAttribute('data-state', 'hidden');
   // });
 
-  $(".vid-controls").on("mouseover", function () {
-    // if (video.paused) {
-    //   return;
-    // }
-    $(".vid-controls").css("visibility", "visible");
-  });
+  // $(".vid-controls").on("mouseover", function () {
+  //   // if (video.paused) {
+  //   //   return;
+  //   // }
+  //   $(".vid-controls").css("visibility", "visible");
+  // });
 
   video.addEventListener(
     "pause",

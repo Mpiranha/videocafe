@@ -4584,9 +4584,9 @@ p.guide {
     position: absolute;
     bottom: 0;
     border-radius: 0 0 0.7rem 0.7rem;
-    visibility: hidden;
-    opacity: 1;
-    transition: all 0.5s linear;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: all 150ms linear;
     z-index: 2;
 }
 
@@ -4677,6 +4677,10 @@ p.guide {
     border-radius: 2px;
     color: #0095dd;
     margin: 0;
+}
+
+.video-outter:hover .vid-controls {
+    opacity: 1;
 }
 
 input[type=range] {
