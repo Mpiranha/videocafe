@@ -1022,6 +1022,7 @@
 .navigation-audio-screen {
     border-radius: 0.4rem;
     background: linear-gradient(to right, #60098e, #8c11d9);
+    aspect-ratio: 16 / 9;
 }
 
 .bg-play-icon {
@@ -1067,7 +1068,7 @@
 }
 
 .step-item-main .step-content {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .navigation-box[data-state="wrapped"] {
@@ -1122,7 +1123,7 @@
 .navigation-video,
 .navigation-audio,
 .navigation-pictures {
-    height: 400px;
+    aspect-ratio: 16 / 9;
     background-color: #6e5ef1;
     border-radius: 0.4rem;
 }
@@ -1201,7 +1202,7 @@
 }
 
 .custom-vid-player {
-    height: 400px;
+    aspect-ratio: 16 / 9;
     position: relative;
     background-color: #517be1;
     border-radius: 0.3rem;
@@ -4586,7 +4587,8 @@ p.guide {
     border-radius: 0 0 0.7rem 0.7rem;
     /* visibility: hidden; */
     opacity: 0;
-    transition: all 150ms linear;
+    transition: all 150ms ease-out;
+    /* transition-delay: -1s; */
     z-index: 2;
 }
 
@@ -5550,19 +5552,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .bottom-left {
     position: absolute;
-    bottom: 16px;
+    bottom: 46px;
     left: 16px;
 }
 
 .bottom-center {
     position: absolute;
-    bottom: 16px;
+    bottom: 46px;
 }
 
 .bottom-right {
     position: absolute;
     right: 55px;
-    bottom: 16px;
+    bottom: 46px;
 }
 
 .info-overlay--wrap {
@@ -5572,6 +5574,7 @@ input[type=range]:focus::-ms-fill-upper {
     top: 0;
     width: 100%;
     /* background-color: #0000003d; */
+    z-index: 3;
 }
 
 .info-overlay--wrap .info-overlay-section {
@@ -5974,8 +5977,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 #audio_display {
-    width: 100%;
-    height: 90%;
+    /* width: 100%;
+    height: calc(100% - 42px); */
     position: absolute;
     top: 0;
     transform: rotateZ(180deg) rotateY(180deg);

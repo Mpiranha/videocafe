@@ -271,14 +271,19 @@ videoContainer.each(function () {
   //   // if (video.paused) {
   //   //   return;
   //   // }
-  //   $(".vid-controls").css("visibility", "visible");
+  //   $(".vid-controls").css("transition-delay", "2s");
+  //   var x = setTimeout(function() {
+  //     $(".vid-controls").css("transition-delay", "initial");
+  //     clearInterval(x);
+  //   }, 2000);
+    
   // });
 
   // video.offsetParent.addEventListener("mouseout", function () {
   //   // if (video.paused) {
   //   //   return;
   //   // }
-  //   $(".vid-controls").css("visibility", "hidden");
+  //   //$(".vid-controls").css("transition-delay", "initial");
   //   // videoControls.get(0).setAttribute('data-state', 'hidden');
   // });
 

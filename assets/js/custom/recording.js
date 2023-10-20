@@ -354,6 +354,11 @@ function startAudioDisplay() {
           "max decibel " +
           analyser.maxDecibels
       );
+      can.setAttribute(
+        "height",
+        $(".custom-aud-player").get(0).scrollHeight - 43
+      );
+      can.setAttribute("width", $(".custom-aud-player").get(0).scrollWidth);
 
       // wavesurfer.microphone.start();
       loopingFunction();
@@ -377,6 +382,11 @@ function startAudioDisplay() {
   // draw();
 }
 
+// window.onresize = function () {
+//   can.setAttribute("height", $(".custom-aud-player").get(0).scrollHeight - 43);
+//   can.setAttribute("width", $(".custom-aud-player").get(0).scrollWidth);
+// };
+
 function loopingFunction() {
   requestAnimationFrame(loopingFunction);
   analyser.getByteFrequencyData(array);
@@ -385,15 +395,14 @@ function loopingFunction() {
 
 function draw(data) {
   data = [...data];
-  
+
   canCtx.clearRect(0, 0, can.offsetWidth, can.offsetHeight);
   canCtx.fillStyle = "#000000";
   canCtx.fillRect(0, 0, can.offsetWidth, can.offsetHeight);
   canCtx.strokeStyle = "#c17c10";
-  canCtx.strokeSize = 10;
+  canCtx.strokeSize = 100;
   let space = can.offsetWidth / data.length;
   data.forEach((value, i) => {
-
     canCtx.beginPath();
     canCtx.moveTo(space * i, 0); //x,y
     canCtx.lineTo(space * i, 0 + value); //x,y
