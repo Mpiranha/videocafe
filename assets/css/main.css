@@ -1251,13 +1251,16 @@
 }
 
 .uploaded-box {
-    height: 325px;
+    max-height: 325px;
     display: flex;
     flex-direction: column;
 }
 
 .uploaded-box .media--box {
     border-radius: 0.4rem 0.4rem 0 0;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    height: 240px;
 }
 
 .media--box video {
@@ -1267,6 +1270,11 @@
     width: 100%;
     max-width: 100%;
 }
+
+.media--box #audio_visualiser {
+    
+}
+
 
 .uploaded-box .media-desc {
     background-color: #570880;
