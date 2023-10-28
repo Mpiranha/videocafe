@@ -541,6 +541,9 @@ $(function () {
       })
     );
 
+    audioElement.play();
+    audioElement.pause();
+
     // The animations will start playing when the provided audio element is played
 
     // 'wave.animations' is an object with all possible animations on it.
@@ -567,6 +570,72 @@ $(function () {
         .find(".btn-play-pause img")
         .attr("src", "assets/icons/vidcloud/Group 142.svg");
     });
+  });
+
+  $(".audio-upload-box").each(function () {
+    let _this = $(this);
+    let audioElement = _this.find("audio").get(0);
+    let canvasElement = _this.find("#audio_visualiser").get(0);
+    let wave = new Wave(audioElement, canvasElement);
+
+    // Simple example: add an animation
+    wave.addAnimation(new wave.animations.Wave());
+
+    // Intermediate example: add an animation with options
+    // wave.addAnimation(
+    //   new wave.animations.Wave({
+    //     lineWidth: 10,
+    //     lineColor: "#ac19a6",
+    //     count: 30,
+    //   })
+    // );
+
+    // Expert example: add multiple animations with options
+    wave.addAnimation(
+      new wave.animations.Square({
+        count: 50,
+        diamater: 300,
+        lineColor: "#A7F008",
+      })
+    );
+
+    wave.addAnimation(
+      new wave.animations.Glob({
+        fillColor: { gradient: ["#ffa500", "#ff0000", "#ffff00"], rotate: 45 },
+        lineWidth: 1,
+        lineColor: "#A7F008",
+      })
+    );
+
+    audioElement.play();
+    audioElement.pause();
+
+    // The animations will start playing when the provided audio element is played
+
+    // 'wave.animations' is an object with all possible animations on it.
+
+    // Each animation is a class, so you have to new-up each animation when passed to 'addAnimation'
+
+    // _this.find(".btn-play-pause").on("click", function () {
+    //   if (_this.find("audio").get(0).paused) {
+    //     stopAllMedia();
+    //     _this.find("audio").get(0).play();
+    //   } else {
+    //     _this.find("audio").get(0).pause();
+    //   }
+    // });
+
+    // _this.find("audio").on("pause", function () {
+    //   _this
+    //     .find(".btn-play-pause img")
+    //     .attr("src", "assets/icons/play one icon.svg");
+    // });
+
+    // _this.find("audio").on("play", function () {
+    //   _this
+    //     .find(".btn-play-pause img")
+    //     .attr("src", "assets/icons/vidcloud/Group 142.svg");
+    // });
   });
 });
 /** Implementation of the functionality of the audio player */

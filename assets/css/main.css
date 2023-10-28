@@ -1272,7 +1272,8 @@
 }
 
 .media--box #audio_visualiser {
-    
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -5990,6 +5991,8 @@ input[type=range]:focus::-ms-fill-upper {
     position: absolute;
     top: 0;
     transform: rotateZ(180deg) rotateY(180deg);
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .no-video-added {
