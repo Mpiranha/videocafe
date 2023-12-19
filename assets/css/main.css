@@ -606,7 +606,7 @@
     background-color: #000000;
     border-radius: 0.3rem;
     position: relative;
-    height: 180px;
+    aspect-ratio: 16 / 9;
     margin-bottom: 1rem;
 }
 
@@ -5980,9 +5980,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 #audio_visual {
     width: 100%;
-    height: 135px;
+    height: 100%;
     position: absolute;
-    top: 10px;
 }
 
 #audio_display {
@@ -6383,6 +6382,187 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     width: 100%;
     right: 0;
     z-index: 1;
+}
+
+.channel_nav {
+    margin-bottom: 2rem;
+}
+
+.channel_nav_main {
+    background-color: var(--color-primary);
+    padding: 0.5rem 1rem;
+}
+
+.channel_nav_main .nav-item {
+    margin-right: 2rem;
+
+}
+
+.channel_nav_main .nav-item .nav-link {
+    color: #fff;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.2rem;
+}
+
+.channel_nav_main .nav-item.active .nav-link {
+    border: 2px solid #eb75ca;
+}
+
+.featured_box {
+    margin-bottom: 2rem;
+}
+
+.featured_box .title,
+.featured_box .channel_view_all {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.featured_box .title {}
+
+.featured_content {
+    border: 2px solid #eb75ca;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.featured_preview_link {
+    height: 250px;
+    display: block;
+}
+
+.featured_preview_img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.channels_item_box {
+    background-color: var(--color-primary);
+    height: 300px;
+    padding: 2rem 4rem;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.channels_items_box_inner {
+    max-width: 900px;
+}
+
+.channels_item_box label {
+    color: #fff;
+    margin-right: 1rem;
+    min-width: 150px;
+
+}
+
+.channel_name_input {
+    /* width: 600px; */
+}
+
+.logo_input_box {
+    display: flex;
+    width: 100%;
+}
+
+.logo_set_area {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.logo_input_box .custom-file {
+    border: 2px solid #f74bec;
+    border-radius: 0.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: unset;
+    padding: 0.25rem 0.8rem;
+}
+
+.logo_input_box .custom-file .icon {
+    margin-right: 0.5rem;
+}
+
+.logo_input_box .custom-file .custom-file-input {
+    position: absolute;
+}
+
+.logo_img_prev {
+    margin-right: 1rem;
+    width: 135px;
+    height: 135px;
+}
+
+.user_alert {
+    color: #fff;
+    border: 2px solid #f74bec;
+    border-radius: 0.3rem;
+    margin-left: auto;
+    padding: 0.5rem 8rem 0.5rem 0.5rem;
+}
+
+.channel_table_outter_wrap {
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.channels_access_box {
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.channel_table_filters {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.table_channels {
+    border: 2px solid #f74bec;
+    border-radius: 0.3rem !important;
+}
+
+.table_channels tr td,
+.table_channels tr th {
+    border: none !important;
+    color: #fff;
+}
+
+.table_channels tr th {
+    border-bottom: 2px solid #f74bec !important;
+    padding: 0.4rem .75rem;
+
+}
+
+.table_channels tr td {
+    vertical-align: middle !important;
+}
+
+.channel_logo_table {
+    height: 80px;
+}
+
+.channel_table_action {
+    
+}
+
+.channel_table_action .nav-link {
+    color: #fff;
+    border: 2px solid #f74bec;
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.privacy_message {
+    color: #fff;
+    font-size: 0.8rem;
 }
 
 
