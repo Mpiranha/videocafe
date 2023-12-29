@@ -1605,7 +1605,7 @@ videoContainer.each(function () {
     }
   });
 
-  var index = 0;
+  var index = 1;
 
   $(".btn-add-mid_rolls").on("click", function () {
     index++;
