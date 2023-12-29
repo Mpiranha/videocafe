@@ -53,7 +53,7 @@ videoContainer.each(function () {
 
   const thumbnailImg = document.querySelector(".thumbnail-img");
   const timelineContainer = document.querySelector(".timeline-container");
-  const previewImg = document.querySelector(".preview-img")
+  const previewImg = document.querySelector(".preview-img");
 
   // Timeline
   timelineContainer.addEventListener("mousemove", handleTimelineUpdate);
@@ -276,7 +276,7 @@ videoContainer.each(function () {
   //     $(".vid-controls").css("transition-delay", "initial");
   //     clearInterval(x);
   //   }, 2000);
-    
+
   // });
 
   // video.offsetParent.addEventListener("mouseout", function () {
@@ -632,7 +632,7 @@ videoContainer.each(function () {
 
   $(".add-btn-color-input").each(function () {
     $(this).on("change", function () {
-      $($(this).attr("data-target")).css("background-color", $(this).val());
+      $($(this).attr("data-target")).css("background", $(this).val());
     });
   });
 
@@ -1598,10 +1598,217 @@ videoContainer.each(function () {
       case "upload":
         $(".upload-thumb").css("display", "block");
         break;
-    
+
       default:
         $(".upload-thumb").css("display", "none");
         break;
+    }
+  });
+
+  var index = 0;
+
+  $(".btn-add-mid_rolls").on("click", function () {
+    index++;
+
+    var newChild =
+      '<div class="card">' +
+      '<div class="card-header" id="heading' +
+      index +
+      '">' +
+      '<h5 class="mb-0">' +
+      '<button class="btn btn-link collapsed"' +
+      'data-toggle="collapse" data-target="#collapse' +
+      index +
+      '"' +
+      'aria-expanded="false" aria-controls="collapse' +
+      index +
+      '">' +
+      "Mid Roll #" +
+      index +
+      "</button>" +
+      '<button class="btn no-shadow btn-delete-mid-roll">' +
+      '<img src="../assets/icons/cancel icon.svg" alt="">' +
+      "</button>" +
+      "</h5>" +
+      "</div>" +
+      '<div id="collapse' +
+      index +
+      '" class="collapse"' +
+      'aria-labelledby="heading' +
+      index +
+      '" data-parent="#accordion">' +
+      '<div class="card-body">' +
+      '<div class="col-12">' +
+      '<div class="form-group">' +
+      '<label for="">Title</label>' +
+      '<input data-update="text" data-target=".ad_title" class="form-control vc-form-input" type="text" name="">' +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="mb-3">' +
+      "<div" +
+      ' class="d-flex align-items-center justify-content-between mb-1">' +
+      '<label class="mb-0">Video Source Url</label>' +
+      '<button class="btn btn-upload-play">' +
+      '<input type="file" name="">' +
+      "Browse" +
+      "</button>" +
+      "</div>" +
+      '<input class="form-control vc-form-input" type="text" name=""' +
+      'placeholder="enter pre-roll src">' +
+      '<div class="red-desc-text mt-1">' +
+      "maximum video size 20mb" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12 mb-3">' +
+      '<div class="d-flex settings-uplooad">' +
+      '<img id="img-selected-mid-roll' +
+      index +
+      '"' +
+      'src="../assets/icons/upload video illustration.png"' +
+      'alt="play icon">' +
+      '<div class="upload-texts">' +
+      '<div class="title">' +
+      "Upload An Image" +
+      "</div>" +
+      '<button type="button" class="btn btn-upload-play">' +
+      '<input type="file" name="" id="" title="image upload"' +
+      'data-update="img-upload"' +
+      'data-target="#img-selected-mid-roll' +
+      index +
+      ' .rolls_ad_img">' +
+      "Browse" +
+      "</button>" +
+      '<div class="note">' +
+      "Note: Image Max Size 1mb" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="mb-3">' +
+      "<label>Button Text</label>" +
+      '<input title="button text"' +
+      'class="form-control vc-form-input add-btn-text"' +
+      'data-target=".btn_ad_link" value="Learn more" type="text" name=""' +
+      'placeholder="">' +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="mb-3">' +
+      "<label>Button URL</label>" +
+      '<input data-update="text" class="form-control vc-form-input"' +
+      'data-target=".ad_link" type="url" value="http://www.dummyurl.com" name=""' +
+      'placeholder="Enter valid url">' +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="form-group play-btn-color">' +
+      '<label for="">Button Text Colour</label>' +
+      '<input value="#000000" class="add-btn-color-text-input"' +
+      'data-target=".btn_ad_link" type="color" name="">' +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="form-group play-btn-color">' +
+      '<label for="">Button Colour</label>' +
+      '<input title="Button Colour" value="#e9e9ed"' +
+      'class="add-btn-color-input" data-target=".btn_ad_link"' +
+      'type="color" name="">' +
+      "</div>" +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="mb-3">' +
+      "<label>Border radius</label>" +
+      '<input title="Border radius" placeholder="1"' +
+      'class="form-control number-input vc-form-input add-btn-border-radius"' +
+      'data-target=".btn_ad_link" type="number" name=""' +
+      'step="1" value="30">' +
+      "</div>" +
+      "</div>" +
+      '<div class="d-flex mb-3 px-3">' +
+      '<label class="custom-check">' +
+      '<input class="skip-option" data-target=".rolls-ad-outter"' +
+      'type="checkbox">' +
+      '<span class="checkmark"></span>' +
+      "</label>" +
+      '<span class="label">Skip Option</span>' +
+      "</div>" +
+      '<div class="col-12">' +
+      '<div class="mb-3">' +
+      '<label class="mb-0">Time</label>' +
+      '<input class="form-control time-input vc-form-input" type="time"' +
+      'value="00:00:00" step="1" name="" placeholder="00:00:00">' +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>";
+    $(".mid-roll-actions").append(newChild);
+    $(".btn-delete-mid-roll").on("click", function () {
+      $(this).parent().parent().parent().remove();
+    });
+    $('[data-update="text"]').on("input", function () {
+      //alert('Yeah');
+      $($(this).attr("data-target")).text($(this).val());
+    });
+    $(".add-btn-text").each(function () {
+      $(this).on("input", function () {
+        $($(this).attr("data-target")).text($(this).val());
+      });
+    });
+    $('[data-update="url"]').on("input", function () {
+      $($(this).attr("data-target")).attr("href", $(this).val());
+    });
+    $('[data-update="text-color"]').on("input", function () {
+      $($(this).attr("data-target")).css("color", $(this).val());
+    });
+    $(".add-btn-color-input").each(function () {
+      $(this).on("change", function () {
+        $($(this).attr("data-target")).css("background", $(this).val());
+      });
+    });
+
+    $(".add-btn-color-text-input").each(function () {
+      $(this).on("change", function () {
+        $($(this).attr("data-target")).css("color", $(this).val());
+      });
+    });
+
+    $(".add-btn-border-radius").each(function () {
+      $(this).on("input", function () {
+        $($(this).attr("data-target")).css(
+          "border-radius",
+          $(this).val() + "px"
+        );
+      });
+    });
+
+    $('[data-update="img-upload"]').change(function () {
+      var targets = $(this).attr("data-target").split(" ");
+
+      if (targets.length > 1) {
+        readURL(this, targets[0], targets[1]);
+      } else {
+        readURL(this, targets[0]);
+      }
+    });
+
+    $(".skip-option").on("change", function () {
+      if ($(this).is(":checked")) {
+        $($(this).attr("data-target")).addClass("skipable");
+      } else {
+        $($(this).attr("data-target")).removeClass("skipable");
+      }
+    });
+  });
+
+  $(".skip-option").on("change", function () {
+    if ($(this).is(":checked")) {
+      $($(this).attr("data-target")).addClass("skipable");
+    } else {
+      $($(this).attr("data-target")).removeClass("skipable");
     }
   });
 

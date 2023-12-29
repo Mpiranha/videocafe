@@ -5395,12 +5395,14 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .btn-skip-popup {
-    background-color: transparent;
+    background-color: #0000005c;
     color: #fff;
     position: absolute;
     right: 10px;
     bottom: 60px;
     display: none;
+    border-radius: 1.1rem;
+    padding: .375rem 1.05rem;
 }
 
 .btn-skip-popup i {
@@ -6548,9 +6550,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     height: 80px;
 }
 
-.channel_table_action {
-    
-}
+.channel_table_action {}
 
 .channel_table_action .nav-link {
     color: #fff;
@@ -6563,6 +6563,99 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .privacy_message {
     color: #fff;
     font-size: 0.8rem;
+}
+
+.rolls-ad-outter {
+    position: absolute;
+    z-index: 2;
+    bottom: 60px;
+    left: 0px;
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.rolls-ad-outter .btn-skip-popup {
+    position: static;
+    margin-left: auto;
+}
+
+
+
+.rolls_ads {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff96;
+    border-radius: 1rem;
+    padding: 0.6rem;
+
+}
+
+.rolls_ads .rolls_ad_img {
+    width: 3.5rem;
+    margin-right: 0.8rem;
+}
+
+.rolls_ads .link_details_wrap .ad_title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.rolls_ads .link_details_wrap .ad_link {
+    font-size: 0.8rem;
+}
+
+.rolls_ads .link_details_wrap {
+    margin-right: 1.2rem;
+    line-height: 20px;
+}
+
+.rolls_ads .btn_ad_link {
+    padding: 0.65rem 0.8rem !important;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.rolls_ads .btn_ad_link:hover {
+    color: #fff;
+}
+
+.mid-roll-actions .card {
+    background-color: inherit !important;
+    margin-bottom: .5rem;
+}
+
+.mid-roll-actions .card-body {
+    padding: 0 !important;
+}
+
+.mid-roll-actions .collapse {
+    padding: 0.5rem 0.5rem !important;
+}
+
+.mid-roll-actions .btn-link {
+    color: #f74bec;
+    text-decoration: none;
+}
+
+.mid-roll-actions .card-header {
+    border: 2px solid #d840e5 !important;
+    border-radius: 1rem !important;
+    position: relative;
+    padding: 0.15rem 1.25rem;
+}
+
+.btn-delete-mid-roll {
+    color: #f74bec;
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    top: 50%;
+    margin-top: -28px;
+    background-color: transparent;
 }
 
 
