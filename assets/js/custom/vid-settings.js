@@ -1812,5 +1812,27 @@ videoContainer.each(function () {
     }
   });
 
-  function makeVideo(src, parent) {}
+ 
+  function countdown(seconds) {
+    let timer = seconds;
+
+    function updateTimer() {
+      $(".countdown-display").text(timer);
+
+      if (timer === 0) {
+        $(".countdown-display").css("display", "none")
+        $($(".countdown-display").attr("data-target")).css("display", "block");
+
+        // Replace the line above with the action you want to perform after the countdown
+      } else {
+        timer--;
+        setTimeout(updateTimer, 1000); // Delay of 1000 milliseconds (1 second)
+      }
+      // console.log(timer);
+    }
+
+    updateTimer();
+  }
+
+  countdown(10);
 });
