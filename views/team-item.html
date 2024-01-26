@@ -335,8 +335,22 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-team"
                                         role="tab" aria-controls="pills-video" aria-selected="false">
+                                        <img src="../assets/icons/vidcloud/members.svg" alt="team icon">
+                                        Members
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-invited"
+                                        role="tab" aria-controls="pills-video" aria-selected="false">
                                         <img src="../assets/icons/members icon.svg" alt="team icon">
                                         Invited Team
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-permission"
+                                        role="tab" aria-controls="pills-video" aria-selected="false">
+                                        <img src="../assets/icons/vidcloud/permission.svg" alt="team icon">
+                                        Permission
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -434,6 +448,7 @@
 
 
                                 </div>
+
                                 <div class="tab-pane fade" id="pills-team" role="tabpanel"
                                     aria-labelledby="pills-team-tab">
 
@@ -459,6 +474,7 @@
                                                         <th>Name</th>
                                                         <th>Sync to</th>
                                                         <th>Ip Address</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -467,12 +483,24 @@
                                                         <td>Nick Fury</td>
                                                         <td>Howwouldiknow</td>
                                                         <td>10:222456442Rj22</td>
+                                                        <td>
+                                                            <button class="btn vc-btn-delete">
+                                                                <img src="../assets/icons/delete_4.svg"
+                                                                    alt="delete icon">
+                                                            </button>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td scope="row">Nick Fury@Shaft.Com</td>
                                                         <td>Nick Fury</td>
                                                         <td>Howwouldiknow</td>
                                                         <td>10:222456442Rj22</td>
+                                                        <td>
+                                                            <button class="btn vc-btn-delete">
+                                                                <img src="../assets/icons/delete_4.svg"
+                                                                    alt="delete icon">
+                                                            </button>
+                                                        </td>
                                                     </tr>
 
                                                 </tbody>
@@ -508,6 +536,528 @@
 
 
                                 </div>
+                                <div class="tab-pane fade" id="pills-invited" role="tabpanel"
+                                    aria-labelledby="pills-default-tab">
+
+                                    <div class="vc-import-wrap team-members-invited">
+                                        <div>
+                                            <button data-toggle="modal" data-target=".invite-team-modal"
+                                                class="btn btn-modal btn-invite-team">
+                                                Invite New Member
+                                            </button>
+                                        </div>
+
+
+                                        <div class="no-team-data">
+                                            🛈 No Members Found! Invite New Member To Get Started
+                                        </div>
+
+                                        <div class="table-responsive bordered-table mb-5">
+                                            <table class="table table-team-invited">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Emails</th>
+                                                        <th>Name</th>
+                                                        <th>Sync to</th>
+                                                        <th>Ip Address</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Nick Fury@Shaft.Com</td>
+                                                        <td>Nick Fury</td>
+                                                        <td>Howwouldiknow</td>
+                                                        <td>10:222456442Rj22</td>
+                                                        <td>
+                                                            <button class="btn vc-btn-delete">
+                                                                <img src="../assets/icons/delete_4.svg"
+                                                                    alt="delete icon">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Nick Fury@Shaft.Com</td>
+                                                        <td>Nick Fury</td>
+                                                        <td>Howwouldiknow</td>
+                                                        <td>10:222456442Rj22</td>
+                                                        <td>
+                                                            <button class="btn vc-btn-delete">
+                                                                <img src="../assets/icons/delete_4.svg"
+                                                                    alt="delete icon">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                        <div class="d-flex justify-content-end mt-auto">
+                                            <div class="pagination-custom">
+                                                <button class="btn btn-left no-shadow">
+                                                    ❰
+                                                </button>
+                                                <div class="page-desc">
+                                                    <span id="cur-page">1 - 2</span>
+                                                    of
+                                                    <span id="total-page">2</span>
+                                                </div>
+                                                <button class="btn btn-right no-shadow">
+                                                    ❱
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-permission" role="tabpanel"
+                                    aria-labelledby="pills-default-tab">
+                                    <div class="vc-import-wrap team-settings-wrap mb-5">
+                                        <div class="permission-item">
+                                            <div class="custom-dropdown">
+                                                <label for="">Select Members</label>
+                                                <button onclick="toggleDropdown()" class="dropdown-btn">
+                                                    Select Options
+                                                </button>
+                                                <div id="myDropdown" class="dropdown-content">
+                                                    <div class="dropdown-item">
+
+                                                        <span>Select All</span>
+                                                        <label class="custom-check pl-3 light">
+                                                            <input value="all" class="permission-check" type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="dropdown-item">
+
+                                                        <span>Nick Fury - nickfury@yahoo.com</span>
+
+                                                        <label class="custom-check pl-3 light">
+                                                            <input value="nickfury@yahoo.com" class="permission-check"
+                                                                type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="dropdown-item">
+
+                                                        <span>Someone Person - someone@gmail.com</span>
+
+                                                        <label class="custom-check pl-3 light">
+                                                            <input value="someone@gmail.com" class="permission-check"
+                                                                type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <!-- Add more options as needed -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Video</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Upload Video
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            All Videos
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Collections
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Single Collections
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Collection Playlist
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Import Video
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Configure Player
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Collection Insider Page
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Direct URL
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Stream</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Create Stream
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Manage Stream
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Go Live and Record
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Record Screen
+                                                        </span>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Text To Speech</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Voiceover View
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Create Voiceover
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Manage Voiceover
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            View Voiceover
+                                                        </span>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Record Videos</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Go Live
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            SCreen Recording
+                                                        </span>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Tools</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Stock Assets
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Stock Videos
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Text To Speech
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Screen To GIF
+                                                        </span>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Build</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Landing Page Build
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Courses
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permission-item">
+                                            <div class="permission-element pt-3">
+                                                <div class="permission-entity">Leads</div>
+                                                <div class="permission-attributes">
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Integerations
+                                                        </span>
+                                                    </div>
+                                                    <div class="permission-attribute-item">
+                                                        <label class="custom-check light">
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <span>
+                                                            Email
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function toggleDropdown() {
+                                        var dropdown = document.getElementById("myDropdown");
+                                        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                                    }
+
+                                    // Close the dropdown if the user clicks outside of it
+                                    window.onclick = function (event) {
+                                        if (!event.target.matches('.dropdown-btn')) {
+                                            // console.log(event.target)
+                                            if (event.target.matches('.dropdown-content') ||
+                                                event.target.matches('.dropdown-item') ||
+                                                event.target.matches('input') ||
+                                                event.target.matches('.custom-check')) {
+                                                // console.log("yes");
+                                                return;
+                                            }
+                                            var dropdown = document.getElementById("myDropdown");
+                                            if (dropdown.style.display === "block") {
+                                                dropdown.style.display = "none";
+                                            }
+                                        }
+                                    }
+
+                                    var inputs = document.getElementsByClassName('permission-check');
+
+                                    var valueDisplay = document.querySelector('.dropdown-btn');
+                                    var bag = [];
+
+                                    for (const key in inputs) {
+                                        if (Object.hasOwnProperty.call(inputs, key)) {
+                                            const element = inputs[key];
+                                            element.addEventListener('change', (event) => {
+                                                // console.log(event.target.value)
+
+                                                if (event.target.value == 'all') {
+                                                    if (event.target.checked) {
+                                                        for (const key in inputs) {
+                                                            if (Object.hasOwnProperty.call(inputs, key)) {
+                                                                const element = inputs[key];
+
+                                                                element.setAttribute('checked', 'checked');
+                                                            }
+                                                        }
+                                                        bag = ['all'];
+                                                    } else {
+                                                        for (const key in inputs) {
+                                                            if (Object.hasOwnProperty.call(inputs, key)) {
+                                                                const element = inputs[key];
+                                                                // element.setAttribute('checked', );
+                                                                // element.removeAttribute('checked');
+                                                                element.toggleAttribute('checked');
+                                                            }
+                                                        }
+                                                        bag = [];
+                                                    }
+
+                                                    if (bag.length > 0) {
+                                                        valueDisplay.innerText = bag;
+                                                    } else {
+                                                        valueDisplay.innerText = 'Select Option';
+                                                    }
+                                                    return;
+                                                }
+                                                if (event.target.checked) {
+                                                    bag.push(event.target.value);
+                                                } else {
+                                                    bag = bag.filter((val) => val != event.target.value);
+                                                }
+                                                // bag.push(event.target.value);
+                                                // console.log(bag.length);
+                                                if (bag.length > 0) {
+                                                    valueDisplay.innerText = bag;
+                                                } else {
+                                                    valueDisplay.innerText = 'Select Option';
+                                                }
+
+                                            })
+                                        }
+                                    }
+
+                                    // inputs.foreach((elem) => {
+                                    //     elem.on('change', (event) => {
+                                    //         console.log(event.target.value)
+                                    //     })
+                                    // })
+                                </script>
                                 <div class="tab-pane fade" id="pills-settings" role="tabpanel"
                                     aria-labelledby="pills-settings-tab">
 
@@ -534,7 +1084,8 @@
                                         <hr style="border-top: 3px solid #d63fe3">
                                         <div>
                                             <button class="btn btn-danger btn-delete-settings">
-                                                <img src="../assets/icons/delete_4.svg" alt="delete icon"> Delete This Settings
+                                                <img src="../assets/icons/delete_4.svg" alt="delete icon"> Delete This
+                                                Settings
                                             </button>
                                         </div>
                                     </div>

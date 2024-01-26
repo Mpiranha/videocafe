@@ -867,6 +867,7 @@
 .table-team-invited tbody tr td {
     border: none;
     color: #fff;
+    vertical-align: middle;
 }
 
 .table-team-invited thead tr th {
@@ -1327,6 +1328,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0.8rem;
 }
 
 #delete-modal .modal-content .warning-icon {
@@ -5442,7 +5444,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 #add-image-project .modal-content {
-    border-radius: 0.7rem;
+    border-radius: 1rem;
 }
 
 #add-image-project .modal-content .modal-inner {
@@ -5455,7 +5457,47 @@ input[type=range]:focus::-ms-fill-upper {
 .bg-modal-purple-header {
     height: 70px;
     background-color: #c39ddb;
-    border-radius: 0.6rem 0.6rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.bg-modal-blue-header {
+    height: 70px;
+    background-color: #2196F3;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.modal-aweber .btn-close-modal {
+    top: 20px;
+    right: 20px;
+}
+
+.modal-aweber .btn-close-modal img {
+    width: 1.2rem;
+}
+
+.modal-aweber .modal-dialog {
+    max-width: 600px;
+}
+
+.modal-aweber .modal-content .modal-inner {
+    min-height: unset !important;
+}
+
+.modal-aweber label {
+    margin-bottom: 0.5rem !important;
+    font-size: 0.9rem;
+    color: rgb(96 22 135) !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+}
+
+.modal-aweber .form-control {
+    border: 2px solid rgb(96 22 135);
+    border-radius: 0.5rem;
 }
 
 #add-image-project .modal-content .modal-inner label {
@@ -6451,7 +6493,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     max-width: 900px;
 }
 
-.channels_item_box label {
+.channels_item_box label,
+.channels_access_box label {
     color: #fff;
     margin-right: 1rem;
     min-width: 150px;
@@ -6516,7 +6559,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .channels_access_box {
     background-color: var(--color-primary);
     border-radius: 0.3rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -6563,6 +6606,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .privacy_message {
     color: #fff;
     font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .rolls-ad-outter {
@@ -6661,18 +6705,341 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: transparent;
 }
 
-.countdown-display {
+.countdown_wrap {
+    display: flex;
+    align-items: center;
     position: absolute;
     right: 10px;
+    /* right: 300px; */
     bottom: 60px;
-    background-color: #000000a8;
     padding: 0.5rem 0.75rem;
+    background-color: #000000a8;
+    color: #fff;
+    border-radius: 1.1rem;
+}
+
+.countdown-display {
+   
+}
+
+.rolls-ad-outter .countdown_wrap {
+    position: static;
+    margin-left: auto;
+}
+
+.url-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+}
+
+.url-link .link-text {
+    margin-right: 0.5rem;
+}
+
+.describe_channel_access {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.channels_access_box .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.channels_access_box .form-group,
+.channels_access_box .form-check {
+    margin-bottom: 2rem;
+}
+
+.channels_access_box .form-check label {
+    min-width: unset !important;
+}
+
+.label-text {
     color: #fff;
 }
 
-.rolls-ad-outter .countdown-display {
-    position: static;
+.navigation-landing {
+    height: 100vh !important;
+}
+
+.nav-landing-title {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.nav-landing-outter {
+    background-color: #2d125b;
+    padding: 2rem 2rem 0.6rem 1rem;
+    height: calc(100vh - 72px) !important;
+    overflow-y: scroll;
+}
+
+.nav-landing-outter .navigation-box {
+    margin: 0 !important;
+    height: unset !important;
+}
+
+.nav-landing-outter .form-control-file {
+    color: #fff;
+    border: 2px solid #d840e5;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-landing-outter .btn-submit {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
     margin-left: auto;
+}
+
+/* .nav-landing-outter .form-control-file {
+    
+} */
+
+.nav_link_set_item {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+
+}
+
+.permission-item {
+    border-bottom: 1px solid rgb(192 66 225);
+    padding-bottom: 2rem;
+}
+
+.dropdown-btn {
+    background-color: transparent;
+    border: 1px solid #f74bec;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    z-index: 1;
+    background-color: hsl(276.68deg 84.74% 48.82%);
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+.custom-dropdown .dropdown-item {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    padding: .25rem 0.5rem;
+}
+
+.dropdown-item span {
+    pointer-events: none;
+}
+
+.custom-dropdown .dropdown-item:focus,
+.custom-dropdown .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.dropdown-content label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.permission-element {
+    display: flex;
+    color: #fff;
+}
+
+.permission-attributes {
+    margin-left: auto;
+}
+
+.permission-attribute-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.related_videos {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000b3;
+    z-index: 9999999999999999999;
+}
+
+.related_videos .related_header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem;
+
+}
+
+.related_videos .btn-close-modal img {
+    width: 1.5rem;
+}
+
+.related_videos .related_videos-item {
+    height: 120px;
+    position: relative;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 0.3rem;
+    margin-bottom: 0.7rem;
+    border-radius: 0.3rem;
+}
+
+.related_videos-item .video-link-wrap {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.relatedvideos-thumb {
+    height: 100%;
+    border-radius: 0.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.relatedvideos-time-span {
+    color: #fff;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.5rem 0.1rem 0.1rem;
+}
+
+.relatedvideos-title-span {
+    position: absolute;
+    font-size: 0.6rem;
+    background-color: #000;
+    color: #fff;
+    top: 5px;
+    left: 5px;
+    padding: 0.1rem 0.2rem;
+    max-width: 50%;
+    word-break: keep-all;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    max-height: 1.3rem;
+}
+
+.row-control {
+    width: 450px;
+
+}
+
+.related_videos-inner {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.alert-heading .warning-icon {
+    width: 1.5rem !important;
+    margin-right: 0.5rem;
+}
+
+.modal-delete .modal-content {
+    padding: 1rem;
+    justify-content: unset !important;
+    align-items: start !important;
+}
+
+.modal-delete .table tr th,
+.modal-delete .table tr td {
+    border: none;
+    padding: 0.25rem;
+}
+
+.modal-delete .table tr th {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.modal-delete .table tr td {
+    font-size: 0.8rem;
+}
+
+.delte-input-test .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed #fff;
+    color: #fff;
+}
+
+.next_video_toast {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    background-color: #0000008a;
+    padding: 0.3rem 3rem 0.3rem 0.3rem;
+    border-radius: 0.7rem;
+}
+
+.next_video_toast .next_video_prev {
+    width: 75px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    height: 42px;
+}
+
+.next_video_toast .next_video_toast_content {
+    color: #fff;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.next_popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    top: 0;
+    left: 0;
+}
+
+.next_item {
+    
 }
 
 

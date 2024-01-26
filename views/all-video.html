@@ -424,8 +424,7 @@
                                         <div class="vc-vid-actions">
 
                                             <div class="dropdown">
-                                                <button
-                                                    class="btn vc-btn-add-project vc-btn-edit no-shadow"
+                                                <button class="btn vc-btn-add-project vc-btn-edit no-shadow"
                                                     data-target=".edit-dropdown">
                                                     <img class="vid-action-icon" src="../assets/icons/edit icon.svg"
                                                         alt="eidt icon">
@@ -433,11 +432,13 @@
                                                 </button>
                                                 <div class="dropdown-menu edit-dropdown close-click-outside">
                                                     <div class="form-group">
-                                                        <input type="text" name="" id="" class="form-control vc-form-input vc-form-edit"
+                                                        <input type="text" name="" id=""
+                                                            class="form-control vc-form-input vc-form-edit"
                                                             placeholder="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <textarea cols="3" rows="3" type="text" name="" id="" class="form-control vc-form-input vc-form-edit"
+                                                        <textarea cols="3" rows="3" type="text" name="" id=""
+                                                            class="form-control vc-form-input vc-form-edit"
                                                             placeholder=""></textarea>
                                                     </div>
 
@@ -567,20 +568,45 @@
 
         </section>
 
-        <div class="modal fade" id="delete-modal" role="dialog">
+        <div class="modal modal-delete fade show" style="display: block;" id="delete-modal" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
-                    <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
-                    <div class="title">Are You Sure?</div>
-                    <div class="desc">
-                        Are You Sure That You Want To Delete This Video
+                    <div class="alert-heading">
+                        <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
+                        <div class="title">Are You Sure?</div>
                     </div>
-                    <div class="d-flex align-items-center">
+                    <div class="desc">
+                        You're about to delete this video
+                    </div>
+                    <table class="table mb-4">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Size</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Site Error</td>
+                                <td>30MB</td>
+                               
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+
+                    <div class="form-group delte-input-test w-100">
+                      <label for="">Type DELETE to confirm</label>
+                      <input type="text" name="" id="" class="form-control no-shadow" placeholder="" aria-describedby="helpId">
+                     
+                    </div>
+                    <div class="d-flex w-100 justify-content-center align-items-center mt-5">
                         <button data-dismiss="modal" class="btn btn-cancel mr-5">
                             Cancel
                         </button>
                         <button class="btn btn-submit">
-                            Yes, Delete
+                            Delete
                         </button>
                     </div>
 

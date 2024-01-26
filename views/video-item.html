@@ -343,7 +343,7 @@
                                                 </label>
                                                 <label class="ml-3" for="">Light</label>
                                             </div>
-
+                                            +
                                         </div>
 
                                         <div class="form-group d-flex flex-column color-input">
@@ -2055,6 +2055,30 @@
                                             </label>
                                             <span class="label">Zoom</span>
                                         </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-zoom" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Air Play</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-zoom" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Chrome Cast</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input id="show-hide-zoom" type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Mirror View</span>
+                                        </div>
 
                                         <div class="d-flex mt-auto justify-content-center mb-4">
                                             <button class="btn btn-login px-3">
@@ -2703,6 +2727,87 @@
                                             </div>
 
                                         </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Show Views</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Enable Comments</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Enable Reaction</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Enable Share</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Enable Download</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Show Only Video</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Auto Play</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Show Branding</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Auto Loop</span>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <label class="custom-check">
+                                                <input name="vid-settings" type="radio">
+                                                <span class="checkmark"></span>
+
+                                            </label>
+                                            <span class="label">Up Next</span>
+                                        </div>
+
 
 
 
@@ -3087,11 +3192,89 @@
                                                 </a>
 
                                             </div>
-                                            <div class="countdown-display" data-target="#skip-for-rolls"></div>
-                                            <button class="btn no-shadow btn-skip-popup" id="skip-for-rolls" data-dismiss="popup"
-                                                data-target=".email-lead-wrap">
+                                            <div class="countdown_wrap">
+                                                <span class="mr-1">Skip Ad in</span>
+                                                <div class="countdown-display" data-target="#skip-for-rolls"></div>
+                                            </div>
+                                            <button class="btn no-shadow btn-skip-popup" id="skip-for-rolls"
+                                                data-dismiss="popup" data-target=".email-lead-wrap">
                                                 Skip <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                             </button>
+                                        </div>
+
+                                        <!-- <div class="next_video_toast">
+                                            <div class="next_video_prev" style="background-image: url('../assets/images/wedding.jpg');"></div>
+                                            <div class="next_video_toast_content">
+                                                <div class="title">Up Next</div>
+                                                <div class="video_name">sdsjlsjsnkf ansdka</div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="next_popup">
+                                            <div class="next_item">
+                                                <div class="related_header">
+                                                    Related videos
+
+                                                    <button class="btn btn-close-modal">
+                                                        <img src="../assets/icons/cancel icon.svg" alt="cancel icon">
+                                                    </button>
+                                                </div>
+                                                <div class="related_videos-item" id="">
+                                                    <a class="video-link-wrap"
+                                                        href="https://app.vidkreate.io/watch/5spf7/">
+                                                        <div class="relatedvideos-thumb"
+                                                            style="background-image: url('../assets/images/wedding.jpg');">
+                                                        </div>
+                                                        <span class="relatedvideos-title-span">
+                                                            479943uerhjre83838hsuuwuw</span>
+                                                        <span class="relatedvideos-time-span"> 00:02:14</span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="related_videos">
+                                            <div class="related_header">
+                                                Related videos
+
+                                                <button class="btn btn-close-modal">
+                                                    <img src="../assets/icons/cancel icon.svg" alt="cancel icon">
+                                                </button>
+                                            </div>
+                                            <div class="related_videos-inner">
+                                                <div class="row row-control">
+                                                    <div class="col-6 pr-0">
+                                                        <div class="related_videos-item" id="">
+                                                            <a class="video-link-wrap"
+                                                                href="https://app.vidkreate.io/watch/5spf7/">
+                                                                <div class="relatedvideos-thumb"
+                                                                    style="background-image: url('../assets/images/wedding.jpg');">
+                                                                </div>
+                                                                <span class="relatedvideos-title-span">
+                                                                    479943uerhjre83838hsuuwuw</span>
+                                                                <span class="relatedvideos-time-span"> 00:02:14</span>
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 pr-0">
+                                                        <div class="related_videos-item" id="">
+                                                            <a class="video-link-wrap"
+                                                                href="https://app.vidkreate.io/watch/5spf7/">
+                                                                <div class="relatedvideos-thumb"
+                                                                    style="background-image: url('../assets/images/wedding.jpg');">
+                                                                </div>
+                                                                <span class="relatedvideos-title-span"> some
+                                                                    title</span>
+                                                                <span class="relatedvideos-time-span"> 00:02:14</span>
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- <video src="../assets/video/video_2021-02-21_11-56-46.mp4"></video> -->
                                         <video>

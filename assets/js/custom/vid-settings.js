@@ -1820,7 +1820,7 @@ videoContainer.each(function () {
       $(".countdown-display").text(timer);
 
       if (timer === 0) {
-        $(".countdown-display").css("display", "none")
+        $(".countdown_wrap").css("display", "none")
         $($(".countdown-display").attr("data-target")).css("display", "block");
 
         // Replace the line above with the action you want to perform after the countdown
@@ -1834,5 +1834,5 @@ videoContainer.each(function () {
     updateTimer();
   }
 
-  countdown(10);
+  countdown(5);
 });
