@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="blue_dislike" data-name="blue dislike" transform="translate(-642.6 -880.787)">
+    <circle id="Ellipse_265" data-name="Ellipse 265" cx="14" cy="14" r="14" transform="translate(642.6 880.787)" fill="#2699fb"/>
+    <g id="thumbs-down" transform="translate(646.395 884.578)">
+      <path id="Path_2108" data-name="Path 2108" d="M21.565,10.909l-.6-4.252A4.272,4.272,0,0,0,16.759,3H8V16.253l1.383,2.806A2.584,2.584,0,0,0,14.248,17.5l-.286-1.74h3.392a4.252,4.252,0,0,0,4.21-4.847Z" transform="translate(-1.197)" fill="#fff"/>
+      <path id="Path_2109" data-name="Path 2109" d="M0,7.252V11.5a4.257,4.257,0,0,0,4.252,4.252H5.1V3h-.85A4.257,4.257,0,0,0,0,7.252Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

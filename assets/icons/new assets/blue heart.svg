@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="blue_heart" data-name="blue heart" transform="translate(-578.396 -880)">
+    <circle id="Ellipse_265" data-name="Ellipse 265" cx="14" cy="14" r="14" transform="translate(578.396 880)" fill="#2699fb"/>
+    <path id="heart" d="M14.577,1.917A5.331,5.331,0,0,0,10,4.666,5.331,5.331,0,0,0,5.414,1.917,5.664,5.664,0,0,0,0,7.79c0,3.788,3.987,7.924,7.33,10.729a4.143,4.143,0,0,0,5.331,0c3.344-2.8,7.33-6.941,7.33-10.729a5.664,5.664,0,0,0-5.414-5.873Z" transform="translate(582.4 884.082)" fill="#fff"/>
+  </g>
+</svg>

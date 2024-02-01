@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <path id="reset_stats" data-name="reset stats" d="M712,460a1,1,0,0,0,1-1v-4a1,1,0,0,0-2,0v4A1,1,0,0,0,712,460Zm6,0a1,1,0,0,0,1-1V449a1,1,0,0,0-2,0v10A1,1,0,0,0,718,460Zm-9,0a1,1,0,0,0,1-1v-1a1,1,0,0,0-2,0v1A1,1,0,0,0,709,460Zm6,0a1,1,0,0,0,1-1v-7a1,1,0,0,0-2,0v7A1,1,0,0,0,715,460Zm4,2H706V449a1,1,0,0,0-2,0v14a1,1,0,0,0,1,1h14a1,1,0,0,0,0-2Z" transform="translate(-704 -448)" fill="#fff" fill-rule="evenodd"/>
+</svg>
