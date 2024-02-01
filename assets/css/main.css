@@ -6880,7 +6880,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .related_videos {
     display: flex;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     position: absolute;
     height: 100%;
@@ -7113,6 +7113,18 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #f74bec;
     text-decoration: none;
 
+}
+
+.video_output_actions {
+    display: flex;
+}
+
+.video_output_user {
+    color: #fff;
+}
+
+.video_output_user .video_output_user_icon {
+    width: 1.5rem;
 }
 
 
