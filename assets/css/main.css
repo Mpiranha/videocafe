@@ -6900,7 +6900,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .related_videos .related_videos-item {
-    height: 120px;
+    height: 90%;
     position: relative;
     background-position: center;
     background-size: 100%;
@@ -6950,7 +6950,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .row-control {
-    width: 500px;
+    width: 80%;
+    height: 80%;
 
 }
 
