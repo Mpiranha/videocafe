@@ -1077,6 +1077,37 @@ videoContainer.each(function () {
     }
   });
 
+  // AirPlay
+  $("#show-hide-airplay").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".btn-airplay-mode").css("display", "inline");
+    } else {
+      $(".btn-airplay-mode").css("display", "none");
+    }
+  });
+
+  // Chrome cast
+
+  $("#show-hide-chromecast").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".btn-chromecast-mode").css("display", "inline");
+    } else {
+      $(".btn-chromecast-mode").css("display", "none");
+    }
+  });
+
+  // Mirror View
+
+  $("#show-hide-mirrorview").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".btn-mirrorview-mode").css("display", "inline");
+    } else {
+      $(".btn-mirrorview-mode").css("display", "none");
+    }
+  });
+
+     
+
   // Theater Mode
 
   $("#show-hide-theater").on("change", function () {

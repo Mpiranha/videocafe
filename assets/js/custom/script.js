@@ -7,6 +7,28 @@ $(function () {
     }
   });
 
+  $(".btn-edit-trigger").each(function (indx, elem) {
+   
+    elem.addEventListener("click", function () {
+      var tag = elem.getAttribute("data-target");
+      document.querySelector(tag).classList.add("editting");
+      // console.log(tag);
+      // $($(this).attr("data-target")).addClass("editting");
+    });
+  });
+
+  $(".btn-done-edit").each(function (indx, elem) {
+   
+    elem.addEventListener("click", function () {
+      var tag = elem.getAttribute("data-target");
+      document.querySelector(tag).classList.remove("editting");
+      // console.log(tag);
+      // $($(this).attr("data-target")).addClass("editting");
+    });
+  });
+
+
+
   $(document).mouseup(function (e) {
     var container = $(".close-click-outside");
 
@@ -237,7 +259,8 @@ $(function () {
           playpauseImage.src = "../assets/icons/play one icon.svg";
         } else {
           playpause.setAttribute("data-state", "pause");
-          playpauseImage.src = "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
+          playpauseImage.src =
+            "../assets/icons/newones/icons/ICONS fRESH/PAUSE WHITE.png";
         }
       }
       // Mute button

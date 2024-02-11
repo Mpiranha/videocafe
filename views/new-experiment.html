@@ -334,7 +334,7 @@
                         <div class="">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <label class="mb-2" for="">Text only thumbnail</label>
+                                    <label class="mb-2" for="">Test only thumbnail</label>
                                     <div class="experiment-input-desc">
                                         Thumbnail experiment allows you to identify the best thumbnail for your video by
                                         comparing the <br>
@@ -342,12 +342,14 @@
                                     </div>
                                 </div>
                                 <label class="switch mb-0">
-                                    <input checked type="checkbox">
+                                    <input type="checkbox" id="test-only-thumb-check">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
                         </div>
                     </div>
+
+
 
                     <div class="experimentation-item experiment-input-wrap">
                         <div class="form-group mb-5">
@@ -443,7 +445,7 @@
                                     </div>
                                     <div class="check-wrap">
                                         <label class="switch mb-0">
-                                            <input checked type="checkbox">
+                                            <input id="avg-duration-check" checked type="checkbox">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
@@ -467,7 +469,7 @@
                                     </div>
                                     <div class="check-wrap">
                                         <label class="switch mb-0">
-                                            <input checked type="checkbox">
+                                            <input id="engagement-check" checked type="checkbox">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
@@ -491,7 +493,7 @@
                                     </div>
                                     <div class="check-wrap">
                                         <label class="switch mb-0">
-                                            <input checked type="checkbox">
+                                            <input id="link-click-check" checked type="checkbox">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
@@ -514,7 +516,7 @@
                                     </div>
                                     <div class="check-wrap">
                                         <label class="switch mb-0">
-                                            <input checked type="checkbox">
+                                            <input id="email-capture-check" checked type="checkbox">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
@@ -566,6 +568,15 @@
                         </div>
                     </div>
 
+                    <div class="d-flex justify-content-center mb-5">
+                        <button class="btn btn-video-head btn-video-head-cancel mr-3">Cancel</button>
+
+                        <button class="btn btn-video-head">
+                            Save Experiment
+                        </button>
+
+                    </div>
+
 
 
 
@@ -599,6 +610,41 @@
 
     <script src="../assets/js/custom/script.js"></script>
     <script src="../assets/js/select.js"></script>
+
+    <script>
+        $("#test-only-thumb-check").on("change", function () {
+            if ($(this).is(":checked")) {
+               $("#avg-duration-check").prop("checked", false);
+               $("#avg-duration-check").prop("disabled", true);
+
+
+               $("#engagement-check").prop("checked", false);
+               $("#engagement-check").prop("disabled", true);
+
+
+               $("#link-click-check").prop("checked", false);
+               $("#link-click-check").prop("disabled", true);
+
+               $("#email-capture-check").prop("checked", false);
+               $("#email-capture-check").prop("disabled", true);
+
+            } else {
+               
+               $("#avg-duration-check").prop("disabled", false);
+
+
+              
+               $("#engagement-check").prop("disabled", false);
+
+
+               
+               $("#link-click-check").prop("disabled", false);
+
+              
+               $("#email-capture-check").prop("disabled", false);
+            }
+        });
+    </script>
 
 </body>
 

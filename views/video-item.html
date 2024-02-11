@@ -2057,7 +2057,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input id="show-hide-zoom" type="checkbox">
+                                                <input id="show-hide-airplay" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -2065,7 +2065,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input id="show-hide-zoom" type="checkbox">
+                                                <input id="show-hide-chromecast" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -2073,7 +2073,7 @@
                                         </div>
                                         <div class="d-flex mb-3">
                                             <label class="custom-check">
-                                                <input id="show-hide-zoom" type="checkbox">
+                                                <input id="show-hide-mirrorview" type="checkbox">
                                                 <span class="checkmark"></span>
 
                                             </label>
@@ -3202,6 +3202,14 @@
                                             </button>
                                         </div>
 
+                                        <div class="advertisement-controls">
+                                            <button class="btn no-shadow btn-play-pause-ads">
+                                                <img src="../assets/icons/play icon.svg" alt="play pause icon">
+                                            </button>
+                                            <span class="ads-hud text-light mr-2">Advertisement</span>
+                                            <span class="ads-hud text-light ads-timer">00:08</span>
+                                        </div>
+
                                         <!-- <div class="next_video_toast">
                                             <div class="next_video_prev" style="background-image: url('../assets/images/wedding.jpg');"></div>
                                             <div class="next_video_toast_content">
@@ -3450,6 +3458,30 @@
                                                 alt="theater icon">
                                         </button>
 
+                                        <button class="btn no-shadow btn-airplay-mode" style="display: none;">
+                                            <img class="dark-icon" src="../assets/icons/new assets/Air Play.svg"
+                                                alt="theater icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/theater mode purple.svg"
+                                                alt="airplay icon">
+                                        </button>
+
+                                        <button class="btn no-shadow btn-chromecast-mode" style="display: none;">
+                                            <img class="dark-icon" src="../assets/icons/new assets/chrome cast.svg"
+                                                alt="theater icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/theater mode purple.svg"
+                                                alt="chromecast icon">
+                                        </button>
+
+                                        <button class="btn no-shadow btn-mirrorview-mode" style="display: none;">
+                                            <img class="dark-icon" src="../assets/icons/new assets/mirrow.svg"
+                                                alt="theater icon">
+                                            <img class="light-icon"
+                                                src="../assets/icons/newones/icons/theater mode purple.svg"
+                                                alt="mirror view icon">
+                                        </button>
+
 
 
 
@@ -3480,8 +3512,8 @@
                                 </div>
 
                                 <div class="vid-inner-setting">
-                                    <label for="">Comments</label>
-                                    <textarea placeholder="Write a Comment" class="form-control" name=""
+                                    <label for="">Description</label>
+                                    <textarea placeholder="Describe your video" class="form-control" name=""
                                         rows="3"></textarea>
                                 </div>
 
@@ -3494,7 +3526,7 @@
                                 </div>
 
                                 <button class="btn btn-submit">
-                                    Comment
+                                    Save
                                 </button>
                             </div>
                         </div>
