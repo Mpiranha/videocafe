@@ -1589,7 +1589,7 @@
 .btn-video-head {
     color: #fff !important;
     font-size: 0.8rem !important;
-    padding: 0.3rem 3rem !important;
+    padding: 0.7rem 2rem;
     background: linear-gradient(to right, #7d32e1 30%, #517be1) !important;
 }
 
@@ -1811,7 +1811,7 @@
 .vc-vid-actions .dropdown-menu a,
 .vc-dropdown .dropdown-menu a {
     color: #fff;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -2410,8 +2410,8 @@
     padding: 0.175rem .75rem;
 }
 
-.video-listing-wrap {
-    height: 40vh;
+.video-listing-wrap, .bandwidth-table-wrap {
+    height: 50vh;
     overflow-y: auto;
     margin-bottom: 2rem;
 }
@@ -6718,9 +6718,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 1.1rem;
 }
 
-.countdown-display {
-   
-}
+.countdown-display {}
 
 .rolls-ad-outter .countdown_wrap {
     position: static;
@@ -6952,7 +6950,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .row-control {
-    width: 450px;
+    width: 500px;
 
 }
 
@@ -7078,7 +7076,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
-} 
+}
 
 .nextvideos-title-span {
     background-color: #000;
@@ -7117,6 +7115,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .video_output_actions {
     display: flex;
+    align-items: center;
+    margin-bottom: .7rem;
 }
 
 .video_output_user {
@@ -7125,6 +7125,385 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .video_output_user .video_output_user_icon {
     width: 1.5rem;
+}
+
+.video_output_reaction {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10rem;
+}
+
+.video_output_reaction .video_output_reaction_item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-right: 0.7rem;
+}
+
+.video_output_reaction .video_output_reaction_item .btn-reaction {
+    background-color: transparent !important;
+    /* background-color: skyblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+
+}
+
+.btn-reaction img,
+.btn-video-export img {
+    width: 1.2rem;
+}
+
+.video_output_export {
+    display: flex;
+}
+
+.btn-video-export img {
+    margin-right: 0.7rem;
+}
+
+.video_output_export .btn-video-export {
+    color: #fff;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.experimentation-item {
+    background-color: #823ddd;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.experiment-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1rem;
+}
+
+.experiment-heading .left-section .title {
+    margin-bottom: 0.5rem;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
+
+.experiment-heading .left-section .experiment-status {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #fff;
+    padding: 0.3rem 0.8rem;
+    justify-content: center;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.experiment-heading .left-section .experiment-status .status-icon {
+    width: 1rem;
+    position: static;
+    margin-right: 0.3rem;
+}
+
+.experiment-heading .mid-section {
+    color: #fff;
+    text-align: center;
+}
+
+.experiment-heading .right-section .vc-vid-actions {
+    margin-bottom: 0 !important;
+}
+
+.experiment-heading .right-section .vc-vid-actions button {
+    padding: 0.7rem 2rem;
+    font-size: 1rem !important;
+    border-radius: 0.3rem;
+    box-shadow: -1px 2px 6px #27242494;
+}
+
+.experiment-video-item .experiment-video-head {
+    display: flex;
+    color: #fff;
+    padding-right: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.experiment-video-item .experiment-video-head .video-tag {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.experiment-video-head .overall-stat {
+    margin-left: auto;
+}
+
+.experiment-video-inner {
+    background-color: #570880;
+    border-radius: 0.5rem;
+    max-width: 400px;
+    padding: 1.1rem;
+}
+
+.experiment-video-inner .experiment-video-preview {
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0.5rem;
+}
+
+.experiment-video-inner .experimentation-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.experiment-video-inner .experiment-video-info {
+    color: #fff;
+    padding: 1.3rem 2rem 1.3rem 1.3rem;
+    display: flex;
+}
+
+.experiment-video-inner .experiment-video-info .experiment-created {
+    margin-left: auto;
+}
+
+.experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box {
+    background-color: #420661 !important;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box .val,
+.experiment-stat-2 .experiment-stat-item .val {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.experiment-stat-2 {
+    display: flex;
+}
+
+.experiment-stat-2 .experiment-stat-item {
+    width: 50%;
+    height: 80px;
+    background-color: #3e055d;
+    border-radius: 0.4rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+
+}
+
+.experiment-stat-2 .experiment-stat-item:not(:last-child) {
+    margin-right: 0.8rem;
+}
+
+
+
+
+
+.experiment-heading .right-section .vc-vid-actions .dropdown-menu {
+    background-color: #9413e6;
+    width: 100%;
+    min-width: 9rem;
+}
+
+.experiment-input-wrap label {
+    color: #fff;
+    margin-bottom: 1.1rem;
+}
+
+.experiment-input-wrap .form-control {
+    background-color: transparent;
+    border: 2px solid hsl(295.27deg 76.04% 57.45%);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.experiment-input-wrap .form-control::placeholder {
+    color: hsl(266.87deg 72.04% 81.76%);
+    font-size: 0.9rem;
+}
+
+.btn-video-head-cancel {
+    background: linear-gradient(135deg, #7d32e1 20%, hsl(295.27deg 76.04% 57.45%)) !important;
+}
+
+.text-only-thumb .switch {
+    margin-left: auto;
+    width: 60px;
+    height: 34px;
+}
+
+.text-only-thumb .slider:before {
+    height: 30px;
+    width: 30px;
+}
+
+.text-only-thumb input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.experiment-input-desc {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.video-file-select-input-wrap {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.video-file-select-input-item {
+    width: 33.33%;
+    background-color: hsl(295.27deg 76.04% 57.45%);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.video-file-select-input-item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.video-file-select-input-item .video-icon {
+    margin-right: 1rem;
+}
+
+.video-file-select-input-item .input-type-select {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.video-file-select-input-item input {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.performance-goals-item {
+    display: flex;
+    border: 2px solid hsl(295.27deg 76.04% 57.45%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 550px;
+    min-height: 130px;
+    border-radius: 0.7rem;
+}
+
+.performance-goals-item .goal-icon-wrap {
+    margin-right: 1rem;
+}
+
+.performance-goals-item .goal-icon-wrap .goal-icon {
+    width: 1.5rem;
+}
+
+.performance-goals-item .performance-goal-content {
+    max-width: 70%;
+}
+
+.performance-goals-item .performance-goal-content .title {
+    color: #fff;
+}
+
+.performance-goals-item .performance-goal-content .desc {
+    text-align: left;
+}
+
+
+.performance-goals-item .check-wrap {
+    margin-left: auto;
+}
+
+.duration-input-wrap {
+    display: flex;
+}
+
+.duration-input-wrap .form-control {
+    width: 150px;
+    margin-right: 0.5rem;
+}
+
+.duration-input-wrap .duration-entity {
+    background-color: hsl(295.27deg 76.04% 57.45%);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 100px;
+    border-radius: 0.4rem;
+    justify-content: center;
+}
+
+.experiment-input-wrap select option {
+    color: #fff;
+    background-color: hsl(295.27deg 76.04% 57.45%);
+}
+
+#bandwidth-view .modal-dialog {
+    max-width: 600px;
+}
+
+#bandwidth-view .modal-content {
+    background-color: rgb(135 51 225);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+#bandwidth-view .modal-content .title {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.show-entries-input {
+    margin-right: ;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.show-entries-input select {
+    background-color: transparent;
+    color: #fff;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    border: 2px solid hsl(295.27deg 76.04% 57.45%);
+}
+
+.bandwidth-search .custom-search-form {
+    width: unset;
+}
+
+.bandwidth-table-wrap tr th, .bandwidth-table-wrap tr td {
+    color: #fff;
+    font-size: 0.8rem;
+    border: 1px solid #fff;
 }
 
 
