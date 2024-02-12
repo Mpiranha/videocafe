@@ -7396,6 +7396,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     justify-content: center;
     border-radius: 1rem;
     position: relative;
+    cursor: pointer;
 }
 
 .video-file-select-input-item:not(:last-child) {
@@ -7421,6 +7422,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     opacity: 0;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 
 .performance-goals-item {

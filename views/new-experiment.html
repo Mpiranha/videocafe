@@ -322,258 +322,269 @@
 
 
 
+                    <div class="px-5">
 
-                    <div class="experimentation-item experiment-input-wrap">
-                        <div class="form-group">
-                            <label for="">Title</label>
-                            <input type="text" class="form-control no-shadow" name="" id="" placeholder="Enter Title">
-                        </div>
-                    </div>
-
-                    <div class="experimentation-item experiment-input-wrap text-only-thumb">
-                        <div class="">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <label class="mb-2" for="">Test only thumbnail</label>
-                                    <div class="experiment-input-desc">
-                                        Thumbnail experiment allows you to identify the best thumbnail for your video by
-                                        comparing the <br>
-                                        play rate of the thumbnails. Video and image thumbnails are supported
-                                    </div>
-                                </div>
-                                <label class="switch mb-0">
-                                    <input type="checkbox" id="test-only-thumb-check">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="experimentation-item experiment-input-wrap">
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Video</label>
-                            <div class="experiment-input-desc">
-                                Video experiment measures and compare key performance criteria for any two videos in the
-                                project. At the end of the experiment, you can use the result to make important decision
-                                and select the best performing video
+                        <div class="experimentation-item experiment-input-wrap">
+                            <div class="form-group">
+                                <label for="">Title</label>
+                                <input type="text" class="form-control no-shadow" name="" id=""
+                                    placeholder="Enter Title">
                             </div>
                         </div>
 
-                        <div class="video-file-select-input-wrap">
-                            <div class="video-file-select-input-item">
-                                <input type="file" name="first-video" id="first-video">
-                                <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
-                                    alt="">
-                                <div class="input-type-select">
-                                    <span class="type">Select First Video</span>
-
-                                </div>
-                            </div>
-                            <div class="video-file-select-input-item">
-                                <input type="file" name="second-video" id="second-video">
-                                <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
-                                    alt="">
-                                <div class="input-type-select">
-                                    <span class="type">Select Second Video</span>
-
-                                </div>
-                            </div>
-                            <div class="video-file-select-input-item">
-                                <input type="file" name="third-video" id="third-video">
-                                <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
-                                    alt="">
-                                <div class="input-type-select">
-                                    <span class="type">Select Third Video</span>
-                                    <span class="required-stat">(Optional)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="experimentation-item experiment-input-wrap">
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Performance Goals</label>
-                            <div class="experiment-input-desc">
-                                Performance goals are used to determine the best performing video. Select at least one
-                                performance goals to use in this experiment.
-                            </div>
-                        </div>
-
-                        <div class="row px-4 mb-5">
-                            <div class="col-6">
-                                <div class="performance-goals-item">
-                                    <div class="goal-icon-wrap">
-                                        <img class="goal-icon" src="../assets/icons/new assets/asset two/play-rate.svg"
-                                            alt="play rate icon">
-                                    </div>
-                                    <div class="performance-goal-content">
-                                        <div class="title">
-                                            Play Rate
-                                        </div>
-                                        <div class="desc">
-                                            Measure and compare how often people who see the video thumbnail click
-                                            the
-                                            play button to watch the video
+                        <div class="experimentation-item experiment-input-wrap text-only-thumb">
+                            <div class="">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <label class="mb-2" for="">Test only thumbnail</label>
+                                        <div class="experiment-input-desc">
+                                            Thumbnail experiment allows you to identify the best thumbnail for your
+                                            video by
+                                            comparing the <br>
+                                            play rate of the thumbnails. Video and image thumbnails are supported
                                         </div>
                                     </div>
-                                    <div class="check-wrap">
-                                        <label class="switch mb-0">
-                                            <input checked type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="performance-goals-item">
-                                    <div class="goal-icon-wrap">
-                                        <img class="goal-icon"
-                                            src="../assets/icons/new assets/asset two/Avg. View Duration.svg"
-                                            alt="play rate icon">
-                                    </div>
-
-                                    <div class="performance-goal-content">
-                                        <div class="title">
-                                            AVG. View Duration
-                                        </div>
-                                        <div class="desc">
-                                            Measure and compare how often viewers watch each video before dropping
-                                            off
-                                        </div>
-                                    </div>
-                                    <div class="check-wrap">
-                                        <label class="switch mb-0">
-                                            <input id="avg-duration-check" checked type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="performance-goals-item">
-                                    <div class="goal-icon-wrap">
-                                        <img class="goal-icon" src="../assets/icons/new assets/asset two/engagement.svg"
-                                            alt="play rate icon">
-                                    </div>
-
-                                    <div class="performance-goal-content">
-                                        <div class="title">
-                                            Engagement
-                                        </div>
-                                        <div class="desc">
-                                            Measure and compare how often viewers stay engaged while watching the
-                                            video
-                                        </div>
-                                    </div>
-                                    <div class="check-wrap">
-                                        <label class="switch mb-0">
-                                            <input id="engagement-check" checked type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="performance-goals-item">
-                                    <div class="goal-icon-wrap">
-                                        <img class="goal-icon"
-                                            src="../assets/icons/new assets/asset two/Link Clicks.svg"
-                                            alt="play rate icon">
-                                    </div>
-                                    <div class="performance-goal-content">
-                                        <div class="title">
-                                            Link Clicks
-                                        </div>
-                                        <div class="desc">
-                                            Measure and compare the number of a click-through interaction on each
-                                            video
-                                        </div>
-                                    </div>
-                                    <div class="check-wrap">
-                                        <label class="switch mb-0">
-                                            <input id="link-click-check" checked type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="performance-goals-item">
-                                    <div class="goal-icon-wrap">
-                                        <img class="goal-icon"
-                                            src="../assets/icons/new assets/asset two/email capture.svg"
-                                            alt="email capture icon">
-                                    </div>
-                                    <div class="performance-goal-content">
-                                        <div class="title">
-                                            Email Capture
-                                        </div>
-                                        <div class="desc">
-                                            Measure and compare the number of email through each video
-                                        </div>
-                                    </div>
-                                    <div class="check-wrap">
-                                        <label class="switch mb-0">
-                                            <input id="email-capture-check" checked type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
+                                    <label class="switch mb-0">
+                                        <input type="checkbox" id="test-only-thumb-check">
+                                        <span class="slider round"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
 
 
-                    </div>
 
-                    <div class="experimentation-item experiment-input-wrap">
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Duration of Experiment</label>
-                            <div class="experiment-input-desc">
-                                How long do you want to run this experiment? for the most reliable results, the video
-                                should receive enough views withing the set duration
+                        <div class="experimentation-item experiment-input-wrap">
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Video</label>
+                                <div class="experiment-input-desc">
+                                    Video experiment measures and compare key performance criteria for any two videos in
+                                    the
+                                    project. At the end of the experiment, you can use the result to make important
+                                    decision
+                                    and select the best performing video
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Duration</label>
-                            <div class="duration-input-wrap">
-                                <input class="form-control no-shadow" type="number" placeholder="4">
-                                <div class="duration-entity">
-                                    Days
+                            <div class="video-file-select-input-wrap">
+                                <div class="video-file-select-input-item">
+                                    <input type="file" name="first-video" id="first-video">
+                                    <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
+                                        alt="">
+                                    <div class="input-type-select">
+                                        <span class="type">Select First Video</span>
+
+                                    </div>
+                                </div>
+                                <div class="video-file-select-input-item">
+                                    <input type="file" name="second-video" id="second-video">
+                                    <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
+                                        alt="">
+                                    <div class="input-type-select">
+                                        <span class="type">Select Second Video</span>
+
+                                    </div>
+                                </div>
+                                <div class="video-file-select-input-item">
+                                    <input type="file" name="third-video" id="third-video">
+                                    <img class="video-icon" src="../assets/icons/new assets/asset two/select video.svg"
+                                        alt="">
+                                    <div class="input-type-select">
+                                        <span class="type">Select Third Video</span>
+                                        <span class="required-stat">(Optional)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="experimentation-item experiment-input-wrap">
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Performance Goals</label>
+                                <div class="experiment-input-desc">
+                                    Performance goals are used to determine the best performing video. Select at least
+                                    one
+                                    performance goals to use in this experiment.
+                                </div>
+                            </div>
 
-                    </div>
+                            <div class="row px-4 mb-5">
+                                <div class="col-6">
+                                    <div class="performance-goals-item">
+                                        <div class="goal-icon-wrap">
+                                            <img class="goal-icon"
+                                                src="../assets/icons/new assets/asset two/play-rate.svg"
+                                                alt="play rate icon">
+                                        </div>
+                                        <div class="performance-goal-content">
+                                            <div class="title">
+                                                Play Rate
+                                            </div>
+                                            <div class="desc">
+                                                Measure and compare how often people who see the video thumbnail click
+                                                the
+                                                play button to watch the video
+                                            </div>
+                                        </div>
+                                        <div class="check-wrap">
+                                            <label class="switch mb-0">
+                                                <input checked type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="performance-goals-item">
+                                        <div class="goal-icon-wrap">
+                                            <img class="goal-icon"
+                                                src="../assets/icons/new assets/asset two/Avg. View Duration.svg"
+                                                alt="play rate icon">
+                                        </div>
 
-                    <div class="experimentation-item experiment-input-wrap">
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Post-Completion Action</label>
-                            <div class="experiment-input-desc">
-                                Set what happens after the set duration of the experiment ellapses
+                                        <div class="performance-goal-content">
+                                            <div class="title">
+                                                AVG. View Duration
+                                            </div>
+                                            <div class="desc">
+                                                Measure and compare how often viewers watch each video before dropping
+                                                off
+                                            </div>
+                                        </div>
+                                        <div class="check-wrap">
+                                            <label class="switch mb-0">
+                                                <input id="avg-duration-check" checked type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="performance-goals-item">
+                                        <div class="goal-icon-wrap">
+                                            <img class="goal-icon"
+                                                src="../assets/icons/new assets/asset two/engagement.svg"
+                                                alt="play rate icon">
+                                        </div>
+
+                                        <div class="performance-goal-content">
+                                            <div class="title">
+                                                Engagement
+                                            </div>
+                                            <div class="desc">
+                                                Measure and compare how often viewers stay engaged while watching the
+                                                video
+                                            </div>
+                                        </div>
+                                        <div class="check-wrap">
+                                            <label class="switch mb-0">
+                                                <input id="engagement-check" checked type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="performance-goals-item">
+                                        <div class="goal-icon-wrap">
+                                            <img class="goal-icon"
+                                                src="../assets/icons/new assets/asset two/Link Clicks.svg"
+                                                alt="play rate icon">
+                                        </div>
+                                        <div class="performance-goal-content">
+                                            <div class="title">
+                                                Link Clicks
+                                            </div>
+                                            <div class="desc">
+                                                Measure and compare the number of a click-through interaction on each
+                                                video
+                                            </div>
+                                        </div>
+                                        <div class="check-wrap">
+                                            <label class="switch mb-0">
+                                                <input id="link-click-check" checked type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="performance-goals-item">
+                                        <div class="goal-icon-wrap">
+                                            <img class="goal-icon"
+                                                src="../assets/icons/new assets/asset two/email capture.svg"
+                                                alt="email capture icon">
+                                        </div>
+                                        <div class="performance-goal-content">
+                                            <div class="title">
+                                                Email Capture
+                                            </div>
+                                            <div class="desc">
+                                                Measure and compare the number of email through each video
+                                            </div>
+                                        </div>
+                                        <div class="check-wrap">
+                                            <label class="switch mb-0">
+                                                <input id="email-capture-check" checked type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="experimentation-item experiment-input-wrap">
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Duration of Experiment</label>
+                                <div class="experiment-input-desc">
+                                    How long do you want to run this experiment? for the most reliable results, the
+                                    video
+                                    should receive enough views withing the set duration
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Duration</label>
+                                <div class="duration-input-wrap">
+                                    <input class="form-control no-shadow" type="number" placeholder="4">
+                                    <div class="duration-entity">
+                                        Days
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="experimentation-item experiment-input-wrap">
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Post-Completion Action</label>
+                                <div class="experiment-input-desc">
+                                    Set what happens after the set duration of the experiment ellapses
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-5">
+                                <label class="mb-2" for="">Post-Completion Action</label>
+                                <select class="form-control no-shadow" name="" id="">
+                                    <option value="">Use Best-Performing Video</option>
+                                    <option value="disabled">Disable Experiment (Not Recommended)</option>
+                                    <option value="none" selected>Do Nothing</option>
+                                </select>
+
                             </div>
                         </div>
 
-                        <div class="form-group mb-5">
-                            <label class="mb-2" for="">Post-Completion Action</label>
-                            <select class="form-control no-shadow" name="" id="">
-                                <option value="">Use Best-Performing Video</option>
-                                <option value="disabled">Disable Experiment (Not Recommended)</option>
-                                <option value="none" selected>Do Nothing</option>
-                            </select>
+                        <div class="d-flex justify-content-center mb-5">
+                            <button class="btn btn-video-head btn-video-head-cancel mr-3">Cancel</button>
+
+                            <button class="btn btn-video-head">
+                                Save Experiment
+                            </button>
 
                         </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center mb-5">
-                        <button class="btn btn-video-head btn-video-head-cancel mr-3">Cancel</button>
-
-                        <button class="btn btn-video-head">
-                            Save Experiment
-                        </button>
 
                     </div>
 
@@ -614,34 +625,34 @@
     <script>
         $("#test-only-thumb-check").on("change", function () {
             if ($(this).is(":checked")) {
-               $("#avg-duration-check").prop("checked", false);
-               $("#avg-duration-check").prop("disabled", true);
+                $("#avg-duration-check").prop("checked", false);
+                $("#avg-duration-check").prop("disabled", true);
 
 
-               $("#engagement-check").prop("checked", false);
-               $("#engagement-check").prop("disabled", true);
+                $("#engagement-check").prop("checked", false);
+                $("#engagement-check").prop("disabled", true);
 
 
-               $("#link-click-check").prop("checked", false);
-               $("#link-click-check").prop("disabled", true);
+                $("#link-click-check").prop("checked", false);
+                $("#link-click-check").prop("disabled", true);
 
-               $("#email-capture-check").prop("checked", false);
-               $("#email-capture-check").prop("disabled", true);
+                $("#email-capture-check").prop("checked", false);
+                $("#email-capture-check").prop("disabled", true);
 
             } else {
-               
-               $("#avg-duration-check").prop("disabled", false);
+
+                $("#avg-duration-check").prop("disabled", false);
 
 
-              
-               $("#engagement-check").prop("disabled", false);
+
+                $("#engagement-check").prop("disabled", false);
 
 
-               
-               $("#link-click-check").prop("disabled", false);
 
-              
-               $("#email-capture-check").prop("disabled", false);
+                $("#link-click-check").prop("disabled", false);
+
+
+                $("#email-capture-check").prop("disabled", false);
             }
         });
     </script>
