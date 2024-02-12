@@ -370,28 +370,32 @@
 
                                 <div class="video_output_actions">
                                     <div class="video_output_user">
-                                        <img class="video_output_user_icon" src="../assets/icons/newones/general User.svg" alt="user icon">
+                                        <img class="video_output_user_icon"
+                                            src="../assets/icons/newones/general User.svg" alt="user icon">
                                         General
                                     </div>
 
                                     <div class="video_output_reaction">
                                         <div class="video_output_reaction_item">
                                             <button class="btn no-shadow btn-reaction">
-                                                <img src="../assets/icons/new assets/blue thumbs.svg" alt="thumb up icon">
+
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                             </button>
                                             05
                                         </div>
 
                                         <div class="video_output_reaction_item">
                                             <button class="btn no-shadow btn-reaction">
-                                                <img src="../assets/icons/new assets/thumbs-down.svg" alt="thumb down icon">
+                                                <!-- <img src="../assets/icons/new assets/thumbs-down.svg" alt="thumb down icon"> -->
+                                                <i class="fa fa-thumbs-down" aria-hidden="true"></i>
                                             </button>
                                             05
                                         </div>
 
                                         <div class="video_output_reaction_item">
                                             <button class="btn no-shadow btn-reaction">
-                                                <img src="../assets/icons/new assets/heart.svg" alt="heart icon">
+                                                <!-- <img src="../assets/icons/new assets/heart.svg" alt="heart icon"> -->
+                                                <i class="fa fa-heart" aria-hidden="true"></i>
                                             </button>
                                             05
                                         </div>
@@ -1030,6 +1034,30 @@
     <script>
         $(".btn-theater-mode").on("click", function () {
             $(".video-display-page").toggleClass("theater-mode");
+        });
+
+        $(".btn-reaction").each(function () {
+
+            $(this).on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    return;
+                }
+
+                $(".btn-reaction").each(function () {
+                    $(this).removeClass("active");
+                });
+
+                $(this).addClass("active");
+
+
+            });
+
+
+
+
+
+
         });
     </script>
 
