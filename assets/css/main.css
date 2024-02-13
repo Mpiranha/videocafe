@@ -7362,19 +7362,19 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .text-only-thumb .switch {
     margin-left: auto;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 24px;
 }
 
 .text-only-thumb .slider:before {
-    height: 30px;
-    width: 30px;
+    height: 21px;
+    width: 21px;
 }
 
 .text-only-thumb input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
 }
 
 .experiment-input-desc {
