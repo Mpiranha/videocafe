@@ -3448,16 +3448,16 @@ path {
     margin-bottom: 0 !important;
 }
 
-/* .active-indicator img.add-icon {
+.active-indicator img.add-icon {
     display: none;
-} */
+}
 
 .active-indicator img.minus-icon {
     display: inline;
 }
 
 .nav-link.collapsed .active-indicator img.add-icon {
-    display: none;
+    display: inline;
 }
 
 .nav-link.collapsed .active-indicator img.minus-icon {
