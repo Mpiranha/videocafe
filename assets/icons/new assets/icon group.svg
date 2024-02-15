@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_group" data-name="icon group" transform="translate(-432 -364)">
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="12" cy="12" r="12" transform="translate(432 364)" fill="#9413e6"/>
+    <path id="minus-circle" d="M6.709,0a6.709,6.709,0,1,0,6.709,6.709A6.716,6.716,0,0,0,6.709,0Zm0,12.3A5.591,5.591,0,1,1,12.3,6.709,5.6,5.6,0,0,1,6.709,12.3ZM9.5,6.709a.559.559,0,0,1-.559.559H4.472a.559.559,0,0,1,0-1.118H8.945A.559.559,0,0,1,9.5,6.709Z" transform="translate(437 369)" fill="#fff"/>
+  </g>
+</svg>

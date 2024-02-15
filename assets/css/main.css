@@ -1588,7 +1588,7 @@
 
 .btn-video-head {
     color: #fff !important;
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
     padding: 0.7rem 2rem;
     background: linear-gradient(to right, #7d32e1 30%, #517be1) !important;
 }
@@ -3446,6 +3446,22 @@ path {
 .active-indicator img {
     width: 0.6rem !important;
     margin-bottom: 0 !important;
+}
+
+.active-indicator img.add-icon {
+    display: none;
+}
+
+.active-indicator img.minus-icon {
+    display: inline;
+}
+
+.nav-link.collapsed .active-indicator img.add-icon {
+    display: inline;
+}
+
+.nav-link.collapsed .active-indicator img.minus-icon {
+    display: none;
 }
 
 .navigation-player-settings .nav-pills .nav-link.active .active-indicator {
@@ -7249,7 +7265,9 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
     padding-right: 3rem;
     margin-bottom: 0.5rem;
+    max-width: 400px;
 }
+
 
 .experiment-video-item .experiment-video-head .video-tag {
     font-weight: 600;
@@ -7297,6 +7315,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     line-height: 1.2rem;
 }
 
+.experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box.winning,
+.experiment-stat-2 .experiment-stat-item.winning {
+    background: #d840e5 !important;
+}
+
+
 .experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box .val,
 .experiment-stat-2 .experiment-stat-item .val {
     font-weight: 600;
@@ -7342,6 +7366,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .experiment-input-wrap label {
     color: #fff;
     margin-bottom: 1.1rem;
+    font-weight: bold;
 }
 
 .experiment-input-wrap .form-control {
@@ -7357,7 +7382,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .btn-video-head-cancel {
-    background: linear-gradient(135deg, #7d32e1 20%, hsl(295.27deg 76.04% 57.45%)) !important;
+    background-color: hsl(295.27deg 76.04% 57.45%);
 }
 
 .text-only-thumb .switch {
@@ -7584,6 +7609,11 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .ads-hud {
     font-size: 0.8rem;
+    color: #fff !important;
+}
+
+.extra-padding {
+    padding: 0 8rem 0 8rem;
 }
 
 
