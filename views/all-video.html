@@ -568,7 +568,26 @@
 
         </section>
 
-        <div class="modal modal-delete fade show" style="display: block;" id="delete-modal" role="dialog">
+
+        <div class="modal access-restriction-modal fade show" style="display: block;" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <button data-dismiss="modal" class="btn btn-close-modal no-shadow">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                   
+                    <img class="restriction-icon mb-2" src="../assets/icons/new assets/access restricted icon.png" alt="">
+                    <div class="title">
+                        Access Restricted
+                    </div>
+                    <div class="desc mb-3">You don't have acess to this resources</div>
+
+                    <button class="btn btn-submit">Get Access</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-delete fade show" id="delete-modal" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
                     <div class="alert-heading">

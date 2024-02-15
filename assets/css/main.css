@@ -3448,16 +3448,16 @@ path {
     margin-bottom: 0 !important;
 }
 
-.active-indicator img.add-icon {
+/* .active-indicator img.add-icon {
     display: none;
-}
+} */
 
 .active-indicator img.minus-icon {
     display: inline;
 }
 
 .nav-link.collapsed .active-indicator img.add-icon {
-    display: inline;
+    display: none;
 }
 
 .nav-link.collapsed .active-indicator img.minus-icon {
@@ -7614,6 +7614,30 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .extra-padding {
     padding: 0 8rem 0 8rem;
+}
+
+
+
+.access-restriction-modal .modal-content {
+    background-color: var(--color-primary);
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.restriction-icon {
+    width: 8rem;
+}
+
+.access-restriction-modal .modal-content .title {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.access-restriction-modal .modal-content .btn-submit {
+    font-size: 0.9rem !important;
 }
 
 
