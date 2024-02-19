@@ -126,26 +126,26 @@
 
 .right-section label {
     font-size: 1rem;
-    color: #2c0640;
+    color: #9b8dae;
     margin-bottom: 0.4rem
 }
 
 .forgot-pwd-link {
     text-decoration: none !important;
-    color: #442357;
-    font-size: 0.9rem;
+    color: #9b8dae;
+    font-size: 1rem;
 }
 
 .sign-up-input {
-    border: 2px solid #570880;
+    border: 2px solid #9b8dae;
     font-size: 1rem;
     padding: 0.75rem .75rem;
     border-radius: 0.3rem;
 }
 
 .sign-up-link {
-    color: #2c0640;
-    font-size: 0.9rem;
+    color: #9b8dae;
+    font-size: 1rem;
     text-decoration: none;
 }
 
