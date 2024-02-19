@@ -161,9 +161,8 @@
     font-size: 0.9rem;
 }
 
-.btn-facebook-sign-in, .btn-google-sign-in {
-
-}
+.btn-facebook-sign-in,
+.btn-google-sign-in {}
 
 .btn-facebook-sign-in {
     background-color: rgb(24 119 242);
@@ -172,7 +171,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.65rem 0.75rem;
-} 
+}
 
 .btn-google-sign-in {
     background-color: #fff;
@@ -184,7 +183,8 @@
     padding: 0.65rem 0.75rem;
 }
 
-.btn-facebook-sign-in img, .btn-google-sign-in img {
+.btn-facebook-sign-in img,
+.btn-google-sign-in img {
     width: 0.9rem;
     margin-right: 0.3rem;
 }
@@ -198,7 +198,7 @@
 .login-logo {
     width: 200px;
     max-width: 100%;
-   margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
 }
 
 
@@ -7741,7 +7741,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: rgb(255 255 255);
     border-left: 10px solid rgb(216 64 229);
     border-radius: 0.5rem;
-   
+
 }
 
 
