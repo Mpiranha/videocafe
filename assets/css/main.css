@@ -124,6 +124,10 @@
 
 }
 
+.sign-up-inner .right-section .register-form .form-group {
+    margin-bottom: 0.5rem;
+}
+
 .right-section label {
     font-size: 1rem;
     color: #9b8dae;
