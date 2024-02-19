@@ -112,8 +112,8 @@
 }
 
 .right-section form {
-    min-width: 300px;
-    max-width: 350px;
+    min-width: 370px;
+    max-width: 370px;
 }
 
 .right-section .title {
@@ -139,7 +139,7 @@
 .sign-up-input {
     border: 2px solid #570880;
     font-size: 1rem;
-    padding: 0.45rem .75rem;
+    padding: 0.55rem .75rem;
     border-radius: 0.3rem;
 }
 
@@ -207,7 +207,7 @@
     width: 100%;
     color: #fff;
     font-size: 1rem;
-    padding: 0.3rem 1.2rem;
+    padding: 0.55rem 1.2rem;
 }
 
 .flex-wrapper {
