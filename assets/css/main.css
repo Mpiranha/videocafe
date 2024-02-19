@@ -112,8 +112,8 @@
 }
 
 .right-section form {
-    min-width: 370px;
-    max-width: 370px;
+    min-width: 400px;
+    max-width: 400px;
 }
 
 .right-section .title {
@@ -139,7 +139,7 @@
 .sign-up-input {
     border: 2px solid #570880;
     font-size: 1rem;
-    padding: 0.55rem .75rem;
+    padding: 0.75rem .75rem;
     border-radius: 0.3rem;
 }
 
@@ -171,7 +171,7 @@
     width: 100%;
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0.75rem 0.75rem;
+    padding: 0.65rem 0.75rem;
 } 
 
 .btn-google-sign-in {
@@ -181,7 +181,7 @@
     width: 100%;
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0.75rem 0.75rem;
+    padding: 0.65rem 0.75rem;
 }
 
 .btn-facebook-sign-in img, .btn-google-sign-in img {
