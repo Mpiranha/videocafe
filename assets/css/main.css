@@ -52,8 +52,8 @@
 }
 
 .sign-up-inner {
-    height: 58%;
-    width: 60%;
+    height: 78%;
+    width: 80%;
     display: flex;
 }
 
@@ -67,6 +67,8 @@
     background-size: 70%;
     padding: 3.1rem 2.5rem;
     border-radius: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -84,7 +86,8 @@
 
 .left-section .title {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
     font-weight: bold;
 }
 
@@ -101,7 +104,7 @@
 }
 
 .right-section form {
-    min-width: 230px;
+    min-width: 280px;
     max-width: 300px;
 }
 
@@ -114,7 +117,7 @@
 }
 
 .right-section label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #2c0640;
     margin-bottom: 0.4rem
 }
@@ -127,16 +130,73 @@
 
 .sign-up-input {
     border: 2px solid #570880;
-    font-size: 0.8rem;
-    padding: 0.175rem .75rem;
+    font-size: 1rem;
+    padding: 0.375rem .75rem;
     border-radius: 0.3rem;
+}
+
+.sign-up-link {
+    color: #2c0640;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.sign-up-link:hover {
+    text-decoration: none;
+}
+
+.sign-in-or {
+    color: #2c0640;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.btn-facebook-sign-in, .btn-google-sign-in {
+
+}
+
+.btn-facebook-sign-in {
+    background-color: rgb(24 119 242);
+    color: #fff;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+} 
+
+.btn-google-sign-in {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-facebook-sign-in img, .btn-google-sign-in img {
+    width: 0.9rem;
+    margin-right: 0.3rem;
+}
+
+.line {
+    height: 2px;
+    background-color: #2c0640;
+    flex-grow: 1;
+}
+
+.login-logo {
+    width: 200px;
+    max-width: 100%;
+   margin-bottom: 3rem;
 }
 
 
 .btn-login {
     background: linear-gradient(to right, #7d32e1, #517be1);
+    width: 100%;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem 1.2rem;
 }
 
@@ -5487,6 +5547,12 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
 }
 
+.bg-modal-primary-header {
+    background-color: var(--color-primary);
+    justify-content: left;
+    padding: 1rem;
+}
+
 .modal-aweber .btn-close-modal {
     top: 20px;
     right: 20px;
@@ -5502,6 +5568,27 @@ input[type=range]:focus::-ms-fill-upper {
 
 .modal-aweber .modal-content .modal-inner {
     min-height: unset !important;
+}
+
+.modal-aweber .transcode-modal-title {
+    color: rgb(96 22 135) !important;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.resolution-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resolution-item .resolution-category {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: 500;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    padding: 0 0.5rem;
 }
 
 .modal-aweber label {
@@ -7640,6 +7727,68 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-size: 0.9rem !important;
 }
 
+.toast {
+    background-color: rgb(255 255 255);
+    border-left: 10px solid rgb(216 64 229);
+    border-radius: 0.5rem;
+   
+}
+
+
+.toast .toast-body {
+    display: flex;
+    padding: 1rem 1rem 1rem 0.2rem;
+    align-items: center;
+}
+
+.toast .toast-inner {
+    line-height: 0.9rem;
+}
+
+.toast .variant-icon {
+    width: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.toast .toast-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.toast .toast-content {
+    font-size: 0.8rem;
+}
+
+.toast.success {
+    color: rgb(43 155 251);
+}
+
+.transcode-status {
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    display: inline-flex;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    font-weight: 500;
+}
+
+
+
+.transcode-status .transcode-progress-icon {
+    width: 1rem;
+    margin-right: 0.3rem;
+}
+
+.transcode-status.success {
+    background-color: hsl(133.81deg 60% 41.18%);
+}
+
+.transcode-status.in-progress {
+    background-color: orange;
+    color: #000;
+}
 
 @keyframes bg-stretch-out {
     0% {
