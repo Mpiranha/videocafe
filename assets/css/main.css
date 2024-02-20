@@ -126,6 +126,7 @@
 
 .right-section .forgot-pwd-form .title {
     font-size: 1.5rem;
+    margin-bottom: 0.3rem;
 }
 
 
@@ -7796,7 +7797,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     display: flex;
     align-items: center;
     display: inline-flex;
-    padding: 0.1rem 0.3rem;
+    padding: 0.2rem 0.3rem 0.3rem 0.3rem;
     border-radius: 0.2rem;
     font-weight: 500;
 }
