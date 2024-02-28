@@ -59,6 +59,7 @@
 
 .sign-up-inner .left-section {
     background-color: #2f0643;
+    /* background: linear-gradient(to bottom, #570880, #190523); */
     width: 45%;
     position: relative;
     background-image: url("../../assets/icons/login\ image.svg");
