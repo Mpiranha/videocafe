@@ -180,6 +180,7 @@
 .sign-up-inner .right-section .register-form .sign-in-or {
     margin: 1rem 0;
 }
+
 .btn-facebook-sign-in,
 .btn-google-sign-in {}
 
@@ -2009,6 +2010,10 @@
     font-size: 0.8rem;
 }
 
+.video-wrap-outer {
+    cursor: grab;
+}
+
 .video-wrap-inner .video-stat {
     flex-grow: 1;
     display: flex;
@@ -2790,16 +2795,16 @@
     font-size: 0.8rem;
 }
 
-svg {
+/* svg {
     height: 25px !important;
     width: 25px !important;
     position: absolute;
-}
+} */
 
-path {
+/* path {
     stroke: #007db5;
     fill: #fff;
-}
+} */
 
 
 .pagination-bottom .page-link {
@@ -6906,6 +6911,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 2rem 2rem 0.6rem 1rem;
     height: calc(100vh - 72px) !important;
     overflow-y: scroll;
+    min-width: 406px;
 }
 
 .nav-landing-outter .navigation-box {
@@ -7476,7 +7482,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .experiment-heading .right-section .vc-vid-actions .dropdown-menu {
     background-color: #9413e6;
     width: 100%;
-    min-width: 9rem;
+    min-width: 12rem;
 }
 
 .experiment-input-wrap label {
@@ -7820,6 +7826,183 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: orange;
     color: #000;
 }
+
+.logo_output_link img {
+    width: 12rem;
+}
+
+/* .popover_svg_icon {
+    width: 80px !important;
+    height: 80px !important;
+} */
+
+.video-embed .video-inner{
+    border-radius: 0 !important;
+}
+
+.more-text {
+    display: none;
+}
+
+.video-as-playlist {
+    height: 100%;
+
+}
+
+.video-as-playlist .video-display-page {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-as-playlist .video-display-page .playlist_wrap {
+    max-height: 100%;
+    max-width: unset;
+}
+
+.video-as-playlist .video-display-page .video_content {
+    /* border: none !important; */
+}
+
+.playlist-head {
+    background-color: inherit;
+    padding: 0.2rem 0.5rem 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1rem;
+}
+
+.playlist-head .playlist-stat {
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+
+.ql-snow .ql-picker-label {
+    color: #fff;
+}
+
+.ql-snow .ql-stroke {
+    stroke: #fff;
+}
+
+.ql-toolbar.ql-snow {
+    border-color: #d840e5;
+    border-width: 2px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.ql-container.ql-snow {
+    border-color: #d840e5;
+    border-width: 2px;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.ql-editor {
+    color: #fff;
+}
+
+.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+    fill: #fff;
+}
+
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+    height: 20px;
+    width: 20px;
+}
+
+.color-picker {
+    width: 40px;
+    height: 35px;
+    padding: 0.2rem;
+}
+
+.man-width {
+    width: calc(100% - 60px);
+}
+
+.nav_link_set_item .custom-check-label .check-mark {
+    border: 2px solid #e15fff;
+}
+
+.nav_link_set_item .custom-check-label .check-mark::after {
+    background-color: #e15fff;
+}
+
+.landing-link-export .input-url-wrap input {
+    width: 230px;
+}
+
+.course-page-header {
+    color: #fff;
+    margin: 2rem 0;
+}
+
+.course-page-header .title {
+    font-size: 1.3rem;
+}
+
+.course-page-header .description {
+    max-width: 60%;
+}
+
+.course-video-page-content {
+    display: flex;
+    height: 530px;
+    margin-bottom: 1rem;
+}
+
+.course-video-page-content .video_content {
+    width: calc(70% - 1rem);
+    margin-right: 1rem;
+}
+
+.course-video-page-content .playlist_wrap {
+    width: 30%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #570880;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+
+.course-page-outter {
+    border-radius: 1rem !important;
+}
+
+.course-video-page-content .video-inner, .course-video-page-content .video-outter {
+    height: 100%;
+} 
+
+.course-video-page-content .playlist_wrap::-webkit-scrollbar {
+    background-color: #d840e5;
+}
+
+.course-video-page-content .playlist_wrap::-webkit-scrollbar-button {
+    
+}
+
+.course-video-page-content .playlist_wrap::-webkit-scrollbar-thumb {
+   background-color: #fff;
+   border-radius: 1rem;
+}
+
+.course-page-extra-content {
+    background-color: #570880;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-height: 400px;
+    color: #fff
+}
+
+.course-page-extra-content .title {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
 
 @keyframes bg-stretch-out {
     0% {
