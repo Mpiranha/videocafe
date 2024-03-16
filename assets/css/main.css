@@ -8003,6 +8003,15 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 2rem;
 }
 
+.courses_page_outter {
+    height: calc(100vh - 72px) !important;
+    overflow-y: auto;
+}
+
+.no-scroll {
+    overflow-y: hidden !important;
+}
+
 
 @keyframes bg-stretch-out {
     0% {
