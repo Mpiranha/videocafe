@@ -6908,10 +6908,10 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .nav-landing-outter {
     background-color: #2d125b;
-    padding: 2rem 2rem 0.6rem 1rem;
+    padding: 2rem 0.5rem 0.6rem 1rem;
     height: calc(100vh - 72px) !important;
     overflow-y: scroll;
-    min-width: 406px;
+    min-width: 387px;
 }
 
 .nav-landing-outter .navigation-box {
@@ -7975,6 +7975,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .course-video-page-content .video-inner, .course-video-page-content .video-outter {
     height: 100%;
+    aspect-ratio: unset;
 } 
 
 .course-video-page-content .playlist_wrap::-webkit-scrollbar {
