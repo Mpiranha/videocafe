@@ -1870,7 +1870,7 @@
 .vc-btn-add-project {
     background-color: #583381;
     color: #fff !important;
-    font-size: 0.75rem;
+    font-size: 1rem;
     padding: 0.4rem 0.7rem 0.4rem 1rem;
 }
 
@@ -2111,7 +2111,7 @@
 
 #swap-modal .modal-content .title {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .modal-content label {
@@ -4296,7 +4296,7 @@ input.clr-color {
 }
 
 .table-engagement tbody {
-    background-color: #d840e5;
+    /* background-color: #d840e5; */
 }
 
 .table-engagement tbody tr td {
@@ -6582,12 +6582,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .channel_nav_main .nav-item .nav-link {
     color: #fff;
-    padding: 0.1rem 0.6rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 0.2rem;
 }
 
-.channel_nav_main .nav-item.active .nav-link {
-    border: 2px solid #eb75ca;
+.channel_nav_main .nav-item .nav-link.active {
+    border: 2px solid #eb75ca !important;
+    background-color: transparent !important;
 }
 
 .featured_box {
@@ -7836,7 +7837,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     height: 80px !important;
 } */
 
-.video-embed .video-inner{
+.video-embed .video-inner {
     border-radius: 0 !important;
 }
 
@@ -7903,11 +7904,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
 }
 
-.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
     fill: #fff;
 }
 
-.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+.ql-snow.ql-toolbar button,
+.ql-snow .ql-toolbar button {
     height: 20px;
     width: 20px;
 }
@@ -7973,22 +7976,21 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 1rem !important;
 }
 
-.course-video-page-content .video-inner, .course-video-page-content .video-outter {
+.course-video-page-content .video-inner,
+.course-video-page-content .video-outter {
     height: 100%;
     aspect-ratio: unset;
-} 
+}
 
 .course-video-page-content .playlist_wrap::-webkit-scrollbar {
     background-color: #d840e5;
 }
 
-.course-video-page-content .playlist_wrap::-webkit-scrollbar-button {
-    
-}
+.course-video-page-content .playlist_wrap::-webkit-scrollbar-button {}
 
 .course-video-page-content .playlist_wrap::-webkit-scrollbar-thumb {
-   background-color: #fff;
-   border-radius: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 
 .course-page-extra-content {
@@ -8011,6 +8013,112 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .no-scroll {
     overflow-y: hidden !important;
+}
+
+.big_banner {
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.channel-inner {
+    margin: 150px auto 0 auto;
+    width: 70%;
+}
+
+.big_banner .btn-edit-cover {
+    position: absolute;
+    background-color: #fff;
+    right: 25px;
+    bottom: 25px;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 0.8rem;
+
+}
+
+.channel-header {
+    background-color: #f74bec;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -85px;
+    width: 70%;
+    padding: 0.5rem 10rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.channel-logo {
+    width: 100px;
+}
+
+.channel-detail {
+    display: flex;
+    align-items: center;
+}
+
+.channel-detail .channel-name {
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.channel-action {
+    margin-left: auto;
+}
+
+.channel-action .btn {
+    background: linear-gradient(to right, #7d32e1, #517be1);
+    color: #fff;
+    width: 185px;
+    border-radius: 0.5rem;
+}
+
+.channel-action .btn:active {
+    background: linear-gradient(to right, #7d32e1, #517be1) !important;
+}
+
+.btn-subscribe {
+    margin-right: 1rem;
+}
+
+.btn-subscribe img {
+    margin-right: 1rem;
+}
+
+.channel-about-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+}
+
+.channel-about-head.about-head {
+    border-bottom: 1px solid #f74bec;
+}
+
+.channel-about-head .title{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.btn-edit-about {
+    background-color: #f74bec;
+    color: #fff;
+    border-radius: 0.3rem;
+    padding: 0.35rem 0.7rem;
+}
+
+.btn-edit-about img {
+    width: 0.9rem;
 }
 
 

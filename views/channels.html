@@ -52,10 +52,38 @@
 
             </div>
             <div class="content-body content-body-video">
-                <div class="container-fluid">
-                    <div class="big_banner">
+                <div class="big_banner" style="background-image: url('../assets/images/wedding.jpg');">
+                    <button class="btn btn-edit-cover">
+                        Edit cover
+                    </button>
 
+                    <div class="channel-header">
+                        <div class="channel-detail">
+                            <img class="channel-logo" src="../assets/images/tool-test-image.png" alt="channel logo">
+
+                            <div class="channel-name">
+                                The Channel
+                            </div>
+                        </div>
+
+                        <div class="channel-action">
+                            <button class="btn btn-subscribe">
+                                <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/remain icons and illustrators/users-alt.svg"
+                                    alt="subscribers icon">
+                                Subscribe
+
+                                <span class="ml-4">0</span>
+
+                            </button>
+
+                            <button data-toggle="modal" data-target="#swap-modal" class="btn btn-edit-contact">
+                                Edit contact info
+                            </button>
+                        </div>
                     </div>
+                </div>
+                <div class="channel-inner">
+
 
                     <div class="channel_nav">
                         <nav class="navbar navbar-expand-sm navbar-dark channel_nav_main">
@@ -66,20 +94,26 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <ul class="nav nav-pills navbar-nav mr-auto mt-2 mt-lg-0" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                            href="#pills-home" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Home <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Videos</a>
+                                        <a class="nav-link" id="pills-videos-nav" data-toggle="pill"
+                                            href="#pills-videos" role="tab" aria-controls="pills-videos"
+                                            aria-selected="false">Videos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Playlist</a>
+                                        <a class="nav-link" id="pills-playlist-tab" data-toggle="pill"
+                                            href="#pills-playlist" role="tab" aria-controls="pills-playlist"
+                                            aria-selected="false">Playlist</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
+                                        <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#pills-about"
+                                            role="tab" aria-controls="pills-about" aria-selected="false">About</a>
                                     </li>
-
                                 </ul>
                                 <form class="form-inline my-2 my-lg-0">
                                     <div class="custom-search-form">
@@ -94,77 +128,363 @@
                         </nav>
                     </div>
 
-                    <div class="featured_box">
-                        <div class="d-flex align-items-center justify-content-between px-2">
-                            <h1 class="title">Featured</h1>
-                            <a class="channel_view_all" href="#">View all</a>
-                        </div>
-                        <div class="featured_content">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
+
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-default-tab">
+
+                            <div class="featured_box">
+                                <div class="d-flex align-items-center justify-content-between px-2">
+                                    <h1 class="title">Featured</h1>
+                                    <a class="channel_view_all" href="#">View all</a>
                                 </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
+                                <div class="featured_content">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
+
+                            </div>
+
+                            <div class="featured_box">
+                                <div class="d-flex align-items-center justify-content-between px-2">
+                                    <h1 class="title">Featured</h1>
+                                    <a class="channel_view_all" href="#">View all</a>
                                 </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
+                                <div class="featured_content">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="featured_preview_link" href="#">
+                                                <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
+                                                    alt="featured content">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="pills-videos" role="tabpanel" aria-labelledby="pills-videos-tab">
+                            <div class="d-flex mb-3 px-2">
+                                <div class="sc-market-select mr-4">
+                                    <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
+                                    <select>
+                                        <option value="0">Sort by date</option>
+                                        <option value="1">Sort by title</option>
+                                        <option value="2">Yesterday</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="dropdown mr-3">
+                                    <a class="btn vc-btn-add-project dropdown-toggle" data-target=".project-drop-down"
+                                        type="button" aria-haspopup="true" aria-expanded="false">
+                                        Add to Channel
+                                    </a>
+                                    <div class="dropdown-menu project-drop-down" aria-labelledby="triggerId">
+                                        <a class="dropdown-item" href="#">
+                                            <label class="mr-2">
+                                                <input type="checkbox">
+                                            </label>
+                                            Popular
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <label class="mr-2">
+                                                <input type="checkbox">
+                                            </label>
+                                            Recent
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-submit">Save</button>
+
+
+                            </div>
+                            <div class="featured_box">
+
+                                <div class="featured_content">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-playlist" role="tabpanel"
+                            aria-labelledby="pills-playlist-tab">
+
+                            <div class="d-flex mb-3 px-2">
+                                <div class="sc-market-select mr-4">
+                                    <img class="sort-icon" src="../assets/icons/sort by.svg" alt="">
+                                    <select>
+                                        <option value="0">Sort by date</option>
+                                        <option value="1">Sort by title</option>
+                                        <option value="2">Yesterday</option>
+
+                                    </select>
+                                </div>
+
+
+                            </div>
+                            <div class="featured_box">
+
+                                <div class="featured_content">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="uploaded-box">
+                                                <div class="media--box">
+                                                    <video
+                                                        src="../assets/video/y2mate.com - Paw Paw Now In Charge Of His Fathers Shop  Very Funny  Nigerian Comedy Skits _480p.mp4"></video>
+                                                </div>
+                                                <div class="media-desc">
+
+                                                    <div class="title">
+                                                        Screenrecording20210830at2am
+                                                    </div>
+
+                                                    <div class="box-actions">
+                                                        <button class="btn btn-add-to no-shadow">
+                                                            <img src="../assets/icons/newones/icons/views.svg"
+                                                                alt="view icon">
+                                                            10K
+                                                        </button>
+                                                        <div class="btn btn-del no-shadow" data-toggle="modal"
+                                                            data-target="#delete-modal">
+                                                            <img src="../assets/icons/newones/NEW ICON vIDEO CLAWD4/calendar-lines-pen.svg"
+                                                                alt="calendar icon">
+                                                            2020-05-24 05:23AM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                            <div class="channel-about-head about-head">
+                                <h1 class="title">
+                                    About info
+                                </h1>
+
+                                <button class="btn btn-edit-about">
+                                    <img class="mr-1" src="../assets/icons/edit icon.svg" alt="edit icon">
+                                    About info
+                                </button>
+                            </div>
+
+                            
+
+                            <div class="channel-about-head">
+                                <h1 class="title">
+                                    Contact
+                                </h1>
+
+                                <button class="btn btn-edit-about">
+                                    <img class="mr-1" src="../assets/icons/edit icon.svg" alt="edit icon">
+                                    Contact info
+                                </button>
+                            </div>
+
+
+                        </div>
+
 
                     </div>
 
-                    <div class="featured_box">
-                        <div class="d-flex align-items-center justify-content-between px-2">
-                            <h1 class="title">Featured</h1>
-                            <a class="channel_view_all" href="#">View all</a>
-                        </div>
-                        <div class="featured_content">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a class="featured_preview_link" href="#">
-                                        <img class="featured_preview_img" src="../assets/images/arrt-love.jpg"
-                                            alt="featured content">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
 
 
 
@@ -183,6 +503,72 @@
 
 
 
+    </div>
+
+
+    <div class="modal fade invite-team-modal" id="swap-modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="d-flex justify-content-between mb-4">
+                    <h1 class="title">
+                        Edit contact info
+                    </h1>
+                    <button data-dismiss="modal" class="btn btn-close-modal no-shadow">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label>Website</label>
+
+                    <input type="url" class="form-control vc-form-input">
+
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+
+                    <input type="email" class="form-control vc-form-input">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="source-video">Phone Number</label>
+
+                    <input type="number" class="form-control vc-form-input">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="source-video">Facebook</label>
+
+                    <input type="url" class="form-control vc-form-input">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="source-video">Instagram</label>
+
+                    <input type="url" class="form-control vc-form-input">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="source-video">Twitter</label>
+
+                    <input type="url" class="form-control vc-form-input">
+
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                    <button data-dismiss="modal" class="btn btn-submit mr-3">
+                        Cancel
+                    </button>
+                    <button class="btn btn-submit">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../assets/js/jquery/jquery-3.5.1.min.js"></script>
