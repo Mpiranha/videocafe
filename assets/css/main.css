@@ -8101,9 +8101,9 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.8rem 1rem;
 }
 
-.channel-about-head.about-head {
+/* .channel-about-head.about-head {
     border-bottom: 1px solid #f74bec;
-}
+} */
 
 .channel-about-head .title{
     color: #fff;
@@ -8119,6 +8119,41 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .btn-edit-about img {
     width: 0.9rem;
+}
+
+.about-box {
+    background-color: #f74bec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    border-radius: 1rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.about-box:hover {
+    text-decoration: none;
+}
+
+.about-box .about-icon {
+    width: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-box .text {
+    color: #fff;
+}
+
+.modal-about-info .modal-content {
+    background-color: var(--color-primary);
+    padding: 1rem;
+}
+
+.modal-about-info .title {
+    color: #fff;
 }
 
 
