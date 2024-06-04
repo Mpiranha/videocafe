@@ -399,7 +399,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                        <div class="col-6 drag">
                             <div class="video-wrap-outter" id="vid-1" draggable="true" ondragstart="onDragStart(event)">
                                 <div class="form-check pl-0">
                                     <label class="custom-check-label">
@@ -542,7 +542,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                        <div class="col-6 drag">
                             <div class="video-wrap-outter" id="vid-2" draggable="true" ondragstart="onDragStart(event)">
                                 <div class=" form-check pl-0">
                                     <label class="custom-check-label">
@@ -891,7 +891,7 @@
         //         .clearData();
         // }
 
-        var columns = document.querySelectorAll('.card');
+        var columns = document.querySelectorAll('.drag');
         var draggingClass = 'dragging';
         var dragSource;
 
