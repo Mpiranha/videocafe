@@ -480,10 +480,16 @@
 
                                 <div class="channels_items_box_inner">
                                     <div class="form-group d-flex align-items-center pl-5">
-                                        <label for="my-input">Channel Name</label>
-                                        <input id="my-input"
+                                        <label for="my-input">Channel visibility</label>
+                                        <!-- <input id="my-input"
                                             class="form-control vc-form-input channel_name_input no-shadow" type="text"
-                                            name="" placeholder="">
+                                            name="" placeholder=""> -->
+                                        <select title="channel visibility" class="form-control vc-form-input channel_name_input no-shadow" name="" id="">
+                                            <option>Public (Anyone can visit my channel)</option>
+                                            <option>Keep private (Only channel admin can access)</option>
+                                            
+                                        </select>
+
                                     </div>
 
                                     <div class="form-group d-flex align-items-center pl-5">
@@ -500,7 +506,7 @@
                                         capture new lead
                                     </div>
 
-                                  
+
 
                                     <div class="form-check pl-5">
                                         <label class="custom-check-label mb-0">
@@ -508,7 +514,8 @@
                                                 value="select all">
                                             <span class="check-mark rounded"></span>
                                         </label>
-                                        <span class="label-text">Notify channel subscribers when i upload a new public video</span>
+                                        <span class="label-text">Notify channel subscribers when i upload a new public
+                                            video</span>
                                     </div>
 
                                     <div class="pl-5">
