@@ -8178,6 +8178,10 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 0.3rem;
 }
 
+.courses_page_outter .ql-editor {
+    white-space: unset !important;
+}
+
 
 
 
