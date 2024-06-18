@@ -9,7 +9,7 @@ const toolbarOptions = [
   [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
 
   // [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-  // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
 
   [{ color: [] }, { background: [] }], // dropdown with defaults from theme
   // [{ 'font': [] }],
@@ -49,6 +49,12 @@ quillSub.on("text-change", function () {
 
   $("#subheading-before-video").html(content);
 });
+
+quillSubAfter.on("text-change", function () {
+    const content = quillSubAfter.root.innerHTML;
+  
+    $("#subheading-after-video").html(content);
+  });
 
 $("#default-logo-switch").on("change", function () {
   if ($(this).is(":checked")) {

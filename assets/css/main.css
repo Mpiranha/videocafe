@@ -8182,6 +8182,10 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     white-space: unset !important;
 }
 
+.navigation-box .ql-editor {
+    word-break: break-all;
+}
+
 
 
 
