@@ -58,6 +58,22 @@ $("#default-logo-switch").on("change", function () {
   }
 });
 
+$("#disable-comment-switch").on("change", function () {
+  if ($(this).is(":checked")) {
+    $(".comment-section").css("display", "none");
+  } else {
+    $(".comment-section").css("display", "block");
+  }
+});
+
+$("#disable-related-switch").on("change", function () {
+  if ($(this).is(":checked")) {
+    $(".related-videos-section").css("display", "none");
+  } else {
+    $(".related-videos-section").css("display", "block");
+  }
+});
+
 $("#page-logo-upload").change(function () {
   readURL(this, ".default-logo");
 });
