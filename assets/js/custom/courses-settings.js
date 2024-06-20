@@ -51,10 +51,10 @@ quillSub.on("text-change", function () {
 });
 
 quillSubAfter.on("text-change", function () {
-    const content = quillSubAfter.root.innerHTML;
-  
-    $("#subheading-after-video").html(content);
-  });
+  const content = quillSubAfter.root.innerHTML;
+
+  $("#subheading-after-video").html(content);
+});
 
 $("#default-logo-switch").on("change", function () {
   if ($(this).is(":checked")) {
@@ -95,6 +95,37 @@ var links = [
   },
 ];
 
+var buttonList = [
+  // {
+  //   name: "default link",
+  //   link: "http://www.default.com",
+  //   fontSize: "16",
+  //   backgroundColor: "#000000",
+  //   position: "left",
+  // },
+  // {
+  //   name: "default link 2",
+  //   link: "http://www.default.com",
+  //   fontSize: "35",
+  //   backgroundColor: "#eeeeee",
+  //   position: "right",
+  // },
+  // {
+  //   name: "default link 2",
+  //   link: "http://www.default.com",
+  //   fontSize: "25",
+  //   backgroundColor: "#F20D0D",
+  //   position: "center",
+  // },
+  // {
+  //   name: "default link 3",
+  //   link: "http://www.defaulter.com",
+  //   fontSize: "40",
+  //   backgroundColor: "#F20D0D",
+  //   position: "left",
+  // },
+];
+
 //populate navbar
 links.forEach((link, indx) => {
   $("#navigation-custom").append(
@@ -125,6 +156,118 @@ links.forEach((link, indx) => {
   );
 });
 
+buttonList.forEach((butt, indx) => {
+  $(".buttons-after-video-list").append(
+    '<div class="button-after-video-wrap mb-3" style="display: flex; justify-content: ' +
+      butt.position +
+      ';">' +
+      '<a class="btn" href="' +
+      butt.link +
+      '"' +
+      'style="background-color: ' +
+      butt.backgroundColor +
+      ";color: #ffffff; font-size: " +
+      butt.fontSize +
+      'px;">' +
+      butt.name +
+      "</a>" +
+      "</div>"
+  );
+
+  $(".buttons-after-video-list-settings").append(
+    '<div class="nav_link_set_item">' +
+      '<input oninput="storeButton(event, ' +
+      indx +
+      ')" value="' +
+      butt.name +
+      '" type="text"' +
+      'class="form-control vc-form-input mr-2">' +
+      '<input oninput="storeButton(event, ' +
+      indx +
+      ')" value="' +
+      butt.backgroundColor +
+      '" type="color"' +
+      'class="form-control vc-form-input color-picker">' +
+      "</div>" +
+      '<div class="form-group">' +
+      '<input type="url" name="" id="" class="form-control vc-form-input"' +
+      'placeholder="http://" oninput="storeButton(event, ' +
+      indx +
+      ')" value="' +
+      butt.link +
+      '">' +
+      "</div>" +
+      '<div class="nav_link_set_item align-items-center">' +
+      '<label for="" class="mr-2">Font Size</label>' +
+      '<input oninput="storeButton(event, ' +
+      indx +
+      ')" value="' +
+      butt.fontSize +
+      '" type="number"' +
+      'class="form-control vc-form-input man-width">' +
+      "</div>" +
+      '<div class="nav_link_set_item">' +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      indx +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      indx +
+      ')" value="left" ' +
+      (butt.position == "left" ? "checked" : "") +
+      ">" +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Left</label>' +
+      "</div>" +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      indx +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      indx +
+      ')" value="center" ' +
+      (butt.position == "center" ? "checked" : "") +
+      ">" +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Center</label>' +
+      "</div>" +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      indx +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      indx +
+      ')" value="right" ' +
+      (butt.position == "right" ? "checked" : "") +
+      ">" +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Right</label>' +
+      "</div>" +
+      '<div class="d-flex">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      indx +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      indx +
+      ')" value="between" ' +
+      (butt.position == "between" ? "checked" : "") +
+      ">" +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Between</label>' +
+      "</div>" +
+      "</div>" +
+      "</div>"
+  );
+});
+
 storeData = (event, index) => {
   const target = event.target;
   console.log(target.type);
@@ -133,6 +276,32 @@ storeData = (event, index) => {
   } else {
     links[index].link = target.value;
   }
+};
+
+storeButton = (event, index) => {
+  const target = event.target;
+
+  console.log(target.type);
+  // position: "left",
+  switch (target.type) {
+    case "text":
+      buttonList[index].name = target.value;
+      break;
+    case "color":
+      buttonList[index].backgroundColor = target.value;
+      break;
+    case "url":
+      buttonList[index].link = target.value;
+      break;
+    case "number":
+      buttonList[index].fontSize = target.value;
+      break;
+    default:
+      buttonList[index].position = target.value;
+      break;
+  }
+
+  console.log(buttonList);
 };
 
 $(".btn-addmore-link").on("click", () => {
@@ -163,8 +332,102 @@ $(".btn-addmore-link").on("click", () => {
   console.log(links);
 });
 
+$(".btn-add-more-button").on("click", () => {
+  buttonList.push({
+    name: "Button-" + (buttonList.length + 1),
+    link: "http://",
+    fontSize: "35",
+    backgroundColor: "#000000",
+    position: "left",
+  });
+
+  $(".buttons-after-video-list-settings").append(
+    // main
+    '<div class="nav_link_set_item">' +
+      '<input oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="Button-' +
+      buttonList.length +
+      '" type="text"' +
+      'class="form-control vc-form-input mr-2">' +
+      '<input oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="#000000" type="color"' +
+      'class="form-control vc-form-input color-picker">' +
+      "</div>" +
+      '<div class="form-group">' +
+      '<input type="url" name="" id="" class="form-control vc-form-input"' +
+      'placeholder="http://" oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="http://">' +
+      "</div>" +
+      '<div class="nav_link_set_item align-items-center">' +
+      '<label for="" class="mr-2">Font Size</label>' +
+      '<input oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="35" type="number"' +
+      'class="form-control vc-form-input man-width">' +
+      "</div>" +
+      '<div class="nav_link_set_item">' +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      (buttonList.length - 1) +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="left" checked>' +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Left</label>' +
+      "</div>" +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      (buttonList.length - 1) +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="center">' +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Center</label>' +
+      "</div>" +
+      '<div class="d-flex mr-2">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      (buttonList.length - 1) +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="right">' +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Right</label>' +
+      "</div>" +
+      '<div class="d-flex">' +
+      '<label class="custom-check-label mr-2">' +
+      '<input type="radio" name="btn-' +
+      (buttonList.length - 1) +
+      '-pos" class="form-check-input" ' +
+      'id="" oninput="storeButton(event, ' +
+      (buttonList.length - 1) +
+      ')" value="between">' +
+      '<span class="check-mark rounded"></span>' +
+      "</label>" +
+      '<label for="">Between</label>' +
+      "</div>" +
+      "</div>" +
+      "</div>"
+  );
+});
+
 $(".btn-preview-nav").on("click", () => {
   populateNavbar();
+});
+
+$(".btn-preview-btns").on("click", () => {
+  populateButtons();
 });
 
 $("#remove-navbar").on("change", function () {
@@ -204,8 +467,36 @@ function populateNavbar() {
   });
 }
 
+function populateButtons() {
+  removeAllButtons();
+  console.log(buttonList);
+  //populate buttons
+  buttonList.forEach((butt) => {
+    $(".buttons-after-video-list").append(
+      '<div class="button-after-video-wrap mb-3" style="display: flex; justify-content: ' +
+        butt.position +
+        ';">' +
+        '<a class="btn" href="' +
+        butt.link +
+        '"' +
+        'style="background-color: ' +
+        butt.backgroundColor +
+        ";color: #ffffff; font-size: " +
+        butt.fontSize +
+        'px;">' +
+        butt.name +
+        "</a>" +
+        "</div>"
+    );
+  });
+}
+
 function removeAllNavbar() {
   $("#navigation-custom").html("");
+}
+
+function removeAllButtons() {
+  $(".buttons-after-video-list").html("");
 }
 
 function clearAllLink() {

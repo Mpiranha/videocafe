@@ -8186,6 +8186,10 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     word-break: break-all;
 }
 
+.button-after-video-wrap button {
+    border-radius: 0.5rem;
+}
+
 
 
 
