@@ -81,7 +81,7 @@ $("#disable-related-switch").on("change", function () {
 });
 
 $("#page-logo-upload").change(function () {
-  readURL(this, ".default-logo");
+  readURLLogo(this, ".default-logo");
 });
 
 var links = [
@@ -528,10 +528,11 @@ toggleOptions = (event) => {
   switch (value) {
     case "image":
       imageWrap.removeClass("d-none");
+      $(".courses_page_outter").css("backgroundColor", "unset");
       break;
     default:
       colorWrap.removeClass("d-none");
-      $('.courses_page_outter').css('backgroundImage', 'unset');
+      $(".courses_page_outter").css("backgroundImage", "unset");
       break;
   }
 };
@@ -544,9 +545,24 @@ function readURL(input, target) {
 
     reader.onload = function (e) {
       //$(target).attr("src", e.target.result);
-     // console.log(target.css("backgroundImage"));
+      // console.log(target.css("backgroundImage"));
 
       target.css("backgroundImage", "url(" + e.target.result + ")");
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function readURLLogo(input, target, self) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      if (self) {
+        $(self).attr("src", e.target.result);
+      }
+      $(target).attr("src", e.target.result);
     };
 
     reader.readAsDataURL(input.files[0]);
