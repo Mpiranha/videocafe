@@ -267,11 +267,12 @@
                                     </li>
                                     <li class="collapse" id="collapse-roll-action">
                                         <div class="d-flex justify-content-end mb-2">
-                                            <button class="btn btn-submit btn-submit-sm btn-add-more-button">Add more</button>
+                                            <button class="btn btn-submit btn-submit-sm btn-add-more-button">Add
+                                                more</button>
                                         </div>
 
                                         <div class="buttons-after-video-list-settings">
-                                            
+
                                         </div>
 
                                         <!-- <div class="nav_link_set_item">
@@ -331,7 +332,8 @@
                                         </div> -->
 
                                         <div class="px-2 mb-3">
-                                            <button class="btn btn-submit btn-preview-btns btn-block py-2">Preview</button>
+                                            <button
+                                                class="btn btn-submit btn-preview-btns btn-block py-2">Preview</button>
                                         </div>
 
 
@@ -397,18 +399,27 @@
                                             <div class="d-flex">
                                                 <label class="custom-check-label mr-2">
                                                     <input type="radio" name="btn-pos" class="form-check-input" name=""
-                                                        id="" value="left" checked>
+                                                        id="" value="image" onchange="toggleOptions(event)">
                                                     <span class="check-mark rounded"></span>
                                                 </label>
                                                 <label for="">Image</label>
                                             </div>
+                                            <div class="form-group d-none" id="bg-image-upload-wrap">
+                                                <label for="">Select Image</label>
+                                                <input type="file" class="form-control-file" name="" id="bg-image-upload"
+                                                    placeholder="">
+                                            </div>
                                             <div class="d-flex">
                                                 <label class="custom-check-label mr-2">
                                                     <input type="radio" name="btn-pos" class="form-check-input" name=""
-                                                        id="" value="center">
+                                                        id="" value="#ececef00" checked onchange="toggleOptions(event)">
                                                     <span class="check-mark rounded"></span>
                                                 </label>
                                                 <label for="">Color</label>
+                                            </div>
+                                            <div class="form-group" id="bg-color-change-wrap">
+                                                <input value="#eee" type="color" id="bg-color-change"
+                                                    class="form-control vc-form-input color-picker">
                                             </div>
 
                                         </div>

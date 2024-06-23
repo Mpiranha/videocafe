@@ -437,6 +437,16 @@ $("#remove-navbar").on("change", function () {
   }
 });
 
+$("#bg-color-change").on("input", () => {
+  $(".courses_page_outter").css("backgroundColor", $("#bg-color-change").val());
+});
+
+$("#bg-image-upload").on("change", () => {
+  //console.log(readURL($("#bg-image-upload")));
+  readURL($("#bg-image-upload").get(0), $(".courses_page_outter"));
+  //$(".courses_page_outter").css("backgroundColor", $("#bg-image-upload").val());
+});
+
 //populate sidemenu
 // links.forEach((link) => {
 //   $(".nav_link_set_wrap").append(
@@ -506,15 +516,37 @@ function clearAllLink() {
   $(".nav_link_set_wrap").html("");
 }
 
-function readURL(input, target, self) {
+toggleOptions = (event) => {
+  var imageWrap = $("#bg-image-upload-wrap");
+  var colorWrap = $("#bg-color-change-wrap");
+  var target = event.target;
+  var value = target.value;
+
+  imageWrap.addClass("d-none");
+  colorWrap.addClass("d-none");
+
+  switch (value) {
+    case "image":
+      imageWrap.removeClass("d-none");
+      break;
+    default:
+      colorWrap.removeClass("d-none");
+      $('.courses_page_outter').css('backgroundImage', 'unset');
+      break;
+  }
+};
+
+function readURL(input, target) {
+  console.log(input);
+  console.log(target);
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      if (self) {
-        $(self).attr("src", e.target.result);
-      }
-      $(target).attr("src", e.target.result);
+      //$(target).attr("src", e.target.result);
+     // console.log(target.css("backgroundImage"));
+
+      target.css("backgroundImage", "url(" + e.target.result + ")");
     };
 
     reader.readAsDataURL(input.files[0]);
