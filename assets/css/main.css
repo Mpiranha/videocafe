@@ -4841,7 +4841,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
+    background: #d840e5;
 }
 
 input[type=range]::-moz-range-track {
@@ -8220,13 +8220,121 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 2rem;
 }
 
-.channel-link ~ .title {
+.channel-link~.title {
     margin-bottom: 0.8rem;
 }
 
 .channel-link:hover {
     color: #fff;
     text-decoration: none;
+}
+
+.subtitles-menu {
+    display: none;
+    position: absolute;
+    bottom: 116%;
+    right: 20px;
+    background: var(--color-primary);
+    list-style-type: none;
+    margin: 0;
+    width: 100px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.subtitles-menu li {
+    padding: 0;
+    text-align: center;
+}
+
+.subtitles-menu li button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    width: 90%;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.subtitles-button[data-state="active"] {
+    border: 1px solid #fff;
+}
+
+::cue {
+    color: #ccc;
+    font-size: 20px;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.comment-item {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.comment-item:not(:last-child) {
+    border-bottom: 2px solid #ab34be;
+}
+
+.comment-item .video_output_user_icon {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+.comment-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.comment-inner .comment-top {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.comment-inner .comment-top *:not(span) {
+    margin-right: 1rem;
+}
+
+.comment-top .time-stamp-value {
+    font-size: 0.85rem;
+    background-color: #f74bec;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.comment-inner .comment-text {
+    padding: 1rem;
+    color: #fff;
+}
+
+.comment-top .comment-time {
+    font-size: 0.85rem;
+}
+
+.comment-top .reply-btn {
+    text-decoration: none;
+    color: #f74bec;
+    font-size: 0.85rem;
+    background-color: transparent;
+}
+
+.btn-delete-comment {
+    background-color: transparent;
+    color: #fff;
+    margin-left: auto;
+    font-size: 0.85rem;
+    transition: all 0.5s;
+}
+
+.btn-delete-comment:hover {
+    color: red;
+}
+
+.comment-item-sub {
+    padding-left: 5rem;
 }
 
 

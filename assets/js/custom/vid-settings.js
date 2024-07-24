@@ -346,33 +346,9 @@ videoContainer.each(function () {
     video.volume = this.value / 100;
   });
 
-  $(document).on("click", function (event) {
-    // event.stopPropagation();
-    // if (event.target == volumeControlContainer.get(0)) {
-    //     return
-    // }
-    // $('.close-click-outside').removeClass('show')
-    // $('#vid-volume-controls')
-    // console.log(event.currentTarget)
-    // console.log("event");
-    // console.log(event.target)
-    // console.log("target");
-    // console.log(volumeControlContainer.get(0));
-  });
 
-  // Close the dropdown menu if the user clicks outside of it
-  window.addEventListener("click", function (event) {
-    // if (!event.target.matches('.close-click-outside')) {
-    //     var dropdowns = document.getElementsByClassName("close-click-outside");
-    //     var i;
-    //     for (i = 0; i < dropdowns.length; i++) {
-    //         var openDropdown = dropdowns[i];
-    //         if (openDropdown.classList.contains('show')) {
-    //             openDropdown.classList.remove('show');
-    //         }
-    //     }
-    // }
-  });
+
+
 
   // bigPlay.addEventListener("click", function (e) {
   //   if (video.paused || video.ended) {
@@ -432,21 +408,91 @@ videoContainer.each(function () {
     rafVid = requestAnimationFrame(whilePlayingVideo);
   };
 
+  // Subttitle
+  const subtitles = document.getElementById("subtitles");
+  const subtitleMenuButtons = [];
+  let subtitlesMenu;
+  for (let i = 0; i < video.textTracks.length; i++) {
+    video.textTracks[i].mode = "hidden";
+  }
+
+  if (video.textTracks) {
+    const df = document.createDocumentFragment();
+    subtitlesMenu = df.appendChild(document.createElement("ul"));
+    subtitlesMenu.className = "subtitles-menu close-click-outside";
+    subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
+    for (let i = 0; i < video.textTracks.length; i++) {
+      subtitlesMenu.appendChild(
+        createMenuItem(
+          `subtitles-${video.textTracks[i].language}`,
+          video.textTracks[i].language,
+          video.textTracks[i].label
+        )
+      );
+    }
+
+    $(".vid-controls").get(0).appendChild(subtitlesMenu);
+  }
+
+  function createMenuItem(id, lang, label) {
+    const listItem = document.createElement("li");
+    const button = listItem.appendChild(document.createElement("button"));
+    button.setAttribute("id", id);
+    button.className = "subtitles-button";
+    if (lang.length > 0) button.setAttribute("lang", lang);
+    button.value = label;
+    button.setAttribute("data-state", "inactive");
+    button.appendChild(document.createTextNode(label));
+    button.addEventListener("click", (e) => {
+      // Set all buttons to inactive
+      subtitleMenuButtons.forEach((button) => {
+        button.setAttribute("data-state", "inactive");
+      });
+
+      // Find the language to activate
+      const lang = button.getAttribute("lang");
+      for (let i = 0; i < video.textTracks.length; i++) {
+        // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+        console.log(video.textTracks[i]);
+        if (video.textTracks[i].language === lang) {
+          video.textTracks[i].mode = "showing";
+          button.setAttribute("data-state", "active");
+        } else {
+          video.textTracks[i].mode = "hidden";
+        }
+      }
+      subtitlesMenu.style.display = "none";
+    });
+    subtitleMenuButtons.push(button);
+    return listItem;
+  }
+
+  subtitles.addEventListener("click", (e) => {
+    console.log(subtitlesMenu);
+    if (subtitlesMenu) {
+      // subtitlesMenu.style.display =
+      //   subtitlesMenu.style.display === "block" ? "none" : "block";
+      subtitlesMenu.classList.toggle("show-visible");
+    }
+  });
+
+  // ENd of subtitle
+
   $("#reset-player-color").click(function () {
     if ($(this).is(":checked")) {
       if ($(".video-settings-box").hasClass("light-mode")) {
         $("#skin-color-input").val("#ffffff4d");
         $(".clr-field").css("color", "#ffffff4d");
-        $("#skin-color-input").trigger("change");
+        $("#skin-color-input").trigger("input");
       } else {
         $("#skin-color-input").val("#2c0640");
         $(".clr-field").css("color", "#2c0640");
-        $("#skin-color-input").trigger("change");
+        $("#skin-color-input").trigger("input");
       }
     }
   });
 
-  $("#skin-color-input").on("change", function () {
+  $("#skin-color-input").on("input", function () {
     $(".vid-controls").css("background-color", $(this).val());
   });
 
@@ -581,7 +627,7 @@ videoContainer.each(function () {
     }
   });
 
-  $("#play-color-input").on("change", function () {
+  $("#play-color-input").on("input", function () {
     $(".btn-play-select").css("color", $(this).val());
     $(".btn-play-settings").css("color", $(this).val());
   });
@@ -631,13 +677,13 @@ videoContainer.each(function () {
   });
 
   $(".add-btn-color-input").each(function () {
-    $(this).on("change", function () {
+    $(this).on("input", function () {
       $($(this).attr("data-target")).css("background", $(this).val());
     });
   });
 
   $(".add-btn-color-text-input").each(function () {
-    $(this).on("change", function () {
+    $(this).on("input", function () {
       $($(this).attr("data-target")).css("color", $(this).val());
     });
   });
@@ -981,11 +1027,11 @@ videoContainer.each(function () {
     $("#email-lead-btn").text($(this).val());
   });
 
-  $("#email-lead--btn-color-input").on("change", function () {
+  $("#email-lead--btn-color-input").on("input", function () {
     $("#email-lead-btn").css("background", $(this).val());
   });
 
-  $("#email-lead--btn-text-color-input").on("change", function () {
+  $("#email-lead--btn-text-color-input").on("input", function () {
     $("#email-lead-btn").css("color", $(this).val());
   });
 
@@ -1105,8 +1151,6 @@ videoContainer.each(function () {
       $(".btn-mirrorview-mode").css("display", "none");
     }
   });
-
-     
 
   // Theater Mode
 
@@ -1611,11 +1655,11 @@ videoContainer.each(function () {
     if ($(this).is(":checked")) {
       $(".video-settings-box").addClass("light-mode");
       $("#skin-color-input").val("#ffffff4d");
-      $("#skin-color-input").trigger("change");
+      $("#skin-color-input").trigger("input");
     } else {
       $(".video-settings-box").removeClass("light-mode");
       $("#skin-color-input").val("#2c064054");
-      $("#skin-color-input").trigger("change");
+      $("#skin-color-input").trigger("input");
     }
   });
 
@@ -1796,13 +1840,13 @@ videoContainer.each(function () {
       $($(this).attr("data-target")).css("color", $(this).val());
     });
     $(".add-btn-color-input").each(function () {
-      $(this).on("change", function () {
+      $(this).on("input", function () {
         $($(this).attr("data-target")).css("background", $(this).val());
       });
     });
 
     $(".add-btn-color-text-input").each(function () {
-      $(this).on("change", function () {
+      $(this).on("input", function () {
         $($(this).attr("data-target")).css("color", $(this).val());
       });
     });
@@ -1843,7 +1887,6 @@ videoContainer.each(function () {
     }
   });
 
- 
   function countdown(seconds) {
     let timer = seconds;
 
@@ -1851,7 +1894,7 @@ videoContainer.each(function () {
       $(".countdown-display").text(timer);
 
       if (timer === 0) {
-        $(".countdown_wrap").css("display", "none")
+        $(".countdown_wrap").css("display", "none");
         $($(".countdown-display").attr("data-target")).css("display", "block");
 
         // Replace the line above with the action you want to perform after the countdown
