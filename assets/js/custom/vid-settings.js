@@ -346,10 +346,6 @@ videoContainer.each(function () {
     video.volume = this.value / 100;
   });
 
-
-
-
-
   // bigPlay.addEventListener("click", function (e) {
   //   if (video.paused || video.ended) {
   //     video.play();
@@ -407,6 +403,154 @@ videoContainer.each(function () {
     // audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
     rafVid = requestAnimationFrame(whilePlayingVideo);
   };
+
+  // Airplay
+
+  // Detect if AirPlay is available
+  // Mac OS Safari 9+ only
+  if (window.WebKitPlaybackTargetAvailabilityEvent) {
+    video.addEventListener(
+      "webkitplaybacktargetavailabilitychanged",
+      function (event) {
+        switch (event.availability) {
+          case "available":
+            //  airPlay.style.display = "block";
+
+            $(".btn-airplay-mode").css("display", "inline-block");
+            break;
+
+          default:
+            // airPlay.style.display = "none";
+            $(".btn-airplay-mode").css("display", "none");
+        }
+
+        $(".btn-airplay-mode").on("click", function () {
+          video.webkitShowPlaybackTargetPicker();
+        });
+      }
+    );
+  } else {
+    $(".btn-airplay-mode").css("display", "none");
+  }
+
+  // End Airplay
+
+  // Chromecast
+
+  var session = null;
+
+  $(document).ready(function () {
+    var loadCastInterval = setInterval(function () {
+      if (chrome.cast.isAvailable) {
+        console.log("Cast has loaded.");
+        clearInterval(loadCastInterval);
+        initializeCastApi();
+      } else {
+        console.log("Unavailable");
+      }
+    }, 1000);
+  });
+
+  function initializeCastApi() {
+    var applicationID = chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID;
+    var sessionRequest = new chrome.cast.SessionRequest(applicationID);
+    var apiConfig = new chrome.cast.ApiConfig(
+      sessionRequest,
+      sessionListener,
+      receiverListener
+    );
+    chrome.cast.initialize(apiConfig, onInitSuccess, onInitError);
+  }
+
+  function sessionListener(e) {
+    session = e;
+    console.log("New session");
+    if (session.media.length != 0) {
+      console.log("Found " + session.media.length + " sessions.");
+    }
+  }
+
+  function receiverListener(e) {
+    if (e === "available") {
+      console.log("Chromecast was found on the network.");
+    } else {
+      console.log("There are no Chromecasts available.");
+    }
+  }
+
+  function onInitSuccess() {
+    console.log("Initialization succeeded");
+  }
+
+  function onInitError() {
+    console.log("Initialization failed");
+  }
+
+  $(".btn-chromecast-mode").click(function () {
+    launchApp();
+  });
+
+  function launchApp() {
+    console.log("Launching the Chromecast App...");
+    chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
+  }
+
+  function onRequestSessionSuccess(e) {
+    console.log("Successfully created session: " + e.sessionId);
+    session = e;
+  }
+
+  function onLaunchError() {
+    console.log("Error connecting to the Chromecast.");
+  }
+
+  function onRequestSessionSuccess(e) {
+    console.log("Successfully created session: " + e.sessionId);
+    session = e;
+    loadMedia();
+  }
+
+  function loadMedia() {
+    if (!session) {
+      console.log("No session.");
+      return;
+    }
+
+    var videoSrc = video.src;
+    var mediaInfo = new chrome.cast.media.MediaInfo(videoSrc);
+    mediaInfo.contentType = "video/mp4";
+
+    var request = new chrome.cast.media.LoadRequest(mediaInfo);
+    request.autoplay = true;
+
+    session.loadMedia(request, onLoadSuccess, onLoadError);
+  }
+
+  function onLoadSuccess() {
+    console.log("Successfully loaded video.");
+  }
+
+  function onLoadError() {
+    console.log("Failed to load video.");
+  }
+
+  $("#stop").click(function () {
+    stopApp();
+  });
+
+  function stopApp() {
+    session.stop(onStopAppSuccess, onStopAppError);
+  }
+
+  function onStopAppSuccess() {
+    console.log("Successfully stopped app.");
+  }
+
+  function onStopAppError() {
+    console.log("Error stopping app.");
+  }
+
+  // End of Chromecast
 
   // Subttitle
   const subtitles = document.getElementById("subtitles");
@@ -804,19 +948,19 @@ videoContainer.each(function () {
     }
   });
 
-  gifshot.createGIF(
-    {
-      video: ["example.mp4", "example.ogv"],
-    },
-    function (obj) {
-      if (!obj.error) {
-        var image = obj.image,
-          animatedImage = document.createElement("img");
-        animatedImage.src = image;
-        document.body.appendChild(animatedImage);
-      }
-    }
-  );
+  // gifshot.createGIF(
+  //   {
+  //     video: ["example.mp4", "example.ogv"],
+  //   },
+  //   function (obj) {
+  //     if (!obj.error) {
+  //       var image = obj.image,
+  //         animatedImage = document.createElement("img");
+  //       animatedImage.src = image;
+  //       document.body.appendChild(animatedImage);
+  //     }
+  //   }
+  // );
 
   if ($("#thumbnail-type-select").val() == "image") {
     $(".thumb-image-selected").css("display", "block");
