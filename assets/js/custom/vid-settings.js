@@ -622,6 +622,86 @@ videoContainer.each(function () {
 
   // ENd of subtitle
 
+  // VR 360
+
+  // create a scene
+  const scene = new THREE.Scene();
+
+  // create a perspective camera
+  // https://threejs.org/docs/#api/en/cameras/PerspectiveCamera
+  const width = 640;
+  const height = 480;
+  const camera = new THREE.PerspectiveCamera(75, width / height, 1, 100);
+  
+  // create a renderer
+  // https://threejs.org/docs/#api/en/renderers/WebGLRenderer
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(width, height);
+
+  // display the renderer
+  document.body.appendChild(renderer.domElement);
+ //videoContainer.appendChild(renderer.domElement);
+
+  // create a sphere geometry
+  // https://threejs.org/docs/#api/en/geometries/SphereGeometry
+  const geometry = new THREE.SphereGeometry(15, 32, 16);
+  
+  // create a VideoTexture
+  // create a video element and set attributes
+  const videoElement = document.createElement('video');
+  videoElement.src = "https://s.bepro11.com/vr-video-sample.mp4";
+  videoElement.loop = true;
+  videoElement.muted = true;
+  videoElement.playsInline = true;
+  videoElement.crossOrigin = "anonymous";
+  videoElement.play();
+  const texture = new THREE.VideoTexture(videoElement);
+
+  // create a material from the texture
+  const material = new THREE.MeshBasicMaterial({map: texture});
+  
+  // need to use back side - surface of the sphere is facing outside but we put the camera inside of the sphere
+  material.side = THREE.BackSide;
+
+  // create a mesh and add to the scene
+  const mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+
+  renderer.setAnimationLoop(() => renderer.render(scene, camera));
+
+  // zoom in / out
+  const clamp = (v, min, max) => Math.max(min, Math.min(v, max));
+  renderer.domElement.addEventListener('wheel', e => {
+      camera.fov = clamp(camera.fov + e.deltaY / 10, 10, 120);
+      // need to call this function after changing most of properties in PerspectiveCamera
+      camera.updateProjectionMatrix();
+  });
+
+  // rotate camera
+  let mouseDown = false;
+  renderer.domElement.addEventListener('mousedown', e => {
+      if (e.button === 0) mouseDown = true;
+  });
+
+  window.addEventListener('mouseup', e => {
+      if (e.button === 0) mouseDown = false;
+  });
+
+  window.addEventListener('mousemove', e => {
+      if (!mouseDown) return;
+
+      const {movementX, movementY} = e;
+
+      // rotateX: rotate vertically since x-axis is horizontal
+      const rotateX = movementY / 100;
+      const rotateY = movementX / 100;
+
+      camera.rotateX(rotateX);
+      camera.rotateY(rotateY);
+  });
+
+  // End of VR 360
+
   $("#reset-player-color").click(function () {
     if ($(this).is(":checked")) {
       if ($(".video-settings-box").hasClass("light-mode")) {
