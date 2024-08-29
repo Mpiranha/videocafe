@@ -629,8 +629,8 @@ videoContainer.each(function () {
 
   // create a perspective camera
   // https://threejs.org/docs/#api/en/cameras/PerspectiveCamera
-  const width = 640;
-  const height = 480;
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
   const camera = new THREE.PerspectiveCamera(75, width / height, 1, 100);
   
   // create a renderer
@@ -639,8 +639,9 @@ videoContainer.each(function () {
   renderer.setSize(width, height);
 
   // display the renderer
-  document.body.appendChild(renderer.domElement);
- //videoContainer.appendChild(renderer.domElement);
+  // document.body.appendChild(renderer.domElement);
+  // console.log(videoContainer);
+ container.appendChild(renderer.domElement);
 
   // create a sphere geometry
   // https://threejs.org/docs/#api/en/geometries/SphereGeometry
