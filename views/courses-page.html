@@ -102,13 +102,39 @@
                                         </div>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="nav-link" id="player-apperance-tab" data-toggle="collapse"
+                                            role="button" href="#collapse-apperance-thumb">
+                                            <div class="icon-nav-wrap">
+                                                <img src="../assets/icons/appearance icon.svg" alt="appearance icon">
+                                            </div>
+                                            Change Cover Photo
+                                            <div class="active-indicator">
+                                                <img src="../assets/icons/add icon.svg" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="collapse" id="collapse-apperance-thumb">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="">Upload Image</label>
+                                                    <input type="file" class="form-control-file" name=""
+                                                        id="page-logo-upload" placeholder=""
+                                                        aria-describedby="fileHelpId">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" id="pills-player-control-tab" data-toggle="collapse"
                                             href="#collapse-action" role="button">
                                             <div class="icon-nav-wrap">
                                                 <img src="../assets/icons/call to action icon.svg"
                                                     alt="appearance icon">
                                             </div>
-                                            Navbar items
+                                            Navbar Items
                                             <div class="active-indicator">
                                                 <img src="../assets/icons/add icon.svg" alt="">
                                             </div>
@@ -406,8 +432,8 @@
                                             </div>
                                             <div class="form-group d-none" id="bg-image-upload-wrap">
                                                 <label for="">Select Image</label>
-                                                <input type="file" class="form-control-file" name="" id="bg-image-upload"
-                                                    placeholder="">
+                                                <input type="file" class="form-control-file" name=""
+                                                    id="bg-image-upload" placeholder="">
                                             </div>
                                             <div class="d-flex">
                                                 <label class="custom-check-label mr-2">
@@ -447,12 +473,22 @@
                                     </li>
                                     <li class="collapse" id="collapse-enable-pwd">
 
+
+
                                         <div class="d-flex align-items-center">
                                             <label class="switch">
                                                 <input type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>
                                             <label class="ml-3" for="">Enable Password</label>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Password Label</label>
+                                                <textarea type="text" class="form-control vc-form-input" name="" id=""
+                                                    placeholder="password">Enter password to access courses</textarea>
+                                            </div>
                                         </div>
 
                                         <div class="col-12">
