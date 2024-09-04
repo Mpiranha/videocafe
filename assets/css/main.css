@@ -247,6 +247,7 @@
     flex-grow: 1;
     overflow-y: auto;
     background-color: #261148;
+    position: relative;
 }
 
 
@@ -1599,9 +1600,9 @@
 
 .helper-outter .desc-text {
     color: #fff;
-} {
-
 }
+
+    {}
 
 .help_video {
     /* height: 321px !important; */
@@ -5458,11 +5459,13 @@ input[type=range]:focus::-ms-fill-upper {
     display: none;
 }
 
-.video-passworded .form-group {
+.video-passworded .form-group,
+.page-passworded .form-group {
     max-width: 300px;
 }
 
-.video-passworded {
+.video-passworded,
+.page-passworded {
     position: absolute;
     top: 0;
     left: 0;
@@ -5476,7 +5479,8 @@ input[type=range]:focus::-ms-fill-upper {
     display: none;
 }
 
-.video-passworded label {
+.video-passworded label,
+.page-passworded label {
     color: #fff;
     font-size: 1.1rem;
     text-align: center;
@@ -5485,7 +5489,8 @@ input[type=range]:focus::-ms-fill-upper {
     word-break: break-all;
 }
 
-.video-passworded .custom-pwd-input {
+.video-passworded .custom-pwd-input,
+.page-passworded .custom-pwd-input {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -8349,6 +8354,21 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .comment-item-sub {
     padding-left: 5rem;
+}
+
+.page-passworded {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-passworded .form-group {
+    max-width: 500px;
+    width: 50%;
 }
 
 
