@@ -484,10 +484,12 @@
                                         <!-- <input id="my-input"
                                             class="form-control vc-form-input channel_name_input no-shadow" type="text"
                                             name="" placeholder=""> -->
-                                        <select title="channel visibility" class="form-control vc-form-input channel_name_input no-shadow" name="" id="">
+                                        <select title="channel visibility"
+                                            class="form-control vc-form-input channel_name_input no-shadow" name=""
+                                            id="">
                                             <option>Public (Anyone can visit my channel)</option>
                                             <option>Keep private (Only channel admin can access)</option>
-                                            
+
                                         </select>
 
                                     </div>
@@ -509,18 +511,111 @@
 
 
                                     <div class="form-check pl-5">
-                                        <label class="custom-check-label mb-0">
-                                            <input type="checkbox" class="form-check-input" name="" id=""
-                                                value="select all">
-                                            <span class="check-mark rounded"></span>
+                                        <label class="switch mb-0">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
                                         </label>
                                         <span class="label-text">Notify channel subscribers when i upload a new public
                                             video</span>
                                     </div>
 
+                                    <div class="form-check pl-5">
+                                        <label class="switch mb-0">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="label-text">Show emails captured from channel</span>
+                                    </div>
+
+                                    <div class="form-check pl-5">
+                                        <label class="switch mb-0">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="label-text">Automatically tag and add subscribers to email
+                                            list</span>
+                                    </div>
+
+                                    <div class="form-group pl-5 w-75">
+                                        <label for="">Email List</label>
+                                        <select class="form-control vc-form-input" name="" id="">
+                                            <option selected>List one</option>
+                                            <option>List 2</option>
+                                            <option>List three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pl-5 w-75">
+                                        <label for="">Tags</label>
+                                        <div class="tag-input-container">
+                                            <ul id="tags"></ul>
+                                            <input type="text" id="tag-input" class="vc-form-input" placeholder="Add a tag and press Enter">
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            const tagInput = document.getElementById("tag-input");
+                                            const tagList = document.getElementById("tags");
+                                            let tags = [];
+
+                                            // Function to render the tags in the UI
+                                            function renderTags() {
+                                                tagList.innerHTML = "";
+                                                tags.forEach((tag, index) => {
+                                                    const li = document.createElement("li");
+                                                    li.textContent = tag;
+
+                                                    const closeBtn = document.createElement("span");
+                                                    closeBtn.textContent = "x";
+                                                    closeBtn.classList.add("close");
+                                                    closeBtn.setAttribute("data-index", index);
+                                                    li.appendChild(closeBtn);
+
+                                                    tagList.appendChild(li);
+                                                });
+                                            }
+
+                                            // Function to add a tag
+                                            function addTag(tag) {
+                                                if (tag && !tags.includes(tag)) {
+                                                    tags.push(tag);
+                                                    renderTags();
+                                                }
+                                            }
+
+                                            // Function to remove a tag
+                                            function removeTag(index) {
+                                                tags.splice(index, 1);
+                                                renderTags();
+                                            }
+
+                                            // Event listener for adding tags
+                                            tagInput.addEventListener("keydown", function (e) {
+                                                if (e.key === "Enter") {
+                                                    e.preventDefault();
+                                                    const tag = tagInput.value.trim();
+                                                    addTag(tag);
+                                                    tagInput.value = ""; // Clear input after adding tag
+                                                }
+                                            });
+
+                                            // Event listener for removing tags
+                                            tagList.addEventListener("click", function (e) {
+                                                if (e.target.classList.contains("close")) {
+                                                    const index = e.target.getAttribute("data-index");
+                                                    removeTag(index);
+                                                }
+                                            });
+                                        });
+                                    </script>
+
+
+
+
                                     <div class="pl-5">
                                         <button class="btn btn-login py-2">Save</button>
                                     </div>
+
 
 
 
