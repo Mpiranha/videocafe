@@ -7967,7 +7967,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .course-page-header .description {
-    max-width: 60%;
+    /* max-width: 60%; */
 }
 
 .course-video-page-content {
@@ -8410,6 +8410,15 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     flex-grow: 1;
     padding: 5px;
     margin: 2px;
+}
+
+.courses_page_outter.light-mode {
+    /* background-color: #fff; */
+    color: #333333 !important;
+}
+
+.ql-snow .ql-picker-options {
+    background-color: #d840e5 !important;
 }
 
 
