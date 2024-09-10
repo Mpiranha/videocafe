@@ -2011,6 +2011,61 @@
                                         </div>
 
                                         <div class="trigger subtitle-wrap">
+
+                                            <div class="generated-subtitle-wrap">
+                                                <div class="title">
+                                                    ORIGINAL LANGUAGE
+                                                </div>
+
+                                                <div class="generated-item">
+                                                    <div class="label">
+                                                        This is the language spoken in your video
+                                                    </div>
+
+                                                    <div class="generated-inner">
+                                                        <span>English</span>
+
+
+                                                        <div class="dropdown open">
+                                                            <button class="btn no-shadow btn-more-option" type="button"
+                                                                id="triggerId" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                                <img src="../assets/icons/options icon.svg" alt="">
+                                                            </button>
+
+                                                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                                                <button class="dropdown-item" href="#">Edit</button>
+                                                                <button class="dropdown-item" href="#">Add
+                                                                    subtitle</button>
+                                                                <button class="dropdown-item" href="#">Download</button>
+                                                                <button class="dropdown-item" href="#">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex mb-3">
+                                                    <button class="btn btn-block mr-2"
+                                                        style="background-color: #f74bec; color: #fff;">Cancel</button>
+                                                    <button class="btn btn-block mt-0 btn-gen-w-ai">Save</button>
+                                                </div>
+
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <button class="btn btn-block btn-gen-w-ai w-75" data-toggle="modal"
+                                                        data-target="#ai-generate">
+                                                        Generate with AI
+                                                    </button>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="d-flex justify-content-center mb-3">
+                                                <button class="btn btn-block btn-gen-w-ai w-75" data-toggle="modal"
+                                                    data-target="#ai-generate">
+                                                    Generate with AI
+                                                </button>
+                                            </div>
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="">Select file format</label>
@@ -4127,6 +4182,46 @@
             </div>
         </div>
     </div>
+    <div class="modal fade modal-select-vid" id="ai-generate" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button data-dismiss="modal" class="btn btn-close-modal">
+                    <img src="../assets/icons/close.svg" alt="">
+                </button>
+                <div class="new-project-modal--head mb-4">
+
+                    <span class="label">GENERATE SUBTITLE</span>
+                </div>
+
+                <div class="alert-box">
+                    <img class="warning-icon" src="../assets/icons/exclamation_cr.svg" alt="Warning icon">
+                    Select the original language in your video for accurate subtitle and captions
+                </div>
+
+                <div class="form-group">
+                    <label for="">Language</label>
+                    <select class="form-control vc-form-input" name="" id="">
+                        <option>English</option>
+                        <option>French</option>
+                        <option>Hausa</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="d-flex">
+                    <button class="btn btn-cancel mr-3" data-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button class="btn btn-submit">
+                        GENERATE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade modal-select-vid" id="add-channel" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-md">
@@ -4334,7 +4429,7 @@
 
     <script src="../assets/js/custom/google-webfont.js"></script>
 
-   
+
 
 
 

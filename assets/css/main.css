@@ -2143,6 +2143,10 @@
     font-size: 0.8rem;
 }
 
+.vc-form-input option {
+    color: #000;
+}
+
 .vc-form-input::placeholder {
     color: #e15fff;
 }
@@ -2373,6 +2377,7 @@
 
 #new-project .modal-content,
 #add-project .modal-content,
+#ai-generate .modal-content,
 #add-channel .modal-content,
 #download-video_modal .modal-content,
 #delete-video_modal .modal-content,
@@ -8420,6 +8425,73 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .ql-snow .ql-picker-options {
     background-color: #d840e5 !important;
 }
+
+.btn-gen-w-ai {
+    background: linear-gradient(to right, #7d32e1, #517be1);
+    color: #fff;
+    padding: 0.75rem 0.75rem;
+}
+
+.alert-box {
+    background-color: #d840e5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.alert-box .warning-icon {
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+.generated-subtitle-wrap {
+
+}
+
+.generated-item {
+    margin-bottom: 1rem;
+}
+
+.generated-subtitle-wrap .title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.generated-item .label {
+
+}
+
+.generated-item .generated-inner {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+    border: 2px solid #f74bec;
+    border-radius: 0.5rem;
+}
+
+.generated-inner .btn-more-option {
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-more-option ~ .dropdown-menu button {
+    font-size: 0.85rem;
+
+}
+
+.btn-more-option ~ .dropdown-menu button:hover {
+    background-color: #f74bec;
+}
+
+
+
 
 
 
