@@ -8417,10 +8417,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin: 2px;
 }
 
-.courses_page_outter.light-mode {
-    /* background-color: #fff; */
-    color: #333333 !important;
-}
+
 
 .ql-snow .ql-picker-options {
     background-color: #d840e5 !important;
@@ -8447,9 +8444,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-right: 1rem;
 }
 
-.generated-subtitle-wrap {
-
-}
+.generated-subtitle-wrap {}
 
 .generated-item {
     margin-bottom: 1rem;
@@ -8461,9 +8456,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-weight: 400;
 }
 
-.generated-item .label {
-
-}
+.generated-item .label {}
 
 .generated-item .generated-inner {
     display: flex;
@@ -8481,12 +8474,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0;
 }
 
-.btn-more-option ~ .dropdown-menu button {
+.btn-more-option~.dropdown-menu button {
     font-size: 0.85rem;
 
 }
 
-.btn-more-option ~ .dropdown-menu button:hover {
+.btn-more-option~.dropdown-menu button:hover {
     background-color: #f74bec;
 }
 
@@ -8518,6 +8511,49 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-top: -20px;
 }
 
+.courses_page_outter.light-mode {
+    background-color: #cdc7c7;
+    color: #333333 !important;
+}
+
+.courses_page_outter.light-mode .uploaded-box .media-desc {
+    background-color: #fff;
+    color: #333333;
+}
+
+.courses_page_outter.light-mode .featured_box .title,
+.courses_page_outter.light-mode .featured_box .channel_view_all {
+    color: #333333;
+}
+
+.courses_page_outter.light-mode .media-desc .box-actions .btn {
+    color: #333333;
+}
+
+.courses_page_outter.light-mode .course-page-extra-content {
+    background-color: #fff;
+}
+
+.courses_page_outter.light-mode .vid-inner-setting textarea {
+    background-color: #fff;
+    color: #333333;
+}
+
+.courses_page_outter.light-mode .vid-inner-setting textarea::placeholder {
+    color: #cdc7c7;
+}
+
+.courses_page_outter.light-mode .vid-inner-setting label {
+    color: #000;
+}
+
+.courses_page_outter.light-mode .custom-check.light .checkmark {
+    border: 2px solid #000;
+}
+
+.courses_page_outter.light-mode .text-light {
+    color: #333333 !important;
+}
 
 
 
