@@ -8490,6 +8490,34 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: #f74bec;
 }
 
+.edit-generated-wrap .title {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.edit-generated-wrap a[download] {
+    color: #f74bec;
+    text-decoration: none;
+}
+
+.edit-subtitle-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.edit-subtitle-item .time-wrap {
+    margin-right: 0.5rem;
+}
+
+.edit-subtitle-item .btn-remove-caption {
+    position: absolute;
+    background-color: transparent;
+    right: -35px;
+    top: 50%;
+    margin-top: -20px;
+}
+
 
 
 
