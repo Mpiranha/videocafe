@@ -8429,7 +8429,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .btn-gen-w-ai {
     background: linear-gradient(to right, #7d32e1, #517be1);
     color: #fff;
-    padding: 0.75rem 0.75rem;
+    padding: 0.35rem 0.75rem;
 }
 
 .alert-box {
