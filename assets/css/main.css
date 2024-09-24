@@ -8531,6 +8531,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .edit-subtitle-item .time-wrap {
     margin-right: 0.5rem;
+    width: 115px;
 }
 
 .edit-subtitle-item .btn-remove-caption {
