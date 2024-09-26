@@ -1375,6 +1375,10 @@
     width: 450px;
 }
 
+.edit-subtitle-item .vc-form-input {
+    padding: .375rem 0.65rem;
+}
+
 @keyframes colorSwap {
     from {
         background-color: #828282;
