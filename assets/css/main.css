@@ -8590,7 +8590,80 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #333333 !important;
 }
 
+.subtitle {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    pointer-events: none; /* Make sure subtitles are not clickable */
+  }
 
+   /* Basic styling for the input and dropdown */
+   .dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-container .dropdown-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: white;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.dropdown-container .dropdown-item {
+    padding: 4px 8px;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.dropdown-container .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style for the selected items displayed as tags in the input field */
+.selected-item {
+    display: inline-block;
+    background-color: #e46ad7;
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.selected-item .remove-btn {
+    margin-left: 5px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.table-chan-sel thead tr th {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.table-chan-sel tr th, .table-chan-sel tr td {
+    border: none;
+}
 
 
 
@@ -8612,7 +8685,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     }
 
     100% {
-        height: 590px;
+        height: 665px;
     }
 }
 
@@ -8627,7 +8700,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     }
 
     100% {
-        height: 300px;
+        height: 380px;
     }
 }
 

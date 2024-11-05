@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Select Dropdown Example</title>
+    <style>
+        /* Basic styling for the input and dropdown */
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .dropdown-input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+            background-color: white;
+            z-index: 1;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .dropdown-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Style for the selected items displayed as tags in the input field */
+        .selected-item {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .selected-item .remove-btn {
+            margin-left: 5px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select Your Options</h2>
+
+    <div class="dropdown-container">
+        <div class="dropdown-input" onclick="toggleDropdown()">Select options...</div>
+        <div class="dropdown-list" id="dropdownList">
+            <div class="dropdown-item" onclick="selectOption('Option 1')">Option 1</div>
+            <div class="dropdown-item" onclick="selectOption('Option 2')">Option 2</div>
+            <div class="dropdown-item" onclick="selectOption('Option 3')">Option 3</div>
+            <div class="dropdown-item" onclick="selectOption('Option 4')">Option 4</div>
+        </div>
+    </div>
+
+    <div id="selectedOptions" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        let selectedValues = [];
+
+        // Toggle the dropdown visibility
+        function toggleDropdown() {
+            const dropdownList = document.getElementById('dropdownList');
+            dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Select an option from the dropdown
+        function selectOption(value) {
+            // Add value only if it is not already selected
+            if (!selectedValues.includes(value)) {
+                selectedValues.push(value);
+                displaySelected();
+            }
+        }
+
+        // Display selected values as tags and in the selected options div
+        function displaySelected() {
+            const dropdownInput = document.querySelector('.dropdown-input');
+            dropdownInput.innerHTML = ''; // Clear input content
+
+            // Display each selected value as a tag inside the input
+            selectedValues.forEach(value => {
+                const tag = document.createElement('span');
+                tag.className = 'selected-item';
+                tag.innerHTML = `${value} <span class="remove-btn" onclick="removeOption('${value}')">x</span>`;
+                dropdownInput.appendChild(tag);
+            });
+
+            // If no options selected, show placeholder text
+            if (selectedValues.length === 0) {
+                dropdownInput.innerHTML = 'Select options...';
+            }
+        }
+
+        // Remove a selected option
+        function removeOption(value) {
+            selectedValues = selectedValues.filter(item => item !== value);
+            displaySelected();
+        }
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContainer = document.querySelector('.dropdown-container');
+            if (!dropdownContainer.contains(event.target)) {
+                document.getElementById('dropdownList').style.display = 'none';
+            }
+        });
+    </script>
+
+
+<div class="dropdown-container" id="dropdown1">
+    <div class="dropdown-input" onclick="toggleDropdown('dropdown1')">Select options...</div>
+    <div class="dropdown-list">
+        <div class="dropdown-item" onclick="selectOption('dropdown1', 'Option 1')">Option 1</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown1', 'Option 2')">Option 2</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown1', 'Option 3')">Option 3</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown1', 'Option 4')">Option 4</div>
+    </div>
+</div>
+
+<div class="dropdown-container" id="dropdown2">
+    <div class="dropdown-input" onclick="toggleDropdown('dropdown2')">Select options...</div>
+    <div class="dropdown-list">
+        <div class="dropdown-item" onclick="selectOption('dropdown2', 'Item A')">Item A</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown2', 'Item B')">Item B</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown2', 'Item C')">Item C</div>
+        <div class="dropdown-item" onclick="selectOption('dropdown2', 'Item D')">Item D</div>
+    </div>
+</div>
+</body>
+</html>

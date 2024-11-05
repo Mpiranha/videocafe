@@ -620,6 +620,116 @@ videoContainer.each(function () {
     }
   });
 
+  // var subtitleses = [];
+
+  const subtitleses = [
+    { start: 0, end: 12, text: "Subtitle by Manuelxx!" },
+    { start: 18.7, end: 21, text: "This blade has a dark past." },
+    { start: 22.8, end: 26.8, text: "It has shed much innocent blood." },
+    {
+      start: 29,
+      end: 32,
+      text: "You're a fool for traveling alone, so completely unprepared.",
+    },
+    {
+      start: 32.75,
+      end: 35.8,
+      text: "You're lucky your blood's still flowing.",
+    },
+    {
+      start: 36.25,
+      end: 37.3,
+      text: "Thank you.",
+    },
+    {
+      start: 38.5,
+      end: 40.0,
+      text: "So...",
+    },
+    {
+      start: 40.4,
+      end: 44.8,
+      text: "What brings you to the land of the gatekeepers?",
+    },
+    {
+      start: 46.0,
+      end: 48.8,
+      text: "I'm searching for someone.",
+    },
+    {
+      start: 49.0,
+      end: 53.2,
+      text: "Someone very dear? A kindred spirit?",
+    },
+    {
+      start: 54.4,
+      end: 56.0,
+      text: "A dragon.",
+    },
+    {
+      start: 58.85,
+      end: 61.75,
+      text: "A dangerous quest for a lone hunter.",
+    },
+    {
+      start: 62.95,
+      end: 65.75,
+      text: "I've been alone for as long as I can remember.",
+    },
+  ];
+
+  // Function to fetch and parse subtitle file (SRT or VTT)
+  async function loadSubtitles(url) {
+
+    const response = await fetch(url);
+    const text = await response.text();
+    parseSubtitles(text);
+  }
+
+  // Function to parse SRT/VTT subtitle text into an array of subtitle objects
+  function parseSubtitles(text) {
+    const lines = text.split('\n');
+    let subtitle = {};
+    
+    lines.forEach((line, index) => {
+      // For VTT: Ignore WEBVTT header line
+      if (index === 0 && line.includes("WEBVTT")) return;
+      
+      const timeMatch = line.match(/(\d{2}):(\d{2}):(\d{2})[.,](\d{3}) --> (\d{2}):(\d{2}):(\d{2})[.,](\d{3})/);
+      
+      if (timeMatch) {
+        // Calculate start and end times in seconds
+        subtitle.start = parseInt(timeMatch[1]) * 3600 + parseInt(timeMatch[2]) * 60 + parseInt(timeMatch[3]) + parseInt(timeMatch[4]) / 1000;
+        subtitle.end = parseInt(timeMatch[5]) * 3600 + parseInt(timeMatch[6]) * 60 + parseInt(timeMatch[7]) + parseInt(timeMatch[8]) / 1000;
+        subtitle.text = '';
+      } else if (line.trim() === '') {
+        // Blank line signals end of subtitle block
+        if (subtitle.text) subtitles.push({ ...subtitle });
+        subtitle = {};
+      } else {
+        // Add line to the subtitle text
+        subtitle.text = (subtitle.text ? subtitle.text + '\n' : '') + line;
+      }
+    });
+
+    // Push the last subtitle if needed
+    if (subtitle.text) subtitleses.push(subtitle);
+  }
+
+  const subtitleDiv = document.getElementById("subtitle");
+
+  video.addEventListener("timeupdate", () => {
+    const currentTime = video.currentTime;
+    const subtitle = subtitleses.find(
+      ({ start, end }) => currentTime >= start && currentTime <= end
+    );
+
+    // Update the subtitle text or clear it if none matches
+    subtitleDiv.textContent = subtitle ? subtitle.text : "";
+  });
+
+  loadSubtitles("https://github.com/Mpiranha/videocafe/blob/58b46fe2a1807a6093d28db11ed85e9acbf53fcf/assets/captions/vtt/sintel-es.vtt")
+
   // ENd of subtitle
 
   // VR 360
@@ -632,7 +742,7 @@ videoContainer.each(function () {
   const width = container.offsetWidth;
   const height = container.offsetHeight;
   const camera = new THREE.PerspectiveCamera(75, width / height, 1, 100);
-  
+
   // create a renderer
   // https://threejs.org/docs/#api/en/renderers/WebGLRenderer
   const renderer = new THREE.WebGLRenderer();
@@ -641,15 +751,15 @@ videoContainer.each(function () {
   // display the renderer
   // document.body.appendChild(renderer.domElement);
   // console.log(videoContainer);
- container.appendChild(renderer.domElement);
+  //  container.appendChild(renderer.domElement);
 
   // create a sphere geometry
   // https://threejs.org/docs/#api/en/geometries/SphereGeometry
   const geometry = new THREE.SphereGeometry(15, 32, 16);
-  
+
   // create a VideoTexture
   // create a video element and set attributes
-  const videoElement = document.createElement('video');
+  const videoElement = document.createElement("video");
   videoElement.src = "https://s.bepro11.com/vr-video-sample.mp4";
   videoElement.loop = true;
   videoElement.muted = true;
@@ -659,8 +769,8 @@ videoContainer.each(function () {
   const texture = new THREE.VideoTexture(videoElement);
 
   // create a material from the texture
-  const material = new THREE.MeshBasicMaterial({map: texture});
-  
+  const material = new THREE.MeshBasicMaterial({ map: texture });
+
   // need to use back side - surface of the sphere is facing outside but we put the camera inside of the sphere
   material.side = THREE.BackSide;
 
@@ -672,33 +782,33 @@ videoContainer.each(function () {
 
   // zoom in / out
   const clamp = (v, min, max) => Math.max(min, Math.min(v, max));
-  renderer.domElement.addEventListener('wheel', e => {
-      camera.fov = clamp(camera.fov + e.deltaY / 10, 10, 120);
-      // need to call this function after changing most of properties in PerspectiveCamera
-      camera.updateProjectionMatrix();
+  renderer.domElement.addEventListener("wheel", (e) => {
+    camera.fov = clamp(camera.fov + e.deltaY / 10, 10, 120);
+    // need to call this function after changing most of properties in PerspectiveCamera
+    camera.updateProjectionMatrix();
   });
 
   // rotate camera
   let mouseDown = false;
-  renderer.domElement.addEventListener('mousedown', e => {
-      if (e.button === 0) mouseDown = true;
+  renderer.domElement.addEventListener("mousedown", (e) => {
+    if (e.button === 0) mouseDown = true;
   });
 
-  window.addEventListener('mouseup', e => {
-      if (e.button === 0) mouseDown = false;
+  window.addEventListener("mouseup", (e) => {
+    if (e.button === 0) mouseDown = false;
   });
 
-  window.addEventListener('mousemove', e => {
-      if (!mouseDown) return;
+  window.addEventListener("mousemove", (e) => {
+    if (!mouseDown) return;
 
-      const {movementX, movementY} = e;
+    const { movementX, movementY } = e;
 
-      // rotateX: rotate vertically since x-axis is horizontal
-      const rotateX = movementY / 100;
-      const rotateY = movementX / 100;
+    // rotateX: rotate vertically since x-axis is horizontal
+    const rotateX = movementY / 100;
+    const rotateY = movementX / 100;
 
-      camera.rotateX(rotateX);
-      camera.rotateY(rotateY);
+    camera.rotateX(rotateX);
+    camera.rotateY(rotateY);
   });
 
   // End of VR 360

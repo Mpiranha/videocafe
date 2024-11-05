@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstap/bootstrap.min.css">
@@ -53,7 +53,7 @@
                         <span class="nav-text">
                             Videos
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-video">
@@ -78,7 +78,7 @@
                         <span class="nav-text">
                             Media
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-media">
@@ -113,14 +113,14 @@
                         </span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" role="button" href="#collapse-agency">
                         <img class="sidebar-icon" src="../assets/icons/agency icons.svg" alt="">
                         <span class="nav-text">
                             Agency
                         </span>
-                       <i class="fas fa-chevron-down icons collapse-icon"></i>
+                        <i class="fas fa-chevron-down icons collapse-icon"></i>
                     </a>
                 </li>
                 <li class="collapse" id="collapse-agency">
@@ -318,7 +318,8 @@
                         <div class="check-flex">
                             <div class="form-check d-flex align-items-center pl-0 mr-5">
                                 <label class="custom-check-label mb-0">
-                                    <input type="radio" class="form-check-input select-content-type-input" name="select-project-video" id="select-input-vid" value="select-video">
+                                    <input type="radio" class="form-check-input select-content-type-input"
+                                        name="select-project-video" id="select-input-vid" value="select-video">
                                     <span class="check-mark rounded"></span>
 
                                 </label>
@@ -326,8 +327,8 @@
                             </div>
                             <div class="form-check d-flex align-items-center pl-0">
                                 <label class="custom-check-label mb-0">
-                                    <input type="radio" class="form-check-input select-content-type-input" name="select-project-video" id="select-input-project"
-                                        value="select-project">
+                                    <input type="radio" class="form-check-input select-content-type-input"
+                                        name="select-project-video" id="select-input-project" value="select-project">
                                     <span class="check-mark rounded"></span>
 
                                 </label>
@@ -381,6 +382,20 @@
                                                     alt="appearance icon">
                                             </div>
                                             Privacy
+                                            <div class="active-indicator">
+                                                <img src="../assets/icons/add icon.svg" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-global-player-setting-tab" data-toggle="pill"
+                                            href="#pills-global-player-setting" role="tab"
+                                            aria-controls="pills-audio-screen" aria-selected="false">
+                                            <div class="icon-nav-wrap">
+                                                <img src="../assets/icons/visibility and privacy icon.svg"
+                                                    alt="appearance icon">
+                                            </div>
+                                            Global Video Settings
                                             <div class="active-indicator">
                                                 <img src="../assets/icons/add icon.svg" alt="">
                                             </div>
@@ -462,8 +477,7 @@
                                                 <div class="row mb-4">
                                                     <div class="col-6">
                                                         <div class="d-flex h-100 align-items-end settings-uplooad">
-                                                            <img id="default-selected-logo"
-                                                                src="" alt="play icon">
+                                                            <img id="default-selected-logo" src="" alt="play icon">
                                                             <div class="upload-texts">
                                                                 <div class="title">
                                                                     Upload An Image
@@ -480,13 +494,12 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="default-logo-img-prev">
-                                                            <img class="default-logo-prev"
-                                                            src="" alt="play icon">
+                                                            <img class="default-logo-prev" src="" alt="play icon">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                   
+
                                                     <div class="col-6">
                                                         <div class="mb-3">
                                                             <label for="my-input">Logo Title</label>
@@ -497,7 +510,7 @@
                                                             <label for="my-input">Logo Position</label>
 
                                                             <select class="form-control vc-form-input" name="" id="">
-                                                               
+
                                                                 <option value="top-left" selected>Top Left</option>
                                                                 <option value="top-right">Top Right</option>
                                                                 <option value="playbar">Playbar</option>
@@ -652,7 +665,8 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-group">
-                                                            <label class="text-light" for="">Play Button Animation</label>
+                                                            <label class="text-light" for="">Play Button
+                                                                Animation</label>
                                                             <select class="form-control vc-form-input mb-3 anim-select"
                                                                 name="">
                                                                 <option value="animate__animated animate__" selected>
@@ -886,6 +900,175 @@
                                                         <option selected value="public">Any Domain</option>
                                                         <option value="private">No Domain</option>
                                                     </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="d-flex mt-auto justify-content-end">
+                                            <button class="btn btn-login px-3">
+                                                Save
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade " id="pills-global-player-setting" role="tabpanel"
+                                    aria-labelledby="pills-player-privacy-tab">
+                                    <div class="privacy-settings controls-settings d-flex flex-column">
+                                        <h5 class="title">
+                                            Global Video Settings
+                                        </h5>
+                                        <p>
+
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group d-flex flex-column">
+                                                    <label for="">Africa</label>
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                        id="africa-drop-dwn">
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('africa-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('africa-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('africa-drop-dwn','Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('africa-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('africa-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="">Australia/Oceania</label>
+                                                   
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                        id="artantica-drop-dwn">
+                                                        <div class="dropdown-input" onclick="toggleDropdown('artantica-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('artantica-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('artantica-drop-dwn', 'Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('artantica-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('artantica-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label for="">North America</label>
+                                                   
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                        id="north-ame-drop-dwn">
+                                                        <div class="dropdown-input" onclick="toggleDropdown('north-ame-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('north-ame-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('north-ame-drop-dwn', 'Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('north-ame-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('north-ame-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="">Asia</label>
+                                                    
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                    id="asia-drop-dwn">
+                                                    <div class="dropdown-input" onclick="toggleDropdown('asia-drop-dwn')">Select
+                                                        options...</div>
+                                                    <div class="dropdown-list" id="dropdownList">
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('asia-drop-dwn', 'Option 1')">
+                                                            Option 1</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('asia-drop-dwn', 'Option 2')">
+                                                            Option 2</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('asia-drop-dwn','Option 3')">
+                                                            Option 3</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('asia-drop-dwn','Option 4')">
+                                                            Option 4</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="">Europe</label>
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                    id="europe-drop-dwn">
+                                                    <div class="dropdown-input" onclick="toggleDropdown('europe-drop-dwn')">Select
+                                                        options...</div>
+                                                    <div class="dropdown-list" id="dropdownList">
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('europe-drop-dwn', 'Option 1')">
+                                                            Option 1</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('europe-drop-dwn', 'Option 2')">
+                                                            Option 2</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('europe-drop-dwn','Option 3')">
+                                                            Option 3</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('europe-drop-dwn','Option 4')">
+                                                            Option 4</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label for="">South America</label>
+                                                    <div class="dropdown-container form-control p-0 vc-form-input"
+                                                    id="sth-ame-drop-dwn">
+                                                    <div class="dropdown-input" onclick="toggleDropdown('sth-ame-drop-dwn')">Select
+                                                        options...</div>
+                                                    <div class="dropdown-list" id="dropdownList">
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('sth-ame-drop-dwn', 'Option 1')">
+                                                            Option 1</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('sth-ame-drop-dwn', 'Option 2')">
+                                                            Option 2</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('sth-ame-drop-dwn','Option 3')">
+                                                            Option 3</div>
+                                                        <div class="dropdown-item"
+                                                            onclick="selectOption('sth-ame-drop-dwn','Option 4')">
+                                                            Option 4</div>
+                                                    </div>
+                                                </div>
                                                 </div>
                                             </div>
 
@@ -1159,6 +1342,114 @@
     <script src="../assets/js/coloris/coloris.js"></script>
     <script src="../assets/js/custom/script.js"></script>
     <script src="../assets/js/custom/player-settings.js"></script>
+
+    <script>
+        // let selectedValues = [];
+
+        // // Toggle the dropdown visibility
+        // function toggleDropdown() {
+        //     const dropdownList = document.getElementById('dropdownList');
+        //     dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+        // }
+
+        // // Select an option from the dropdown
+        // function selectOption(value) {
+        //     // Add value only if it is not already selected
+        //     if (!selectedValues.includes(value)) {
+        //         selectedValues.push(value);
+        //         displaySelected();
+        //     }
+        // }
+
+        // // Display selected values as tags and in the selected options div
+        // function displaySelected() {
+        //     const dropdownInput = document.querySelector('.dropdown-input');
+        //     dropdownInput.innerHTML = ''; // Clear input content
+
+        //     // Display each selected value as a tag inside the input
+        //     selectedValues.forEach(value => {
+        //         const tag = document.createElement('span');
+        //         tag.className = 'selected-item';
+        //         tag.innerHTML = `${value} <span class="remove-btn" onclick="removeOption('${value}')">x</span>`;
+        //         dropdownInput.appendChild(tag);
+        //     });
+
+        //     // If no options selected, show placeholder text
+        //     if (selectedValues.length === 0) {
+        //         dropdownInput.innerHTML = 'Select options...';
+        //     }
+        // }
+
+        // // Remove a selected option
+        // function removeOption(value) {
+        //     selectedValues = selectedValues.filter(item => item !== value);
+        //     displaySelected();
+        // }
+
+        // // Close dropdown if clicked outside
+        // document.addEventListener('click', function(event) {
+        //     const dropdownContainer = document.querySelector('.dropdown-container');
+        //     if (!dropdownContainer.contains(event.target)) {
+        //         document.getElementById('dropdownList').style.display = 'none';
+        //     }
+        // });
+
+        // Object to store selected values for each dropdown by ID
+        const selectedValuesMap = {};
+
+        // Toggle the dropdown visibility
+        function toggleDropdown(containerId) {
+            const dropdownList = document.querySelector(`#${containerId} .dropdown-list`);
+            dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Select an option from the dropdown
+        function selectOption(containerId, value) {
+            if (!selectedValuesMap[containerId]) {
+                selectedValuesMap[containerId] = [];
+            }
+
+            // Add value if not already selected
+            if (!selectedValuesMap[containerId].includes(value)) {
+                selectedValuesMap[containerId].push(value);
+                displaySelected(containerId);
+            }
+        }
+
+        // Display selected values as tags in the dropdown input field
+        function displaySelected(containerId) {
+            const dropdownInput = document.querySelector(`#${containerId} .dropdown-input`);
+            dropdownInput.innerHTML = ''; // Clear input content
+
+            // Display each selected value as a tag inside the input
+            selectedValuesMap[containerId].forEach(value => {
+                const tag = document.createElement('span');
+                tag.className = 'selected-item';
+                tag.innerHTML = `${value} <span class="remove-btn" onclick="event.stopPropagation(); removeOption('${containerId}', '${value}')">x</span>`;
+                dropdownInput.appendChild(tag);
+            });
+
+            // If no options selected, show placeholder text
+            if (selectedValuesMap[containerId].length === 0) {
+                dropdownInput.innerHTML = 'Select options...';
+            }
+        }
+
+        // Remove a selected option
+        function removeOption(containerId, value) {
+            selectedValuesMap[containerId] = selectedValuesMap[containerId].filter(item => item !== value);
+            displaySelected(containerId);
+        }
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function (event) {
+            document.querySelectorAll('.dropdown-container').forEach(container => {
+                if (!container.contains(event.target)) {
+                    container.querySelector('.dropdown-list').style.display = 'none';
+                }
+            });
+        });
+    </script>
 
 </body>
 
