@@ -8602,11 +8602,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .subtitle {
     text-align: center;
     color: white;
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 125%;
     font-family: Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     pointer-events: none;
-    background-color: #00000070;
+    background-color: #00000036;
     padding: 0.1rem 0.2rem;
   }
 
@@ -8677,6 +8678,17 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border: none;
 }
 
+.table-chan-sel tr td {
+    padding: 0.2rem 0.5rem;
+ }
+
+ .table-chan-sel tr td .label{
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    max-width: 80px;
+    word-break: keep-all;
+    overflow: hidden;
+ }
 
 
 @keyframes bg-stretch-out {
