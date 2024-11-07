@@ -8592,7 +8592,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .subtitle {
     position: absolute;
-    bottom: 10%;
+    bottom: 1%;
     width: 100%;
     text-align: center;
     color: white;
@@ -8600,6 +8600,11 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-family: Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     pointer-events: none; /* Make sure subtitles are not clickable */
+    transition: all 0.5s;
+  }
+
+  .video-outter:hover .subtitle {
+    bottom: 10%;
   }
 
    /* Basic styling for the input and dropdown */
