@@ -8590,20 +8590,27 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #333333 !important;
 }
 
-.subtitle {
+.subtitle-wrap {
     position: absolute;
     bottom: 1%;
+    transition: all 0.5s;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle {
     text-align: center;
     color: white;
     font-size: 24px;
     font-family: Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    pointer-events: none; /* Make sure subtitles are not clickable */
-    transition: all 0.5s;
+    pointer-events: none;
+    background-color: #00000070;
+    padding: 0.1rem 0.2rem;
   }
 
-  .video-outter:hover .subtitle {
+  .video-outter:hover .subtitle-wrap {
     bottom: 10%;
   }
 
