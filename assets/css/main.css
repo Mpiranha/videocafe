@@ -8590,7 +8590,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #333333 !important;
 }
 
-.subtitle-wrap {
+.video-subtitle-wrap {
     position: absolute;
     bottom: 1%;
     transition: all 0.5s;

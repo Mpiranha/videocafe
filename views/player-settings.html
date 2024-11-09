@@ -918,11 +918,12 @@
                                 <div class="tab-pane fade " id="pills-global-player-setting" role="tabpanel"
                                     aria-labelledby="pills-player-privacy-tab">
                                     <div class="privacy-settings controls-settings d-flex flex-column">
-                                        <h5 class="title">
+                                        <h5 class="title mb-0">
                                             Global Video Settings
                                         </h5>
-                                        <p>
-
+                                        <p style="color: #fff; font-size: 0.8rem;">
+                                            You can block specific countries and locations from streaming your video.
+                                            Select the countries you want blocked below.
                                         </p>
                                         <div class="row">
                                             <div class="col-6">
@@ -952,10 +953,11 @@
 
                                                 <div class="form-group">
                                                     <label for="">Australia/Oceania</label>
-                                                   
+
                                                     <div class="dropdown-container form-control p-0 vc-form-input"
                                                         id="artantica-drop-dwn">
-                                                        <div class="dropdown-input" onclick="toggleDropdown('artantica-drop-dwn')">Select
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('artantica-drop-dwn')">Select
                                                             options...</div>
                                                         <div class="dropdown-list" id="dropdownList">
                                                             <div class="dropdown-item"
@@ -977,10 +979,11 @@
 
                                                 <div class="form-group">
                                                     <label for="">North America</label>
-                                                   
+
                                                     <div class="dropdown-container form-control p-0 vc-form-input"
                                                         id="north-ame-drop-dwn">
-                                                        <div class="dropdown-input" onclick="toggleDropdown('north-ame-drop-dwn')">Select
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('north-ame-drop-dwn')">Select
                                                             options...</div>
                                                         <div class="dropdown-list" id="dropdownList">
                                                             <div class="dropdown-item"
@@ -1002,73 +1005,76 @@
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="">Asia</label>
-                                                    
+
                                                     <div class="dropdown-container form-control p-0 vc-form-input"
-                                                    id="asia-drop-dwn">
-                                                    <div class="dropdown-input" onclick="toggleDropdown('asia-drop-dwn')">Select
-                                                        options...</div>
-                                                    <div class="dropdown-list" id="dropdownList">
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('asia-drop-dwn', 'Option 1')">
-                                                            Option 1</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('asia-drop-dwn', 'Option 2')">
-                                                            Option 2</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('asia-drop-dwn','Option 3')">
-                                                            Option 3</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('asia-drop-dwn','Option 4')">
-                                                            Option 4</div>
+                                                        id="asia-drop-dwn">
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('asia-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('asia-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('asia-drop-dwn', 'Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('asia-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('asia-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="">Europe</label>
                                                     <div class="dropdown-container form-control p-0 vc-form-input"
-                                                    id="europe-drop-dwn">
-                                                    <div class="dropdown-input" onclick="toggleDropdown('europe-drop-dwn')">Select
-                                                        options...</div>
-                                                    <div class="dropdown-list" id="dropdownList">
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('europe-drop-dwn', 'Option 1')">
-                                                            Option 1</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('europe-drop-dwn', 'Option 2')">
-                                                            Option 2</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('europe-drop-dwn','Option 3')">
-                                                            Option 3</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('europe-drop-dwn','Option 4')">
-                                                            Option 4</div>
+                                                        id="europe-drop-dwn">
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('europe-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('europe-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('europe-drop-dwn', 'Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('europe-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('europe-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
 
 
                                                 <div class="form-group">
                                                     <label for="">South America</label>
                                                     <div class="dropdown-container form-control p-0 vc-form-input"
-                                                    id="sth-ame-drop-dwn">
-                                                    <div class="dropdown-input" onclick="toggleDropdown('sth-ame-drop-dwn')">Select
-                                                        options...</div>
-                                                    <div class="dropdown-list" id="dropdownList">
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('sth-ame-drop-dwn', 'Option 1')">
-                                                            Option 1</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('sth-ame-drop-dwn', 'Option 2')">
-                                                            Option 2</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('sth-ame-drop-dwn','Option 3')">
-                                                            Option 3</div>
-                                                        <div class="dropdown-item"
-                                                            onclick="selectOption('sth-ame-drop-dwn','Option 4')">
-                                                            Option 4</div>
+                                                        id="sth-ame-drop-dwn">
+                                                        <div class="dropdown-input"
+                                                            onclick="toggleDropdown('sth-ame-drop-dwn')">Select
+                                                            options...</div>
+                                                        <div class="dropdown-list" id="dropdownList">
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('sth-ame-drop-dwn', 'Option 1')">
+                                                                Option 1</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('sth-ame-drop-dwn', 'Option 2')">
+                                                                Option 2</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('sth-ame-drop-dwn','Option 3')">
+                                                                Option 3</div>
+                                                            <div class="dropdown-item"
+                                                                onclick="selectOption('sth-ame-drop-dwn','Option 4')">
+                                                                Option 4</div>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
 
