@@ -4987,15 +4987,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .vid-controls .btn-drop-up {
     position: absolute;
-    top: -14px;
+    top: -25px;
     width: 80px;
-    bottom: 0;
+    /* bottom: 0; */
     transform: rotateZ(-90deg);
-    transform-origin: -11px;
-    left: 50%;
-    margin-left: 6px;
+    /* margin-left: 6px; */
     display: none;
     height: 30px;
+    transform-origin: 21px -3px;
+}
+
+.vid-controls .btn-volume {
+    display: inline-flex;
+    justify-content: center;
 }
 
 .vid-controls .btn-drop-up input {
@@ -8611,7 +8615,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.1rem 0.2rem;
   }
 
-  .video-outter:hover .subtitle-wrap {
+  .video-outter:hover .video-subtitle-wrap {
     bottom: 10%;
   }
 
