@@ -4511,7 +4511,7 @@ input.clr-color {
 
 .settings-desc {
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding-right: 1.5rem;
     text-align: justify;
     margin-bottom: 1rem;
@@ -8693,6 +8693,52 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     word-break: keep-all;
     overflow: hidden;
  }
+
+ .date-time-selection-wrap {
+    display: flex;
+    border: 2px solid #f74bec;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+ }
+
+ .date-time-selection-wrap .date-time-sel-item:not(:last-child) {
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ #date-time-sel-item-hour,
+ #date-time-sel-item-min {
+    width: calc(44% / 2);
+ }
+
+ #publish-date,
+ #publish-hour,
+ #publish-minutes {
+    padding: .375rem 0.25rem;
+ }
+
+ #publish-date:focus,
+ #publish-hour:focus,
+ #publish-minutes:focus {
+    background-color: transparent;
+    color: #fff;
+ }
+
+ #date-time-sel-item-date {
+    width: 50%;
+ }
+
+ #publish-date {
+ }
+
+ #publish-date::-webkit-calendar-picker-indicator {
+   
+ }
+
+ /* #date-time-sel-item-date {
+    width: 100px;
+ } */
 
 
 @keyframes bg-stretch-out {
