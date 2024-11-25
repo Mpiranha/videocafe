@@ -2244,4 +2244,34 @@ videoContainer.each(function () {
   }
 
   countdown(5);
+
+  // Count dowwn 
+
+  const targetDate = new Date("November 29, 2024 23:59").getTime();
+
+  // Display the target date
+  document.getElementById("target-date").innerText = new Date(targetDate).toLocaleString();
+
+  // Update the countdown every second
+  const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+
+      if (timeLeft > 0) {
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          // Update the DOM
+          document.getElementById("days").innerText = days;
+          document.getElementById("hours").innerText = hours;
+          document.getElementById("minutes").innerText = minutes;
+          document.getElementById("seconds").innerText = seconds;
+      } else {
+          // Countdown completed
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "<h2>Countdown Complete!</h2>";
+      }
+  }, 1000);
 });

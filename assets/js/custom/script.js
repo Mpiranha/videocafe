@@ -660,5 +660,8 @@ $(function () {
     //     .attr("src", "assets/icons/vidcloud/Group 142.svg");
     // });
   });
+
+
+  
 });
 /** Implementation of the functionality of the audio player */
