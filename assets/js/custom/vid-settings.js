@@ -38,6 +38,7 @@ videoContainer.each(function () {
   //let vidInnerContainer = $(this).find('.video-inner');
 
   let playBack = $(this).find(".btn-play-back").get(0);
+  let playforward = $(this).find(".btn-play-forward").get(0);
 
   let btnPictureInPicture = $(this).find(".btn-picture").get(0);
 
@@ -251,6 +252,13 @@ videoContainer.each(function () {
   playBack.addEventListener("click", function () {
     if (video.currentTime > 10) {
       video.currentTime -= 10;
+      vidCurTime.textContent = calculateTime(Math.floor(video.currentTime));
+    }
+  });
+
+  playforward.addEventListener("click", function () {
+    if (video.currentTime < (video.duration - 10)) {
+      video.currentTime += 10;
       vidCurTime.textContent = calculateTime(Math.floor(video.currentTime));
     }
   });
